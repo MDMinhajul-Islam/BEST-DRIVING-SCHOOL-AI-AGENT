@@ -1,6 +1,6 @@
 {
   "schema_version": "1.0",
-  "generated_at": "2026-09-13T07:45:17.760951+00:00",
+  "generated_at": "2026-09-13T08:35:37.932296+00:00",
   "review_status": "pending_manual_review",
   "business": {
     "name": {
@@ -17253,6 +17253,9 @@
       "discount_price": null,
       "original_price": null,
       "promotion": null,
+      "marketing_labels": [
+        "Best selling"
+      ],
       "prerequisites": [
         "A Texas learner permit is needed before behind-the-wheel hours begin, not before enrolling in the classroom portion."
       ],
@@ -17497,6 +17500,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -17552,6 +17558,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -17607,6 +17616,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -17662,6 +17674,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -17717,6 +17732,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -17772,6 +17790,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -17827,6 +17848,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "A Texas learner permit is needed before behind-the-wheel hours begin, not before enrolling in the classroom portion."
           ],
@@ -17968,6 +17990,7 @@
       "discount_price": null,
       "original_price": null,
       "promotion": null,
+      "marketing_labels": [],
       "prerequisites": [
         "A Texas learner permit, and completed classroom driver education.",
         "Student must have a valid Texas Learner License/Permit before beginning behind-the-wheel training. After enrollment, the driving schedule will be sent via email."
@@ -18210,6 +18233,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Student must have a valid Texas Learner License/Permit before beginning behind-the-wheel training. After enrollment, the driving schedule will be sent via email."
           ],
@@ -18270,6 +18294,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Student must have a valid Texas Learner License/Permit before beginning behind-the-wheel training. After enrollment, the driving schedule will be sent via email."
           ],
@@ -18330,6 +18355,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Student must have a valid Texas Learner License/Permit before beginning behind-the-wheel training. After enrollment, the driving schedule will be sent via email."
           ],
@@ -18390,6 +18416,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Student must have a valid Texas Learner License/Permit before beginning behind-the-wheel training. After enrollment, the driving schedule will be sent via email."
           ],
@@ -18450,6 +18477,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Student must have a valid Texas Learner License/Permit before beginning behind-the-wheel training. After enrollment, the driving schedule will be sent via email."
           ],
@@ -18510,6 +18538,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Student must have a valid Texas Learner License/Permit before beginning behind-the-wheel training. After enrollment, the driving schedule will be sent via email."
           ],
@@ -18570,6 +18599,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "A Texas learner permit, and completed classroom driver education."
           ],
@@ -18708,6 +18738,7 @@
       "discount_price": null,
       "original_price": null,
       "promotion": null,
+      "marketing_labels": [],
       "prerequisites": [
         "A Texas learner permit, and an active parent-taught driver education program."
       ],
@@ -18953,6 +18984,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -19008,6 +19040,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -19063,6 +19096,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -19118,6 +19152,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -19173,6 +19208,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -19228,6 +19264,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -19283,6 +19320,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "A Texas learner permit, and an active parent-taught driver education program."
           ],
@@ -19425,6 +19463,7 @@
       "discount_price": null,
       "original_price": null,
       "promotion": null,
+      "marketing_labels": [],
       "prerequisites": [
         "A Texas learner permit, and an active parent-taught driver education program."
       ],
@@ -19670,6 +19709,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -19725,6 +19765,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -19780,6 +19821,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -19835,6 +19877,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -19890,6 +19933,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -19945,6 +19989,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -20000,6 +20045,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "A Texas learner permit, and an active parent-taught driver education program."
           ],
@@ -20142,6 +20188,9 @@
       "discount_price": null,
       "original_price": null,
       "promotion": "Best selling",
+      "marketing_labels": [
+        "Best selling"
+      ],
       "prerequisites": [
         "A Texas learner permit, and an active parent-taught driver education program."
       ],
@@ -20387,6 +20436,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -20442,6 +20494,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -20497,6 +20552,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -20552,6 +20610,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -20607,6 +20668,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -20662,6 +20726,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -20717,6 +20784,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "A Texas learner permit, and an active parent-taught driver education program."
           ],
@@ -20859,6 +20929,7 @@
       "discount_price": "$19.99",
       "original_price": "$70",
       "promotion": null,
+      "marketing_labels": [],
       "prerequisites": [
         "Applicants aged 18 and over applying for a first Texas driver license."
       ],
@@ -21088,6 +21159,7 @@
           "discount_price": "$19.99",
           "original_price": "$70",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -21140,6 +21212,7 @@
           "discount_price": "$19.99",
           "original_price": "$70",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -21192,6 +21265,7 @@
           "discount_price": "$19.99",
           "original_price": "$70",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -21244,6 +21318,7 @@
           "discount_price": "$19.99",
           "original_price": "$70",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -21296,6 +21371,7 @@
           "discount_price": "$19.99",
           "original_price": "$70",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -21348,6 +21424,7 @@
           "discount_price": "$19.99",
           "original_price": "$70",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -21400,6 +21477,7 @@
           "discount_price": "$19.99",
           "original_price": "$70",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Applicants aged 18 and over applying for a first Texas driver license."
           ],
@@ -21550,6 +21628,9 @@
       "discount_price": null,
       "original_price": null,
       "promotion": "Best selling",
+      "marketing_labels": [
+        "Best selling"
+      ],
       "prerequisites": [
         "A valid Texas learner permit or restricted license, a printed Impact Texas Drivers certificate dated within 90 days, and the driver education certificate for the course you completed.",
         "Must have a valid learner license (permit)."
@@ -21800,6 +21881,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -21858,6 +21942,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -21916,6 +22003,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -21974,6 +22064,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -22032,6 +22125,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -22090,6 +22186,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -22148,6 +22247,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "A valid Texas learner permit or restricted license, a printed Impact Texas Drivers certificate dated within 90 days, and the driver education certificate for the course you completed."
           ],
@@ -22294,6 +22396,7 @@
       "discount_price": null,
       "original_price": null,
       "promotion": null,
+      "marketing_labels": [],
       "prerequisites": [
         "A valid Texas learner permit or restricted license, a printed Impact Texas Drivers certificate dated within 90 days, and the driver education certificate for the course you completed.",
         "Must have a valid learner license (permit)."
@@ -22544,6 +22647,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -22602,6 +22706,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -22660,6 +22765,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -22718,6 +22824,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -22776,6 +22883,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -22834,6 +22942,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -22892,6 +23001,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "A valid Texas learner permit or restricted license, a printed Impact Texas Drivers certificate dated within 90 days, and the driver education certificate for the course you completed."
           ],
@@ -23038,6 +23148,7 @@
       "discount_price": null,
       "original_price": null,
       "promotion": null,
+      "marketing_labels": [],
       "prerequisites": [
         "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first.",
         "Must have a valid Learner License/Permit."
@@ -23296,6 +23407,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -23354,6 +23466,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -23412,6 +23525,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -23470,6 +23584,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -23528,6 +23643,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -23586,6 +23702,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -23644,6 +23761,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first."
           ],
@@ -23798,6 +23916,7 @@
       "discount_price": "$246",
       "original_price": "$270",
       "promotion": "Save $24",
+      "marketing_labels": [],
       "prerequisites": [
         "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first.",
         "Must have a valid Learner License/Permit."
@@ -24056,6 +24175,7 @@
           "discount_price": "$246",
           "original_price": "$270",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -24114,6 +24234,7 @@
           "discount_price": "$246",
           "original_price": "$270",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -24172,6 +24293,7 @@
           "discount_price": "$246",
           "original_price": "$270",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -24230,6 +24352,7 @@
           "discount_price": "$246",
           "original_price": "$270",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -24288,6 +24411,7 @@
           "discount_price": "$246",
           "original_price": "$270",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -24346,6 +24470,7 @@
           "discount_price": "$246",
           "original_price": "$270",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -24404,6 +24529,7 @@
           "discount_price": "$246",
           "original_price": "$270",
           "promotion": "Save $24",
+          "marketing_labels": [],
           "prerequisites": [
             "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first."
           ],
@@ -24558,6 +24684,7 @@
       "discount_price": "$328",
       "original_price": "$360",
       "promotion": "Save $32",
+      "marketing_labels": [],
       "prerequisites": [
         "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first.",
         "Must have a valid Learner License/Permit."
@@ -24816,6 +24943,7 @@
           "discount_price": "$328",
           "original_price": "$360",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -24874,6 +25002,7 @@
           "discount_price": "$328",
           "original_price": "$360",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -24932,6 +25061,7 @@
           "discount_price": "$328",
           "original_price": "$360",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -24990,6 +25120,7 @@
           "discount_price": "$328",
           "original_price": "$360",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -25048,6 +25179,7 @@
           "discount_price": "$328",
           "original_price": "$360",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -25106,6 +25238,7 @@
           "discount_price": "$328",
           "original_price": "$360",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -25164,6 +25297,7 @@
           "discount_price": "$328",
           "original_price": "$360",
           "promotion": "Save $32",
+          "marketing_labels": [],
           "prerequisites": [
             "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first."
           ],
@@ -25318,6 +25452,7 @@
       "discount_price": "$405",
       "original_price": "$450",
       "promotion": "Save $45",
+      "marketing_labels": [],
       "prerequisites": [
         "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first.",
         "Must have a valid Learner License/Permit."
@@ -25576,6 +25711,7 @@
           "discount_price": "$405",
           "original_price": "$450",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -25634,6 +25770,7 @@
           "discount_price": "$405",
           "original_price": "$450",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -25692,6 +25829,7 @@
           "discount_price": "$405",
           "original_price": "$450",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -25750,6 +25888,7 @@
           "discount_price": "$405",
           "original_price": "$450",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -25808,6 +25947,7 @@
           "discount_price": "$405",
           "original_price": "$450",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -25866,6 +26006,7 @@
           "discount_price": "$405",
           "original_price": "$450",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -25924,6 +26065,7 @@
           "discount_price": "$405",
           "original_price": "$450",
           "promotion": "Save $45",
+          "marketing_labels": [],
           "prerequisites": [
             "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first."
           ],
@@ -26078,6 +26220,9 @@
       "discount_price": "$495",
       "original_price": "$550",
       "promotion": "Save $55",
+      "marketing_labels": [
+        "Best selling"
+      ],
       "prerequisites": [
         "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first.",
         "Must have a valid Learner License/Permit."
@@ -26336,6 +26481,9 @@
           "discount_price": "$495",
           "original_price": "$550",
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -26394,6 +26542,9 @@
           "discount_price": "$495",
           "original_price": "$550",
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -26452,6 +26603,9 @@
           "discount_price": "$495",
           "original_price": "$550",
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -26510,6 +26664,9 @@
           "discount_price": "$495",
           "original_price": "$550",
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -26568,6 +26725,9 @@
           "discount_price": "$495",
           "original_price": "$550",
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -26626,6 +26786,9 @@
           "discount_price": "$495",
           "original_price": "$550",
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -26684,6 +26847,9 @@
           "discount_price": "$495",
           "original_price": "$550",
           "promotion": "Save $55",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first."
           ],
@@ -27059,6 +27225,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -27114,6 +27283,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -27169,6 +27341,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -27224,6 +27399,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -27279,6 +27457,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -27334,6 +27515,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -27389,6 +27573,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "A Texas learner permit is needed before behind-the-wheel hours begin, not before enrolling in the classroom portion."
           ],
@@ -27739,6 +27924,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Student must have a valid Texas Learner License/Permit before beginning behind-the-wheel training. After enrollment, the driving schedule will be sent via email."
           ],
@@ -27799,6 +27985,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Student must have a valid Texas Learner License/Permit before beginning behind-the-wheel training. After enrollment, the driving schedule will be sent via email."
           ],
@@ -27859,6 +28046,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Student must have a valid Texas Learner License/Permit before beginning behind-the-wheel training. After enrollment, the driving schedule will be sent via email."
           ],
@@ -27919,6 +28107,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Student must have a valid Texas Learner License/Permit before beginning behind-the-wheel training. After enrollment, the driving schedule will be sent via email."
           ],
@@ -27979,6 +28168,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Student must have a valid Texas Learner License/Permit before beginning behind-the-wheel training. After enrollment, the driving schedule will be sent via email."
           ],
@@ -28039,6 +28229,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Student must have a valid Texas Learner License/Permit before beginning behind-the-wheel training. After enrollment, the driving schedule will be sent via email."
           ],
@@ -28099,6 +28290,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "A Texas learner permit, and completed classroom driver education."
           ],
@@ -28450,6 +28642,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -28505,6 +28698,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -28560,6 +28754,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -28615,6 +28810,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -28670,6 +28866,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -28725,6 +28922,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -28780,6 +28978,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "A Texas learner permit, and an active parent-taught driver education program."
           ],
@@ -29135,6 +29334,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -29190,6 +29390,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -29245,6 +29446,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -29300,6 +29502,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -29355,6 +29558,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -29410,6 +29614,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -29465,6 +29670,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "A Texas learner permit, and an active parent-taught driver education program."
           ],
@@ -29820,6 +30026,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -29875,6 +30084,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -29930,6 +30142,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -29985,6 +30200,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -30040,6 +30258,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -30095,6 +30316,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -30150,6 +30374,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "A Texas learner permit, and an active parent-taught driver education program."
           ],
@@ -30488,6 +30715,7 @@
           "discount_price": "$19.99",
           "original_price": "$70",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -30540,6 +30768,7 @@
           "discount_price": "$19.99",
           "original_price": "$70",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -30592,6 +30821,7 @@
           "discount_price": "$19.99",
           "original_price": "$70",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -30644,6 +30874,7 @@
           "discount_price": "$19.99",
           "original_price": "$70",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -30696,6 +30927,7 @@
           "discount_price": "$19.99",
           "original_price": "$70",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -30748,6 +30980,7 @@
           "discount_price": "$19.99",
           "original_price": "$70",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": null,
           "required_documents": null,
           "eligibility": null,
@@ -30800,6 +31033,7 @@
           "discount_price": "$19.99",
           "original_price": "$70",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Applicants aged 18 and over applying for a first Texas driver license."
           ],
@@ -31164,6 +31398,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -31222,6 +31459,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -31280,6 +31520,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -31338,6 +31581,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -31396,6 +31642,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -31454,6 +31703,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -31512,6 +31764,9 @@
           "discount_price": null,
           "original_price": null,
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "A valid Texas learner permit or restricted license, a printed Impact Texas Drivers certificate dated within 90 days, and the driver education certificate for the course you completed."
           ],
@@ -31872,6 +32127,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -31930,6 +32186,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -31988,6 +32245,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -32046,6 +32304,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -32104,6 +32363,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -32162,6 +32422,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid learner license (permit)."
           ],
@@ -32220,6 +32481,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "A valid Texas learner permit or restricted license, a printed Impact Texas Drivers certificate dated within 90 days, and the driver education certificate for the course you completed."
           ],
@@ -32591,6 +32853,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -32649,6 +32912,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -32707,6 +32971,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -32765,6 +33030,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -32823,6 +33089,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -32881,6 +33148,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -32939,6 +33207,7 @@
           "discount_price": null,
           "original_price": null,
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first."
           ],
@@ -33318,6 +33587,7 @@
           "discount_price": "$246",
           "original_price": "$270",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -33376,6 +33646,7 @@
           "discount_price": "$246",
           "original_price": "$270",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -33434,6 +33705,7 @@
           "discount_price": "$246",
           "original_price": "$270",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -33492,6 +33764,7 @@
           "discount_price": "$246",
           "original_price": "$270",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -33550,6 +33823,7 @@
           "discount_price": "$246",
           "original_price": "$270",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -33608,6 +33882,7 @@
           "discount_price": "$246",
           "original_price": "$270",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -33666,6 +33941,7 @@
           "discount_price": "$246",
           "original_price": "$270",
           "promotion": "Save $24",
+          "marketing_labels": [],
           "prerequisites": [
             "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first."
           ],
@@ -34045,6 +34321,7 @@
           "discount_price": "$328",
           "original_price": "$360",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -34103,6 +34380,7 @@
           "discount_price": "$328",
           "original_price": "$360",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -34161,6 +34439,7 @@
           "discount_price": "$328",
           "original_price": "$360",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -34219,6 +34498,7 @@
           "discount_price": "$328",
           "original_price": "$360",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -34277,6 +34557,7 @@
           "discount_price": "$328",
           "original_price": "$360",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -34335,6 +34616,7 @@
           "discount_price": "$328",
           "original_price": "$360",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -34393,6 +34675,7 @@
           "discount_price": "$328",
           "original_price": "$360",
           "promotion": "Save $32",
+          "marketing_labels": [],
           "prerequisites": [
             "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first."
           ],
@@ -34772,6 +35055,7 @@
           "discount_price": "$405",
           "original_price": "$450",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -34830,6 +35114,7 @@
           "discount_price": "$405",
           "original_price": "$450",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -34888,6 +35173,7 @@
           "discount_price": "$405",
           "original_price": "$450",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -34946,6 +35232,7 @@
           "discount_price": "$405",
           "original_price": "$450",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -35004,6 +35291,7 @@
           "discount_price": "$405",
           "original_price": "$450",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -35062,6 +35350,7 @@
           "discount_price": "$405",
           "original_price": "$450",
           "promotion": null,
+          "marketing_labels": [],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -35120,6 +35409,7 @@
           "discount_price": "$405",
           "original_price": "$450",
           "promotion": "Save $45",
+          "marketing_labels": [],
           "prerequisites": [
             "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first."
           ],
@@ -35499,6 +35789,9 @@
           "discount_price": "$495",
           "original_price": "$550",
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -35557,6 +35850,9 @@
           "discount_price": "$495",
           "original_price": "$550",
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -35615,6 +35911,9 @@
           "discount_price": "$495",
           "original_price": "$550",
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -35673,6 +35972,9 @@
           "discount_price": "$495",
           "original_price": "$550",
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -35731,6 +36033,9 @@
           "discount_price": "$495",
           "original_price": "$550",
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -35789,6 +36094,9 @@
           "discount_price": "$495",
           "original_price": "$550",
           "promotion": "Best selling",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "Must have a valid Learner License/Permit."
           ],
@@ -35847,6 +36155,9 @@
           "discount_price": "$495",
           "original_price": "$550",
           "promotion": "Save $55",
+          "marketing_labels": [
+            "Best selling"
+          ],
           "prerequisites": [
             "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first."
           ],
@@ -112297,5 +112608,15 @@
     "retell_workflow_modified": false,
     "operational_data_collected": false,
     "requires_manual_review_before_upload": true
+  },
+  "regulatory_reference": {
+    "schema_version": "1.0",
+    "research_date": "2026-09-13",
+    "knowledge": "data/structured/texas_regulatory_knowledge.json",
+    "sources": "data/structured/regulatory_sources.json",
+    "pathways": "data/structured/license_pathways.json",
+    "service_map": "data/structured/regulation_to_service_map.json",
+    "business_licensing_guidance_is_not_official_authority": true,
+    "manual_review_required_before_production": true
   }
 }

@@ -62,7 +62,8 @@ def generate_knowledge(kb):
     for meta in kb['source_pages']:
         content += f"| [{meta['title'] or meta['url']}]({meta['url']}) | {meta['page_category']} | {meta['sitemap_lastmod'] or 'NOT FOUND'} | {meta['scraped_at']} | {meta['status']} |\n"
     save('source_index.md', 'Source index', content)
-    write_text(ROOT / 'knowledge/regulatory/README.md', '# Official Texas research — pending\n\nNo official regulatory facts have been collected in this phase. Review the flagged school statements in `data/structured/knowledge_base.json` against current DPS and TDLR primary sources before use. Sitemap lastmod is the site publisher’s metadata, not independent verification.\n')
+    if not kb.get('regulatory_reference'):
+        write_text(ROOT / 'knowledge/regulatory/README.md', '# Official Texas research — pending\n\nNo official regulatory facts have been collected in this phase. Review the flagged school statements in `data/structured/knowledge_base.json` against current DPS and TDLR primary sources before use. Sitemap lastmod is the site publisher’s metadata, not independent verification.\n')
     generate_retell_support(kb)
 
 
@@ -115,9 +116,21 @@ def generate_retell_support(kb):
     text = '# Recommended shared variables\n\nProposal for manual Retell setup; nothing is implemented in Retell. Caller statements are not verified account facts. Preserve answered fields and ask again only to resolve contradiction or confirm critical actions.\n\n| Variable | Type | Source | Use |\n| --- | --- | --- | --- |\n'
     text += '\n'.join(f'| `{name}` | {kind} | {origin} | {use} |' for name,kind,origin,use in variables)
     text += '\n\nMinimize personal data and define retention during the operational integration phase. No passwords, payment card data or authentication tokens should be conversation variables.\n'
-    write_text(folder / 'recommended_shared_variables.md', text)
+    existing = folder / 'recommended_shared_variables.md'
+    if kb.get('regulatory_reference') and existing.exists():
+        marker = '\n## Phase B proposed updates\n'
+        previous = existing.read_text(encoding='utf-8')
+        if marker in previous:
+            text += marker + previous.split(marker, 1)[1]
+    write_text(existing, text)
     text = '# Knowledge source map\n\n| Data | Source | Readiness |\n| --- | --- | --- |\n| Services, packages, prices | Public school sitemap pages | Extracted; manual review required |\n| FAQ and policy text | Public school pages | Preserved; review applicability and conflicts |\n| Locations and contacts | Public school content | Distinguish office from service areas |\n| Texas licensing requirements | DPS/TDLR official sources | Not collected; verification pending |\n| Availability, bookings | Approved school scheduling backend | REQUIRES API |\n| Enrollment, accounts, payments | Authenticated school system | REQUIRES AUTHENTICATED SYSTEM |\n\nEach structured record has `sources` with URL, title, page category, sitemap lastmod, scrape time, heading/section and evidence where practical. Package `observations` preserve page-specific values. Raw HTML and request audit are under `data/`. A sitemap date is not a freshness guarantee.\n\nSee [source index](../source_index.md), [quality report](../../reports/data_quality_report.md) and [coverage](../../reports/knowledge_coverage.md).\n'
-    write_text(folder / 'knowledge_source_map.md', text)
+    existing = folder / 'knowledge_source_map.md'
+    if kb.get('regulatory_reference') and existing.exists():
+        marker = '\n## Phase B authority separation\n'
+        previous = existing.read_text(encoding='utf-8')
+        if marker in previous:
+            text += marker + previous.split(marker, 1)[1]
+    write_text(existing, text)
     text = '# Unresolved information\n\n'
     for item in kb['unknowns']:
         text += f"- **{item['topic']} — {item['status']}**: {item['detail']}"

@@ -26,3 +26,37 @@ Proposal for manual Retell setup; nothing is implemented in Retell. Caller state
 | `school_timezone` | string | reviewed backend configuration | Scheduling timezone must be agreed with school |
 
 Minimize personal data and define retention during the operational integration phase. No passwords, payment card data or authentication tokens should be conversation variables.
+
+## Phase B proposed updates
+
+Manual proposal only. Existing `age`, `student_or_parent`, `license_status` and `permit_status` remain; prefer exact credential normalization rather than duplicate conflicting fields.
+
+| Variable | Status | Purpose |
+| --- | --- | --- |
+| first_time_applicant | RECOMMENDED | Distinguish first-time from exchange |
+| texas_resident_status / move_date | RECOMMENDED | Resident versus visitor and deadline |
+| license_issuing_jurisdiction / license_expiry | RECOMMENDED | Conditional exchange/foreign screening |
+| driver_education_status / certificate_type | RECOMMENDED | Partial/full and adult/teen distinction |
+| learner_license_status / issue_date | RECOMMENDED | Exact credential and teen hold; normalize existing permit_status |
+| parent_taught_status | RECOMMENDED | Designation, selected course and instruction stage |
+| impact_texas_status / program / certificate_date | RECOMMENDED | Correct program and 90-day window |
+| road_test_eligibility | RECOMMENDED | unknown, prerequisites_reported, needs_review; never government-approved |
+| required_document_status | OPTIONAL | Category-level missing/uncertain checklist |
+| suspension_during_hold | OPTIONAL | Ask only if teen holding period matters |
+| foreign_license_status / out_of_state_license_status | NOT NEEDED | Derive from exact license status/jurisdiction rather than duplicate booleans |
+| SSN / document_numbers / criminal_history_details | NOT NEEDED | Refer sensitive eligibility verification to official channels |
+## Course/package audit proposed variables
+
+| Variable | Origin / use |
+| --- | --- |
+| intent | Caller need; existing variable |
+| program / program_id | Canonical business catalog |
+| course_id / course_name | Course entity, distinct from package |
+| package_id / package_name | Chosen canonical option; retain legacy ID for migration |
+| package_price / currency / price_snapshot | Structured source; caller cannot overwrite |
+| selected_package | Existing proposal: normalize to package_id rather than maintain conflicting selections |
+| preferred_location / preferred_date / preferred_time | Caller preferences; not confirmed availability |
+| appointment_id | Verified backend result only; existing variable |
+| selected_slot_id / confirmed_datetime | OPTIONAL after actual backend contract is reviewed; no invented field names |
+
+Proposed manual variables, not configured Retell fields. Price, availability and booking state remain distinct.

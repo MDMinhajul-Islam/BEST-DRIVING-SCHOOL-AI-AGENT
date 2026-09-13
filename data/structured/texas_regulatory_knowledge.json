@@ -1,0 +1,2545 @@
+{
+  "schema_version": "1.0",
+  "research_date": "2026-09-13",
+  "jurisdiction": "Texas",
+  "scope": "General noncommercial Class C licensing guidance; not an individualized eligibility determination.",
+  "categories": [
+    "adult_first_time",
+    "teen",
+    "learner_license",
+    "parent_taught",
+    "driver_education",
+    "road_test",
+    "impact_texas_drivers",
+    "new_texas_resident",
+    "international_driver",
+    "documents",
+    "third_party_testing",
+    "exceptions"
+  ],
+  "rules": [
+    {
+      "rule_id": "TX-R001",
+      "category": "adult_first_time",
+      "title": "Adult education ages 18–24",
+      "conditions": {
+        "age_min": 18,
+        "age_max": 24,
+        "first_texas_license": true,
+        "valid_out_of_state_exchange": false
+      },
+      "requirements": [
+        "Complete six-hour adult driver education; full teen-course alternatives are described by TDLR."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-001",
+        "TX-TDLR-001"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-001",
+          "url": "https://www.dps.texas.gov/section/driver-license/apply-texas-driver-license",
+          "section_locator": "18 through 24",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-001.txt",
+          "normalized_content_hash": "fd06dcd6f3000dc8ef9a899fb6a295ad1c1419b1010e27dbcecffb30c71fe455"
+        },
+        {
+          "source_id": "TX-TDLR-001",
+          "url": "https://www.tdlr.texas.gov/driver/education/students/do-i-need-driver-ed/",
+          "section_locator": "6-hour adult",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-001.txt",
+          "normalized_content_hash": "a4e881fe2ce11276947f662edcb02366099b824894f5bc556f1b778054ce8c89"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-001": "2024-11-25",
+        "TX-TDLR-001": null
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": [
+        "Adult education completion evidence (ADE-1317 for adult six-hour course)"
+      ],
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R002",
+      "category": "adult_first_time",
+      "title": "No mandatory education at 25+",
+      "conditions": {
+        "age_min": 25,
+        "first_texas_license": true
+      },
+      "requirements": [
+        "DPS states no driver education requirement at ages 25 and older. Driving lessons remain optional preparation."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-001"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-001",
+          "url": "https://www.dps.texas.gov/section/driver-license/apply-texas-driver-license",
+          "section_locator": "ages 25 and older",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-001.txt",
+          "normalized_content_hash": "fd06dcd6f3000dc8ef9a899fb6a295ad1c1419b1010e27dbcecffb30c71fe455"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-001": "2024-11-25"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R003",
+      "category": "adult_first_time",
+      "title": "Usual first-time tests and application",
+      "conditions": {
+        "first_license": true,
+        "age_min": 18
+      },
+      "requirements": [
+        "Apply at DPS, provide required documents and biometrics, pay the application fee, and pass vision, knowledge and driving skills requirements unless an applicable waiver is established."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-001"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-001",
+          "url": "https://www.dps.texas.gov/section/driver-license/apply-texas-driver-license",
+          "section_locator": "vision exam",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-001.txt",
+          "normalized_content_hash": "fd06dcd6f3000dc8ef9a899fb6a295ad1c1419b1010e27dbcecffb30c71fe455"
+        },
+        {
+          "source_id": "TX-DPS-001",
+          "url": "https://www.dps.texas.gov/section/driver-license/apply-texas-driver-license",
+          "section_locator": "written knowledge",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-001.txt",
+          "normalized_content_hash": "fd06dcd6f3000dc8ef9a899fb6a295ad1c1419b1010e27dbcecffb30c71fe455"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-001": "2024-11-25"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R004",
+      "category": "third_party_testing",
+      "title": "Testing versus issuance",
+      "conditions": {
+        "third_party_test": true
+      },
+      "requirements": [
+        "Testing may be completed through an eligible third-party provider. DPS completes license issuance; a test pass alone is not a license."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-001"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-001",
+          "url": "https://www.dps.texas.gov/section/driver-license/apply-texas-driver-license",
+          "section_locator": "Third Party provider",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-001.txt",
+          "normalized_content_hash": "fd06dcd6f3000dc8ef9a899fb6a295ad1c1419b1010e27dbcecffb30c71fe455"
+        },
+        {
+          "source_id": "TX-DPS-001",
+          "url": "https://www.dps.texas.gov/section/driver-license/apply-texas-driver-license",
+          "section_locator": "Once your driver license has been issued",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-001.txt",
+          "normalized_content_hash": "fd06dcd6f3000dc8ef9a899fb6a295ad1c1419b1010e27dbcecffb30c71fe455"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-001": "2024-11-25"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R005",
+      "category": "teen",
+      "title": "Start education at 14, learner at 15",
+      "conditions": {
+        "age_max": 17,
+        "first_license": true
+      },
+      "requirements": [
+        "Classroom education may begin at 14; a learner license requires age 15 or older."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-TDLR-001",
+        "TX-TDLR-005"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-TDLR-001",
+          "url": "https://www.tdlr.texas.gov/driver/education/students/do-i-need-driver-ed/",
+          "section_locator": "14 years old",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-001.txt",
+          "normalized_content_hash": "a4e881fe2ce11276947f662edcb02366099b824894f5bc556f1b778054ce8c89"
+        },
+        {
+          "source_id": "TX-TDLR-005",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/learner-license.htm",
+          "section_locator": "15 years old",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-005.txt",
+          "normalized_content_hash": "2a70e88027c64d6eafb3a3695ebe34c56ddf48bc92f39587327a5a5c85ac9c40"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-005": null,
+        "TX-TDLR-001": null
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R006",
+      "category": "driver_education",
+      "title": "Teen classroom total has conflicting official wording",
+      "conditions": {
+        "age_max": 17,
+        "teen_course": true
+      },
+      "requirements": [
+        "Current overview pages and ITTD FAQ describe 24 classroom hours; TDLR learner/block and hybrid pages still say 32. Do not quote one universal total or completion schedule until TDLR/provider review."
+      ],
+      "confidence": "conflicting_official_sources",
+      "official_sources": [
+        "TX-TDLR-001",
+        "TX-TDLR-005",
+        "TX-TDLR-008",
+        "TX-DPS-016"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-TDLR-001",
+          "url": "https://www.tdlr.texas.gov/driver/education/students/do-i-need-driver-ed/",
+          "section_locator": "24 hours",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-001.txt",
+          "normalized_content_hash": "a4e881fe2ce11276947f662edcb02366099b824894f5bc556f1b778054ce8c89"
+        },
+        {
+          "source_id": "TX-TDLR-005",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/learner-license.htm",
+          "section_locator": "32",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-005.txt",
+          "normalized_content_hash": "2a70e88027c64d6eafb3a3695ebe34c56ddf48bc92f39587327a5a5c85ac9c40"
+        },
+        {
+          "source_id": "TX-TDLR-008",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/hybrid-instruction.htm",
+          "section_locator": "32",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-008.txt",
+          "normalized_content_hash": "7d1530b2b2d9a65cef2db573ad9594d3a90c7968cf796d2d1edba1c3d96068c6"
+        },
+        {
+          "source_id": "TX-DPS-016",
+          "url": "https://impacttexasdrivers.dps.texas.gov/ittd/FAQ.aspx",
+          "section_locator": "24 classroom hours",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-016.txt",
+          "normalized_content_hash": "b83e2c28a79bc5b8f0d67c6508d4fa4025f25b3f4f92b9638c879d6bb57c3a15"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-005": null,
+        "TX-TDLR-008": null,
+        "TX-DPS-016": null,
+        "TX-TDLR-001": null
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    },
+    {
+      "rule_id": "TX-R007",
+      "category": "learner_license",
+      "title": "Concurrent learner classroom milestone",
+      "conditions": {
+        "age_min": 15,
+        "age_max": 17,
+        "method": "concurrent"
+      },
+      "requirements": [
+        "Complete the first six classroom hours and obtain the learner-stage education certificate before applying to DPS."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-002",
+        "TX-TDLR-005"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-002",
+          "url": "https://www.dps.texas.gov/section/driver-license/texas-learners-license-teen",
+          "section_locator": "concurrent (6 hours)",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-002.txt",
+          "normalized_content_hash": "944d5443350431da3d3bfb2e6966ba5867f83dd6f45c95dcea5adfa61bc4377f"
+        },
+        {
+          "source_id": "TX-TDLR-005",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/learner-license.htm",
+          "section_locator": "6 hours for concurrent",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-005.txt",
+          "normalized_content_hash": "2a70e88027c64d6eafb3a3695ebe34c56ddf48bc92f39587327a5a5c85ac9c40"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-005": null,
+        "TX-DPS-002": "2024-02-27"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R008",
+      "category": "learner_license",
+      "title": "Block learner milestone needs review",
+      "conditions": {
+        "age_min": 15,
+        "age_max": 17,
+        "method": "block"
+      },
+      "requirements": [
+        "Block method completes all classroom instruction before the learner application; the official 24/32-hour discrepancy must be resolved for the selected course."
+      ],
+      "confidence": "conflicting_official_sources",
+      "official_sources": [
+        "TX-DPS-002",
+        "TX-TDLR-005"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-002",
+          "url": "https://www.dps.texas.gov/section/driver-license/texas-learners-license-teen",
+          "section_locator": "24 hours",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-002.txt",
+          "normalized_content_hash": "944d5443350431da3d3bfb2e6966ba5867f83dd6f45c95dcea5adfa61bc4377f"
+        },
+        {
+          "source_id": "TX-TDLR-005",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/learner-license.htm",
+          "section_locator": "32",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-005.txt",
+          "normalized_content_hash": "2a70e88027c64d6eafb3a3695ebe34c56ddf48bc92f39587327a5a5c85ac9c40"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-005": null,
+        "TX-DPS-002": "2024-02-27"
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    },
+    {
+      "rule_id": "TX-R009",
+      "category": "learner_license",
+      "title": "Supervising adult",
+      "conditions": {
+        "teen_learner_license": true
+      },
+      "requirements": [
+        "Drive only with a licensed adult aged at least 21 in the front passenger seat."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-002",
+        "TX-TDLR-005"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-002",
+          "url": "https://www.dps.texas.gov/section/driver-license/texas-learners-license-teen",
+          "section_locator": "21",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-002.txt",
+          "normalized_content_hash": "944d5443350431da3d3bfb2e6966ba5867f83dd6f45c95dcea5adfa61bc4377f"
+        },
+        {
+          "source_id": "TX-TDLR-005",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/learner-license.htm",
+          "section_locator": "21",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-005.txt",
+          "normalized_content_hash": "2a70e88027c64d6eafb3a3695ebe34c56ddf48bc92f39587327a5a5c85ac9c40"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-005": null,
+        "TX-DPS-002": "2024-02-27"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R010",
+      "category": "learner_license",
+      "title": "Holding period",
+      "conditions": {
+        "age_max": 17,
+        "texas_learner_license": true,
+        "hardship_exception": false
+      },
+      "requirements": [
+        "Hold the learner license at least six months unless turning 18 first. Suspension extends the holding period by the suspension duration."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-002",
+        "TX-DPS-004"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-002",
+          "url": "https://www.dps.texas.gov/section/driver-license/texas-learners-license-teen",
+          "section_locator": "six months",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-002.txt",
+          "normalized_content_hash": "944d5443350431da3d3bfb2e6966ba5867f83dd6f45c95dcea5adfa61bc4377f"
+        },
+        {
+          "source_id": "TX-DPS-004",
+          "url": "https://www.dps.texas.gov/section/driver-license/graduated-driver-license-gdl-and-hardship-license",
+          "section_locator": "suspension",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-004.txt",
+          "normalized_content_hash": "aee5df842e8e1f700cc0d97f4319809f31eee744214a5c42de989855fe2daf8f"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-002": "2024-02-27",
+        "TX-DPS-004": "2020-09-28"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R011",
+      "category": "learner_license",
+      "title": "Learner validity",
+      "conditions": {
+        "teen_learner_license": true
+      },
+      "requirements": [
+        "The teen learner license expires on the 18th birthday; confirm the next DPS application rather than assuming automatic conversion."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-002"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-002",
+          "url": "https://www.dps.texas.gov/section/driver-license/texas-learners-license-teen",
+          "section_locator": "18th birthday",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-002.txt",
+          "normalized_content_hash": "944d5443350431da3d3bfb2e6966ba5867f83dd6f45c95dcea5adfa61bc4377f"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-002": "2024-02-27"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R012",
+      "category": "documents",
+      "title": "Teen school attendance evidence",
+      "conditions": {
+        "age_max": 17,
+        "learner_application": true
+      },
+      "requirements": [
+        "Bring diploma/GED or Verification of Enrollment and Attendance. VOE is valid for 30 days, or 90 days when issued June through August."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-002"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-002",
+          "url": "https://www.dps.texas.gov/section/driver-license/texas-learners-license-teen",
+          "section_locator": "30 days",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-002.txt",
+          "normalized_content_hash": "944d5443350431da3d3bfb2e6966ba5867f83dd6f45c95dcea5adfa61bc4377f"
+        },
+        {
+          "source_id": "TX-DPS-002",
+          "url": "https://www.dps.texas.gov/section/driver-license/texas-learners-license-teen",
+          "section_locator": "90 days",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-002.txt",
+          "normalized_content_hash": "944d5443350431da3d3bfb2e6966ba5867f83dd6f45c95dcea5adfa61bc4377f"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-002": "2024-02-27"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": [
+        "High-school diploma/GED or valid VOE"
+      ],
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R013",
+      "category": "documents",
+      "title": "Teen guardian and education evidence",
+      "conditions": {
+        "age_max": 17,
+        "learner_application": true
+      },
+      "requirements": [
+        "Bring the applicable DE-964/DEE-964/DE-964E education evidence and required identity, residency, lawful-status and SSN documentation. Parent/guardian presence or an accepted waiver/notarized application is required as specified by DPS."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-002"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-002",
+          "url": "https://www.dps.texas.gov/section/driver-license/texas-learners-license-teen",
+          "section_locator": "DE-964",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-002.txt",
+          "normalized_content_hash": "944d5443350431da3d3bfb2e6966ba5867f83dd6f45c95dcea5adfa61bc4377f"
+        },
+        {
+          "source_id": "TX-DPS-002",
+          "url": "https://www.dps.texas.gov/section/driver-license/texas-learners-license-teen",
+          "section_locator": "guardian",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-002.txt",
+          "normalized_content_hash": "944d5443350431da3d3bfb2e6966ba5867f83dd6f45c95dcea5adfa61bc4377f"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-002": "2024-02-27"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": [
+        "Applicable learner-stage education certificate",
+        "Identity",
+        "Texas residency",
+        "Citizenship/lawful presence",
+        "SSN as applicable",
+        "Parent/guardian or accepted waiver/notarized application"
+      ],
+      "required_certificates": [
+        "DE-964/DEE-964/DE-964E as applicable"
+      ],
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R014",
+      "category": "teen",
+      "title": "In-car instruction and practice are separate",
+      "conditions": {
+        "teen_course": true
+      },
+      "requirements": [
+        "Complete seven hours driving instruction, seven observation hours, and 30 additional supervised practice hours including ten at night. A school package is not automatically all 44 hours."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-TDLR-002",
+        "TX-TDLR-P03"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-TDLR-002",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/",
+          "section_locator": "7 hours",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-002.txt",
+          "normalized_content_hash": "10a86f5662b949d49fc3e1ae0ad86f381f5bb947687522ad8c273131b02a0efc"
+        },
+        {
+          "source_id": "TX-TDLR-P03",
+          "url": "https://www.tdlr.texas.gov/media/pdf/DES-at-a-glance.pdf",
+          "section_locator": "30 hours",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-P03.txt",
+          "normalized_content_hash": "72ab8735343b5612395decbad0fcad0256b07ec37c7baf393c1ab2cccfe0d786"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-002": null,
+        "TX-TDLR-P03": "2025-12"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R015",
+      "category": "teen",
+      "title": "Practice supervision and log",
+      "conditions": {
+        "teen_course": true,
+        "practice_hours": true
+      },
+      "requirements": [
+        "The practice supervisor must be 21+, licensed for at least a year; the parent/guardian certifies the 30-hour practice log. Follow the approved course instructions for other logs."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-TDLR-006"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-TDLR-006",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/behind-the-wheel.htm",
+          "section_locator": "at least a year",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-006.txt",
+          "normalized_content_hash": "19e38524be4b4151568d1378ce26f5a5adfee771a0914c90700a572ea1ce0c21"
+        },
+        {
+          "source_id": "TX-TDLR-006",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/behind-the-wheel.htm",
+          "section_locator": "certified by a parent",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-006.txt",
+          "normalized_content_hash": "19e38524be4b4151568d1378ce26f5a5adfee771a0914c90700a572ea1ce0c21"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-006": null
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R016",
+      "category": "road_test",
+      "title": "Usual teen road-test prerequisites",
+      "conditions": {
+        "age_min": 16,
+        "age_max": 17,
+        "hardship_exception": false
+      },
+      "requirements": [
+        "Complete classroom and in-car education, the applicable learner holding period and ITTD within 90 days, then pass the skills test; DPS decides provisional issuance."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-TDLR-007",
+        "TX-DPS-004"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-TDLR-007",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/provisional-license.htm",
+          "section_locator": "16",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-007.txt",
+          "normalized_content_hash": "5f245a374d67cf2fb2447f8436300c964a8849247a17a88360b60c428f5c03c4"
+        },
+        {
+          "source_id": "TX-DPS-004",
+          "url": "https://www.dps.texas.gov/section/driver-license/graduated-driver-license-gdl-and-hardship-license",
+          "section_locator": "Completing a state-approved",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-004.txt",
+          "normalized_content_hash": "aee5df842e8e1f700cc0d97f4319809f31eee744214a5c42de989855fe2daf8f"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-007": null,
+        "TX-DPS-004": "2020-09-28"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": [
+        "Completed classroom/in-car education evidence",
+        "ITTD within 90 days"
+      ],
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R017",
+      "category": "teen",
+      "title": "Provisional passenger and nighttime restrictions",
+      "conditions": {
+        "age_max": 17,
+        "provisional_license": true
+      },
+      "requirements": [
+        "No more than one non-family passenger under 21. No driving midnight–5 a.m. except work, school activities or emergencies."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-TDLR-007",
+        "TX-DPS-004"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-TDLR-007",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/provisional-license.htm",
+          "section_locator": "midnight",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-007.txt",
+          "normalized_content_hash": "5f245a374d67cf2fb2447f8436300c964a8849247a17a88360b60c428f5c03c4"
+        },
+        {
+          "source_id": "TX-DPS-004",
+          "url": "https://www.dps.texas.gov/section/driver-license/graduated-driver-license-gdl-and-hardship-license",
+          "section_locator": "one passenger",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-004.txt",
+          "normalized_content_hash": "aee5df842e8e1f700cc0d97f4319809f31eee744214a5c42de989855fe2daf8f"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-007": null,
+        "TX-DPS-004": "2020-09-28"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R018",
+      "category": "teen",
+      "title": "Device restriction",
+      "conditions": {
+        "age_max": 17,
+        "learner_or_provisional": true
+      },
+      "requirements": [
+        "Cellphone use, including hands-free, is prohibited while driving except an emergency under the cited teen guidance."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-002",
+        "TX-TDLR-007"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-002",
+          "url": "https://www.dps.texas.gov/section/driver-license/texas-learners-license-teen",
+          "section_locator": "hands-free",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-002.txt",
+          "normalized_content_hash": "944d5443350431da3d3bfb2e6966ba5867f83dd6f45c95dcea5adfa61bc4377f"
+        },
+        {
+          "source_id": "TX-TDLR-007",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/provisional-license.htm",
+          "section_locator": "emergency",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-007.txt",
+          "normalized_content_hash": "5f245a374d67cf2fb2447f8436300c964a8849247a17a88360b60c428f5c03c4"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-002": "2024-02-27",
+        "TX-TDLR-007": null
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R019",
+      "category": "parent_taught",
+      "title": "PTDE authorization and guide",
+      "conditions": {
+        "parent_taught": true
+      },
+      "requirements": [
+        "Obtain TDLR instructor designation for the particular student before teaching; read the supplied program guide and select an approved parent-taught course."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-TDLR-003",
+        "TX-TDLR-P01"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-TDLR-003",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/parent-instructors.htm",
+          "section_locator": "one specific parent",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-003.txt",
+          "normalized_content_hash": "5806772a361da733c9ddbdfbb01a3ea60ac55d17fb27deec0f7ae67c13dfd455"
+        },
+        {
+          "source_id": "TX-TDLR-P01",
+          "url": "https://www.tdlr.texas.gov/driver/docs/parent-taught-step-by-step-guide.pdf",
+          "section_locator": "Read the Parent",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-P01.txt",
+          "normalized_content_hash": "4daf1df2ed225011cf214f3ca22defce695978e994db7a71ccf072d1c36bfd7f"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-P01": null,
+        "TX-TDLR-003": null
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": [
+        "TDLR instructor designation",
+        "Supplied PTDE program guide"
+      ],
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R020",
+      "category": "parent_taught",
+      "title": "TDLR designation fee",
+      "conditions": {
+        "parent_taught": true
+      },
+      "requirements": [
+        "Current public guidance states $20 nonrefundable per instructor/student designation application, online only. This is separate from course costs."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-TDLR-003"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-TDLR-003",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/parent-instructors.htm",
+          "section_locator": "$20",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-003.txt",
+          "normalized_content_hash": "5806772a361da733c9ddbdfbb01a3ea60ac55d17fb27deec0f7ae67c13dfd455"
+        },
+        {
+          "source_id": "TX-TDLR-003",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/parent-instructors.htm",
+          "section_locator": "Paper applications",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-003.txt",
+          "normalized_content_hash": "5806772a361da733c9ddbdfbb01a3ea60ac55d17fb27deec0f7ae67c13dfd455"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-003": null
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R021",
+      "category": "parent_taught",
+      "title": "Instructor relationships",
+      "conditions": {
+        "parent_taught": true
+      },
+      "requirements": [
+        "Eligible relationships include parent, stepparent, grandparent, step-grandparent, foster parent and legal guardian. An authorized alternate must meet the same qualifications and may not charge a fee."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-TDLR-010",
+        "TX-TDLR-003"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-TDLR-010",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/instructor-eligibility/",
+          "section_locator": "stepparent",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-010.txt",
+          "normalized_content_hash": "b6413b32dc917fc6dd93623f248cac7ea8c812cc0bdff92a9a2ae9015a245f89"
+        },
+        {
+          "source_id": "TX-TDLR-003",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/parent-instructors.htm",
+          "section_locator": "alternate instructor",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-003.txt",
+          "normalized_content_hash": "5806772a361da733c9ddbdfbb01a3ea60ac55d17fb27deec0f7ae67c13dfd455"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-010": null,
+        "TX-TDLR-003": null
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R022",
+      "category": "parent_taught",
+      "title": "Instructor screening is not approval",
+      "conditions": {
+        "parent_taught": true
+      },
+      "requirements": [
+        "The official eligibility questionnaire asks age 25+, seven years holding a license, three continuous valid-license years, homicide/DWI history, suspensions, accidents and moving violations. These are screening questions; obtain TDLR/DPS confirmation of the actual instructor's eligibility."
+      ],
+      "confidence": "requires_human_review",
+      "official_sources": [
+        "TX-TDLR-010"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-TDLR-010",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/instructor-eligibility/",
+          "section_locator": "seven years",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-010.txt",
+          "normalized_content_hash": "b6413b32dc917fc6dd93623f248cac7ea8c812cc0bdff92a9a2ae9015a245f89"
+        },
+        {
+          "source_id": "TX-TDLR-010",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/instructor-eligibility/",
+          "section_locator": "criminally negligent homicide",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-010.txt",
+          "normalized_content_hash": "b6413b32dc917fc6dd93623f248cac7ea8c812cc0bdff92a9a2ae9015a245f89"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-010": null
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    },
+    {
+      "rule_id": "TX-R023",
+      "category": "parent_taught",
+      "title": "DPS record checks and B restriction",
+      "conditions": {
+        "parent_taught": true
+      },
+      "requirements": [
+        "B-restricted license holders cannot instruct. DPS checks the instructor's record at learner and provisional stages; disqualification may invalidate subsequent instruction hours."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-TDLR-003"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-TDLR-003",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/parent-instructors.htm",
+          "section_locator": "B restriction",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-003.txt",
+          "normalized_content_hash": "5806772a361da733c9ddbdfbb01a3ea60ac55d17fb27deec0f7ae67c13dfd455"
+        },
+        {
+          "source_id": "TX-TDLR-003",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/parent-instructors.htm",
+          "section_locator": "invalidate",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-003.txt",
+          "normalized_content_hash": "5806772a361da733c9ddbdfbb01a3ea60ac55d17fb27deec0f7ae67c13dfd455"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-003": null
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R024",
+      "category": "parent_taught",
+      "title": "No driving instruction before learner issuance",
+      "conditions": {
+        "parent_taught": true
+      },
+      "requirements": [
+        "Obtain the learner license before starting behind-the-wheel training; finish remaining classroom and in-car requirements afterward."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-TDLR-P01",
+        "TX-TDLR-006"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-TDLR-P01",
+          "url": "https://www.tdlr.texas.gov/driver/docs/parent-taught-step-by-step-guide.pdf",
+          "section_locator": "before they may begin",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-P01.txt",
+          "normalized_content_hash": "4daf1df2ed225011cf214f3ca22defce695978e994db7a71ccf072d1c36bfd7f"
+        },
+        {
+          "source_id": "TX-TDLR-006",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/behind-the-wheel.htm",
+          "section_locator": "obtained the learner license",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-006.txt",
+          "normalized_content_hash": "19e38524be4b4151568d1378ce26f5a5adfee771a0914c90700a572ea1ce0c21"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-006": null,
+        "TX-TDLR-P01": null
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R025",
+      "category": "parent_taught",
+      "title": "PTDE daily instruction limits conflict",
+      "conditions": {
+        "parent_taught": true
+      },
+      "requirements": [
+        "TDLR classroom guidance permits six daily instruction hours, while the in-car page caps combined classroom/in-car credit at two. Do not calculate completion dates until TDLR resolves the discrepancy."
+      ],
+      "confidence": "conflicting_official_sources",
+      "official_sources": [
+        "TX-TDLR-004",
+        "TX-TDLR-006"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-TDLR-004",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/classroom-instruction.htm",
+          "section_locator": "six hours",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-004.txt",
+          "normalized_content_hash": "a407fcfd73c916128d0969eb47da05a32a52a437acf2b3cfdf47ac4f26ab982e"
+        },
+        {
+          "source_id": "TX-TDLR-006",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/behind-the-wheel.htm",
+          "section_locator": "two hours per day of instruction",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-006.txt",
+          "normalized_content_hash": "19e38524be4b4151568d1378ce26f5a5adfee771a0914c90700a572ea1ce0c21"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-006": null,
+        "TX-TDLR-004": null
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    },
+    {
+      "rule_id": "TX-R026",
+      "category": "parent_taught",
+      "title": "Hybrid transfer needs course review",
+      "conditions": {
+        "parent_taught": true,
+        "classroom_elsewhere": true
+      },
+      "requirements": [
+        "TDLR describes transfer of licensed-school classroom education into parent-taught in-car instruction after designation. The page's 32-hour classroom wording conflicts with 24-hour overviews; confirm course acceptance and transfer certificate."
+      ],
+      "confidence": "conflicting_official_sources",
+      "official_sources": [
+        "TX-TDLR-008"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-TDLR-008",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/hybrid-instruction.htm",
+          "section_locator": "transfer",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-008.txt",
+          "normalized_content_hash": "7d1530b2b2d9a65cef2db573ad9594d3a90c7968cf796d2d1edba1c3d96068c6"
+        },
+        {
+          "source_id": "TX-TDLR-008",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/hybrid-instruction.htm",
+          "section_locator": "32",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-008.txt",
+          "normalized_content_hash": "7d1530b2b2d9a65cef2db573ad9594d3a90c7968cf796d2d1edba1c3d96068c6"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-008": null
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    },
+    {
+      "rule_id": "TX-R027",
+      "category": "driver_education",
+      "title": "Approved education options",
+      "conditions": {
+        "driver_education_required": true
+      },
+      "requirements": [
+        "Use an approved driver education provider, an eligible public-school course or authorized PTDE pathway. Confirm the provider's relevant approval/endorsement before choosing an online or parent-taught course."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-TDLR-001",
+        "TX-TDLR-004"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-TDLR-001",
+          "url": "https://www.tdlr.texas.gov/driver/education/students/do-i-need-driver-ed/",
+          "section_locator": "public high-school",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-001.txt",
+          "normalized_content_hash": "a4e881fe2ce11276947f662edcb02366099b824894f5bc556f1b778054ce8c89"
+        },
+        {
+          "source_id": "TX-TDLR-004",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/classroom-instruction.htm",
+          "section_locator": "licensed",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-004.txt",
+          "normalized_content_hash": "a407fcfd73c916128d0969eb47da05a32a52a437acf2b3cfdf47ac4f26ab982e"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-004": null,
+        "TX-TDLR-001": null
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R028",
+      "category": "driver_education",
+      "title": "Turning 18 during teen education",
+      "conditions": {
+        "age_min": 18,
+        "partial_teen_course": true
+      },
+      "requirements": [
+        "Partial teen classroom hours cannot be credited toward the six-hour adult course. Complete the full teen program or full adult course."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-TDLR-009"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-TDLR-009",
+          "url": "https://www.tdlr.texas.gov/driver/education/students/faq.htm",
+          "section_locator": "cannot be applied",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-009.txt",
+          "normalized_content_hash": "256d17d965097e1867fc821b773e3c7e9840891f5c7caaf9dcbe749b127860bc"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-009": null
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R029",
+      "category": "driver_education",
+      "title": "Education transfers and duplicate certificates",
+      "conditions": {
+        "education_transfer_or_duplicate": true
+      },
+      "requirements": [
+        "Contact the original approved provider for duplicate certificates. Texas-licensed school transfers are possible; out-of-state education hours do not transfer under TDLR guidance—confirm the licensing scenario with DPS."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-TDLR-009"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-TDLR-009",
+          "url": "https://www.tdlr.texas.gov/driver/education/students/faq.htm",
+          "section_locator": "duplicate certificate",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-009.txt",
+          "normalized_content_hash": "256d17d965097e1867fc821b773e3c7e9840891f5c7caaf9dcbe749b127860bc"
+        },
+        {
+          "source_id": "TX-TDLR-009",
+          "url": "https://www.tdlr.texas.gov/driver/education/students/faq.htm",
+          "section_locator": "Out of state hours",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-009.txt",
+          "normalized_content_hash": "256d17d965097e1867fc821b773e3c7e9840891f5c7caaf9dcbe749b127860bc"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-009": null
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R030",
+      "category": "impact_texas_drivers",
+      "title": "ITD is separate from education",
+      "conditions": {
+        "skills_test_required": true
+      },
+      "requirements": [
+        "Complete the appropriate ITD program after required education/in-car instruction and before skills testing. It does not replace driver education."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-005",
+        "TX-DPS-015"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-005",
+          "url": "https://www.dps.texas.gov/section/driver-license/impact-texas-drivers-itd-program",
+          "section_locator": "prior to taking the driving skills test",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-005.txt",
+          "normalized_content_hash": "d765efd01612f710fd95494cf4db634250cede8063533b5c63c2dba95fd6554a"
+        },
+        {
+          "source_id": "TX-DPS-015",
+          "url": "https://impacttexasdrivers.dps.texas.gov/itad/FAQ.aspx",
+          "section_locator": "separate requirement",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-015.txt",
+          "normalized_content_hash": "cc673a280f9b5543024acc23a373cdaca9b01f7d372317e604d2a069d0c64b9a"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-015": null,
+        "TX-DPS-005": "2020-09-22"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R031",
+      "category": "impact_texas_drivers",
+      "title": "Usual minor ITTD and adult ITAD",
+      "conditions": {
+        "skills_test_required": true
+      },
+      "requirements": [
+        "Minor teen/PTDE applicants use ITTD (two hours). Adult six-hour-course/ADE-1317 applicants use ITAD (one hour); DPS overview also identifies ITAD for ages 25+."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-005",
+        "TX-DPS-015",
+        "TX-DPS-016"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-005",
+          "url": "https://www.dps.texas.gov/section/driver-license/impact-texas-drivers-itd-program",
+          "section_locator": "25",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-005.txt",
+          "normalized_content_hash": "d765efd01612f710fd95494cf4db634250cede8063533b5c63c2dba95fd6554a"
+        },
+        {
+          "source_id": "TX-DPS-015",
+          "url": "https://impacttexasdrivers.dps.texas.gov/itad/FAQ.aspx",
+          "section_locator": "ADE-1317",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-015.txt",
+          "normalized_content_hash": "cc673a280f9b5543024acc23a373cdaca9b01f7d372317e604d2a069d0c64b9a"
+        },
+        {
+          "source_id": "TX-DPS-016",
+          "url": "https://impacttexasdrivers.dps.texas.gov/ittd/FAQ.aspx",
+          "section_locator": "2 hour",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-016.txt",
+          "normalized_content_hash": "b83e2c28a79bc5b8f0d67c6508d4fa4025f25b3f4f92b9638c879d6bb57c3a15"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-015": null,
+        "TX-DPS-005": "2020-09-22",
+        "TX-DPS-016": null
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R032",
+      "category": "impact_texas_drivers",
+      "title": "ITD validity and paper copy",
+      "conditions": {
+        "skills_test_required": true
+      },
+      "requirements": [
+        "Present a printed ITD certificate dated within 90 days of the skills test. If the test is not passed within that window, restart the program. ITAD and ITTD are free."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-015",
+        "TX-DPS-016"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-015",
+          "url": "https://impacttexasdrivers.dps.texas.gov/itad/FAQ.aspx",
+          "section_locator": "90 days",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-015.txt",
+          "normalized_content_hash": "cc673a280f9b5543024acc23a373cdaca9b01f7d372317e604d2a069d0c64b9a"
+        },
+        {
+          "source_id": "TX-DPS-016",
+          "url": "https://impacttexasdrivers.dps.texas.gov/ittd/FAQ.aspx",
+          "section_locator": "print the certificate",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-016.txt",
+          "normalized_content_hash": "b83e2c28a79bc5b8f0d67c6508d4fa4025f25b3f4f92b9638c879d6bb57c3a15"
+        },
+        {
+          "source_id": "TX-DPS-015",
+          "url": "https://impacttexasdrivers.dps.texas.gov/itad/FAQ.aspx",
+          "section_locator": "free of charge",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-015.txt",
+          "normalized_content_hash": "cc673a280f9b5543024acc23a373cdaca9b01f7d372317e604d2a069d0c64b9a"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-015": null,
+        "TX-DPS-016": null
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": [
+        "Printed ITD completion certificate within 90 days"
+      ],
+      "required_certificates": [
+        "ITD completion certificate within 90 days"
+      ],
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R033",
+      "category": "impact_texas_drivers",
+      "title": "Adult ITD selection ambiguity",
+      "conditions": {
+        "age_min": 18,
+        "teen_certificate_or_program_choice_unclear": true
+      },
+      "requirements": [
+        "Adult FAQ permits either ITAD or ITTD at 18+, while the overview and certificate-based FAQs specify programs differently. Confirm the acceptable program with DPS/testing provider for adults holding teen certificates; do not invent a universal choice."
+      ],
+      "confidence": "conflicting_official_sources",
+      "official_sources": [
+        "TX-DPS-015",
+        "TX-DPS-016",
+        "TX-DPS-005"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-015",
+          "url": "https://impacttexasdrivers.dps.texas.gov/itad/FAQ.aspx",
+          "section_locator": "either",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-015.txt",
+          "normalized_content_hash": "cc673a280f9b5543024acc23a373cdaca9b01f7d372317e604d2a069d0c64b9a"
+        },
+        {
+          "source_id": "TX-DPS-016",
+          "url": "https://impacttexasdrivers.dps.texas.gov/ittd/FAQ.aspx",
+          "section_locator": "DE-964",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-016.txt",
+          "normalized_content_hash": "b83e2c28a79bc5b8f0d67c6508d4fa4025f25b3f4f92b9638c879d6bb57c3a15"
+        },
+        {
+          "source_id": "TX-DPS-005",
+          "url": "https://www.dps.texas.gov/section/driver-license/impact-texas-drivers-itd-program",
+          "section_locator": "ITAD",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-005.txt",
+          "normalized_content_hash": "d765efd01612f710fd95494cf4db634250cede8063533b5c63c2dba95fd6554a"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-015": null,
+        "TX-DPS-005": "2020-09-22",
+        "TX-DPS-016": null
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    },
+    {
+      "rule_id": "TX-R034",
+      "category": "documents",
+      "title": "Core application document categories",
+      "conditions": {
+        "texas_license_application": true
+      },
+      "requirements": [
+        "Provide identity, Texas residency, citizenship/lawful-presence evidence and SSN as applicable, plus the application. Owned-vehicle insurance or a no-vehicle statement is specified; vehicle registration evidence at application is limited to new residents exchanging out-of-state licenses on the general DPS page."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-001"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-001",
+          "url": "https://www.dps.texas.gov/section/driver-license/apply-texas-driver-license",
+          "section_locator": "Proof of Insurance",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-001.txt",
+          "normalized_content_hash": "fd06dcd6f3000dc8ef9a899fb6a295ad1c1419b1010e27dbcecffb30c71fe455"
+        },
+        {
+          "source_id": "TX-DPS-001",
+          "url": "https://www.dps.texas.gov/section/driver-license/apply-texas-driver-license",
+          "section_locator": "new residents",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-001.txt",
+          "normalized_content_hash": "fd06dcd6f3000dc8ef9a899fb6a295ad1c1419b1010e27dbcecffb30c71fe455"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-001": "2024-11-25"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": [
+        "Application",
+        "Identity",
+        "Texas residency",
+        "Citizenship/lawful presence",
+        "SSN as applicable",
+        "Owned-vehicle insurance or no-vehicle statement",
+        "Owned-vehicle registration for new-resident out-of-state exchange"
+      ],
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R035",
+      "category": "documents",
+      "title": "Identity combinations",
+      "conditions": {
+        "texas_license_application": true
+      },
+      "requirements": [
+        "Use one primary identity document, two secondary, or one secondary plus two supporting. Present originals/certified copies and legal name-change evidence when needed; photocopies are not accepted."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-009"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-009",
+          "url": "https://www.dps.texas.gov/section/driver-license/identification-requirements",
+          "section_locator": "primary",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-009.txt",
+          "normalized_content_hash": "6f38a98ed39c7eb5935d60ac80a1fe8dbe319441efad26e35145e046cad97268"
+        },
+        {
+          "source_id": "TX-DPS-009",
+          "url": "https://www.dps.texas.gov/section/driver-license/identification-requirements",
+          "section_locator": "photocopies",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-009.txt",
+          "normalized_content_hash": "6f38a98ed39c7eb5935d60ac80a1fe8dbe319441efad26e35145e046cad97268"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-009": null
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": [
+        "One primary OR two secondary OR one secondary plus two supporting identity documents",
+        "Legal name-change evidence if applicable"
+      ],
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R036",
+      "category": "documents",
+      "title": "Texas residency documents",
+      "conditions": {
+        "texas_license_application": true
+      },
+      "requirements": [
+        "Normally present two printed documents with the applicant's name and Texas residential address; one must show at least 30 days' residency. Exchange of a valid unexpired out-of-state license/ID waives the 30-day duration, not the two-document requirement."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-010"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-010",
+          "url": "https://www.dps.texas.gov/section/driver-license/texas-residency-requirement-driver-licenses-and-id-cards",
+          "section_locator": "two",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-010.txt",
+          "normalized_content_hash": "7938d13d7d08c726e2f18dd030e42e62dd6e8ee3a648d6569c70f3e393f9dfd0"
+        },
+        {
+          "source_id": "TX-DPS-010",
+          "url": "https://www.dps.texas.gov/section/driver-license/texas-residency-requirement-driver-licenses-and-id-cards",
+          "section_locator": "30 days",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-010.txt",
+          "normalized_content_hash": "7938d13d7d08c726e2f18dd030e42e62dd6e8ee3a648d6569c70f3e393f9dfd0"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-010": null
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": [
+        "Two printed named Texas-address residency documents, subject to DPS exceptions"
+      ],
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R037",
+      "category": "exceptions",
+      "title": "Residency affidavit option",
+      "conditions": {
+        "cannot_supply_two_residency_documents": true
+      },
+      "requirements": [
+        "DPS provides a conditional residency-affidavit option and special cases. Confirm the appropriate affidavit and supporting documentation with DPS; it is not a blanket exemption."
+      ],
+      "confidence": "requires_dps_confirmation",
+      "official_sources": [
+        "TX-DPS-010"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-010",
+          "url": "https://www.dps.texas.gov/section/driver-license/texas-residency-requirement-driver-licenses-and-id-cards",
+          "section_locator": "affidavit",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-010.txt",
+          "normalized_content_hash": "7938d13d7d08c726e2f18dd030e42e62dd6e8ee3a648d6569c70f3e393f9dfd0"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-010": null
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    },
+    {
+      "rule_id": "TX-R038",
+      "category": "documents",
+      "title": "SSN verification",
+      "conditions": {
+        "ssn_eligible": true
+      },
+      "requirements": [
+        "DPS electronically verifies SSN information; resolve mismatches with SSA before issuance."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-011"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-011",
+          "url": "https://www.dps.texas.gov/section/driver-license/social-security-number-ssn",
+          "section_locator": "electronically",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-011.txt",
+          "normalized_content_hash": "96a59c67e567f14e54d6d5621534fcc2b36f7dd52c08036c845108acf983446c"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-011": null
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R039",
+      "category": "exceptions",
+      "title": "SSN ineligibility affidavit",
+      "conditions": {
+        "ssn_eligible": false
+      },
+      "requirements": [
+        "DPS describes an office SSN affidavit for ineligible applicants. The page's never-applied/applied-and-denied wording is ambiguous; have DPS confirm eligibility and required evidence."
+      ],
+      "confidence": "requires_dps_confirmation",
+      "official_sources": [
+        "TX-DPS-011"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-011",
+          "url": "https://www.dps.texas.gov/section/driver-license/social-security-number-ssn",
+          "section_locator": "affidavit",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-011.txt",
+          "normalized_content_hash": "96a59c67e567f14e54d6d5621534fcc2b36f7dd52c08036c845108acf983446c"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-011": null
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    },
+    {
+      "rule_id": "TX-R040",
+      "category": "documents",
+      "title": "Lawful presence verification",
+      "conditions": {
+        "not_us_citizen": true
+      },
+      "requirements": [
+        "Present appropriate lawful-status evidence for the applicant category. DHS verification must complete before DPS issues the license; no approval or immigration outcome is guaranteed."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-012"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-012",
+          "url": "https://www.dps.texas.gov/section/driver-license/us-citizenship-or-lawful-presence-requirement",
+          "section_locator": "DHS",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-012.txt",
+          "normalized_content_hash": "e877833493660edc6a270ca9e960008e84e97800b2a33224acc3479ba0435f81"
+        },
+        {
+          "source_id": "TX-DPS-012",
+          "url": "https://www.dps.texas.gov/section/driver-license/us-citizenship-or-lawful-presence-requirement",
+          "section_locator": "verified",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-012.txt",
+          "normalized_content_hash": "e877833493660edc6a270ca9e960008e84e97800b2a33224acc3479ba0435f81"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-012": null
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": [
+        "Applicant-category lawful-presence evidence"
+      ],
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R041",
+      "category": "road_test",
+      "title": "DPS test vehicle safety",
+      "conditions": {
+        "dps_skills_test": true
+      },
+      "requirements": [
+        "Bring a legally operable vehicle that passes the examiner's safety check: working signals, horn, speedometer, mirrors, doors, seatbelts and brake lights, plus weather-appropriate lights/wipers. Bring current registration and insurance; the applicant must not be an excluded driver."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-P01"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-P01",
+          "url": "https://www.dps.texas.gov/internetforms/Forms/DL-60.pdf",
+          "section_locator": "Operational speedometer",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-P01.txt",
+          "normalized_content_hash": "7690cf049252a38327f9be31f617a2ce7f8afadb79da062a985aff7d13c174ef"
+        },
+        {
+          "source_id": "TX-DPS-P01",
+          "url": "https://www.dps.texas.gov/internetforms/Forms/DL-60.pdf",
+          "section_locator": "excluded driver",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-P01.txt",
+          "normalized_content_hash": "7690cf049252a38327f9be31f617a2ce7f8afadb79da062a985aff7d13c174ef"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-P01": "2026-03"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": [
+        "Current registration",
+        "Current insurance without applicant exclusion"
+      ],
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R042",
+      "category": "road_test",
+      "title": "Test-day identification and failure triggers",
+      "conditions": {
+        "dps_skills_test": true
+      },
+      "requirements": [
+        "Present valid identification. Unsafe vehicles may prevent testing; pets/unauthorized passengers are excluded, and dangerous or illegal maneuvers cause an automatic failure."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-P01"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-P01",
+          "url": "https://www.dps.texas.gov/internetforms/Forms/DL-60.pdf",
+          "section_locator": "valid form of identification",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-P01.txt",
+          "normalized_content_hash": "7690cf049252a38327f9be31f617a2ce7f8afadb79da062a985aff7d13c174ef"
+        },
+        {
+          "source_id": "TX-DPS-P01",
+          "url": "https://www.dps.texas.gov/internetforms/Forms/DL-60.pdf",
+          "section_locator": "automatic failure",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-P01.txt",
+          "normalized_content_hash": "7690cf049252a38327f9be31f617a2ce7f8afadb79da062a985aff7d13c174ef"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-P01": "2026-03"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": [
+        "Valid identification"
+      ],
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R043",
+      "category": "road_test",
+      "title": "Annual inspection versus examiner safety check",
+      "conditions": {
+        "noncommercial_test_vehicle": true
+      },
+      "requirements": [
+        "DPS says annual noncommercial safety inspection ended January 1, 2025, while March 2026 DL-60 still lists unexpired inspection for testing. The examiner safety check remains separate; confirm exact test-vehicle paperwork with DPS/provider and do not promise a universal annual-inspection requirement."
+      ],
+      "confidence": "conflicting_official_sources",
+      "official_sources": [
+        "TX-DPS-P01",
+        "TX-DPS-017"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-P01",
+          "url": "https://www.dps.texas.gov/internetforms/Forms/DL-60.pdf",
+          "section_locator": "registration and inspection",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-P01.txt",
+          "normalized_content_hash": "7690cf049252a38327f9be31f617a2ce7f8afadb79da062a985aff7d13c174ef"
+        },
+        {
+          "source_id": "TX-DPS-017",
+          "url": "https://www.dps.texas.gov/news/vehicle-safety-inspection-program-changes-now-effect",
+          "section_locator": "Jan. 1, 2025",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-017.txt",
+          "normalized_content_hash": "4789be5b4afb988e6365802c990f50bb85a72e7ae782590be8ed45bceeda8152"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-017": "2025-01-03",
+        "TX-DPS-P01": "2026-03"
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    },
+    {
+      "rule_id": "TX-R044",
+      "category": "third_party_testing",
+      "title": "Teen post-test submission",
+      "conditions": {
+        "age_max": 17,
+        "third_party_test": true
+      },
+      "requirements": [
+        "DL-68 describes submitting third-party results in a sealed unaltered envelope with applicable provisional documents and completed classroom/in-car certificates. Confirm whether the specific approved provider uses an authorized digital process instead."
+      ],
+      "confidence": "requires_human_review",
+      "official_sources": [
+        "TX-DPS-P02"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-P02",
+          "url": "https://www.dps.texas.gov/Internetforms/Forms/DL-68.pdf",
+          "section_locator": "sealed",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-P02.txt",
+          "normalized_content_hash": "f55bc3756eacd046cbf7da25662e4be19a712164f8ee5527aca244d240b4f81c"
+        },
+        {
+          "source_id": "TX-DPS-P02",
+          "url": "https://www.dps.texas.gov/Internetforms/Forms/DL-68.pdf",
+          "section_locator": "behind-the-wheel",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-P02.txt",
+          "normalized_content_hash": "f55bc3756eacd046cbf7da25662e4be19a712164f8ee5527aca244d240b4f81c"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-P02": "2025-10"
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": [
+        "Applicable completed education evidence",
+        "ITD evidence",
+        "Third-party test results via confirmed accepted handoff"
+      ],
+      "required_certificates": [
+        "Completed classroom/in-car education evidence",
+        "ITD"
+      ],
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    },
+    {
+      "rule_id": "TX-R045",
+      "category": "third_party_testing",
+      "title": "Provider-specific testing gate remains unverified",
+      "conditions": {
+        "third_party_test": true
+      },
+      "requirements": [
+        "DPS and TDLR support third-party skills testing generally, but the TPST program page and DL-65 could not be reviewed. Confirm current adult restricted-license prerequisites and the school's active testing authorization before booking."
+      ],
+      "confidence": "requires_human_review",
+      "official_sources": [
+        "TX-DPS-001",
+        "TX-TDLR-007"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-001",
+          "url": "https://www.dps.texas.gov/section/driver-license/apply-texas-driver-license",
+          "section_locator": "Third Party provider",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-001.txt",
+          "normalized_content_hash": "fd06dcd6f3000dc8ef9a899fb6a295ad1c1419b1010e27dbcecffb30c71fe455"
+        },
+        {
+          "source_id": "TX-TDLR-007",
+          "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/provisional-license.htm",
+          "section_locator": "third-party",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-007.txt",
+          "normalized_content_hash": "5f245a374d67cf2fb2447f8436300c964a8849247a17a88360b60c428f5c03c4"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-001": "2024-11-25",
+        "TX-TDLR-007": null
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    },
+    {
+      "rule_id": "TX-R046",
+      "category": "new_texas_resident",
+      "title": "Resident driving deadline",
+      "conditions": {
+        "new_texas_resident": true,
+        "valid_recognized_license": true
+      },
+      "requirements": [
+        "DPS permits driving with a valid unexpired US-state/territory, Canadian or qualifying-country license for up to 90 days after moving to Texas."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-007"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-007",
+          "url": "https://www.dps.texas.gov/section/driver-license/moving-texas-guide-driver-licenses-and-ids",
+          "section_locator": "90-days",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-007.txt",
+          "normalized_content_hash": "d1d7904a4ec7e378712899488e71fbcde805e11708579f9faac8e804b8144b21"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-007": "2020-09-22"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R047",
+      "category": "new_texas_resident",
+      "title": "Usual adult valid US transfer",
+      "conditions": {
+        "age_min": 18,
+        "valid_unexpired_us_out_of_state_license": true,
+        "surrender_license": true
+      },
+      "requirements": [
+        "Surrender the recognized license and apply with Texas documents. DPS describes knowledge/skills and adult education/ITD waivers; do not sell a first-time education or test package as mandatory."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-001",
+        "TX-DPS-007"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-001",
+          "url": "https://www.dps.texas.gov/section/driver-license/apply-texas-driver-license",
+          "section_locator": "surrendering a valid, unexpired",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-001.txt",
+          "normalized_content_hash": "fd06dcd6f3000dc8ef9a899fb6a295ad1c1419b1010e27dbcecffb30c71fe455"
+        },
+        {
+          "source_id": "TX-DPS-007",
+          "url": "https://www.dps.texas.gov/section/driver-license/moving-texas-guide-driver-licenses-and-ids",
+          "section_locator": "Age 18 and Older",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-007.txt",
+          "normalized_content_hash": "d1d7904a4ec7e378712899488e71fbcde805e11708579f9faac8e804b8144b21"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-001": "2024-11-25",
+        "TX-DPS-007": "2020-09-22"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": [
+        "Existing license for surrender",
+        "Applicable Texas application documents"
+      ],
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R048",
+      "category": "new_texas_resident",
+      "title": "Expired out-of-state adult license",
+      "conditions": {
+        "age_min": 18,
+        "out_of_state_license_expired": true
+      },
+      "requirements": [
+        "DPS moving guidance describes waivers for licenses expired not over two years, and DL-60 reserves DPS discretion to require a test. Confirm expiry dates and the actual application before recommending a waiver."
+      ],
+      "confidence": "requires_dps_confirmation",
+      "official_sources": [
+        "TX-DPS-007",
+        "TX-DPS-P01"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-007",
+          "url": "https://www.dps.texas.gov/section/driver-license/moving-texas-guide-driver-licenses-and-ids",
+          "section_locator": "not expired over two years",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-007.txt",
+          "normalized_content_hash": "d1d7904a4ec7e378712899488e71fbcde805e11708579f9faac8e804b8144b21"
+        },
+        {
+          "source_id": "TX-DPS-P01",
+          "url": "https://www.dps.texas.gov/internetforms/Forms/DL-60.pdf",
+          "section_locator": "at any time",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-P01.txt",
+          "normalized_content_hash": "7690cf049252a38327f9be31f617a2ce7f8afadb79da062a985aff7d13c174ef"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-007": "2020-09-22",
+        "TX-DPS-P01": "2026-03"
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    },
+    {
+      "rule_id": "TX-R049",
+      "category": "new_texas_resident",
+      "title": "Minor transfer conflict",
+      "conditions": {
+        "age_max": 17,
+        "out_of_state_license": true
+      },
+      "requirements": [
+        "Moving guidance says valid surrendered licenses/permits receive the equivalent Texas version; GDL guidance says all transfers obtain a Texas learner and hold six months. All minors need skills testing, but the exact transfer stage/holding requirement requires DPS confirmation."
+      ],
+      "confidence": "conflicting_official_sources",
+      "official_sources": [
+        "TX-DPS-007",
+        "TX-DPS-004"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-007",
+          "url": "https://www.dps.texas.gov/section/driver-license/moving-texas-guide-driver-licenses-and-ids",
+          "section_locator": "equivalent Texas version",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-007.txt",
+          "normalized_content_hash": "d1d7904a4ec7e378712899488e71fbcde805e11708579f9faac8e804b8144b21"
+        },
+        {
+          "source_id": "TX-DPS-004",
+          "url": "https://www.dps.texas.gov/section/driver-license/graduated-driver-license-gdl-and-hardship-license",
+          "section_locator": "regardless of prior licensure",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-004.txt",
+          "normalized_content_hash": "aee5df842e8e1f700cc0d97f4319809f31eee744214a5c42de989855fe2daf8f"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-007": "2020-09-22",
+        "TX-DPS-004": "2020-09-28"
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    },
+    {
+      "rule_id": "TX-R050",
+      "category": "international_driver",
+      "title": "Foreign reciprocal license categories",
+      "conditions": {
+        "foreign_license": true,
+        "new_texas_resident": true
+      },
+      "requirements": [
+        "DPS lists France, Germany, South Korea, UAE and Taiwan for valid-license testing reciprocity; retaining the foreign license affects waivers. Confirm the applicant's age, country, license validity and surrender choice with DPS."
+      ],
+      "confidence": "requires_dps_confirmation",
+      "official_sources": [
+        "TX-DPS-007"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-007",
+          "url": "https://www.dps.texas.gov/section/driver-license/moving-texas-guide-driver-licenses-and-ids",
+          "section_locator": "France",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-007.txt",
+          "normalized_content_hash": "d1d7904a4ec7e378712899488e71fbcde805e11708579f9faac8e804b8144b21"
+        },
+        {
+          "source_id": "TX-DPS-007",
+          "url": "https://www.dps.texas.gov/section/driver-license/moving-texas-guide-driver-licenses-and-ids",
+          "section_locator": "keep your out-of-country license",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-007.txt",
+          "normalized_content_hash": "d1d7904a4ec7e378712899488e71fbcde805e11708579f9faac8e804b8144b21"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-007": "2020-09-22"
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    },
+    {
+      "rule_id": "TX-R051",
+      "category": "international_driver",
+      "title": "Foreign document translations",
+      "conditions": {
+        "foreign_license": true
+      },
+      "requirements": [
+        "DPS requires foreign licenses not in English or Spanish to be translated by a translation service or consulate; foreign marriage documents not in English need certified English translation."
+      ],
+      "confidence": "official_verified",
+      "official_sources": [
+        "TX-DPS-007"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-007",
+          "url": "https://www.dps.texas.gov/section/driver-license/moving-texas-guide-driver-licenses-and-ids",
+          "section_locator": "Translation Requirements",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-007.txt",
+          "normalized_content_hash": "d1d7904a4ec7e378712899488e71fbcde805e11708579f9faac8e804b8144b21"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-007": "2020-09-22"
+      },
+      "review_required": false,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": true,
+      "review_status": "reviewed_general_guidance"
+    },
+    {
+      "rule_id": "TX-R052",
+      "category": "international_driver",
+      "title": "Visitors versus residents",
+      "conditions": {
+        "foreign_license": true,
+        "texas_residency_status": "unknown_or_nonresident"
+      },
+      "requirements": [
+        "Recognition of a foreign license depends on agreements and nonresident conditions; DPS describes a limited visitor period and a different 90-day resident rule. Ask residency and country; confirm individual recognition and IDP questions with DPS."
+      ],
+      "confidence": "requires_dps_confirmation",
+      "official_sources": [
+        "TX-DPS-008"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-008",
+          "url": "https://www.dps.texas.gov/section/driver-license/driving-privilege-reciprocity",
+          "section_locator": "one year",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-008.txt",
+          "normalized_content_hash": "907d344c302bcb753ddaa6c2c47008d4aba263654a1d29167f4b972915e1029a"
+        },
+        {
+          "source_id": "TX-DPS-008",
+          "url": "https://www.dps.texas.gov/section/driver-license/driving-privilege-reciprocity",
+          "section_locator": "resident",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-008.txt",
+          "normalized_content_hash": "907d344c302bcb753ddaa6c2c47008d4aba263654a1d29167f4b972915e1029a"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-008": "2020-09-22"
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    },
+    {
+      "rule_id": "TX-R053",
+      "category": "exceptions",
+      "title": "Hardship license exception",
+      "conditions": {
+        "age_min": 15,
+        "age_max": 17,
+        "hardship_claimed": true
+      },
+      "requirements": [
+        "DPS describes a necessity-based minor restricted/hardship license with an exception to the six-month learner hold and expiry at the next birthday. DPS must establish the qualifying hardship; do not infer approval."
+      ],
+      "confidence": "requires_dps_confirmation",
+      "official_sources": [
+        "TX-DPS-004"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-004",
+          "url": "https://www.dps.texas.gov/section/driver-license/graduated-driver-license-gdl-and-hardship-license",
+          "section_locator": "necessity",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-004.txt",
+          "normalized_content_hash": "aee5df842e8e1f700cc0d97f4319809f31eee744214a5c42de989855fe2daf8f"
+        },
+        {
+          "source_id": "TX-DPS-004",
+          "url": "https://www.dps.texas.gov/section/driver-license/graduated-driver-license-gdl-and-hardship-license",
+          "section_locator": "next birthday",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-004.txt",
+          "normalized_content_hash": "aee5df842e8e1f700cc0d97f4319809f31eee744214a5c42de989855fe2daf8f"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-004": "2020-09-28"
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    },
+    {
+      "rule_id": "TX-R054",
+      "category": "exceptions",
+      "title": "Military/NATO exceptions",
+      "conditions": {
+        "military_or_nato_claimed": true
+      },
+      "requirements": [
+        "DPS describes conditional military-extension and NATO-order testing exemptions. Route documentation and applicability to DPS rather than promising a waiver."
+      ],
+      "confidence": "requires_dps_confirmation",
+      "official_sources": [
+        "TX-DPS-007"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-007",
+          "url": "https://www.dps.texas.gov/section/driver-license/moving-texas-guide-driver-licenses-and-ids",
+          "section_locator": "military extension policy",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-007.txt",
+          "normalized_content_hash": "d1d7904a4ec7e378712899488e71fbcde805e11708579f9faac8e804b8144b21"
+        },
+        {
+          "source_id": "TX-DPS-007",
+          "url": "https://www.dps.texas.gov/section/driver-license/moving-texas-guide-driver-licenses-and-ids",
+          "section_locator": "validating orders",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-007.txt",
+          "normalized_content_hash": "d1d7904a4ec7e378712899488e71fbcde805e11708579f9faac8e804b8144b21"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-007": "2020-09-22"
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    },
+    {
+      "rule_id": "TX-R055",
+      "category": "learner_license",
+      "title": "Adult permit and waiting-period gap",
+      "conditions": {
+        "age_min": 18,
+        "adult_learner_or_restricted_license": true
+      },
+      "requirements": [
+        "The six-month holding rule is verified for minors, not automatically adults. Exact adult restricted-license acquisition and third-party test prerequisites remain unverified in this snapshot; confirm with DPS/provider."
+      ],
+      "confidence": "requires_human_review",
+      "official_sources": [
+        "TX-DPS-002",
+        "TX-DPS-001"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-DPS-002",
+          "url": "https://www.dps.texas.gov/section/driver-license/texas-learners-license-teen",
+          "section_locator": "18",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-002.txt",
+          "normalized_content_hash": "944d5443350431da3d3bfb2e6966ba5867f83dd6f45c95dcea5adfa61bc4377f"
+        },
+        {
+          "source_id": "TX-DPS-001",
+          "url": "https://www.dps.texas.gov/section/driver-license/apply-texas-driver-license",
+          "section_locator": "18 through 24",
+          "extracted_path": "data/regulatory_sources/extracted/TX-DPS-001.txt",
+          "normalized_content_hash": "fd06dcd6f3000dc8ef9a899fb6a295ad1c1419b1010e27dbcecffb30c71fe455"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-DPS-001": "2024-11-25",
+        "TX-DPS-002": "2024-02-27"
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    },
+    {
+      "rule_id": "TX-R056",
+      "category": "teen",
+      "title": "Provisional expiry versus restrictions",
+      "conditions": {
+        "provisional_license": true,
+        "age_transition": 18
+      },
+      "requirements": [
+        "TDLR's step guide says the provisional license expires at 18 and must be renewed. Confirm the exact expiry of each restriction with DPS; turning 18 does not itself renew an expired document."
+      ],
+      "confidence": "requires_dps_confirmation",
+      "official_sources": [
+        "TX-TDLR-P01"
+      ],
+      "evidence": [
+        {
+          "source_id": "TX-TDLR-P01",
+          "url": "https://www.tdlr.texas.gov/driver/docs/parent-taught-step-by-step-guide.pdf",
+          "section_locator": "18th birthday",
+          "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-P01.txt",
+          "normalized_content_hash": "4daf1df2ed225011cf214f3ca22defce695978e994db7a71ccf072d1c36bfd7f"
+        }
+      ],
+      "last_verified": "2026-09-13",
+      "source_last_updated": {
+        "TX-TDLR-P01": null
+      },
+      "review_required": true,
+      "exceptions": null,
+      "required_documents": null,
+      "required_certificates": null,
+      "safe_for_general_guidance": false,
+      "review_status": "blocked_pending_confirmation"
+    }
+  ],
+  "terminology": {
+    "official_term": "Learner License",
+    "caller_aliases": [
+      "permit",
+      "learner permit",
+      "instruction permit"
+    ],
+    "aliases_are_input_recognition_only": true,
+    "distinctions": {
+      "driver_education": "Approved instruction and completion certificate",
+      "practice": "Supervised driving experience and logs",
+      "road_test": "Driving skills assessment",
+      "license": "DPS-issued driving credential subject to its restrictions"
+    }
+  },
+  "unresolved_questions": [
+    {
+      "id": "TX-U01",
+      "topic": "Teen classroom/block/hybrid totals",
+      "status": "CONFLICT",
+      "rule_ids": [
+        "TX-R006",
+        "TX-R008",
+        "TX-R026"
+      ],
+      "action": "Ask TDLR/provider which current approved curriculum applies; review 24/32 wording."
+    },
+    {
+      "id": "TX-U02",
+      "topic": "PTDE daily instruction limits",
+      "status": "CONFLICT",
+      "rule_ids": [
+        "TX-R025"
+      ],
+      "action": "TDLR must clarify combined classroom/in-car daily credit; do not calculate timeline."
+    },
+    {
+      "id": "TX-U03",
+      "topic": "Adult restricted license and TPST eligibility",
+      "status": "REQUIRES HUMAN REVIEW",
+      "rule_ids": [
+        "TX-R045",
+        "TX-R055"
+      ],
+      "action": "Retrieve TPST page/DL-65 and confirm current school authorization and applicant prerequisites."
+    },
+    {
+      "id": "TX-U04",
+      "topic": "Adult with teen certificate ITD program",
+      "status": "CONFLICT",
+      "rule_ids": [
+        "TX-R033"
+      ],
+      "action": "DPS/provider must confirm acceptable program."
+    },
+    {
+      "id": "TX-U05",
+      "topic": "Minor out-of-state transfer stage",
+      "status": "CONFLICT",
+      "rule_ids": [
+        "TX-R049"
+      ],
+      "action": "DPS must resolve equivalent-license versus learner-six-month guidance."
+    },
+    {
+      "id": "TX-U06",
+      "topic": "Test-vehicle annual inspection paperwork",
+      "status": "CONFLICT",
+      "rule_ids": [
+        "TX-R043"
+      ],
+      "action": "DPS/provider must clarify DL-60 wording; distinguish examiner safety check from annual inspection."
+    },
+    {
+      "id": "TX-U07",
+      "topic": "Foreign/visitor/IDP and unusual documents",
+      "status": "REQUIRES DPS CONFIRMATION",
+      "rule_ids": [
+        "TX-R037",
+        "TX-R039",
+        "TX-R048",
+        "TX-R050",
+        "TX-R052",
+        "TX-R054"
+      ],
+      "action": "Individual country/status/document or exemption determination belongs to DPS. IDP-specific authority not found."
+    },
+    {
+      "id": "TX-U08",
+      "topic": "PTDE instructor full screening",
+      "status": "REQUIRES HUMAN REVIEW",
+      "rule_ids": [
+        "TX-R022"
+      ],
+      "action": "Public questionnaire preserved without submission; verify actual instructor with TDLR/DPS. Complete designated program guide was not obtained."
+    },
+    {
+      "id": "TX-U09",
+      "topic": "Teen restriction expiry and result handoff",
+      "status": "REQUIRES DPS CONFIRMATION",
+      "rule_ids": [
+        "TX-R044",
+        "TX-R056"
+      ],
+      "action": "Confirm exact restriction durations and authorized digital versus sealed-envelope submission."
+    }
+  ]
+}

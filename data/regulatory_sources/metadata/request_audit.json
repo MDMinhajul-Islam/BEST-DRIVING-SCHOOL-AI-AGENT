@@ -1,0 +1,72 @@
+[
+  {
+    "url": "https://impacttexasdrivers.dps.texas.gov/itad/FAQ.aspx",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://impacttexasdrivers.dps.texas.gov/ittd/FAQ.aspx",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://www.tdlr.texas.gov/driver/education/students/do-i-need-driver-ed/",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/parent-instructors.htm",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/classroom-instruction.htm",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/learner-license.htm",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/behind-the-wheel.htm",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/provisional-license.htm",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/hybrid-instruction.htm",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://www.tdlr.texas.gov/driver/education/students/faq.htm",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://www.tdlr.texas.gov/driver/docs/parent-taught-step-by-step-guide.pdf",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://www.tdlr.texas.gov/media/pdf/Parent-Taught%20Driver%20Education%20Guide%20-%20one-sheet.pdf",
+    "status_code": 404,
+    "attempt": 1
+  },
+  {
+    "url": "https://www.tdlr.texas.gov/media/pdf/DES-at-a-glance.pdf",
+    "status_code": 200,
+    "attempt": 1
+  }
+]

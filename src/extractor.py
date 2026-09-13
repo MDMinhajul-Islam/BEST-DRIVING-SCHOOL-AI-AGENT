@@ -61,6 +61,10 @@ def packages(soup, meta):
             meta_el = container.select_one('[data-pk-meta]')
             description = chip.get('data-meta') if chips else (tidy(meta_el.get_text(' ',strip=True)) if meta_el else None)
             note = chip.get('data-note') if chips else None
+            badge = chip.get('data-badge') if chips else None
+            if not chips:
+                badge_el = container.select_one('[data-pk-badge]:not([hidden])')
+                badge = tidy(badge_el.get_text(' ', strip=True)) if badge_el else None
             link = chip.get('data-link') if chips else None
             if not link and meta['page_category'] == 'course':
                 link = meta['url']
@@ -96,6 +100,7 @@ def packages(soup, meta):
                 'session_duration_unit': 'hours' if duration else None,
                 'price': price, 'discount_price': price if original else None, 'original_price': original,
                 'promotion': chip.get('data-save') or chip.get('data-badge') or None if chips else None,
+                'marketing_labels': [tidy(badge)] if badge else [],
                 'prerequisites': [tidy(note)] if note else None, 'required_documents': None,
                 'eligibility': None, 'restrictions': None, 'next_steps': None,
                 'booking_or_purchase_url': link, 'canonical_course_url': identity_url,

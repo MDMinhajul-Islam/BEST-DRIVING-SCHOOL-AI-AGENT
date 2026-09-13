@@ -38,6 +38,7 @@ def consolidate_packages(records):
         target['sources'] = []
         target['observations'] = items
         target['source_urls'] = sorted({x['source_url'] for x in items})
+        target['marketing_labels'] = sorted({label for item in items for label in item.get('marketing_labels', [])})
         for item in ordered:
             for field in ('prerequisites', 'required_documents', 'included_services', 'pricing_conditions'):
                 if item.get(field):

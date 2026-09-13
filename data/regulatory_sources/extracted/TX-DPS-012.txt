@@ -1,0 +1,70 @@
+Search Form Search
+
+[Input: What can we help you find?]
+
+[Button: Search]
+
+[Input] [Input]
+
+## Change Text Size
+
+^{-}A A ^{+}A
+
+## Change Display Setting
+
+Default Text Only L15: 
+# U.S. Citizenship or Lawful Presence Requirement
+
+September 22, 2020
+###
+
+NOTE: If you have recently applied for an original or renewal of a Limited-Term Texas driver license or identification card and your period of lawful presence required additional verification, visit our License Eligibility†txapps.texas.gov page to determine if the Department has received a response from DHS.
+To reduce the risk of identity theft, enhance security and protect the integrity of the licensing process, individuals must present one document from the appropriate category below to verify their U.S. citizenship or lawful presence status.
+When at the driver license office, the license and permit specialist will verify the period of lawful presence with the U.S. Department of Homeland Security (DHS)†www.dhs.gov . A driver license or ID card cannot be issued until the period of lawful presence is verified by DHS. If the specialist is unable to immediately verify the information electronically, an additional verification is initiated and the individual will be given instructions on what to do next.
+Please see the Verifying Lawful Presence guide for more information on the different immigration statuses, whether or not each group is eligible for a driver license or ID card and the specific documents needed to apply.
+
+NOTE: The "Verifying Lawful Presence" guide is for informational purposes only and does not ensure a driver license or ID card will be issued. Select the following link to download more information on How to Complete Lawful Presence Verification .
+#### Licenses and ID Cards
+
+In addition to lawful presence, individuals must meet other requirements to obtain a Texas driver license or ID card .
+
+Applicants who are not a U.S. citizen, U.S. national, lawful permanent resident, refugee or asylee may be eligible for a non-domicile commercial driver license .
+
+#### Renewals
+
+Due to DHS verification processing time, applicants are encouraged to renew their driver license or ID card at least thirty days prior to expiration.
+#### Acceptable Documents
+
+To determine what documents will be accepted to verify citizenship or lawful presence status, please review the categories below.
+
+NOTE: A brochure listing all of the following documents is available for download.
+
+
+
+U.S. Citizens
+
+Individuals who are U.S. citizens can present one of the following documents, which may require verification through DHS.
+* Valid, unexpired U.S. passport book or U.S. passport card
+* Original or certified copy of a birth certificate issued by a State Bureau of Vital Statistics or equivalent agency from a U.S. territory, or District of Columbia
+* Laminated copies are not accepted
+* No photocopies can be accepted
+* Original or certified copy of Consular Report of Birth Abroad (CRBA) (Form FS-240) or Certificate of Report of Birth (DS-1350 or FS-545) issued by the U.S. Department of State
+* U.S. Citizenship C ertificate or Certificate of Naturalization with identifiable photo (N-550, N-560, N-561, N-570 or N-578)
+* U.S. Citizen identification card (Form I-179 or I-197)
+NOTE: Because Puerto Rican statute provides that Puerto Rican birth certificates issued before July 1, 2010 are no longer valid, the Department cannot recognize these birth certificates as proof of identification or lawful presence.
+
+
+
+U.S. Nationals, Lawful Permanent Residents, Refugees and Asylees
+Individuals who are U.S. nationals, lawful permanent residents, refugees or asylees can present one of the following documents for verification through DHS. (Expired documents may be accepted unless otherwise noted.)
+* Valid, unexpired U.S. passport book or U.S. passport card stating, “THE BEARER IS A UNITED STATES NATIONAL AND NOT A UNITED STATES CITIZEN” on the last page
+* Valid, unexpired Permanent Resident Card (Form I-551)
+* Machine Readable Immigrant Visa with temporary I-551 language and ADIT stamp
+* Valid, unexpired foreign passport, visa (Visa may be valid or expired) with valid I-94 (the visa requirement may be waived in the case of Parolees, the Republic of Palau, the Republic of the Marshall Islands, the Federated States of Micronesia and certain Canadian non-immigrants)
+* Valid, unexpired employment authorization document (EAD), (I-766)
+### Follow DPS
+
+### Keep Texas Safe
+
+Report Suspicious Activity†iwatchtx.org L70: 
+© 2026 Texas Department of Public Safety. PDF files require Adobe Reader†get.adobe.com or compatible.

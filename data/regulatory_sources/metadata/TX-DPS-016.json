@@ -1,0 +1,39 @@
+{
+  "source_id": "TX-DPS-016",
+  "agency": "Texas DPS",
+  "url": "https://impacttexasdrivers.dps.texas.gov/ittd/FAQ.aspx",
+  "topics": [
+    "impact_texas_drivers"
+  ],
+  "authority_level": 1,
+  "title": "Impact Texas Teen Drivers",
+  "source_type": "webpage",
+  "retrieved_at": "2026-09-13T08:00:15.223375+00:00",
+  "published_or_updated": null,
+  "displayed_dates": [],
+  "date_type": null,
+  "active": true,
+  "reviewed": true,
+  "notes": "Empty/short public source; review required No reliable update/effective date displayed; live retrieval confirms availability, not amendment history. No reliable update/effective date displayed; live retrieval confirms availability, not amendment history. No reliable update/effective date displayed; live retrieval confirms availability, not amendment history. No reliable update/effective date displayed; live retrieval confirms availability, not amendment history. No reliable update/effective date displayed; live retrieval confirms availability, not amendment history.",
+  "redirects": [],
+  "content_hash": "1830122f3fc8e642db3370e6a98533caaa62d09ca7aa2499983de9dfb282de0b",
+  "normalized_content_hash": "b83e2c28a79bc5b8f0d67c6508d4fa4025f25b3f4f92b9638c879d6bb57c3a15",
+  "previous_normalized_hash": "b83e2c28a79bc5b8f0d67c6508d4fa4025f25b3f4f92b9638c879d6bb57c3a15",
+  "change_status": "UNCHANGED",
+  "currency_status": "official_but_date_uncertain",
+  "raw_path": "data/regulatory_sources/html/TX-DPS-016.html",
+  "extracted_path": "data/regulatory_sources/extracted/TX-DPS-016.txt",
+  "status_code": 200,
+  "final_url": "https://impacttexasdrivers.dps.texas.gov/ittd/FAQ.aspx",
+  "headings": [
+    "FAQs"
+  ],
+  "last_verified": "2026-09-13",
+  "review_required": false,
+  "recommended_recheck": "2026-12-12",
+  "reviewed_content_hash": "b83e2c28a79bc5b8f0d67c6508d4fa4025f25b3f4f92b9638c879d6bb57c3a15",
+  "preservation_method": "original_html",
+  "original_archived": true,
+  "normalization_version": "phase-b-1",
+  "preservation_method_changed": false
+}

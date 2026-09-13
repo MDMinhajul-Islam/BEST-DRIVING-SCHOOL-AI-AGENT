@@ -1,0 +1,13 @@
+{
+  "programs": 5,
+  "courses": 6,
+  "packages": 13,
+  "raw_observations": 91,
+  "duplicate_observations_consolidated": 78,
+  "canonical_duplicates_removed": 0,
+  "prices_verified": 13,
+  "price_conflicts": 0,
+  "labeled_packages": 4,
+  "requires_live_availability": 12,
+  "unknown_included_fields": 130
+}

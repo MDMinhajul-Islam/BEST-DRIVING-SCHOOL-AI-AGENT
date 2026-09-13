@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <!-- theme -->
+        <link href="/lib/tdlr-web-design-system/tdlr-web-design-system.css" rel="stylesheet" />
+        <script type="module" crossorigin src="/lib/tdlr-web-design-system/tdlr-web-design-system.js"></script>
+
+        <!-- favicons -->
+        <link rel="icon" href="/images/favicons/favicon.svg" type="image/svg+xml" sizes="any" />
+        <link rel="icon" type="image/png" href="/images/favicons/favicon-32x32.png" sizes="32x32" />
+        <link rel="icon" href="/images/favicons/favicon.ico" sizes="32x32" />
+        <link rel="apple-touch-icon" href="/images/favicons/apple-touch-icon.png" sizes="180x180" />
+
+        <!-- page meta -->
+        <title>Am I Eligible to be a Parent-Taught Instructor?</title>
+        <meta name="description" content="Learn who is eligibility to participate in the parent-taught driver education program as an instructor by answering a few short questions about your driving record and criminal history." />
+
+        <!-- app implementation -->
+        <script type="module" src="./assets/bundle.min.js?v=2.4"></script>
+        <link rel="stylesheet" href="./assets/bundle.min.css" />
+    </head>
+
+    <body>
+        <!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MPP5WF5" height="0" width="0" style="display: none; visibility: hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- <tdlr-banner level="danger" icon="true" dismissable="true" sticky="true" hidden>
+    <div class="banner-title">Scheduled Maintenance</div>
+    <p>All online applications are currently unavailable. We apologize for any inconvenience.</p>
+</tdlr-banner> -->
+
+<!-- <tdlr-banner level="danger" icon="true" dismissable="true" sticky="true" hidden>
+    <div class="banner-title">Scheduled Maintenance</div>
+    <p>Online applications associated with TULIP are currently unavailable. These include TOOLS, SHEARS, TABS, Online Apps, DPS, Palms, TULIP Dashboard and other online applications. We apologize for any inconvenience.</p>
+</tdlr-banner> -->
+
+<header id="top-navigation-menu" data-twe-navbar-ref>
+    <div id="skip-links">
+        <p><a href="#content" class="sr-only">Skip to main content</a></p>
+    </div>
+
+    <div id="top-row">
+        <a href="/" id="logo-link">
+            <picture>
+                <source srcset="/images/logo/desktop.svg" media="(min-width: 1024px)" width="387" height="38" />
+                <source srcset="/images/logo/mobile.svg" media="(max-width: 1023px)" width="280" height="43" />
+                <img src="/images/logo/mobile.svg" alt="TDLR Logo" />
+            </picture>
+        </a>
+
+        <img src="/images/logo/Texas-America-250-logo.jpg" class="texas-america-250" alt="America's 250th celebration logo for state agencies comprising of a star to the left and the words Texas America 250 stacked to the right." />
+
+        <div id="top-row-menu">
+            <div id="translate-menu-wrapper" class="notranslate" height="18"></div>
+            <span id="translate-pipe"> | </span>
+            <a href="/verify.htm" data-menu="search">Search Everything</a> <span> | </span>
+            <a href="https://www.tdlr.texas.gov/LicenseSearch/" data-menu="search">Verify a License</a>
+            <div class="search-box-container">
+                <form id="site-search-top">
+                    <input type="search" class="search-input" placeholder="Search Website" aria-label="Search Website" />
+                    <button type="submit" class="search-button" data-twe-ripple-init data-twe-ripple-color="light" aria-label="Search">Go</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <div id="offcanvas-menu-trigger">
+        <button type="button" id="offcanvas-menu-button" data-twe-offcanvas-toggle data-twe-target="#offcanvas-menu" aria-controls="offcanvas-menu" data-twe-ripple-init data-twe-ripple-color="light">
+            <span role="heading" aria-level="2">Site Navigation</span>
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <title>click to expand</title>
+                <path d="M4 18L20 18" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                <path d="M4 12L20 12" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+                <path d="M4 6L20 6" stroke="#fff" stroke-width="2" stroke-linecap="round" />
+            </svg>
+        </button>
+    </div>
+
+    <div id="navigation-menu">
+        <div id="primary-nav-menu" role="navigation" aria-label="Main" data-twe-collapse-item>
+            <div class="sr-only" role="heading" aria-level="2">Site Navigation</div>
+            <ul data-twe-navbar-nav-ref>
+                <li><a data-menu="licensing" href="/renew/">Renew a License</a></li>
+                <li><a data-menu="licensing" href="/apply/">Apply for a License</a></li>
+                <li><a data-menu="licensing" href="/manage/">Manage Your License</a></li>
+                <li class="megamenu-item" data-twe-nav-item-ref data-twe-dropdown-ref>
+                    <button type="button" class="megamenu-trigger" data-target="/licenses.htm" data-menu="regulated-industries" data-twe-ripple-init data-twe-ripple-color="light" id="regulated-megamenu" data-twe-dropdown-toggle-ref aria-expanded="false" data-twe-nav-link-ref>
+                        Regulated Industries
+                        <span class="ml-2 w-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" height="20" width="20">
+                                <path fill-rule="evenodd" d="M5.23 7.21a.75.75 0 011.06.02L10 11.168l3.71-3.938a.75.75 0 111.08 1.04l-4.25 4.5a.75.75 0 01-1.08 0l-4.25-4.5a.75.75 0 01.02-1.06z" clip-rule="evenodd" />
+                            </svg>
+                        </span>
+                    </button>
+                    <div class="megamenu-children" aria-labelledby="regulated-megamenu" data-twe-dropdown-menu-ref>
+                        <div class="megamenu-children-inner">
+                            <div class="megamenu-children-grid" role="navigation" aria-label="Regulated Industries">
+                                <div class="sr-only" role="heading" aria-level="3">Regulated Industries Menu</div>
+                                <div>
+                                    <a href="/acr/">Air Conditioning and Refrigeration Contractors</a>
+                                    <a href="/ab/">Elimination of Architectural Barriers</a>
+                                    <a href="/at/">Athletic Trainers</a>
+                                    <a href="/auc/">Auctioneers</a>
+                                    <a href="/barbering-and-cosmetology/">Barbering and Cosmetology</a>
+                                    <a href="/bhv/">Behavior Analysts</a>
+                                    <a href="/boilers/">Boiler Safety</a>
+                                    <a href="/charitable-bingo/">Charitable Bingo</a>
+                                    <a href="/ceo/">Code Enforcement Officers</a>
+                                    <a href="/sports/">Combative Sports</a>
+                                    <a href="/court-ordered/">Court-Ordered Education Programs</a>
+                                </div>
+                                <div>
+                                    <a href="/diet/">Dietitians</a>
+                                    <a href="/driver/">Driver Education and Safety</a>
+                                    <a href="/dtp/">Dyslexia Therapy</a>
+                                    <a href="/electricians/">Electricians</a>
+                                    <a href="/ev-charging/">Electric Vehicle Charging Stations</a>
+                                    <a href="/elevator/">Elevator / Escalator Safety</a>
+                                    <a href="/hearing/">Hearing Instrument Fitters and Dispensers</a>
+                                    <a href="/ihb/">Industrialized Housing and Buildings</a>
+                                    <a href="/las/">Laser Hair Removal</a>
+                                    <a href="/bre/">Licensed Breeders</a>
+                                </div>
+                                <div>
+                                    <a href="/mas/">Massage Therapy</a>
+                                    <a href="/midwives/">Midwives</a>
+                                    <a href="/mld/">Mold Assessors and Remediators</a>
+                                    <a href="/fmq/">Motor Fuel Metering and Quality</a>
+                                    <a href="/mot/">Motorcycle and ATV Operator Safety</a>
+                                    <a href="/op/">Orthotists and Prosthetists</a>
+                                    <a href="/pod/">Podiatry</a>
+                                    <a href="/peo/">Professional Employer Organizations</a>
+                                    <a href="/ptc/">Property Tax Consultants</a>
+                                    <a href="/taxprof/">Property Tax Professionals</a>
+                                    <a href="/residential-solar-retailers/">Residential Solar Retailers</a>
+                                </div>
+                                <div>
+                                    <a href="/san/">Sanitarians</a>
+                                    <a href="/scp/">Service Contract Providers</a>
+                                    <a href="/slpa/">Speech-Language Pathologists and Audiologists</a>
+                                    <a href="/lottery/">Texas Lottery</a>
+                                    <a href="/towing/">Tow Trucks, Operators and VSFs</a>
+                                    <a href="/tnc/">Transportation &amp; Delivery Network Companies</a>
+                                    <a href="/parts/">Used Auto Parts Recyclers</a>
+                                    <a href="/wwd/">Water Well Drillers and Pump Installers</a>
+                                    <a href="/weather/">Weather Modification</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <li><a data-menu="licensing" href="/tdlrce.htm">Continuing Education</a></li>
+                <li><a data-menu="contact" href="/help">Contact Us</a></li>
+            </ul>
+        </div>
+        <div id="secondary-nav-menu" role="navigation" aria-label="Secondary">
+            <ul>
+                <li><a data-menu="agency" href="/laws-rules/">Laws and Rules</a></li>
+                <li><a data-menu="agency" href="/meetings/">Open Meetings</a></li>
+                <li><a data-menu="agency" href="/careers">Careers</a></li>
+                <li><a data-menu="agency" href="/commissioners.htm">Commission</a></li>
+                <li><a data-menu="complaints" href="/complaints-and-enforcement/">Complaints and Enforcement</a></li>
+                <li><a data-menu="complaints" href="/lawful-presence.htm">Lawful Presence</a></li>
+                <li><a data-menu="agency" href="https://public.govdelivery.com/accounts/TXDLR/subscriber/new">Email Updates</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="offcanvas-menu" tabindex="-1" data-twe-offcanvas-init>
+        <div id="offcanvas-header">
+            <h2 aria-label="Site Navigaton Modal Window">Site Navigation</h2>
+            <button id="offcanvas-close-button" type="button" aria-label="close site navigation menu" data-twe-offcanvas-dismiss>
+                <span id="offcanvas-svg-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-6 w-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </span>
+            </button>
+        </div>
+
+        <div id="offcanvas-nav-wrapper">
+            <!-- mobile app drawer renders here -->
+        </div>
+    </div>
+</header>
+
+        <div id="content-area">
+            <aside>
+    <div id="page-sidebar">
+        <tdlr-sidebar label="Parent Taught Driver Education">
+
+            <div class="sidebar-item">
+                <a href="/driver/education/parent-taught/">Getting Started</a>
+            </div>
+
+            <div class="sidebar-item">
+                <a href="/driver/education/parent-taught/parent-instructors.htm">Become an Instructor</a>
+            </div>
+
+            <div class="sidebar-item">
+                <a href="/driver/education/parent-taught/classroom-instruction.htm">Classroom Instruction</a>
+            </div>
+
+            <div class="sidebar-item">
+                <a href="/driver/education/parent-taught/learner-license.htm">Learner License</a>
+            </div>
+
+            <div class="sidebar-item">
+                <a href="/driver/education/parent-taught/behind-the-wheel.htm">Behind the Wheel Instruction</a>
+            </div>
+
+            <div class="sidebar-item">
+                <a href="/driver/education/parent-taught/provisional-license.htm">Provisional License</a>
+            </div>
+            
+        </tdlr-sidebar>
+
+        <div id="sidecards">
+
+            <div>
+                <div class="sidecard-group" id="sidebar-contact">
+                    <div class="sidecard-group-title">Contact Information</div>
+
+                    <div class="sidecard-item">
+                        <div class="sidecard-icon">
+                            <img src="/images/sidebar-icons/help-icon.svg" loading="lazy" alt="" height="48" width="48" />
+                        </div>
+                        <div class="sidecard-item-content">
+                            <p>For more information about Driver Education and Safety, <a href="/help/">contact customer service</a>.</p>
+                            <p>
+                                Texas Department of Licensing and Regulation<br />
+                                Driver Education and Safety<br />
+                                PO Box 12157<br />
+                                Austin, TX 78711
+                            </p>
+                            <p>
+                                (800) 803-9202 [in state only]<br />
+                                (512) 463-6599<br />
+                                
+                                Relay Texas-TDD: (800) 735-2989
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</aside>
+            <main id="content">
+                <div id="breadcrumbs">
+                    <a href="/driver/">Driver Education and Safety</a> <span>&gt;</span> <a href="/driver/education/">Driver Education</a> <span>&gt;</span>
+                    <a href="/driver/education/parent-taught/">Parent Taught</a>
+                </div>
+
+                <h1>Am I Eligible to be a Parent-Taught Instructor?</h1>
+
+                <p>Parent-taught driver education in Texas allows a parent, stepparent, grandparent, step-grandparent, foster parent or legal guardian to teach their teenager how to drive. Parents and legal guardians may also designate an alternate instructor who must meet the same eligibility requirements. <strong>Parent taught instructors may not charge a fee for conducting the course.</strong></p>
+
+                <p>Answer the questions below to determine if you&rsquo;re eligible to be an instructor.</p>
+
+                <form id="eligibility">
+                    <div id="q1" class="question">
+                        <p><label for="s1">1. What is your relationship to the student?</label></p>
+                        <select name="" id="s1" required>
+                            <option value="">-- Select an Answer --</option>
+                            <option value="true">Parent or Step-Parent</option>
+                            <option value="true">Grandparent or Step-Grandparent</option>
+                            <option value="true">Foster Parent</option>
+                            <option value="true">Legal Guardian</option>
+                            <option value="true">Judge with Jurisdiction Over the Student</option>
+                            <option value="true">Individual designated by Parent</option>
+                            <option value="true">Individual designated by Legal Guardian</option>
+                            <option value="true">Individual designated by Judge with Jurisdiction Over the Student</option>
+                            <option value="false">Individual with Power of Attorney</option>
+                            <option value="false">Relative</option>
+                            <option value="false">Friend</option>
+                            <option value="false">Other</option>
+                        </select>
+                    </div>
+
+                    <div id="q2" class="question">
+                        <p><label for="s2">2. Are you at least 25 years of age?</label></p>
+                        <select name="" id="s2" required>
+                            <option value="">-- Select an Answer --</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+
+                    <div id="q3" class="question">
+                        <p><label for="s3">3. Have you held a driver’s license for at least seven years?</label></p>
+                        <select name="" id="s3" required>
+                            <option value="">-- Select an Answer --</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+
+                    <div id="q4" class="question">
+                        <p><label for="s4">4. Have you continuously held a valid driver's license for the past three years?</label></p>
+                        <select name="" id="s4" required>
+                            <option value="">-- Select an Answer --</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
+                        </select>
+                    </div>
+
+                    <div id="q5" class="question">
+                        <p><label for="s5">5. Have you ever been convicted of criminally negligent homicide?</label></p>
+                        <select name="" id="s5" required>
+                            <option value="">-- Select an Answer --</option>
+                            <option value="false">Yes</option>
+                            <option value="true">No</option>
+                        </select>
+                    </div>
+
+                    <div id="q6" class="question">
+                        <p><label for="s6">6. Have you been convicted of DWI within the past seven years?</label></p>
+                        <select name="" id="s6" required>
+                            <option value="">-- Select an Answer --</option>
+                            <option value="false">Yes</option>
+                            <option value="true">No</option>	
+                        </select>
+                    </div>
+
+                    <div id="q7" class="question">
+                        <p><label for="s7">7. Has your driver's license been suspended, revoked or forfeited because of traffic violations during the past three years?</label></p>
+                        <select name="" id="s7" required>
+                            <option value="">-- Select an Answer --</option>
+                            <option value="false">Yes</option>
+                            <option value="true">No</option>
+                        </select>
+                    </div>
+
+                    <div id="q8" class="question">
+                        <p><label for="s8">8. Have you been involved in two or more accidents have you that were deemed to be your fault in the past three years?</label></p>
+                        <select name="" id="s8" required>
+                            <option value="">-- Select an Answer --</option>
+                            <option value="false">Yes</option>
+                            <option value="true">No</option>
+                        </select>
+                    </div>
+					
+                    <div id="q9" class="question">
+                        <p><label for="s9">9. Have you had three or more moving violations in the past three years?</label></p>
+                        <select name="" id="s9" required>
+                            <option value="">-- Select an Answer --</option>
+                            <option value="false">Yes</option>
+                            <option value="true">No</option>
+                        </select>
+                    </div>
+
+                    <tdlr-button color="secondary" id="submit" type="submit">Submit</tdlr-button>
+                </form>
+				
+				<div id="responses">
+					<div class="response"></div>
+				</div>
+				
+				<!--
+                <div id="responses">
+                    <div class="response" id="response-1" hidden>
+                        <h2>You are not Eligible to be a Parent-Taught Instructor</h2>
+
+                        <tdlr-alert level="danger" icon="true"> The answers you have provided indicate that you are not eligible to participate as in instructor in the parent-taught driver education program. </tdlr-alert>
+
+                        <div id="reason-why" hidden></div>
+                        <h3>What's Next?</h3>
+                        <p>Your student still has options to:</p>
+                        <ul>
+                            <li>take a course at their public high-school, it it&rsquo;s offered</li>
+                            <li>take a class with a <a href="/driver/education/providers/search/">driver education provider</a></li>
+                            <li>take a parent-taught course with another parent, grandparent or legal guardian who may be eligible</li>
+                        </ul>
+                        <p>If you believe that this may be in error, please <a href="https://ga.tdlr.texas.gov:1443/form/education">contact the Education and Examination division</a> and we'll take another look at what's going on.</p>
+                    </div>
+
+                    <div class="response" id="response-2" hidden>
+                        <h2>You can Teach Parent-Taught Driver Education!</h2>
+                        <tdlr-alert level="success" icon="true"> Congratulations! It looks like you're qualified to participate as in instructor in the parent-taught driver education program. </tdlr-alert>
+                        <p>When you&rsquo;re ready to begin, return to the <a href="/driver/education/parent-taught/parent-instructors.htm#record">How to Become a Parent-Taught Driver Education Instructor</a> page to get a copy of your driving record an apply for instructor authorization.</p>
+                    </div>
+
+                    <div class="response" id="response-3" hidden>
+                        <h2>Maybe. It Depends.</h2>
+                        <tdlr-alert level="warning" icon="true">
+                            You <em><strong>might</strong> </em>be qualified to participate as in instructor in the parent-taught driver education program.
+                        </tdlr-alert>
+                        <p>Because you have held a Texas issued driver&rsquo;s license for less than three years, you will need to provide a copy of your driving history from any other states where you have held a driver&rsquo;s license.</p>
+                        <p>The total length of your driving history (including your Texas driver&rsquo;s license) must equal at least three years.</p>
+                        <p>When you&rsquo;re ready to begin, see the <a href="/driver/education/parent-taught/">getting started with parent-taught driver education</a> page.</p>
+                    </div>
+
+                    <div class="response" id="response-4" hidden>
+                        <tdlr-alert level="info" icon="true">
+                            <p>Be aware that any future moving violations you are convicted of can invalidate your instructor authorization.</p>
+                            <p>Instructors may only have one moving violation that resulted in an accident, or two moving violations that did not result in an accident within the past three years.</p>
+                            <p>DPS will examine your driving record when the student applies for a learner license and again when they apply for the provisional license. If it is found that you have become ineligible to be an instructor, the license application will be denied and any hours you taught after becoming ineligible will also be deemed invalid.</p>
+                        </tdlr-alert>
+                    </div>
+                </div>
+				-->
+            </main>
+        </div>
+        <footer>
+    <div id="footer-body">
+        <div id="footer-links">
+            <!-- About section -->
+            <div id="footer-links-about">
+                <div class="footer-section-header">About This Site</div>
+                <p><a href="/disclaimer.htm#Copyright">Copyright Statement</a></p>
+                <p><a href="/disclaimer.htm">Privacy Policy</a></p>
+                <p><a href="/disclaimer.htm">Security Policy</a></p>
+                <p><a href="/disclaimer.htm#PublicInfoPolicy">Open Records Requests</a></p>
+                <p><a href="/digital-accessibility.htm">Accessibility Policy</a></p>
+                <p><a href="/disclaimer.htm#link">Content Linking Policy</a></p>
+            </div>
+            <!-- Texas Government section -->
+            <div id="footer-links-govt">
+                <div class="footer-section-header">Texas Government</div>
+                <p><a href="/compact.htm">Compact with Texans</a></p>
+                <p><a href="/disclaimer.htm#fraud">Report Fraud, Waste, or Abuse</a></p>
+                <p><a href="https://www.texas.gov/" target="_blank">Texas.gov</a></p>
+                <p><a href="https://www.tsl.texas.gov/trail/index.html" target="_blank">Statewide Search</a></p>
+                <p><a href="https://gov.texas.gov/organization/hsgd" target="_blank">Texas Homeland Security</a></p>
+                <p><a href="https://ga.tdlr.texas.gov:1443/form/Subpoena">Subpoenas</a></p>
+            </div>
+            <!-- Contact section -->
+            <div id="footer-contact-info">
+                <div class="footer-section-header">Contact</div>
+                <div id="footer-contact-inner">
+                    <div class="footer-contact-col">
+                        <p>
+                            <strong>Mailing Address:</strong><br />
+                            P.O. Box 12157<br />
+                            Austin, TX 78711
+                        </p>
+                        <p>
+                            <strong>Main Office:</strong><br />
+                            <a href="https://goo.gl/maps/KpBkMPjXKVAixp1H8" target="_blank">920 Colorado St.<br />Austin, Texas 78701</a>
+                        </p>
+                    </div>
+
+                    <div class="footer-contact-col">
+                        <!--<p>
+                            <strong>Need Help?</strong><br />
+                            <a href="https://ga.tdlr.texas.gov:1443/form/csgeneralinquiry">Send Us a Message</a>
+                        </p>-->
+                        <p>
+                            <strong>Call Us</strong><br />
+                            <a href="tel:512-463-6599">(512) 463-6599</a>
+                            <br />
+                            <a href="tel:800-803-9202">(800) 803-9202</a>
+                        </p>
+                        <p>
+                            <strong>Relay Texas-TDD</strong><br />
+                            <a href="tel:800-735-7989">(800) 735-2989</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="bottom-row">
+        <div id="official-website">
+            <img src="/images/footer/tx-flag-sm.png" alt="" width="37" height="25" loading="lazy" />
+            <span><a href="https://www.tdlr.texas.gov">tdlr.texas.gov</a> is an official website of the State of Texas</span>
+        </div>
+        <div id="footer-social-icons">
+            <a href="https://www.facebook.com/TDLRLicense/" target="_blank">
+                <img src="/images/footer/facebook.svg" alt="facebook" height="16" width="16" loading="lazy" />
+            </a>
+
+            <a href="https://twitter.com/tdlrlicense/" target="_blank">
+                <img src="/images/footer/twitter.svg" alt="twitter" height="16" width="16" loading="lazy" />
+            </a>
+
+            <a href="https://www.instagram.com/tdlrlicense/" target="_blank">
+                <img src="/images/footer/instagram.svg" alt="instagram" height="16" width="16" loading="lazy" />
+            </a>
+
+            <a href="https://www.linkedin.com/company/texas-department-of-licensing-and-regulation/" target="_blank">
+                <img src="/images/footer/linkedin.svg" alt="linkedin" height="16" width="16" loading="lazy" />
+            </a>
+        </div>
+    </div>
+</footer>
+
+    </body>
+</html>

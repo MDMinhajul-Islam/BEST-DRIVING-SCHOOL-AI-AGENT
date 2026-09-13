@@ -1,0 +1,56 @@
+# Course / package / pricing audit
+
+Audit date: 2026-09-13. Prices are verified against preserved website evidence dated in `source_snapshot_dates`; no live price refresh was performed. Recheck before production quoting.
+
+```text
+Website programs: 5 (purchasable program families; four service pages)
+Website courses: 6 (course pages; website also calls five program cards “courses”)
+Website package options: 13
+Previous extracted packages: 13
+Canonical verified packages: 13
+Prices verified: 13/13
+Marketing labels verified: 4 labeled packages/13 packages checked
+Packages with prerequisites: 13
+Packages requiring live availability: 12
+Package price conflicts: 0
+Missing data: 130 null included-feature fields, plus separately documented operational unknowns
+Raw package-looking records: 91
+Canonical unique packages: 13
+Duplicate observations consolidated: 78
+Duplicate canonical records removed: 0
+Website/structured package count match: YES
+```
+
+| Program | Course | Package | Base price | Original | Discount | Marketing label | Included hours | Included services | Prerequisites | Location | Source | Scraped correctly? | Issue |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+| Teen Driver Education | Teen Driver Education Package | 24 Hr Classroom + Driving Package | 399.0 | None | None | Best selling | classroom_hours: 24, driving_hours: 7, observation_hours: 7 | 24 hours of classroom instruction; 7 hours behind the wheel with a licensed instructor; 7 hours of in-car observation; DE-964 certificate on completion | A Texas learner permit is needed before behind-the-wheel hours begin, not before enrolling in the classroom portion. | in_person | https://bestdrivingschool.us/driving-courses/teen-24-hour-class-room-and-driving-package | YES after audit | Missing separate Best selling aggregation corrected |
+| Teen Driver Education | Teen Behind-the-Wheel Lessons | Behind the Wheel Only (7 & 7) | 350.0 | None | None | None shown | classroom_hours: 0, driving_hours: 7, observation_hours: 7 | 7 hours behind the wheel with a licensed instructor; 7 hours of in-car observation; Dual-control vehicle | A Texas learner permit, and completed classroom driver education.; Student must have a valid Texas Learner License/Permit before beginning behind-the-wheel training. After enrollment, the driving schedule will be sent via email. | in_person | https://bestdrivingschool.us/driving-courses/teen-behind-the-wheel-only | YES after audit | Hierarchy/price/fee fields normalized; no missing package |
+| Parent-Taught Log Driving Hours | Parent-Taught Log Driving Hours | 10 hours | 450.0 | None | None | None shown | practice_hours: 10 | Dual-control vehicle; TDLR-licensed instructor; Hours logged for the parent-taught program | A Texas learner permit, and an active parent-taught driver education program. | in_person | https://bestdrivingschool.us/driving-courses/log-driving-hours | YES after audit | Hierarchy/price/fee fields normalized; no missing package |
+| Parent-Taught Log Driving Hours | Parent-Taught Log Driving Hours | 15 hours | 675.0 | None | None | None shown | practice_hours: 15 | Dual-control vehicle; TDLR-licensed instructor; Hours logged for the parent-taught program | A Texas learner permit, and an active parent-taught driver education program. | in_person | https://bestdrivingschool.us/driving-courses/log-driving-hours | YES after audit | Hierarchy/price/fee fields normalized; no missing package |
+| Parent-Taught Log Driving Hours | Parent-Taught Log Driving Hours | 30 hours | 1350.0 | None | None | Best selling | practice_hours: 30 | Dual-control vehicle; TDLR-licensed instructor; Hours logged for the parent-taught program | A Texas learner permit, and an active parent-taught driver education program. | in_person | https://bestdrivingschool.us/driving-courses/log-driving-hours | YES after audit | Hierarchy/price/fee fields normalized; no missing package |
+| Adult 6 Hours Online Permit Class | Texas Adult Permit Class, Online | 6-Hour Online Permit Class | 19.99 | 70.0 | 50.01 | None shown |  | Six hours of TDLR-approved adult driver education; Taken online, at your own pace; ADE-1317 certificate on completion | Applicants aged 18 and over applying for a first Texas driver license. | online | https://bestdrivingschool.us/driving-courses/adult-6-hours-online-permit-class | YES after audit | Hierarchy/price/fee fields normalized; no missing package |
+| 3rd Party Road Test in Plano | DPS Road Test in Plano | Road test only | 100.0 | None | None | Best selling |  | Official Texas road test, administered here in Plano; A DPS-authorized third party examiner; Eligible applications submitted through the DPS Third-Party Skills Testing Submission Portal | A valid Texas learner permit or restricted license, a printed Impact Texas Drivers certificate dated within 90 days, and the driver education certificate for the course you completed.; Must have a valid learner license (permit). | Plano | https://bestdrivingschool.us/driving-courses/road-test | YES after audit | Hierarchy/price/fee fields normalized; no missing package |
+| 3rd Party Road Test in Plano | DPS Road Test in Plano | Practice session + road test | 140.0 | None | None | None shown |  | Official Texas road test, administered here in Plano; A DPS-authorized third party examiner; Eligible applications submitted through the DPS Third-Party Skills Testing Submission Portal | A valid Texas learner permit or restricted license, a printed Impact Texas Drivers certificate dated within 90 days, and the driver education certificate for the course you completed.; Must have a valid learner license (permit). | Plano | https://bestdrivingschool.us/driving-courses/road-test | YES after audit | Hierarchy/price/fee fields normalized; no missing package |
+| Adult Driving Lessons in Plano | Adult Driving Lessons in Plano | 2 hours | 180.0 | None | None | None shown | driving_hours: 2 | Dual-control vehicle; TDLR-licensed instructor; One-to-one instruction, never a shared lesson; Flexible scheduling, including weekends | A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first.; Must have a valid Learner License/Permit. | Plano | https://bestdrivingschool.us/driving-courses/adult-driving-sessions | YES after audit | Hierarchy/price/fee fields normalized; no missing package |
+| Adult Driving Lessons in Plano | Adult Driving Lessons in Plano | 4 hours | 246.0 | 270.0 | 24.0 | None shown | driving_hours: 4 | Dual-control vehicle; TDLR-licensed instructor; One-to-one instruction, never a shared lesson; Flexible scheduling, including weekends | A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first.; Must have a valid Learner License/Permit. | Plano | https://bestdrivingschool.us/driving-courses/adult-driving-sessions | YES after audit | Hierarchy/price/fee fields normalized; no missing package |
+| Adult Driving Lessons in Plano | Adult Driving Lessons in Plano | 6 hours | 328.0 | 360.0 | 32.0 | None shown | driving_hours: 6 | Dual-control vehicle; TDLR-licensed instructor; One-to-one instruction, never a shared lesson; Flexible scheduling, including weekends | A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first.; Must have a valid Learner License/Permit. | Plano | https://bestdrivingschool.us/driving-courses/adult-driving-sessions | YES after audit | Hierarchy/price/fee fields normalized; no missing package |
+| Adult Driving Lessons in Plano | Adult Driving Lessons in Plano | 8 hours | 405.0 | 450.0 | 45.0 | None shown | driving_hours: 8 | Dual-control vehicle; TDLR-licensed instructor; One-to-one instruction, never a shared lesson; Flexible scheduling, including weekends | A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first.; Must have a valid Learner License/Permit. | Plano | https://bestdrivingschool.us/driving-courses/adult-driving-sessions | YES after audit | Hierarchy/price/fee fields normalized; no missing package |
+| Adult Driving Lessons in Plano | Adult Driving Lessons in Plano | 10 hours | 495.0 | 550.0 | 55.0 | Best selling | driving_hours: 10 | Dual-control vehicle; TDLR-licensed instructor; One-to-one instruction, never a shared lesson; Flexible scheduling, including weekends | A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first.; Must have a valid Learner License/Permit. | Plano | https://bestdrivingschool.us/driving-courses/adult-driving-sessions | YES after audit | Missing separate Best selling aggregation corrected |
+
+## Interpretation and corrections
+
+Teen Driver Education is one program with two course pages/packages, not unrelated programs. Adult education and driving lessons are separate offerings even at the same six-hour duration. Road Test and Road test only, and Practice + Road Test and Practice session + road test, are documented website aliases. Existing opaque IDs remain as legacy IDs; readable catalog IDs are independent of price.
+
+The 91 source observations contain repeated homepage, service and location cards plus 13 course-page options. Mobile selects and selected displays are alternative presentations, not extra offerings. Previous 13 canonical packages were already correct. No price disagreements were found among option-bound observations across the saved pages. Unbound narrative/per-hour amounts remain separate; no range was used as a package price.
+
+Separate label aggregation restores Best selling for teen full and adult 10 hours. Discounts and labels now have independent fields. The adult online $70 is an original/crossed-out price, not a competing current price. Online 3% non-refundable charges remain separate; no tax/deposit or all-in checkout total is invented.
+
+## Schedule and booking
+
+Self-paced adult online education needs course access rather than a timed lesson slot. Twelve in-person options need live scheduling at the relevant stage. Walk-ins welcome is a school statement, not guaranteed capacity. Date-specific teen batch Saturdays–Sundays and 3pm–5pm text belongs to its historical batch, not a universal recurring schedule. Office hours and generic weekend scheduling do not prove available slots. Backend contracts have not been inspected.
+
+## Human review
+
+Confirm package-specific practice duration, pickup/dropoff, all-in checkout fees, location/instructor assignment, availability rules, multi-session scheduling, course-access/payment timing and cancellation/rescheduling policies. Website prerequisites remain business statements flagged for official verification; Phase B rules are unchanged. The road-test page’s teen age heading must not override official age/pathway guidance.
+
+See [before-correction audit](course_package_pricing_audit_before.md), [package catalog](../knowledge/package_catalog.md) and [schedule distinction](../docs/schedule_vs_availability.md).

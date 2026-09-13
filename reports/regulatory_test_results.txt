@@ -1,0 +1,32 @@
+Command: .venv\Scripts\python.exe -m unittest discover -s tests -v
+Execution date: 2026-09-13
+test_longest_robots_rule (test_discovery.DiscoveryTests.test_longest_robots_rule) ... ok
+test_scope_and_encoded_private_paths (test_discovery.DiscoveryTests.test_scope_and_encoded_private_paths) ... ok
+test_sitemap_namespace_and_index (test_discovery.DiscoveryTests.test_sitemap_namespace_and_index) ... ok
+test_age_limited_education_statements_are_flagged (test_extraction.ExtractionTests.test_age_limited_education_statements_are_flagged) ... ok
+test_blocked_redirect_never_requests_destination (test_extraction.ExtractionTests.test_blocked_redirect_never_requests_destination) ... ok
+test_cleaning_preserves_packages_hidden_answers_and_table (test_extraction.ExtractionTests.test_cleaning_preserves_packages_hidden_answers_and_table) ... ok
+test_options_not_just_selected_price_and_no_inference (test_extraction.ExtractionTests.test_options_not_just_selected_price_and_no_inference) ... ok
+test_price_conflict_is_not_silently_chosen (test_extraction.ExtractionTests.test_price_conflict_is_not_silently_chosen) ... ok
+test_specific_empty_disallow_group (test_extraction.ExtractionTests.test_specific_empty_disallow_group) ... ok
+test_additive_document_update_is_idempotent (test_regulatory.RegulatoryTests.test_additive_document_update_is_idempotent) ... ok
+test_business_renderer_preserves_phase_b_extensions (test_regulatory.RegulatoryTests.test_business_renderer_preserves_phase_b_extensions) ... ok
+test_change_detection_distinguishes_removal_and_redirect (test_regulatory.RegulatoryTests.test_change_detection_distinguishes_removal_and_redirect) ... ok
+test_changed_source_does_not_approve_rules_automatically (test_regulatory.RegulatoryTests.test_changed_source_does_not_approve_rules_automatically) ... ok
+test_conflict_generation_preserves_historical_issues (test_regulatory.RegulatoryTests.test_conflict_generation_preserves_historical_issues) ... ok
+test_conflicting_rules_are_blocked (test_regulatory.RegulatoryTests.test_conflicting_rules_are_blocked) ... ok
+test_evidence_hash_mismatch_rejected (test_regulatory.RegulatoryTests.test_evidence_hash_mismatch_rejected) ... ok
+test_non_government_source_cannot_be_authoritative (test_regulatory.RegulatoryTests.test_non_government_source_cannot_be_authoritative) ... ok
+test_phase_a_master_data_preserved (test_regulatory.RegulatoryTests.test_phase_a_master_data_preserved) ... ok
+test_public_information_only_and_questionnaire_labels (test_regulatory.RegulatoryTests.test_public_information_only_and_questionnaire_labels) ... ok
+test_registry_categories_and_unique_ids (test_regulatory.RegulatoryTests.test_registry_categories_and_unique_ids) ... ok
+test_schema_and_attributed_archived_evidence (test_regulatory.RegulatoryTests.test_schema_and_attributed_archived_evidence) ... ok
+test_schema_rejects_invalid_requirement_type (test_regulatory.RegulatoryTests.test_schema_rejects_invalid_requirement_type) ... ok
+test_service_map_never_requires_a_school_package (test_regulatory.RegulatoryTests.test_service_map_never_requires_a_school_package) ... ok
+test_unknown_pathway_reference_rejected (test_regulatory.RegulatoryTests.test_unknown_pathway_reference_rejected) ... ok
+test_verified_rule_requires_source_and_evidence (test_regulatory.RegulatoryTests.test_verified_rule_requires_source_and_evidence) ... ok
+
+----------------------------------------------------------------------
+Ran 25 tests in 1.289s
+
+OK

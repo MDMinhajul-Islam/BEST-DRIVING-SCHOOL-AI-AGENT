@@ -92,6 +92,13 @@ def process(metadata, guard, discovery_warnings):
           'conflicts': conflicts, 'unknowns': unknowns,
           'scope': {'retell_workflow_modified': False, 'operational_data_collected': False,
                     'requires_manual_review_before_upload': True}}
+    # Phase B is a separately curated layer; a business refresh must retain its
+    # reference without reclassifying historical school guidance as regulation.
+    existing_path = ROOT / 'data/structured/knowledge_base.json'
+    if existing_path.exists():
+        existing = json.loads(existing_path.read_text(encoding='utf-8'))
+        if 'regulatory_reference' in existing:
+            kb['regulatory_reference'] = existing['regulatory_reference']
     for key, value in {'business': business, 'services': services, 'courses': courses, 'pricing': pricing,
                        'faq': kb['faqs'], 'policies': kb['policies'], 'locations': kb['locations'],
                        'links': all_data['links'], 'page_metadata': metadata, 'conflicts': conflicts,

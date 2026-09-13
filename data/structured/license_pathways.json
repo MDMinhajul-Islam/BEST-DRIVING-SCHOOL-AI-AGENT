@@ -1,0 +1,1202 @@
+{
+  "schema_version": "1.0",
+  "research_date": "2026-09-13",
+  "pathways": [
+    {
+      "pathway_id": "teen_first_time",
+      "caller_situation": "First-time teen",
+      "status": "REVIEW",
+      "readiness_scope": "General pathway explanation only; READY does not authorize booking, establish individual eligibility or certify a particular provider.",
+      "required_inputs": [
+        "age",
+        "first_license",
+        "current_license_type",
+        "texas_residency_status",
+        "driver_education_status",
+        "learner_license_status",
+        "parent_taught_status",
+        "road_test_goal",
+        "license_issuing_jurisdiction",
+        "license_expiry",
+        "impact_program",
+        "impact_certificate_date"
+      ],
+      "conditions": {
+        "selection": "Match caller status; clarify before choosing this pathway."
+      },
+      "rule_ids": [
+        "TX-R005",
+        "TX-R006",
+        "TX-R007",
+        "TX-R013",
+        "TX-R009",
+        "TX-R010",
+        "TX-R014",
+        "TX-R015",
+        "TX-R016",
+        "TX-R017",
+        "TX-R018"
+      ],
+      "verified_steps": [
+        {
+          "order": 1,
+          "rule_id": "TX-R005",
+          "conditions": {
+            "age_max": 17,
+            "first_license": true
+          },
+          "requirements": [
+            "Classroom education may begin at 14; a learner license requires age 15 or older."
+          ]
+        },
+        {
+          "order": 3,
+          "rule_id": "TX-R007",
+          "conditions": {
+            "age_min": 15,
+            "age_max": 17,
+            "method": "concurrent"
+          },
+          "requirements": [
+            "Complete the first six classroom hours and obtain the learner-stage education certificate before applying to DPS."
+          ]
+        },
+        {
+          "order": 4,
+          "rule_id": "TX-R013",
+          "conditions": {
+            "age_max": 17,
+            "learner_application": true
+          },
+          "requirements": [
+            "Bring the applicable DE-964/DEE-964/DE-964E education evidence and required identity, residency, lawful-status and SSN documentation. Parent/guardian presence or an accepted waiver/notarized application is required as specified by DPS."
+          ]
+        },
+        {
+          "order": 5,
+          "rule_id": "TX-R009",
+          "conditions": {
+            "teen_learner_license": true
+          },
+          "requirements": [
+            "Drive only with a licensed adult aged at least 21 in the front passenger seat."
+          ]
+        },
+        {
+          "order": 6,
+          "rule_id": "TX-R010",
+          "conditions": {
+            "age_max": 17,
+            "texas_learner_license": true,
+            "hardship_exception": false
+          },
+          "requirements": [
+            "Hold the learner license at least six months unless turning 18 first. Suspension extends the holding period by the suspension duration."
+          ]
+        },
+        {
+          "order": 7,
+          "rule_id": "TX-R014",
+          "conditions": {
+            "teen_course": true
+          },
+          "requirements": [
+            "Complete seven hours driving instruction, seven observation hours, and 30 additional supervised practice hours including ten at night. A school package is not automatically all 44 hours."
+          ]
+        },
+        {
+          "order": 8,
+          "rule_id": "TX-R015",
+          "conditions": {
+            "teen_course": true,
+            "practice_hours": true
+          },
+          "requirements": [
+            "The practice supervisor must be 21+, licensed for at least a year; the parent/guardian certifies the 30-hour practice log. Follow the approved course instructions for other logs."
+          ]
+        },
+        {
+          "order": 9,
+          "rule_id": "TX-R016",
+          "conditions": {
+            "age_min": 16,
+            "age_max": 17,
+            "hardship_exception": false
+          },
+          "requirements": [
+            "Complete classroom and in-car education, the applicable learner holding period and ITTD within 90 days, then pass the skills test; DPS decides provisional issuance."
+          ]
+        },
+        {
+          "order": 10,
+          "rule_id": "TX-R017",
+          "conditions": {
+            "age_max": 17,
+            "provisional_license": true
+          },
+          "requirements": [
+            "No more than one non-family passenger under 21. No driving midnight–5 a.m. except work, school activities or emergencies."
+          ]
+        },
+        {
+          "order": 11,
+          "rule_id": "TX-R018",
+          "conditions": {
+            "age_max": 17,
+            "learner_or_provisional": true
+          },
+          "requirements": [
+            "Cellphone use, including hands-free, is prohibited while driving except an emergency under the cited teen guidance."
+          ]
+        }
+      ],
+      "blocked_rule_ids": [
+        "TX-R006"
+      ],
+      "possible_school_services": [
+        "TX-M-31f2787781f286ae101c",
+        "TX-M-5e69930bdd20361a21d2",
+        "TX-M-78fa12f00f02284bb032",
+        "TX-M-b54f626c4610ec1c1925",
+        "TX-M-f8aa20bffd9660b75341"
+      ],
+      "official_sources": [
+        "TX-DPS-002",
+        "TX-DPS-004",
+        "TX-DPS-016",
+        "TX-TDLR-001",
+        "TX-TDLR-002",
+        "TX-TDLR-005",
+        "TX-TDLR-006",
+        "TX-TDLR-007",
+        "TX-TDLR-008",
+        "TX-TDLR-P03"
+      ],
+      "unknown_inputs_block_individual_qualification": true
+    },
+    {
+      "pathway_id": "adult_first_time_18_24",
+      "caller_situation": "First-time adult ages 18–24",
+      "status": "READY",
+      "readiness_scope": "General pathway explanation only; READY does not authorize booking, establish individual eligibility or certify a particular provider.",
+      "required_inputs": [
+        "age",
+        "first_license",
+        "current_license_type",
+        "texas_residency_status",
+        "driver_education_status",
+        "learner_license_status",
+        "parent_taught_status",
+        "road_test_goal",
+        "license_issuing_jurisdiction",
+        "license_expiry",
+        "impact_program",
+        "impact_certificate_date"
+      ],
+      "conditions": {
+        "age_min": 18,
+        "age_max": 24,
+        "first_license": true
+      },
+      "rule_ids": [
+        "TX-R001",
+        "TX-R003",
+        "TX-R034",
+        "TX-R030",
+        "TX-R031",
+        "TX-R032",
+        "TX-R004"
+      ],
+      "verified_steps": [
+        {
+          "order": 1,
+          "rule_id": "TX-R001",
+          "conditions": {
+            "age_min": 18,
+            "age_max": 24,
+            "first_texas_license": true,
+            "valid_out_of_state_exchange": false
+          },
+          "requirements": [
+            "Complete six-hour adult driver education; full teen-course alternatives are described by TDLR."
+          ]
+        },
+        {
+          "order": 2,
+          "rule_id": "TX-R003",
+          "conditions": {
+            "first_license": true,
+            "age_min": 18
+          },
+          "requirements": [
+            "Apply at DPS, provide required documents and biometrics, pay the application fee, and pass vision, knowledge and driving skills requirements unless an applicable waiver is established."
+          ]
+        },
+        {
+          "order": 3,
+          "rule_id": "TX-R034",
+          "conditions": {
+            "texas_license_application": true
+          },
+          "requirements": [
+            "Provide identity, Texas residency, citizenship/lawful-presence evidence and SSN as applicable, plus the application. Owned-vehicle insurance or a no-vehicle statement is specified; vehicle registration evidence at application is limited to new residents exchanging out-of-state licenses on the general DPS page."
+          ]
+        },
+        {
+          "order": 4,
+          "rule_id": "TX-R030",
+          "conditions": {
+            "skills_test_required": true
+          },
+          "requirements": [
+            "Complete the appropriate ITD program after required education/in-car instruction and before skills testing. It does not replace driver education."
+          ]
+        },
+        {
+          "order": 5,
+          "rule_id": "TX-R031",
+          "conditions": {
+            "skills_test_required": true
+          },
+          "requirements": [
+            "Minor teen/PTDE applicants use ITTD (two hours). Adult six-hour-course/ADE-1317 applicants use ITAD (one hour); DPS overview also identifies ITAD for ages 25+."
+          ]
+        },
+        {
+          "order": 6,
+          "rule_id": "TX-R032",
+          "conditions": {
+            "skills_test_required": true
+          },
+          "requirements": [
+            "Present a printed ITD certificate dated within 90 days of the skills test. If the test is not passed within that window, restart the program. ITAD and ITTD are free."
+          ]
+        },
+        {
+          "order": 7,
+          "rule_id": "TX-R004",
+          "conditions": {
+            "third_party_test": true
+          },
+          "requirements": [
+            "Testing may be completed through an eligible third-party provider. DPS completes license issuance; a test pass alone is not a license."
+          ]
+        }
+      ],
+      "blocked_rule_ids": [],
+      "possible_school_services": [
+        "TX-M-5761fffba1db1906388a",
+        "TX-M-3b9f45e8b9decb49ff3b",
+        "TX-M-5dfd41b8531dfebc009a"
+      ],
+      "official_sources": [
+        "TX-DPS-001",
+        "TX-DPS-005",
+        "TX-DPS-015",
+        "TX-DPS-016",
+        "TX-TDLR-001"
+      ],
+      "unknown_inputs_block_individual_qualification": true
+    },
+    {
+      "pathway_id": "adult_first_time_25_plus",
+      "caller_situation": "First-time adult ages 25+",
+      "status": "READY",
+      "readiness_scope": "General pathway explanation only; READY does not authorize booking, establish individual eligibility or certify a particular provider.",
+      "required_inputs": [
+        "age",
+        "first_license",
+        "current_license_type",
+        "texas_residency_status",
+        "driver_education_status",
+        "learner_license_status",
+        "parent_taught_status",
+        "road_test_goal",
+        "license_issuing_jurisdiction",
+        "license_expiry",
+        "impact_program",
+        "impact_certificate_date"
+      ],
+      "conditions": {
+        "age_min": 25,
+        "first_license": true
+      },
+      "rule_ids": [
+        "TX-R002",
+        "TX-R003",
+        "TX-R034",
+        "TX-R030",
+        "TX-R031",
+        "TX-R032",
+        "TX-R004"
+      ],
+      "verified_steps": [
+        {
+          "order": 1,
+          "rule_id": "TX-R002",
+          "conditions": {
+            "age_min": 25,
+            "first_texas_license": true
+          },
+          "requirements": [
+            "DPS states no driver education requirement at ages 25 and older. Driving lessons remain optional preparation."
+          ]
+        },
+        {
+          "order": 2,
+          "rule_id": "TX-R003",
+          "conditions": {
+            "first_license": true,
+            "age_min": 18
+          },
+          "requirements": [
+            "Apply at DPS, provide required documents and biometrics, pay the application fee, and pass vision, knowledge and driving skills requirements unless an applicable waiver is established."
+          ]
+        },
+        {
+          "order": 3,
+          "rule_id": "TX-R034",
+          "conditions": {
+            "texas_license_application": true
+          },
+          "requirements": [
+            "Provide identity, Texas residency, citizenship/lawful-presence evidence and SSN as applicable, plus the application. Owned-vehicle insurance or a no-vehicle statement is specified; vehicle registration evidence at application is limited to new residents exchanging out-of-state licenses on the general DPS page."
+          ]
+        },
+        {
+          "order": 4,
+          "rule_id": "TX-R030",
+          "conditions": {
+            "skills_test_required": true
+          },
+          "requirements": [
+            "Complete the appropriate ITD program after required education/in-car instruction and before skills testing. It does not replace driver education."
+          ]
+        },
+        {
+          "order": 5,
+          "rule_id": "TX-R031",
+          "conditions": {
+            "skills_test_required": true
+          },
+          "requirements": [
+            "Minor teen/PTDE applicants use ITTD (two hours). Adult six-hour-course/ADE-1317 applicants use ITAD (one hour); DPS overview also identifies ITAD for ages 25+."
+          ]
+        },
+        {
+          "order": 6,
+          "rule_id": "TX-R032",
+          "conditions": {
+            "skills_test_required": true
+          },
+          "requirements": [
+            "Present a printed ITD certificate dated within 90 days of the skills test. If the test is not passed within that window, restart the program. ITAD and ITTD are free."
+          ]
+        },
+        {
+          "order": 7,
+          "rule_id": "TX-R004",
+          "conditions": {
+            "third_party_test": true
+          },
+          "requirements": [
+            "Testing may be completed through an eligible third-party provider. DPS completes license issuance; a test pass alone is not a license."
+          ]
+        }
+      ],
+      "blocked_rule_ids": [],
+      "possible_school_services": [
+        "TX-M-3b9f45e8b9decb49ff3b",
+        "TX-M-5dfd41b8531dfebc009a",
+        "TX-M-cde52bd7a0cd0c685a78",
+        "TX-M-f7398ec2948e49adb00a",
+        "TX-M-a656dc7bae0dd6380261",
+        "TX-M-0757df861c66e31b5444",
+        "TX-M-9b31bb0abff0d4ff49c9"
+      ],
+      "official_sources": [
+        "TX-DPS-001",
+        "TX-DPS-005",
+        "TX-DPS-015",
+        "TX-DPS-016"
+      ],
+      "unknown_inputs_block_individual_qualification": true
+    },
+    {
+      "pathway_id": "adult_with_learner_license",
+      "caller_situation": "Adult with learner/restricted license",
+      "status": "REVIEW",
+      "readiness_scope": "General pathway explanation only; READY does not authorize booking, establish individual eligibility or certify a particular provider.",
+      "required_inputs": [
+        "age",
+        "first_license",
+        "current_license_type",
+        "texas_residency_status",
+        "driver_education_status",
+        "learner_license_status",
+        "parent_taught_status",
+        "road_test_goal",
+        "license_issuing_jurisdiction",
+        "license_expiry",
+        "impact_program",
+        "impact_certificate_date"
+      ],
+      "conditions": {
+        "selection": "Match caller status; clarify before choosing this pathway."
+      },
+      "rule_ids": [
+        "TX-R055",
+        "TX-R001",
+        "TX-R002",
+        "TX-R030",
+        "TX-R032",
+        "TX-R045"
+      ],
+      "verified_steps": [
+        {
+          "order": 2,
+          "rule_id": "TX-R001",
+          "conditions": {
+            "age_min": 18,
+            "age_max": 24,
+            "first_texas_license": true,
+            "valid_out_of_state_exchange": false
+          },
+          "requirements": [
+            "Complete six-hour adult driver education; full teen-course alternatives are described by TDLR."
+          ]
+        },
+        {
+          "order": 3,
+          "rule_id": "TX-R002",
+          "conditions": {
+            "age_min": 25,
+            "first_texas_license": true
+          },
+          "requirements": [
+            "DPS states no driver education requirement at ages 25 and older. Driving lessons remain optional preparation."
+          ]
+        },
+        {
+          "order": 4,
+          "rule_id": "TX-R030",
+          "conditions": {
+            "skills_test_required": true
+          },
+          "requirements": [
+            "Complete the appropriate ITD program after required education/in-car instruction and before skills testing. It does not replace driver education."
+          ]
+        },
+        {
+          "order": 5,
+          "rule_id": "TX-R032",
+          "conditions": {
+            "skills_test_required": true
+          },
+          "requirements": [
+            "Present a printed ITD certificate dated within 90 days of the skills test. If the test is not passed within that window, restart the program. ITAD and ITTD are free."
+          ]
+        }
+      ],
+      "blocked_rule_ids": [
+        "TX-R055",
+        "TX-R045"
+      ],
+      "possible_school_services": [
+        "TX-M-5761fffba1db1906388a",
+        "TX-M-3b9f45e8b9decb49ff3b",
+        "TX-M-5dfd41b8531dfebc009a",
+        "TX-M-cde52bd7a0cd0c685a78",
+        "TX-M-f7398ec2948e49adb00a",
+        "TX-M-a656dc7bae0dd6380261",
+        "TX-M-0757df861c66e31b5444",
+        "TX-M-9b31bb0abff0d4ff49c9"
+      ],
+      "official_sources": [
+        "TX-DPS-001",
+        "TX-DPS-002",
+        "TX-DPS-005",
+        "TX-DPS-015",
+        "TX-DPS-016",
+        "TX-TDLR-001",
+        "TX-TDLR-007"
+      ],
+      "unknown_inputs_block_individual_qualification": true
+    },
+    {
+      "pathway_id": "teen_with_learner_license",
+      "caller_situation": "Teen with learner license",
+      "status": "REVIEW",
+      "readiness_scope": "General pathway explanation only; READY does not authorize booking, establish individual eligibility or certify a particular provider.",
+      "required_inputs": [
+        "age",
+        "first_license",
+        "current_license_type",
+        "texas_residency_status",
+        "driver_education_status",
+        "learner_license_status",
+        "parent_taught_status",
+        "road_test_goal",
+        "license_issuing_jurisdiction",
+        "license_expiry",
+        "impact_program",
+        "impact_certificate_date"
+      ],
+      "conditions": {
+        "selection": "Match caller status; clarify before choosing this pathway."
+      },
+      "rule_ids": [
+        "TX-R010",
+        "TX-R014",
+        "TX-R015",
+        "TX-R016",
+        "TX-R006"
+      ],
+      "verified_steps": [
+        {
+          "order": 1,
+          "rule_id": "TX-R010",
+          "conditions": {
+            "age_max": 17,
+            "texas_learner_license": true,
+            "hardship_exception": false
+          },
+          "requirements": [
+            "Hold the learner license at least six months unless turning 18 first. Suspension extends the holding period by the suspension duration."
+          ]
+        },
+        {
+          "order": 2,
+          "rule_id": "TX-R014",
+          "conditions": {
+            "teen_course": true
+          },
+          "requirements": [
+            "Complete seven hours driving instruction, seven observation hours, and 30 additional supervised practice hours including ten at night. A school package is not automatically all 44 hours."
+          ]
+        },
+        {
+          "order": 3,
+          "rule_id": "TX-R015",
+          "conditions": {
+            "teen_course": true,
+            "practice_hours": true
+          },
+          "requirements": [
+            "The practice supervisor must be 21+, licensed for at least a year; the parent/guardian certifies the 30-hour practice log. Follow the approved course instructions for other logs."
+          ]
+        },
+        {
+          "order": 4,
+          "rule_id": "TX-R016",
+          "conditions": {
+            "age_min": 16,
+            "age_max": 17,
+            "hardship_exception": false
+          },
+          "requirements": [
+            "Complete classroom and in-car education, the applicable learner holding period and ITTD within 90 days, then pass the skills test; DPS decides provisional issuance."
+          ]
+        }
+      ],
+      "blocked_rule_ids": [
+        "TX-R006"
+      ],
+      "possible_school_services": [
+        "TX-M-31f2787781f286ae101c",
+        "TX-M-5e69930bdd20361a21d2",
+        "TX-M-78fa12f00f02284bb032",
+        "TX-M-b54f626c4610ec1c1925",
+        "TX-M-f8aa20bffd9660b75341"
+      ],
+      "official_sources": [
+        "TX-DPS-002",
+        "TX-DPS-004",
+        "TX-DPS-016",
+        "TX-TDLR-001",
+        "TX-TDLR-002",
+        "TX-TDLR-005",
+        "TX-TDLR-006",
+        "TX-TDLR-007",
+        "TX-TDLR-008",
+        "TX-TDLR-P03"
+      ],
+      "unknown_inputs_block_individual_qualification": true
+    },
+    {
+      "pathway_id": "parent_taught_student",
+      "caller_situation": "Parent-taught student",
+      "status": "REVIEW",
+      "readiness_scope": "General pathway explanation only; READY does not authorize booking, establish individual eligibility or certify a particular provider.",
+      "required_inputs": [
+        "age",
+        "first_license",
+        "current_license_type",
+        "texas_residency_status",
+        "driver_education_status",
+        "learner_license_status",
+        "parent_taught_status",
+        "road_test_goal",
+        "license_issuing_jurisdiction",
+        "license_expiry",
+        "impact_program",
+        "impact_certificate_date"
+      ],
+      "conditions": {
+        "selection": "Match caller status; clarify before choosing this pathway."
+      },
+      "rule_ids": [
+        "TX-R021",
+        "TX-R022",
+        "TX-R023",
+        "TX-R019",
+        "TX-R020",
+        "TX-R007",
+        "TX-R008",
+        "TX-R024",
+        "TX-R014",
+        "TX-R015",
+        "TX-R025",
+        "TX-R016"
+      ],
+      "verified_steps": [
+        {
+          "order": 1,
+          "rule_id": "TX-R021",
+          "conditions": {
+            "parent_taught": true
+          },
+          "requirements": [
+            "Eligible relationships include parent, stepparent, grandparent, step-grandparent, foster parent and legal guardian. An authorized alternate must meet the same qualifications and may not charge a fee."
+          ]
+        },
+        {
+          "order": 3,
+          "rule_id": "TX-R023",
+          "conditions": {
+            "parent_taught": true
+          },
+          "requirements": [
+            "B-restricted license holders cannot instruct. DPS checks the instructor's record at learner and provisional stages; disqualification may invalidate subsequent instruction hours."
+          ]
+        },
+        {
+          "order": 4,
+          "rule_id": "TX-R019",
+          "conditions": {
+            "parent_taught": true
+          },
+          "requirements": [
+            "Obtain TDLR instructor designation for the particular student before teaching; read the supplied program guide and select an approved parent-taught course."
+          ]
+        },
+        {
+          "order": 5,
+          "rule_id": "TX-R020",
+          "conditions": {
+            "parent_taught": true
+          },
+          "requirements": [
+            "Current public guidance states $20 nonrefundable per instructor/student designation application, online only. This is separate from course costs."
+          ]
+        },
+        {
+          "order": 6,
+          "rule_id": "TX-R007",
+          "conditions": {
+            "age_min": 15,
+            "age_max": 17,
+            "method": "concurrent"
+          },
+          "requirements": [
+            "Complete the first six classroom hours and obtain the learner-stage education certificate before applying to DPS."
+          ]
+        },
+        {
+          "order": 8,
+          "rule_id": "TX-R024",
+          "conditions": {
+            "parent_taught": true
+          },
+          "requirements": [
+            "Obtain the learner license before starting behind-the-wheel training; finish remaining classroom and in-car requirements afterward."
+          ]
+        },
+        {
+          "order": 9,
+          "rule_id": "TX-R014",
+          "conditions": {
+            "teen_course": true
+          },
+          "requirements": [
+            "Complete seven hours driving instruction, seven observation hours, and 30 additional supervised practice hours including ten at night. A school package is not automatically all 44 hours."
+          ]
+        },
+        {
+          "order": 10,
+          "rule_id": "TX-R015",
+          "conditions": {
+            "teen_course": true,
+            "practice_hours": true
+          },
+          "requirements": [
+            "The practice supervisor must be 21+, licensed for at least a year; the parent/guardian certifies the 30-hour practice log. Follow the approved course instructions for other logs."
+          ]
+        },
+        {
+          "order": 12,
+          "rule_id": "TX-R016",
+          "conditions": {
+            "age_min": 16,
+            "age_max": 17,
+            "hardship_exception": false
+          },
+          "requirements": [
+            "Complete classroom and in-car education, the applicable learner holding period and ITTD within 90 days, then pass the skills test; DPS decides provisional issuance."
+          ]
+        }
+      ],
+      "blocked_rule_ids": [
+        "TX-R022",
+        "TX-R008",
+        "TX-R025"
+      ],
+      "possible_school_services": [
+        "TX-M-31f2787781f286ae101c",
+        "TX-M-5e69930bdd20361a21d2",
+        "TX-M-78fa12f00f02284bb032",
+        "TX-M-b54f626c4610ec1c1925",
+        "TX-M-f8aa20bffd9660b75341"
+      ],
+      "official_sources": [
+        "TX-DPS-002",
+        "TX-DPS-004",
+        "TX-TDLR-002",
+        "TX-TDLR-003",
+        "TX-TDLR-004",
+        "TX-TDLR-005",
+        "TX-TDLR-006",
+        "TX-TDLR-007",
+        "TX-TDLR-010",
+        "TX-TDLR-P01",
+        "TX-TDLR-P03"
+      ],
+      "unknown_inputs_block_individual_qualification": true
+    },
+    {
+      "pathway_id": "road_test_ready",
+      "caller_situation": "Road-test readiness assessment",
+      "status": "REVIEW",
+      "readiness_scope": "General pathway explanation only; READY does not authorize booking, establish individual eligibility or certify a particular provider.",
+      "required_inputs": [
+        "age",
+        "first_license",
+        "current_license_type",
+        "texas_residency_status",
+        "driver_education_status",
+        "learner_license_status",
+        "parent_taught_status",
+        "road_test_goal",
+        "license_issuing_jurisdiction",
+        "license_expiry",
+        "impact_program",
+        "impact_certificate_date"
+      ],
+      "conditions": {
+        "selection": "Match caller status; clarify before choosing this pathway."
+      },
+      "rule_ids": [
+        "TX-R016",
+        "TX-R030",
+        "TX-R032",
+        "TX-R041",
+        "TX-R042",
+        "TX-R043",
+        "TX-R045",
+        "TX-R004"
+      ],
+      "verified_steps": [
+        {
+          "order": 1,
+          "rule_id": "TX-R016",
+          "conditions": {
+            "age_min": 16,
+            "age_max": 17,
+            "hardship_exception": false
+          },
+          "requirements": [
+            "Complete classroom and in-car education, the applicable learner holding period and ITTD within 90 days, then pass the skills test; DPS decides provisional issuance."
+          ]
+        },
+        {
+          "order": 2,
+          "rule_id": "TX-R030",
+          "conditions": {
+            "skills_test_required": true
+          },
+          "requirements": [
+            "Complete the appropriate ITD program after required education/in-car instruction and before skills testing. It does not replace driver education."
+          ]
+        },
+        {
+          "order": 3,
+          "rule_id": "TX-R032",
+          "conditions": {
+            "skills_test_required": true
+          },
+          "requirements": [
+            "Present a printed ITD certificate dated within 90 days of the skills test. If the test is not passed within that window, restart the program. ITAD and ITTD are free."
+          ]
+        },
+        {
+          "order": 4,
+          "rule_id": "TX-R041",
+          "conditions": {
+            "dps_skills_test": true
+          },
+          "requirements": [
+            "Bring a legally operable vehicle that passes the examiner's safety check: working signals, horn, speedometer, mirrors, doors, seatbelts and brake lights, plus weather-appropriate lights/wipers. Bring current registration and insurance; the applicant must not be an excluded driver."
+          ]
+        },
+        {
+          "order": 5,
+          "rule_id": "TX-R042",
+          "conditions": {
+            "dps_skills_test": true
+          },
+          "requirements": [
+            "Present valid identification. Unsafe vehicles may prevent testing; pets/unauthorized passengers are excluded, and dangerous or illegal maneuvers cause an automatic failure."
+          ]
+        },
+        {
+          "order": 8,
+          "rule_id": "TX-R004",
+          "conditions": {
+            "third_party_test": true
+          },
+          "requirements": [
+            "Testing may be completed through an eligible third-party provider. DPS completes license issuance; a test pass alone is not a license."
+          ]
+        }
+      ],
+      "blocked_rule_ids": [
+        "TX-R043",
+        "TX-R045"
+      ],
+      "possible_school_services": [
+        "TX-M-3b9f45e8b9decb49ff3b",
+        "TX-M-5dfd41b8531dfebc009a"
+      ],
+      "official_sources": [
+        "TX-DPS-001",
+        "TX-DPS-004",
+        "TX-DPS-005",
+        "TX-DPS-015",
+        "TX-DPS-016",
+        "TX-DPS-017",
+        "TX-DPS-P01",
+        "TX-TDLR-007"
+      ],
+      "unknown_inputs_block_individual_qualification": true
+    },
+    {
+      "pathway_id": "new_texas_resident",
+      "caller_situation": "New Texas resident",
+      "status": "REVIEW",
+      "readiness_scope": "General pathway explanation only; READY does not authorize booking, establish individual eligibility or certify a particular provider.",
+      "required_inputs": [
+        "age",
+        "first_license",
+        "current_license_type",
+        "texas_residency_status",
+        "driver_education_status",
+        "learner_license_status",
+        "parent_taught_status",
+        "road_test_goal",
+        "license_issuing_jurisdiction",
+        "license_expiry",
+        "impact_program",
+        "impact_certificate_date"
+      ],
+      "conditions": {
+        "selection": "Match caller status; clarify before choosing this pathway."
+      },
+      "rule_ids": [
+        "TX-R046",
+        "TX-R034",
+        "TX-R036",
+        "TX-R047",
+        "TX-R048",
+        "TX-R049",
+        "TX-R050"
+      ],
+      "verified_steps": [
+        {
+          "order": 1,
+          "rule_id": "TX-R046",
+          "conditions": {
+            "new_texas_resident": true,
+            "valid_recognized_license": true
+          },
+          "requirements": [
+            "DPS permits driving with a valid unexpired US-state/territory, Canadian or qualifying-country license for up to 90 days after moving to Texas."
+          ]
+        },
+        {
+          "order": 2,
+          "rule_id": "TX-R034",
+          "conditions": {
+            "texas_license_application": true
+          },
+          "requirements": [
+            "Provide identity, Texas residency, citizenship/lawful-presence evidence and SSN as applicable, plus the application. Owned-vehicle insurance or a no-vehicle statement is specified; vehicle registration evidence at application is limited to new residents exchanging out-of-state licenses on the general DPS page."
+          ]
+        },
+        {
+          "order": 3,
+          "rule_id": "TX-R036",
+          "conditions": {
+            "texas_license_application": true
+          },
+          "requirements": [
+            "Normally present two printed documents with the applicant's name and Texas residential address; one must show at least 30 days' residency. Exchange of a valid unexpired out-of-state license/ID waives the 30-day duration, not the two-document requirement."
+          ]
+        },
+        {
+          "order": 4,
+          "rule_id": "TX-R047",
+          "conditions": {
+            "age_min": 18,
+            "valid_unexpired_us_out_of_state_license": true,
+            "surrender_license": true
+          },
+          "requirements": [
+            "Surrender the recognized license and apply with Texas documents. DPS describes knowledge/skills and adult education/ITD waivers; do not sell a first-time education or test package as mandatory."
+          ]
+        }
+      ],
+      "blocked_rule_ids": [
+        "TX-R048",
+        "TX-R049",
+        "TX-R050"
+      ],
+      "possible_school_services": [],
+      "official_sources": [
+        "TX-DPS-001",
+        "TX-DPS-004",
+        "TX-DPS-007",
+        "TX-DPS-010",
+        "TX-DPS-P01"
+      ],
+      "unknown_inputs_block_individual_qualification": true
+    },
+    {
+      "pathway_id": "out_of_state_transfer",
+      "caller_situation": "Adult valid US-state license exchange",
+      "status": "READY",
+      "readiness_scope": "General pathway explanation only; READY does not authorize booking, establish individual eligibility or certify a particular provider.",
+      "required_inputs": [
+        "age",
+        "first_license",
+        "current_license_type",
+        "texas_residency_status",
+        "driver_education_status",
+        "learner_license_status",
+        "parent_taught_status",
+        "road_test_goal",
+        "license_issuing_jurisdiction",
+        "license_expiry",
+        "impact_program",
+        "impact_certificate_date"
+      ],
+      "conditions": {
+        "age_min": 18,
+        "valid_unexpired_us_out_of_state_license": true,
+        "surrender_license": true
+      },
+      "rule_ids": [
+        "TX-R046",
+        "TX-R047",
+        "TX-R034",
+        "TX-R036"
+      ],
+      "verified_steps": [
+        {
+          "order": 1,
+          "rule_id": "TX-R046",
+          "conditions": {
+            "new_texas_resident": true,
+            "valid_recognized_license": true
+          },
+          "requirements": [
+            "DPS permits driving with a valid unexpired US-state/territory, Canadian or qualifying-country license for up to 90 days after moving to Texas."
+          ]
+        },
+        {
+          "order": 2,
+          "rule_id": "TX-R047",
+          "conditions": {
+            "age_min": 18,
+            "valid_unexpired_us_out_of_state_license": true,
+            "surrender_license": true
+          },
+          "requirements": [
+            "Surrender the recognized license and apply with Texas documents. DPS describes knowledge/skills and adult education/ITD waivers; do not sell a first-time education or test package as mandatory."
+          ]
+        },
+        {
+          "order": 3,
+          "rule_id": "TX-R034",
+          "conditions": {
+            "texas_license_application": true
+          },
+          "requirements": [
+            "Provide identity, Texas residency, citizenship/lawful-presence evidence and SSN as applicable, plus the application. Owned-vehicle insurance or a no-vehicle statement is specified; vehicle registration evidence at application is limited to new residents exchanging out-of-state licenses on the general DPS page."
+          ]
+        },
+        {
+          "order": 4,
+          "rule_id": "TX-R036",
+          "conditions": {
+            "texas_license_application": true
+          },
+          "requirements": [
+            "Normally present two printed documents with the applicant's name and Texas residential address; one must show at least 30 days' residency. Exchange of a valid unexpired out-of-state license/ID waives the 30-day duration, not the two-document requirement."
+          ]
+        }
+      ],
+      "blocked_rule_ids": [],
+      "possible_school_services": [],
+      "official_sources": [
+        "TX-DPS-001",
+        "TX-DPS-007",
+        "TX-DPS-010"
+      ],
+      "unknown_inputs_block_individual_qualification": true
+    },
+    {
+      "pathway_id": "foreign_license_holder",
+      "caller_situation": "Foreign license holder",
+      "status": "REVIEW",
+      "readiness_scope": "General pathway explanation only; READY does not authorize booking, establish individual eligibility or certify a particular provider.",
+      "required_inputs": [
+        "age",
+        "first_license",
+        "current_license_type",
+        "texas_residency_status",
+        "driver_education_status",
+        "learner_license_status",
+        "parent_taught_status",
+        "road_test_goal",
+        "license_issuing_jurisdiction",
+        "license_expiry",
+        "impact_program",
+        "impact_certificate_date"
+      ],
+      "conditions": {
+        "selection": "Match caller status; clarify before choosing this pathway."
+      },
+      "rule_ids": [
+        "TX-R050",
+        "TX-R051",
+        "TX-R052",
+        "TX-R040",
+        "TX-R034"
+      ],
+      "verified_steps": [
+        {
+          "order": 2,
+          "rule_id": "TX-R051",
+          "conditions": {
+            "foreign_license": true
+          },
+          "requirements": [
+            "DPS requires foreign licenses not in English or Spanish to be translated by a translation service or consulate; foreign marriage documents not in English need certified English translation."
+          ]
+        },
+        {
+          "order": 4,
+          "rule_id": "TX-R040",
+          "conditions": {
+            "not_us_citizen": true
+          },
+          "requirements": [
+            "Present appropriate lawful-status evidence for the applicant category. DHS verification must complete before DPS issues the license; no approval or immigration outcome is guaranteed."
+          ]
+        },
+        {
+          "order": 5,
+          "rule_id": "TX-R034",
+          "conditions": {
+            "texas_license_application": true
+          },
+          "requirements": [
+            "Provide identity, Texas residency, citizenship/lawful-presence evidence and SSN as applicable, plus the application. Owned-vehicle insurance or a no-vehicle statement is specified; vehicle registration evidence at application is limited to new residents exchanging out-of-state licenses on the general DPS page."
+          ]
+        }
+      ],
+      "blocked_rule_ids": [
+        "TX-R050",
+        "TX-R052"
+      ],
+      "possible_school_services": [],
+      "official_sources": [
+        "TX-DPS-001",
+        "TX-DPS-007",
+        "TX-DPS-008",
+        "TX-DPS-012"
+      ],
+      "unknown_inputs_block_individual_qualification": true
+    },
+    {
+      "pathway_id": "uncertain_or_exception",
+      "caller_situation": "Exception or uncertain applicant",
+      "status": "REVIEW",
+      "readiness_scope": "General pathway explanation only; READY does not authorize booking, establish individual eligibility or certify a particular provider.",
+      "required_inputs": [
+        "age",
+        "first_license",
+        "current_license_type",
+        "texas_residency_status",
+        "driver_education_status",
+        "learner_license_status",
+        "parent_taught_status",
+        "road_test_goal",
+        "license_issuing_jurisdiction",
+        "license_expiry",
+        "impact_program",
+        "impact_certificate_date"
+      ],
+      "conditions": {
+        "selection": "Match caller status; clarify before choosing this pathway."
+      },
+      "rule_ids": [
+        "TX-R037",
+        "TX-R039",
+        "TX-R048",
+        "TX-R053",
+        "TX-R054",
+        "TX-R056"
+      ],
+      "verified_steps": [],
+      "blocked_rule_ids": [
+        "TX-R037",
+        "TX-R039",
+        "TX-R048",
+        "TX-R053",
+        "TX-R054",
+        "TX-R056"
+      ],
+      "possible_school_services": [],
+      "official_sources": [
+        "TX-DPS-004",
+        "TX-DPS-007",
+        "TX-DPS-010",
+        "TX-DPS-011",
+        "TX-DPS-P01",
+        "TX-TDLR-P01"
+      ],
+      "unknown_inputs_block_individual_qualification": true
+    }
+  ]
+}

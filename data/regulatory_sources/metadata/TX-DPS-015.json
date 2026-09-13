@@ -1,0 +1,39 @@
+{
+  "source_id": "TX-DPS-015",
+  "agency": "Texas DPS",
+  "url": "https://impacttexasdrivers.dps.texas.gov/itad/FAQ.aspx",
+  "topics": [
+    "impact_texas_drivers"
+  ],
+  "authority_level": 1,
+  "title": "Impact Texas Adult Drivers",
+  "source_type": "webpage",
+  "retrieved_at": "2026-09-13T08:00:09.019870+00:00",
+  "published_or_updated": null,
+  "displayed_dates": [],
+  "date_type": null,
+  "active": true,
+  "reviewed": true,
+  "notes": "Empty/short public source; review required No reliable update/effective date displayed; live retrieval confirms availability, not amendment history. No reliable update/effective date displayed; live retrieval confirms availability, not amendment history. No reliable update/effective date displayed; live retrieval confirms availability, not amendment history. No reliable update/effective date displayed; live retrieval confirms availability, not amendment history. No reliable update/effective date displayed; live retrieval confirms availability, not amendment history.",
+  "redirects": [],
+  "content_hash": "a20e3ca0cfd0ca78576b73e329931db553f1ee8c505579ca7c8db981160a1cf8",
+  "normalized_content_hash": "cc673a280f9b5543024acc23a373cdaca9b01f7d372317e604d2a069d0c64b9a",
+  "previous_normalized_hash": "cc673a280f9b5543024acc23a373cdaca9b01f7d372317e604d2a069d0c64b9a",
+  "change_status": "UNCHANGED",
+  "currency_status": "official_but_date_uncertain",
+  "raw_path": "data/regulatory_sources/html/TX-DPS-015.html",
+  "extracted_path": "data/regulatory_sources/extracted/TX-DPS-015.txt",
+  "status_code": 200,
+  "final_url": "https://impacttexasdrivers.dps.texas.gov/itad/FAQ.aspx",
+  "headings": [
+    "FAQs"
+  ],
+  "last_verified": "2026-09-13",
+  "review_required": false,
+  "recommended_recheck": "2026-12-12",
+  "reviewed_content_hash": "cc673a280f9b5543024acc23a373cdaca9b01f7d372317e604d2a069d0c64b9a",
+  "preservation_method": "original_html",
+  "original_archived": true,
+  "normalization_version": "phase-b-1",
+  "preservation_method_changed": false
+}

@@ -1,0 +1,343 @@
+[
+  {
+    "source_id": "TX-DPS-001",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/section/driver-license/apply-texas-driver-license",
+    "topics": [
+      "adult_first_time",
+      "driver_education",
+      "documents"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-DPS-002",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/section/driver-license/texas-learners-license-teen",
+    "topics": [
+      "teen",
+      "learner_license",
+      "documents"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-DPS-003",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/section/driver-license/texas-provisional-license-teen",
+    "topics": [
+      "teen",
+      "road_test",
+      "documents"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-DPS-004",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/section/driver-license/graduated-driver-license-gdl-and-hardship-license",
+    "topics": [
+      "teen",
+      "learner_license",
+      "exceptions"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-DPS-005",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/section/driver-license/impact-texas-drivers-itd-program",
+    "topics": [
+      "impact_texas_drivers",
+      "road_test"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-DPS-006",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/section/driver-license/third-party-skills-testing-program",
+    "topics": [
+      "third_party_testing",
+      "road_test"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-DPS-007",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/section/driver-license/moving-texas-guide-driver-licenses-and-ids",
+    "topics": [
+      "new_texas_resident",
+      "international_driver",
+      "exceptions"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-DPS-008",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/section/driver-license/driving-privilege-reciprocity",
+    "topics": [
+      "international_driver"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-DPS-009",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/section/driver-license/identification-requirements",
+    "topics": [
+      "documents"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-DPS-010",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/section/driver-license/texas-residency-requirement-driver-licenses-and-id-cards",
+    "topics": [
+      "documents",
+      "new_texas_resident",
+      "exceptions"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-DPS-011",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/section/driver-license/social-security-number-ssn",
+    "topics": [
+      "documents",
+      "exceptions"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-DPS-012",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/section/driver-license/us-citizenship-or-lawful-presence-requirement",
+    "topics": [
+      "documents",
+      "international_driver"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-DPS-013",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/section/driver-license/schedule-your-driving-test-appointment",
+    "topics": [
+      "road_test",
+      "documents"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-DPS-014",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/section/driver-license/faq/section-2-scheduling-road-test",
+    "topics": [
+      "road_test"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-DPS-015",
+    "agency": "Texas DPS",
+    "url": "https://impacttexasdrivers.dps.texas.gov/itad/FAQ.aspx",
+    "topics": [
+      "impact_texas_drivers"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-DPS-016",
+    "agency": "Texas DPS",
+    "url": "https://impacttexasdrivers.dps.texas.gov/ittd/FAQ.aspx",
+    "topics": [
+      "impact_texas_drivers"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-TDLR-001",
+    "agency": "Texas TDLR",
+    "url": "https://www.tdlr.texas.gov/driver/education/students/do-i-need-driver-ed/",
+    "topics": [
+      "driver_education",
+      "adult_first_time",
+      "teen"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-TDLR-002",
+    "agency": "Texas TDLR",
+    "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/",
+    "topics": [
+      "parent_taught",
+      "teen"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-TDLR-003",
+    "agency": "Texas TDLR",
+    "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/parent-instructors.htm",
+    "topics": [
+      "parent_taught"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-TDLR-004",
+    "agency": "Texas TDLR",
+    "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/classroom-instruction.htm",
+    "topics": [
+      "parent_taught",
+      "driver_education"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-TDLR-005",
+    "agency": "Texas TDLR",
+    "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/learner-license.htm",
+    "topics": [
+      "parent_taught",
+      "learner_license",
+      "documents"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-TDLR-006",
+    "agency": "Texas TDLR",
+    "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/behind-the-wheel.htm",
+    "topics": [
+      "parent_taught",
+      "teen"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-TDLR-007",
+    "agency": "Texas TDLR",
+    "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/provisional-license.htm",
+    "topics": [
+      "parent_taught",
+      "road_test",
+      "documents"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-TDLR-008",
+    "agency": "Texas TDLR",
+    "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/hybrid-instruction.htm",
+    "topics": [
+      "parent_taught",
+      "driver_education"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-TDLR-009",
+    "agency": "Texas TDLR",
+    "url": "https://www.tdlr.texas.gov/driver/education/students/faq.htm",
+    "topics": [
+      "driver_education",
+      "adult_first_time",
+      "teen"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-TDLR-P01",
+    "agency": "Texas TDLR",
+    "url": "https://www.tdlr.texas.gov/driver/docs/parent-taught-step-by-step-guide.pdf",
+    "topics": [
+      "parent_taught"
+    ],
+    "authority_level": 2
+  },
+  {
+    "source_id": "TX-TDLR-P02",
+    "agency": "Texas TDLR",
+    "url": "https://www.tdlr.texas.gov/media/pdf/Parent-Taught%20Driver%20Education%20Guide%20-%20one-sheet.pdf",
+    "topics": [
+      "parent_taught"
+    ],
+    "authority_level": 2
+  },
+  {
+    "source_id": "TX-TDLR-P03",
+    "agency": "Texas TDLR",
+    "url": "https://www.tdlr.texas.gov/media/pdf/DES-at-a-glance.pdf",
+    "topics": [
+      "driver_education",
+      "teen"
+    ],
+    "authority_level": 2
+  },
+  {
+    "source_id": "TX-DPS-P01",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/internetforms/Forms/DL-60.pdf",
+    "topics": [
+      "road_test"
+    ],
+    "authority_level": 2
+  },
+  {
+    "source_id": "TX-DPS-P02",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/Internetforms/Forms/DL-68.pdf",
+    "topics": [
+      "documents",
+      "teen"
+    ],
+    "authority_level": 2
+  },
+  {
+    "source_id": "TX-DPS-P03",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/internetforms/Forms/DL-65.pdf",
+    "topics": [
+      "third_party_testing"
+    ],
+    "authority_level": 2
+  },
+  {
+    "source_id": "TX-DPS-P04",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/internetforms/Forms/DL-7.pdf",
+    "topics": [
+      "learner_license",
+      "teen",
+      "road_test",
+      "international_driver"
+    ],
+    "authority_level": 2
+  },
+  {
+    "source_id": "TX-TDLR-010",
+    "agency": "Texas TDLR",
+    "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/instructor-eligibility/",
+    "topics": [
+      "parent_taught"
+    ],
+    "authority_level": 1
+  },
+  {
+    "source_id": "TX-DPS-017",
+    "agency": "Texas DPS",
+    "url": "https://www.dps.texas.gov/news/vehicle-safety-inspection-program-changes-now-effect",
+    "topics": [
+      "road_test",
+      "exceptions"
+    ],
+    "authority_level": 1
+  }
+]

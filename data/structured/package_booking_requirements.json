@@ -1,0 +1,306 @@
+[
+  {
+    "package_id": "teen_24_hr_classroom_driving_package",
+    "legacy_package_id": "31f2787781f286ae101c",
+    "requires_live_availability": true,
+    "expected_availability_type": "class_and_driving_schedule",
+    "availability_type_is_conceptual_not_backend_enum": true,
+    "booking_information_needed": [
+      "selected_package_id",
+      "student_name",
+      "contact",
+      "preferred_location",
+      "preferred_date",
+      "preferred_time"
+    ],
+    "information_is_planning_requirement_not_verified_backend_fields": true,
+    "prerequisite_reference": [
+      "A Texas learner permit is needed before behind-the-wheel hours begin, not before enrolling in the classroom portion."
+    ],
+    "unknown_operational_fields": [
+      "UNKNOWN — REQUIRES BOOKING SYSTEM INSPECTION: actual identifiers, required request fields, timezone, instructor/vehicle allocation, capacity, slot duration, payment/access timing, confirmation, reschedule and cancellation policy"
+    ],
+    "booking_actions_implemented": false
+  },
+  {
+    "package_id": "teen_behind_the_wheel_only_7_7",
+    "legacy_package_id": "5e69930bdd20361a21d2",
+    "requires_live_availability": true,
+    "expected_availability_type": "driving_lesson_schedule",
+    "availability_type_is_conceptual_not_backend_enum": true,
+    "booking_information_needed": [
+      "selected_package_id",
+      "student_name",
+      "contact",
+      "preferred_location",
+      "preferred_date",
+      "preferred_time"
+    ],
+    "information_is_planning_requirement_not_verified_backend_fields": true,
+    "prerequisite_reference": [
+      "A Texas learner permit, and completed classroom driver education.",
+      "Student must have a valid Texas Learner License/Permit before beginning behind-the-wheel training. After enrollment, the driving schedule will be sent via email."
+    ],
+    "unknown_operational_fields": [
+      "UNKNOWN — REQUIRES BOOKING SYSTEM INSPECTION: actual identifiers, required request fields, timezone, instructor/vehicle allocation, capacity, slot duration, payment/access timing, confirmation, reschedule and cancellation policy"
+    ],
+    "booking_actions_implemented": false
+  },
+  {
+    "package_id": "parent_taught_10_hours",
+    "legacy_package_id": "78fa12f00f02284bb032",
+    "requires_live_availability": true,
+    "expected_availability_type": "driving_lesson_schedule",
+    "availability_type_is_conceptual_not_backend_enum": true,
+    "booking_information_needed": [
+      "selected_package_id",
+      "student_name",
+      "contact",
+      "preferred_location",
+      "preferred_date",
+      "preferred_time"
+    ],
+    "information_is_planning_requirement_not_verified_backend_fields": true,
+    "prerequisite_reference": [
+      "A Texas learner permit, and an active parent-taught driver education program."
+    ],
+    "unknown_operational_fields": [
+      "UNKNOWN — REQUIRES BOOKING SYSTEM INSPECTION: actual identifiers, required request fields, timezone, instructor/vehicle allocation, capacity, slot duration, payment/access timing, confirmation, reschedule and cancellation policy"
+    ],
+    "booking_actions_implemented": false
+  },
+  {
+    "package_id": "parent_taught_15_hours",
+    "legacy_package_id": "b54f626c4610ec1c1925",
+    "requires_live_availability": true,
+    "expected_availability_type": "driving_lesson_schedule",
+    "availability_type_is_conceptual_not_backend_enum": true,
+    "booking_information_needed": [
+      "selected_package_id",
+      "student_name",
+      "contact",
+      "preferred_location",
+      "preferred_date",
+      "preferred_time"
+    ],
+    "information_is_planning_requirement_not_verified_backend_fields": true,
+    "prerequisite_reference": [
+      "A Texas learner permit, and an active parent-taught driver education program."
+    ],
+    "unknown_operational_fields": [
+      "UNKNOWN — REQUIRES BOOKING SYSTEM INSPECTION: actual identifiers, required request fields, timezone, instructor/vehicle allocation, capacity, slot duration, payment/access timing, confirmation, reschedule and cancellation policy"
+    ],
+    "booking_actions_implemented": false
+  },
+  {
+    "package_id": "parent_taught_30_hours",
+    "legacy_package_id": "f8aa20bffd9660b75341",
+    "requires_live_availability": true,
+    "expected_availability_type": "driving_lesson_schedule",
+    "availability_type_is_conceptual_not_backend_enum": true,
+    "booking_information_needed": [
+      "selected_package_id",
+      "student_name",
+      "contact",
+      "preferred_location",
+      "preferred_date",
+      "preferred_time"
+    ],
+    "information_is_planning_requirement_not_verified_backend_fields": true,
+    "prerequisite_reference": [
+      "A Texas learner permit, and an active parent-taught driver education program."
+    ],
+    "unknown_operational_fields": [
+      "UNKNOWN — REQUIRES BOOKING SYSTEM INSPECTION: actual identifiers, required request fields, timezone, instructor/vehicle allocation, capacity, slot duration, payment/access timing, confirmation, reschedule and cancellation policy"
+    ],
+    "booking_actions_implemented": false
+  },
+  {
+    "package_id": "adult_6_hour_online_permit_class",
+    "legacy_package_id": "5761fffba1db1906388a",
+    "requires_live_availability": false,
+    "expected_availability_type": "online_course_access",
+    "availability_type_is_conceptual_not_backend_enum": true,
+    "booking_information_needed": [
+      "selected_package_id",
+      "student_name",
+      "contact"
+    ],
+    "information_is_planning_requirement_not_verified_backend_fields": true,
+    "prerequisite_reference": [
+      "Applicants aged 18 and over applying for a first Texas driver license."
+    ],
+    "unknown_operational_fields": [
+      "UNKNOWN — REQUIRES BOOKING SYSTEM INSPECTION: actual identifiers, required request fields, timezone, instructor/vehicle allocation, capacity, slot duration, payment/access timing, confirmation, reschedule and cancellation policy"
+    ],
+    "booking_actions_implemented": false
+  },
+  {
+    "package_id": "road_test_road_test_only",
+    "legacy_package_id": "3b9f45e8b9decb49ff3b",
+    "requires_live_availability": true,
+    "expected_availability_type": "road_test_schedule",
+    "availability_type_is_conceptual_not_backend_enum": true,
+    "booking_information_needed": [
+      "selected_package_id",
+      "student_name",
+      "contact",
+      "preferred_location",
+      "preferred_date",
+      "preferred_time"
+    ],
+    "information_is_planning_requirement_not_verified_backend_fields": true,
+    "prerequisite_reference": [
+      "A valid Texas learner permit or restricted license, a printed Impact Texas Drivers certificate dated within 90 days, and the driver education certificate for the course you completed.",
+      "Must have a valid learner license (permit)."
+    ],
+    "unknown_operational_fields": [
+      "UNKNOWN — REQUIRES BOOKING SYSTEM INSPECTION: actual identifiers, required request fields, timezone, instructor/vehicle allocation, capacity, slot duration, payment/access timing, confirmation, reschedule and cancellation policy"
+    ],
+    "booking_actions_implemented": false
+  },
+  {
+    "package_id": "road_test_practice_session_road_test",
+    "legacy_package_id": "5dfd41b8531dfebc009a",
+    "requires_live_availability": true,
+    "expected_availability_type": "road_test_and_practice_schedule",
+    "availability_type_is_conceptual_not_backend_enum": true,
+    "booking_information_needed": [
+      "selected_package_id",
+      "student_name",
+      "contact",
+      "preferred_location",
+      "preferred_date",
+      "preferred_time"
+    ],
+    "information_is_planning_requirement_not_verified_backend_fields": true,
+    "prerequisite_reference": [
+      "A valid Texas learner permit or restricted license, a printed Impact Texas Drivers certificate dated within 90 days, and the driver education certificate for the course you completed.",
+      "Must have a valid learner license (permit)."
+    ],
+    "unknown_operational_fields": [
+      "UNKNOWN — REQUIRES BOOKING SYSTEM INSPECTION: actual identifiers, required request fields, timezone, instructor/vehicle allocation, capacity, slot duration, payment/access timing, confirmation, reschedule and cancellation policy"
+    ],
+    "booking_actions_implemented": false
+  },
+  {
+    "package_id": "adult_2_hours",
+    "legacy_package_id": "cde52bd7a0cd0c685a78",
+    "requires_live_availability": true,
+    "expected_availability_type": "driving_lesson_schedule",
+    "availability_type_is_conceptual_not_backend_enum": true,
+    "booking_information_needed": [
+      "selected_package_id",
+      "student_name",
+      "contact",
+      "preferred_location",
+      "preferred_date",
+      "preferred_time"
+    ],
+    "information_is_planning_requirement_not_verified_backend_fields": true,
+    "prerequisite_reference": [
+      "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first.",
+      "Must have a valid Learner License/Permit."
+    ],
+    "unknown_operational_fields": [
+      "UNKNOWN — REQUIRES BOOKING SYSTEM INSPECTION: actual identifiers, required request fields, timezone, instructor/vehicle allocation, capacity, slot duration, payment/access timing, confirmation, reschedule and cancellation policy"
+    ],
+    "booking_actions_implemented": false
+  },
+  {
+    "package_id": "adult_4_hours",
+    "legacy_package_id": "f7398ec2948e49adb00a",
+    "requires_live_availability": true,
+    "expected_availability_type": "driving_lesson_schedule",
+    "availability_type_is_conceptual_not_backend_enum": true,
+    "booking_information_needed": [
+      "selected_package_id",
+      "student_name",
+      "contact",
+      "preferred_location",
+      "preferred_date",
+      "preferred_time"
+    ],
+    "information_is_planning_requirement_not_verified_backend_fields": true,
+    "prerequisite_reference": [
+      "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first.",
+      "Must have a valid Learner License/Permit."
+    ],
+    "unknown_operational_fields": [
+      "UNKNOWN — REQUIRES BOOKING SYSTEM INSPECTION: actual identifiers, required request fields, timezone, instructor/vehicle allocation, capacity, slot duration, payment/access timing, confirmation, reschedule and cancellation policy"
+    ],
+    "booking_actions_implemented": false
+  },
+  {
+    "package_id": "adult_6_hours",
+    "legacy_package_id": "a656dc7bae0dd6380261",
+    "requires_live_availability": true,
+    "expected_availability_type": "driving_lesson_schedule",
+    "availability_type_is_conceptual_not_backend_enum": true,
+    "booking_information_needed": [
+      "selected_package_id",
+      "student_name",
+      "contact",
+      "preferred_location",
+      "preferred_date",
+      "preferred_time"
+    ],
+    "information_is_planning_requirement_not_verified_backend_fields": true,
+    "prerequisite_reference": [
+      "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first.",
+      "Must have a valid Learner License/Permit."
+    ],
+    "unknown_operational_fields": [
+      "UNKNOWN — REQUIRES BOOKING SYSTEM INSPECTION: actual identifiers, required request fields, timezone, instructor/vehicle allocation, capacity, slot duration, payment/access timing, confirmation, reschedule and cancellation policy"
+    ],
+    "booking_actions_implemented": false
+  },
+  {
+    "package_id": "adult_8_hours",
+    "legacy_package_id": "0757df861c66e31b5444",
+    "requires_live_availability": true,
+    "expected_availability_type": "driving_lesson_schedule",
+    "availability_type_is_conceptual_not_backend_enum": true,
+    "booking_information_needed": [
+      "selected_package_id",
+      "student_name",
+      "contact",
+      "preferred_location",
+      "preferred_date",
+      "preferred_time"
+    ],
+    "information_is_planning_requirement_not_verified_backend_fields": true,
+    "prerequisite_reference": [
+      "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first.",
+      "Must have a valid Learner License/Permit."
+    ],
+    "unknown_operational_fields": [
+      "UNKNOWN — REQUIRES BOOKING SYSTEM INSPECTION: actual identifiers, required request fields, timezone, instructor/vehicle allocation, capacity, slot duration, payment/access timing, confirmation, reschedule and cancellation policy"
+    ],
+    "booking_actions_implemented": false
+  },
+  {
+    "package_id": "adult_10_hours",
+    "legacy_package_id": "9b31bb0abff0d4ff49c9",
+    "requires_live_availability": true,
+    "expected_availability_type": "driving_lesson_schedule",
+    "availability_type_is_conceptual_not_backend_enum": true,
+    "booking_information_needed": [
+      "selected_package_id",
+      "student_name",
+      "contact",
+      "preferred_location",
+      "preferred_date",
+      "preferred_time"
+    ],
+    "information_is_planning_requirement_not_verified_backend_fields": true,
+    "prerequisite_reference": [
+      "A valid Texas learner permit or driver license. Adults applying for a first Texas license complete the six-hour adult driver education course first.",
+      "Must have a valid Learner License/Permit."
+    ],
+    "unknown_operational_fields": [
+      "UNKNOWN — REQUIRES BOOKING SYSTEM INSPECTION: actual identifiers, required request fields, timezone, instructor/vehicle allocation, capacity, slot duration, payment/access timing, confirmation, reschedule and cancellation policy"
+    ],
+    "booking_actions_implemented": false
+  }
+]

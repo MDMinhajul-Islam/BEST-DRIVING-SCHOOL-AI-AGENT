@@ -1,0 +1,54 @@
+Search Form Search
+
+[Input: What can we help you find?]
+
+[Button: Search]
+
+[Input] [Input]
+
+## Change Text Size
+
+^{-}A A ^{+}A
+
+## Change Display Setting
+
+Default Text Only L15: 
+# Social Security Number (SSN)
+
+September 22, 2020
+###
+
+To enhance security, reduce the risk of identity theft or fraud, and to protect the integrity of the issuance process, applicants for a driver license or ID card must provide their Social Security Number (SSN) on the application form, unless they are not eligible for a SSN.
+Social Security Numbers are verified with the U.S. government electronically during the issuance process. This step is completed automatically within a few seconds using the Social Security Administration’s Social Security Online Verification Service (SSOLV). Applicants whose SSN does not verify through SSOLV must contact the Social Security Administration to correct any issues before their driver license or ID card can be issued or renewed.
+
+Individuals Who Don't Have a SSN But Are Eligible
+To apply for a SSN, visit the Social Security Administration†www.ssa.gov website.
+
+Need a SSN replacement card? The Social Security Administration introduced the expansion of online services for residents of Texas available through its my Social Security portal at www.socialsecurity.gov/myaccount†www.socialsecurity.gov . Residents of Texas can use the portal for many replacement SSN card requests and some other Social Security services.
+
+Individuals Not Eligible for a SSN
+Individuals who are not eligible to receive a SSN, must complete a Social Security Number Affidavit (Form DL-13) provided at the driver license office. Individuals utilizing the affidavit must certify they:
+
+* Have never applied for a SSN.
+* Have never been issued or assigned a SSN.
+* Are not eligible for a SSN.
+* Applied for and were denied a SSN due to ineligibility.
+Providing a false statement in connection with this affidavit will result in the cancellation of the driver license or ID card and may result in criminal charges. An affidavit is not acceptable for the issuance of a CDL.
+
+NOTE: If you are not eligible for a SSN, then you are not eligible for a commercial driver license (CDL).
+#### Privacy
+
+Social Security Numbers are not stored in the bar code nor are they printed on a driver license or ID card. DPS will only share a SSN with governmental agencies that are legally allowed to access the information, such as the Child Support Enforcement Division of the Texas Attorney General’s Office, the U.S. Selective Service Administration, and the Texas Secretary of State.
+#### Statutory Authority
+
+Federal laws allow DPS to collect SSNs: 42 USC Section 405(c)(2)(C)(i)†uscode.house.gov and 42 USC Section 666(a)(13)(A)†uscode.house.gov .
+
+State law governs the way DPS uses SSNs: Transportation Code Section 521.044†www.statutes.legis.state.tx.us .
+
+State and federal law relating to Driver License and ID Card SSN requirements: 6 Code of Federal Regulations Section 37.11†www.ecfr.gov and Texas Transportation Code Section 521.142†statutes.capitol.texas.gov L49: State and federal laws relating to CDL SSN requirements: 49 Code of Federal Regulations Section 383.153†www.ecfr.gov and Texas Transportation Code Section 522.021†www.statutes.legis.state.tx.us .
+### Follow DPS
+
+### Keep Texas Safe
+
+Report Suspicious Activity†iwatchtx.org L55: 
+© 2026 Texas Department of Public Safety. PDF files require Adobe Reader†get.adobe.com or compatible.

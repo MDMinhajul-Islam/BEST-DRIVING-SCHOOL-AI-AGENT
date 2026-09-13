@@ -1,0 +1,36 @@
+{
+  "source_id": "TX-TDLR-010",
+  "agency": "Texas TDLR",
+  "url": "https://www.tdlr.texas.gov/driver/education/parent-taught/instructor-eligibility/",
+  "topics": [
+    "parent_taught"
+  ],
+  "authority_level": 1,
+  "source_type": "webpage",
+  "reviewed": true,
+  "last_verified": "2026-09-13",
+  "review_required": false,
+  "recommended_recheck": "2026-12-12",
+  "reviewed_content_hash": "b6413b32dc917fc6dd93623f248cac7ea8c812cc0bdff92a9a2ae9015a245f89",
+  "title": "Am I Eligible to be a Parent-Taught Instructor?",
+  "headings": [
+    "Am I Eligible to be a Parent-Taught Instructor?"
+  ],
+  "displayed_dates": [],
+  "active": true,
+  "retrieved_at": "2026-09-13",
+  "preservation_method": "original_html",
+  "original_archived": true,
+  "raw_path": "data/regulatory_sources/html/TX-TDLR-010.html",
+  "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-010.txt",
+  "content_hash": "ccbb8338818fcf3e8a6d7440798e0c5064298f4c9b1cd25fde985515bb63ed3c",
+  "previous_normalized_hash": "b6413b32dc917fc6dd93623f248cac7ea8c812cc0bdff92a9a2ae9015a245f89",
+  "normalized_content_hash": "b6413b32dc917fc6dd93623f248cac7ea8c812cc0bdff92a9a2ae9015a245f89",
+  "normalization_version": "phase-b-1",
+  "preservation_method_changed": false,
+  "change_status": "UNCHANGED",
+  "published_or_updated": null,
+  "date_type": null,
+  "currency_status": "official_but_date_uncertain",
+  "notes": " No reliable update/effective date displayed; live retrieval confirms availability, not amendment history. No reliable update/effective date displayed; live retrieval confirms availability, not amendment history. No reliable update/effective date displayed; live retrieval confirms availability, not amendment history. No reliable update/effective date displayed; live retrieval confirms availability, not amendment history. No reliable update/effective date displayed; live retrieval confirms availability, not amendment history."
+}

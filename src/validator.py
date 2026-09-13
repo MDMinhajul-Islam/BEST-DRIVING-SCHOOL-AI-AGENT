@@ -13,10 +13,18 @@ def validate(kb, links, duplicates, warnings, guard):
     def walk(node, path='$'):
         nonlocal source_count
         if isinstance(node, dict):
-            if 'sources' in node:
+            # Phase B reference uses a filename under `sources`, not a business
+            # evidence array. Keep the business-source checks strict elsewhere.
+            if 'sources' in node and path != '$.regulatory_reference':
+                if not isinstance(node['sources'], list):
+                    errors.append(path + ': sources must be an array')
+                    return
                 if not node['sources']:
                     errors.append(path + ': missing sources')
                 for s in node['sources']:
+                    if not isinstance(s, dict):
+                        errors.append(path + ': source must be an object')
+                        continue
                     source_count += 1
                     for field in ['url','title','page_category','sitemap_last_modified','scraped_at','section','evidence','content_hash']:
                         if field not in s:

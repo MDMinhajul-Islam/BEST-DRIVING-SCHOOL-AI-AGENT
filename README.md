@@ -106,7 +106,7 @@ Public purchase links are references, not operations or availability evidence.
 
 School licensing statements are flagged `requires_official_verification: true`.
 They are not official legal facts. [Regulatory research](knowledge/regulatory/README.md)
-is pending. Future tools are specified only in
+now contains a separate reviewed Phase B layer with explicit uncertainty gates. Future tools are specified only in
 [operational requirements](docs/operational_data_requirements.md) and
 [booking integration plan](docs/booking_integration_plan.md).
 
@@ -125,3 +125,69 @@ additional offices. Automated validation checks source/schema integrity, not ful
 semantic truth or legal compliance. Narrative pricing binding and contradictions
 across differently phrased statements still require human review. Live operational
 data and actual Retell behavior are outside this phase.
+
+## Phase B — official Texas knowledge
+
+Regulatory research date: 2026-09-13.
+
+Phase B adds a source registry, preserved government evidence, 56 conditional
+rules, 11 applicant pathways, and 13 potential school-package relationships.
+The master file keeps all Phase A keys and adds only `regulatory_reference`.
+School licensing text and historical conflicts remain unchanged.
+
+Start with [manual review](reports/phase_b_manual_review.md),
+[coverage](reports/regulatory_coverage.md), and
+[official-source index](knowledge/regulatory/source_index.md).
+The reviewed source set contains 13 DPS pages, 10 TDLR pages and four PDFs.
+Two PDFs have archived originals; two DPS PDFs have web-tool extracts because
+direct downloads timed out. Unavailable sources are explicitly unreviewed.
+
+```powershell
+.venv\Scripts\python.exe -m src.regulatory
+.venv\Scripts\python.exe -m unittest discover -s tests -v
+```
+
+The rebuild is offline and checks evidence anchors, hashes, schema and references.
+For a public-source refresh, run `python -m src.regulatory_collect` first.
+Changed or failed sources cannot silently approve dependent rules. Review changes,
+update the curated rule configuration and research date, then use the explicit
+curator flag `python -m src.regulatory --review-current` only after actual review.
+This flag does not bypass missing evidence or failed retrieval. Recheck before
+production and at least every 90 days afterward.
+
+General adult guidance is supported. Teen classroom totals, PTDE daily limits,
+adult ITD selection, minor transfers and vehicle-inspection paperwork have official
+discrepancies. Adult restricted-license/TPST gates, foreign cases and exceptions
+require confirmation. These details are blocked by `review_required`; tests prove
+traceability and integrity, not individual licensing eligibility. Retell support
+documents are references for future manual configuration. No workflow or booking
+integration is implemented.
+
+## Course / package / pricing audit
+
+The saved public snapshot contains five purchasable program families, six course
+pages and 13 unique package options. Four service-page categories are a different
+count; homepage/location wording sometimes calls the five program cards “courses.”
+The audit reconciles that naming explicitly. Ninety-one raw option observations
+consolidate to 13 packages; no previous canonical duplicate was removed.
+
+Review [audit findings](reports/course_package_pricing_audit.md),
+[package catalog](knowledge/package_catalog.md),
+[hierarchy](data/structured/course_package_booking_map.json), and
+[schedule versus availability](docs/schedule_vs_availability.md).
+All 13 prices match the saved evidence; this audit does not perform a live price
+refresh. Marketing labels, discounts and the 3% online processing fee have separate
+fields. Twelve options need live scheduling; self-paced online education uses an
+access/purchase process rather than a timed appointment.
+
+```powershell
+.venv\Scripts\python.exe -m src.main --offline
+.venv\Scripts\python.exe -m src.package_audit
+.venv\Scripts\python.exe -m unittest discover -s tests -v
+```
+
+Run the package audit after business regeneration to refresh the separate catalog.
+It does not collect restricted routes or implement booking. Readable package IDs
+retain legacy IDs for migration; neither includes price. Operational field names,
+slots, checkout totals and service-specific cancellation rules require later
+authorized inspection. Official Phase B research remains separate and unchanged.

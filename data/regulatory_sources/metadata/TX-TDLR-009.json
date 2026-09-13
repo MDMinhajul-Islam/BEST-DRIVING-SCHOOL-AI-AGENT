@@ -1,0 +1,41 @@
+{
+  "source_id": "TX-TDLR-009",
+  "agency": "Texas TDLR",
+  "url": "https://www.tdlr.texas.gov/driver/education/students/faq.htm",
+  "topics": [
+    "driver_education",
+    "adult_first_time",
+    "teen"
+  ],
+  "authority_level": 1,
+  "title": "Frequently Asked Questions for Students",
+  "source_type": "webpage",
+  "retrieved_at": "2026-09-13T08:00:34.317764+00:00",
+  "published_or_updated": null,
+  "displayed_dates": [],
+  "date_type": null,
+  "active": true,
+  "reviewed": true,
+  "notes": " No reliable update/effective date displayed; live retrieval confirms availability, not amendment history. No reliable update/effective date displayed; live retrieval confirms availability, not amendment history. No reliable update/effective date displayed; live retrieval confirms availability, not amendment history. No reliable update/effective date displayed; live retrieval confirms availability, not amendment history. No reliable update/effective date displayed; live retrieval confirms availability, not amendment history.",
+  "redirects": [],
+  "content_hash": "c39ebc15a0c0bad417f6bbde23ba9409561efc53a533422ab7d7600adead4347",
+  "normalized_content_hash": "256d17d965097e1867fc821b773e3c7e9840891f5c7caaf9dcbe749b127860bc",
+  "previous_normalized_hash": "256d17d965097e1867fc821b773e3c7e9840891f5c7caaf9dcbe749b127860bc",
+  "change_status": "UNCHANGED",
+  "currency_status": "official_but_date_uncertain",
+  "raw_path": "data/regulatory_sources/html/TX-TDLR-009.html",
+  "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-009.txt",
+  "status_code": 200,
+  "final_url": "https://www.tdlr.texas.gov/driver/education/students/faq.htm",
+  "headings": [
+    "Frequently Asked Questions for Students"
+  ],
+  "last_verified": "2026-09-13",
+  "review_required": false,
+  "recommended_recheck": "2026-12-12",
+  "reviewed_content_hash": "256d17d965097e1867fc821b773e3c7e9840891f5c7caaf9dcbe749b127860bc",
+  "preservation_method": "original_html",
+  "original_archived": true,
+  "normalization_version": "phase-b-1",
+  "preservation_method_changed": false
+}

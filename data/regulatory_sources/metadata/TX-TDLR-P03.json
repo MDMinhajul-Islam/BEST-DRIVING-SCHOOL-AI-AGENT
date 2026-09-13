@@ -1,0 +1,42 @@
+{
+  "source_id": "TX-TDLR-P03",
+  "agency": "Texas TDLR",
+  "url": "https://www.tdlr.texas.gov/media/pdf/DES-at-a-glance.pdf",
+  "topics": [
+    "driver_education",
+    "teen"
+  ],
+  "authority_level": 2,
+  "title": "DRIVER EDUCATION & SAFETY AT A GLANCE ",
+  "source_type": "pdf",
+  "retrieved_at": "2026-09-13T08:00:48.795803+00:00",
+  "published_or_updated": "2025-12",
+  "displayed_dates": [
+    "revoked or suspended in the preceding three ",
+    "review fee; ",
+    "Dec. 2025 "
+  ],
+  "date_type": "revision",
+  "active": true,
+  "reviewed": true,
+  "notes": "Rev. Dec. 2025; body uses 24 hours but embedded historical curriculum cover says 32. Overview age wording includes 25, unlike precise DPS age 25+ exemption. Do not use those ambiguous overview statements.",
+  "redirects": [],
+  "content_hash": "8384ea4954f07f5d117307ae05951fb9e4a4b133fe4592e9acf507b721cd9c81",
+  "normalized_content_hash": "72ab8735343b5612395decbad0fcad0256b07ec37c7baf393c1ab2cccfe0d786",
+  "previous_normalized_hash": "72ab8735343b5612395decbad0fcad0256b07ec37c7baf393c1ab2cccfe0d786",
+  "change_status": "UNCHANGED",
+  "currency_status": "official_verified",
+  "raw_path": "data/regulatory_sources/pdfs/TX-TDLR-P03.pdf",
+  "extracted_path": "data/regulatory_sources/extracted/TX-TDLR-P03.txt",
+  "status_code": 200,
+  "final_url": "https://www.tdlr.texas.gov/media/pdf/DES-at-a-glance.pdf",
+  "page_count": 2,
+  "last_verified": "2026-09-13",
+  "review_required": false,
+  "recommended_recheck": "2026-12-12",
+  "reviewed_content_hash": "72ab8735343b5612395decbad0fcad0256b07ec37c7baf393c1ab2cccfe0d786",
+  "preservation_method": "original_pdf",
+  "original_archived": true,
+  "normalization_version": "phase-b-1",
+  "preservation_method_changed": false
+}
