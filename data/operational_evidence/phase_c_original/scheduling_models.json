@@ -1,0 +1,249 @@
+[
+  {
+    "package_id": "teen_24_hr_classroom_driving_package",
+    "schedulable": true,
+    "scheduling_model": "frontend_cohort_enrollment_then_schedule",
+    "model_scope": "Observed frontend only",
+    "backend_enforcement_verified": false,
+    "verification_status": "partially_verified",
+    "notes": "class_code selects dated classroom batch; in-car and observation allocation unverified.",
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/teen-24-hour-class-room-and-driving-package",
+        "raw_html": "data/raw_html/driving-courses-teen-24-hour-class-room-and-driving-package-1af9d18f.html",
+        "content_hash": "bcca060a2ed0db00b0483d240866c69f401f828416a0744c4f16b89d0511b321",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "frontend_date_gap_days": 3
+  },
+  {
+    "package_id": "teen_behind_the_wheel_only_7_7",
+    "schedulable": true,
+    "scheduling_model": "frontend_enrollment_without_visible_appointment_rows",
+    "model_scope": "Observed frontend only",
+    "backend_enforcement_verified": false,
+    "verification_status": "partially_verified",
+    "notes": "No visible date/time fields in saved PTDE/BTW form despite teen availability API attribute; enrollment and later scheduling require confirmation.",
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/teen-behind-the-wheel-only",
+        "raw_html": "data/raw_html/driving-courses-teen-behind-the-wheel-only-7de303ab.html",
+        "content_hash": "4d4081dcec33da4becc232e3458869ee1504623cd60cc7989f783e36554b6d9d",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "frontend_date_gap_days": 1
+  },
+  {
+    "package_id": "parent_taught_10_hours",
+    "schedulable": true,
+    "scheduling_model": "frontend_enrollment_without_visible_appointment_rows",
+    "model_scope": "Observed frontend only",
+    "backend_enforcement_verified": false,
+    "verification_status": "partially_verified",
+    "notes": "No visible date/time fields in saved PTDE/BTW form despite teen availability API attribute; enrollment and later scheduling require confirmation.",
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/log-driving-hours",
+        "raw_html": "data/raw_html/driving-courses-log-driving-hours-d99facb5.html",
+        "content_hash": "31f27e4048610e372781c257353e340c708048dc6095633a290bc781012fefff",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "frontend_date_gap_days": 1
+  },
+  {
+    "package_id": "parent_taught_15_hours",
+    "schedulable": true,
+    "scheduling_model": "frontend_enrollment_without_visible_appointment_rows",
+    "model_scope": "Observed frontend only",
+    "backend_enforcement_verified": false,
+    "verification_status": "partially_verified",
+    "notes": "No visible date/time fields in saved PTDE/BTW form despite teen availability API attribute; enrollment and later scheduling require confirmation.",
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/log-driving-hours",
+        "raw_html": "data/raw_html/driving-courses-log-driving-hours-d99facb5.html",
+        "content_hash": "31f27e4048610e372781c257353e340c708048dc6095633a290bc781012fefff",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "frontend_date_gap_days": 1
+  },
+  {
+    "package_id": "parent_taught_30_hours",
+    "schedulable": true,
+    "scheduling_model": "frontend_enrollment_without_visible_appointment_rows",
+    "model_scope": "Observed frontend only",
+    "backend_enforcement_verified": false,
+    "verification_status": "partially_verified",
+    "notes": "No visible date/time fields in saved PTDE/BTW form despite teen availability API attribute; enrollment and later scheduling require confirmation.",
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/log-driving-hours",
+        "raw_html": "data/raw_html/driving-courses-log-driving-hours-d99facb5.html",
+        "content_hash": "31f27e4048610e372781c257353e340c708048dc6095633a290bc781012fefff",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "frontend_date_gap_days": 1
+  },
+  {
+    "package_id": "adult_6_hour_online_permit_class",
+    "schedulable": false,
+    "scheduling_model": "self_paced_external_access",
+    "model_scope": "Observed frontend only",
+    "backend_enforcement_verified": false,
+    "verification_status": "partially_verified",
+    "notes": "No local enrollment form. External portal/access link appears; account activation/payment not traversed.",
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/adult-6-hours-online-permit-class",
+        "raw_html": "data/raw_html/driving-courses-adult-6-hours-online-permit-class-e41fdf0f.html",
+        "content_hash": "de2ab1c446db8ad2b2b3d797b41800a3a123816e63e2c6fb3edc5cba05be4624",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "frontend_date_gap_days": null
+  },
+  {
+    "package_id": "road_test_road_test_only",
+    "schedulable": true,
+    "scheduling_model": "frontend_date_time_test_selection",
+    "model_scope": "Observed frontend only",
+    "backend_enforcement_verified": false,
+    "verification_status": "partially_verified",
+    "notes": "One date/time field for both road-test variants; practice duration and resource coupling unverified.",
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/road-test",
+        "raw_html": "data/raw_html/driving-courses-road-test-69bab08e.html",
+        "content_hash": "a8aa5287dea2fba14e2d4edc8f59fe77569299f1d8d448dc1107e8d6cf9e795a",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "frontend_date_gap_days": 1
+  },
+  {
+    "package_id": "road_test_practice_session_road_test",
+    "schedulable": true,
+    "scheduling_model": "frontend_date_time_test_selection",
+    "model_scope": "Observed frontend only",
+    "backend_enforcement_verified": false,
+    "verification_status": "partially_verified",
+    "notes": "One date/time field for both road-test variants; practice duration and resource coupling unverified.",
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/road-test",
+        "raw_html": "data/raw_html/driving-courses-road-test-69bab08e.html",
+        "content_hash": "a8aa5287dea2fba14e2d4edc8f59fe77569299f1d8d448dc1107e8d6cf9e795a",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "frontend_date_gap_days": 1
+  },
+  {
+    "package_id": "adult_2_hours",
+    "schedulable": true,
+    "scheduling_model": "frontend_multi_row_appointment_selection",
+    "model_scope": "Observed frontend only",
+    "backend_enforcement_verified": false,
+    "verification_status": "partially_verified",
+    "notes": "Adult selected product controls 1–5 rows; every session says two hours. Server acceptance/remaining sessions unverified.",
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/adult-driving-sessions",
+        "raw_html": "data/raw_html/driving-courses-adult-driving-sessions-f1400c84.html",
+        "content_hash": "62cc34610588c98140532c920044db3e0fdb5514f264fa76f4889beb73c37938",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "frontend_date_gap_days": 1
+  },
+  {
+    "package_id": "adult_4_hours",
+    "schedulable": true,
+    "scheduling_model": "frontend_multi_row_appointment_selection",
+    "model_scope": "Observed frontend only",
+    "backend_enforcement_verified": false,
+    "verification_status": "partially_verified",
+    "notes": "Adult selected product controls 1–5 rows; every session says two hours. Server acceptance/remaining sessions unverified.",
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/adult-driving-sessions",
+        "raw_html": "data/raw_html/driving-courses-adult-driving-sessions-f1400c84.html",
+        "content_hash": "62cc34610588c98140532c920044db3e0fdb5514f264fa76f4889beb73c37938",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "frontend_date_gap_days": 1
+  },
+  {
+    "package_id": "adult_6_hours",
+    "schedulable": true,
+    "scheduling_model": "frontend_multi_row_appointment_selection",
+    "model_scope": "Observed frontend only",
+    "backend_enforcement_verified": false,
+    "verification_status": "partially_verified",
+    "notes": "Adult selected product controls 1–5 rows; every session says two hours. Server acceptance/remaining sessions unverified.",
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/adult-driving-sessions",
+        "raw_html": "data/raw_html/driving-courses-adult-driving-sessions-f1400c84.html",
+        "content_hash": "62cc34610588c98140532c920044db3e0fdb5514f264fa76f4889beb73c37938",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "frontend_date_gap_days": 1
+  },
+  {
+    "package_id": "adult_8_hours",
+    "schedulable": true,
+    "scheduling_model": "frontend_multi_row_appointment_selection",
+    "model_scope": "Observed frontend only",
+    "backend_enforcement_verified": false,
+    "verification_status": "partially_verified",
+    "notes": "Adult selected product controls 1–5 rows; every session says two hours. Server acceptance/remaining sessions unverified.",
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/adult-driving-sessions",
+        "raw_html": "data/raw_html/driving-courses-adult-driving-sessions-f1400c84.html",
+        "content_hash": "62cc34610588c98140532c920044db3e0fdb5514f264fa76f4889beb73c37938",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "frontend_date_gap_days": 1
+  },
+  {
+    "package_id": "adult_10_hours",
+    "schedulable": true,
+    "scheduling_model": "frontend_multi_row_appointment_selection",
+    "model_scope": "Observed frontend only",
+    "backend_enforcement_verified": false,
+    "verification_status": "partially_verified",
+    "notes": "Adult selected product controls 1–5 rows; every session says two hours. Server acceptance/remaining sessions unverified.",
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/adult-driving-sessions",
+        "raw_html": "data/raw_html/driving-courses-adult-driving-sessions-f1400c84.html",
+        "content_hash": "62cc34610588c98140532c920044db3e0fdb5514f264fa76f4889beb73c37938",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "frontend_date_gap_days": 1
+  }
+]

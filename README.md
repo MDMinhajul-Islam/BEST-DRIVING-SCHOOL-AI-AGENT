@@ -191,3 +191,34 @@ It does not collect restricted routes or implement booking. Readable package IDs
 retain legacy IDs for migration; neither includes price. Operational field names,
 slots, checkout totals and service-specific cancellation rules require later
 authorized inspection. Official Phase B research remains separate and unchanged.
+
+
+## Phase C booking investigation
+
+Public frontend evidence and three date-only anonymous availability reads are documented in `reports/phase_c_booking_investigation.md`. All 13 canonical packages are preserved. Twelve form product IDs are provisional; authoritative backend identity, operational location IDs and production transaction contracts remain unverified.
+
+Offline assembly: `.venv\Scripts\python.exe -X utf8 -m src.booking.investigate`. Synthetic five-operation demo: `.venv\Scripts\python.exe -X utf8 -m src.booking.demo`. Tests: `.venv\Scripts\python.exe -X utf8 -m unittest discover -s tests -v`. The demo writes `reports/phase_c_mock_demo.json` and never contacts the school.
+
+`BestDrivingSchoolBookingAdapter` defaults to live disabled. Explicit enablement permits only the three evidenced GET routes, with date only and no redirects. Production create/find/reschedule/cancel stay disabled. `MockBookingAdapter` is in-memory synthetic data with verification, idempotency, capacity conflict and atomic update checks. No Retell configuration or production booking was changed. See `docs/retell_booking_tool_contracts.md` for proposed manual integration contracts.
+
+
+## Phase C.1 and D manual blueprint
+
+CTO-confirmed scheduling rules are internal business facts, distinct from website observations and Texas regulations. Seven known driving package plans and two road-test models are reconciled without claiming backend enforcement. PTDE/observation behavior remains unresolved.
+
+Rebuild in order: `.venv\Scripts\python.exe -X utf8 -m src.manual_retell.business_rules`, then `.venv\Scripts\python.exe -X utf8 -m src.manual_retell.blueprint`. If regenerating Phase C, always run both afterward. Master document: `docs/retell_manual_build_spec.md`; diagram: `docs/manual_retell_flow.md`. Offline validation schema under `data/design` is for tests only and is not a Retell workflow import.
+
+Ten conceptual nodes, 69 shared variables, 40 handoffs, nine persona prompts and 21 expected-call scenarios. Retell remains untouched; production writes/lookup blocked. Local mock validates mechanics, with duration-aware fixtures and authenticated wrapper still needed before faithful multi-session demos. No actual voice calls or recordings claimed. Run the full unittest suite before manual build.
+
+
+## Phase E lean manual packet
+
+Use `docs/retell_manual_implementation_sheet.md` beside Retell and follow `docs/retell_manual_build_order.md`. Copy-paste prompts are under `knowledge/retell_build/prompts/`; global prompt is separate. Nine flow nodes, 21 core state definitions, 20 conditional, 16 server-only, four deferred and eight redundant concepts; all Phase D sources preserved. Twenty transition rule groups mean 17 local edges plus three global conditions (39 expanded pairs if global behavior unavailable).
+
+Regenerate offline with `.venv\Scripts\python.exe -X utf8 -m src.manual_retell.build_packet`. The new validation manifest is a static test artifact, not a Retell workflow import. Current local mock/read adapters need an approved hosted wrapper before Retell tool wiring; production lookup/writes stay blocked. Manual knowledge/routing/extraction/fallback build can start now. Smoke tests and 21-call QA are plans, not executed results.
+
+## Phase F demo booking backend
+
+The authenticated five-operation HTTP wrapper now supports a restart-safe, duration-aware mock and Cal.com API v2 demo adapter. Start with a private RETELL_TOOL_SECRET and BOOKING_MODE=mock; run `.venv\Scripts\python.exe -m uvicorn src.routes.booking:create_app --factory --host 127.0.0.1 --port 8000 --workers 1 --no-access-log`. Environment variables are explicit; .env files are not automatically loaded. Run the full unittest command above for 104 tests (72 prior + 32 Phase F).
+
+Read `docs/calcom_setup_guide.md`, `docs/retell_calcom_tool_wiring.md`, and `docs/dokploy_application_deployment.md`. Dokploy uses backend Application mode with the root Dockerfile and a durable `/app/runtime` volume. Frontend work is deferred. Cal event mappings remain null: the existing public 45-minute events do not match the required 120/60/30-minute events. No Cal write, deployment, or Retell change has occurred. Readiness and remaining configuration are recorded in `reports/phase_f_calcom_integration.md`.

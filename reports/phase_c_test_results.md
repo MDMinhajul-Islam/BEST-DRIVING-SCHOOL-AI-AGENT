@@ -1,0 +1,3 @@
+# Phase C validation
+
+50/50 tests passed on 2026-09-13 using `.venv\Scripts\python.exe -X utf8 -m unittest discover -s tests -v` (36 existing, 14 new). New checks cover all-package references, preservation hashes, deterministic time normalization, rejection of customer-shaped payloads, safe timeout messages, live default-off and write isolation, allowlisted date-only calls, verification/customer isolation, idempotency after cancellation, slot races, atomic rescheduling, stale versions and malformed selections. No tests send live requests. Offline mock demo exercised all five operations. `git diff --check` passed.

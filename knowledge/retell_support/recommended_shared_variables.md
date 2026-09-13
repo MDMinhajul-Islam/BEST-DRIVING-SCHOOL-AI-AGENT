@@ -60,3 +60,13 @@ Manual proposal only. Existing `age`, `student_or_parent`, `license_status` and 
 | selected_slot_id / confirmed_datetime | OPTIONAL after actual backend contract is reviewed; no invented field names |
 
 Proposed manual variables, not configured Retell fields. Price, availability and booking state remain distinct.
+
+
+## Phase C operational booking proposals
+
+Manual planning only; no Retell configuration was changed. Proposed variables: location_id, location_name, selected_slot_id, verified_customer_ref, verification_status, appointment_id, booking_status, booking_version, adapter_mode, last_tool_result. Live location and stable slot IDs remain unknown; never fill them with inferred values. Preserve existing course/package/price and caller preferences. Confirm a real booking only from explicit production backend success and an appointment ID; label every synthetic result as mock.
+
+
+## Phase D final shared-state specification
+
+The final consolidated manual dictionary is `knowledge/retell_manual/shared_state.md` (69 variables). Earlier proposals remain source history; use the final dictionary and alias normalization when building. No Retell variables were implemented. Server owns mode/permissions, verification and confirmation guards; do not expose verification tokens in conversation state.

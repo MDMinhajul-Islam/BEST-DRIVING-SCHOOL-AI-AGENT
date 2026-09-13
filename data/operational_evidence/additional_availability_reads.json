@@ -1,0 +1,34 @@
+[
+  {
+    "method": "GET",
+    "endpoint": "https://bestdrivingschool.us/api/adult-appointment-times",
+    "query_fields": [
+      "date"
+    ],
+    "status_code": 200,
+    "response_shape": "list",
+    "time_labels": [],
+    "secrets_saved": false,
+    "requested_date": "2026-09-20",
+    "observation_date": "2026-09-13"
+  },
+  {
+    "method": "GET",
+    "endpoint": "https://bestdrivingschool.us/api/teen-appointment-times",
+    "query_fields": [
+      "date"
+    ],
+    "status_code": 200,
+    "response_shape": "list",
+    "time_labels": [
+      "09:00 - 11:00",
+      "11:00 - 13:00",
+      "13:00 - 15:00",
+      "15:00 - 17:00",
+      "17:00 - 19:00"
+    ],
+    "secrets_saved": false,
+    "requested_date": "2026-09-20",
+    "observation_date": "2026-09-13"
+  }
+]

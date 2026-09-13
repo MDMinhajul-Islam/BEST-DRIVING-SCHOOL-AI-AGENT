@@ -1,0 +1,8 @@
+{
+  "timezone": "America/Chicago",
+  "event_types": {
+    "driving_standard": {"event_type_id": null, "duration_minutes": 120},
+    "driving_remainder": {"event_type_id": null, "duration_minutes": 60},
+    "road_test": {"event_type_id": null, "duration_minutes": 30}
+  }
+}

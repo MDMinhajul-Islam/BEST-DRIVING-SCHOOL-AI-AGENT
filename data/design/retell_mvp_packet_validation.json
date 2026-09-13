@@ -1,0 +1,1109 @@
+{
+  "artifact_type": "offline_packet_checks_not_retell_import",
+  "nodes": [
+    {
+      "id": "01",
+      "name": "Greeting / Main Router",
+      "type": "Subagent",
+      "prompt_file": "knowledge/retell_build/prompts/01_router_prompt.md",
+      "reads": [
+        "age",
+        "student_or_parent",
+        "primary_intent",
+        "package_id",
+        "support_issue"
+      ],
+      "writes": [
+        "age",
+        "student_or_parent",
+        "primary_intent",
+        "escalation_reason"
+      ],
+      "tools": [
+        "extract_dynamic_variables"
+      ],
+      "production_write_enabled": false
+    },
+    {
+      "id": "02",
+      "name": "Texas License Guide",
+      "type": "Subagent",
+      "prompt_file": "knowledge/retell_build/prompts/02_license_guide_prompt.md",
+      "reads": [
+        "age",
+        "license_status",
+        "learner_license_status",
+        "driver_education_status",
+        "road_test_eligibility",
+        "package_id"
+      ],
+      "writes": [
+        "license_status",
+        "learner_license_status",
+        "driver_education_status",
+        "road_test_eligibility",
+        "escalation_reason"
+      ],
+      "tools": [
+        "extract_dynamic_variables"
+      ],
+      "production_write_enabled": false
+    },
+    {
+      "id": "03",
+      "name": "Adult Sales Specialist",
+      "type": "Subagent",
+      "prompt_file": "knowledge/retell_build/prompts/03_adult_sales_prompt.md",
+      "reads": [
+        "age",
+        "license_status",
+        "learner_license_status",
+        "driver_education_status",
+        "package_id",
+        "package_name",
+        "package_price"
+      ],
+      "writes": [
+        "package_id",
+        "package_name",
+        "package_price",
+        "escalation_reason"
+      ],
+      "tools": [
+        "extract_dynamic_variables"
+      ],
+      "production_write_enabled": false
+    },
+    {
+      "id": "04",
+      "name": "Teen Sales Specialist",
+      "type": "Subagent",
+      "prompt_file": "knowledge/retell_build/prompts/04_teen_sales_prompt.md",
+      "reads": [
+        "age",
+        "student_or_parent",
+        "learner_license_status",
+        "driver_education_status",
+        "package_id",
+        "package_name",
+        "package_price"
+      ],
+      "writes": [
+        "package_id",
+        "package_name",
+        "package_price",
+        "escalation_reason"
+      ],
+      "tools": [
+        "extract_dynamic_variables"
+      ],
+      "production_write_enabled": false
+    },
+    {
+      "id": "05",
+      "name": "Road Test Sales Specialist",
+      "type": "Subagent",
+      "prompt_file": "knowledge/retell_build/prompts/05_road_test_sales_prompt.md",
+      "reads": [
+        "age",
+        "learner_license_status",
+        "driver_education_status",
+        "road_test_eligibility",
+        "package_id",
+        "package_name",
+        "package_price"
+      ],
+      "writes": [
+        "package_id",
+        "package_name",
+        "package_price",
+        "escalation_reason"
+      ],
+      "tools": [
+        "extract_dynamic_variables"
+      ],
+      "production_write_enabled": false
+    },
+    {
+      "id": "06",
+      "name": "Booking & Scheduling Specialist",
+      "type": "Subagent",
+      "prompt_file": "knowledge/retell_build/prompts/06_booking_prompt.md",
+      "reads": [
+        "age",
+        "student_or_parent",
+        "package_id",
+        "package_name",
+        "package_price",
+        "road_test_eligibility",
+        "preferred_date",
+        "preferred_time",
+        "session_count_required",
+        "session_plan",
+        "available_slots",
+        "selected_slot",
+        "appointment_id",
+        "booking_status",
+        "support_issue",
+        "support_category"
+      ],
+      "writes": [
+        "preferred_date",
+        "preferred_time",
+        "session_count_required",
+        "session_plan",
+        "available_slots",
+        "selected_slot",
+        "appointment_id",
+        "booking_status",
+        "escalation_reason"
+      ],
+      "tools": [
+        "extract_dynamic_variables",
+        "check_availability",
+        "create_booking",
+        "find_booking",
+        "reschedule_booking",
+        "cancel_booking"
+      ],
+      "production_write_enabled": false
+    },
+    {
+      "id": "07",
+      "name": "Existing Student Support",
+      "type": "Subagent",
+      "prompt_file": "knowledge/retell_build/prompts/07_student_support_prompt.md",
+      "reads": [
+        "support_issue",
+        "support_category",
+        "package_id",
+        "appointment_id"
+      ],
+      "writes": [
+        "support_issue",
+        "support_category",
+        "escalation_reason"
+      ],
+      "tools": [
+        "extract_dynamic_variables"
+      ],
+      "production_write_enabled": false
+    },
+    {
+      "id": "08",
+      "name": "Human Escalation",
+      "type": "Subagent",
+      "prompt_file": "knowledge/retell_build/prompts/08_human_escalation_prompt.md",
+      "reads": [
+        "escalation_reason",
+        "support_issue",
+        "support_category",
+        "package_name",
+        "preferred_date",
+        "booking_status"
+      ],
+      "writes": [
+        "escalation_reason"
+      ],
+      "tools": [
+        "extract_dynamic_variables"
+      ],
+      "production_write_enabled": false
+    },
+    {
+      "id": "09",
+      "name": "End Call",
+      "type": "End (global, closing prompt)",
+      "prompt_file": "knowledge/retell_build/prompts/09_end_call_prompt.md",
+      "reads": [
+        "package_name",
+        "appointment_id",
+        "booking_status",
+        "escalation_reason"
+      ],
+      "writes": [],
+      "tools": [],
+      "production_write_enabled": false
+    }
+  ],
+  "variable_registry": {
+    "student_or_parent": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Enum: student, parent, other, unknown",
+      "purpose": "student / parent / other",
+      "clear_when": "Student changes: clear licensing, verification, package and tentative slots"
+    },
+    "age": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Number",
+      "purpose": "Explicit student age; do not infer from package",
+      "clear_when": "Student changes: clear licensing, verification, package and tentative slots"
+    },
+    "primary_intent": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Enum: general_license_guidance, adult_sales, teen_sales, road_test, booking, student_support, human_request, end_call, unknown",
+      "purpose": "Current semantic action goal",
+      "clear_when": "New call; consume completed detour; explicit new goal changes primary intent"
+    },
+    "license_status": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Text",
+      "purpose": "license status",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "learner_license_status": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Text",
+      "purpose": "learner license status",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "driver_education_status": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Text",
+      "purpose": "driver education status",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "road_test_eligibility": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Enum: unknown, prerequisites_reported, needs_review",
+      "purpose": "unknown / prerequisites_reported / needs_review; never government-approved",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "package_id": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Text",
+      "purpose": "Canonical catalog ID, never provisional form ID",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "package_name": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Text",
+      "purpose": "package name",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "package_price": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Number",
+      "purpose": "Numeric catalog base price, caller cannot overwrite",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "preferred_date": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Text",
+      "purpose": "Caller-confirmed ISO date in agreed school timezone",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "preferred_time": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Text",
+      "purpose": "preferred time",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "session_count_required": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Number",
+      "purpose": "Known derived driving count; null for unresolved PTDE/preparation",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "session_plan": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Text",
+      "purpose": "Ordered minute durations from known business plan; observation separate",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "available_slots": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Text",
+      "purpose": "Ephemeral returned observations; never static knowledge",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "selected_slot": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Text",
+      "purpose": "Returned authoritative object; never fabricate an ID from a label",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "appointment_id": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Text",
+      "purpose": "Verified backend result only, not caller-entered reference",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "booking_status": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Text",
+      "purpose": "Guarded enum in booking_state_machine.md",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "support_issue": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Text",
+      "purpose": "Minimal caller symptom, not verified account facts",
+      "clear_when": "Student/customer changes clear verification; new issue resets reason/category"
+    },
+    "support_category": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Enum: faq, instruction, booking_change, access, payment, certificate, account, high_risk, unknown",
+      "purpose": "faq / instruction / booking_change / access / payment / certificate / account / high_risk",
+      "clear_when": "Student/customer changes clear verification; new issue resets reason/category"
+    },
+    "escalation_reason": {
+      "group": "CORE",
+      "decision": "KEEP FOR MVP",
+      "reason": "Minimum routing, qualification, selected package and safe outcome context",
+      "type": "Text",
+      "purpose": "Specific reason staff needed; not proof ticket or transfer occurred",
+      "clear_when": "Student/customer changes clear verification; new issue resets reason/category"
+    },
+    "caller_name": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "caller name",
+      "clear_when": "End call under approved retention; never public logs"
+    },
+    "student_name": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "student name",
+      "clear_when": "Student changes: clear licensing, verification, package and tentative slots"
+    },
+    "previous_persona": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "Saved valid prior node ID",
+      "clear_when": "New call; consume completed detour; explicit new goal changes primary intent"
+    },
+    "first_time_applicant": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Boolean (unset until explicit)",
+      "purpose": "first time applicant",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "parent_taught_status": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "parent taught status",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "texas_residency_status": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "texas residency status",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "license_issuing_jurisdiction": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "license issuing jurisdiction",
+      "clear_when": "Changed credential/student; ask only if applicable reviewed rule needs it"
+    },
+    "license_expiry": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "license expiry",
+      "clear_when": "Changed credential/student; ask only if applicable reviewed rule needs it"
+    },
+    "learner_issue_date": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "learner issue date",
+      "clear_when": "Changed credential/student; ask only if applicable reviewed rule needs it"
+    },
+    "certificate_type": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "certificate type",
+      "clear_when": "Changed credential/student; ask only if applicable reviewed rule needs it"
+    },
+    "required_document_status": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "required document status",
+      "clear_when": "Changed credential/student; ask only if applicable reviewed rule needs it"
+    },
+    "impact_texas_status": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "impact texas status",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "impact_program": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "impact program",
+      "clear_when": "Changed credential/student; ask only if applicable reviewed rule needs it"
+    },
+    "impact_certificate_date": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "impact certificate date",
+      "clear_when": "Changed credential/student; ask only if applicable reviewed rule needs it"
+    },
+    "move_date": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "move date",
+      "clear_when": "Changed credential/student; ask only if applicable reviewed rule needs it"
+    },
+    "suspension_during_hold": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "suspension during hold",
+      "clear_when": "Changed credential/student; ask only if applicable reviewed rule needs it"
+    },
+    "preferred_location": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "Caller area preference, not operational ID or pickup commitment",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "experience_level": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "Caller-reported confidence and training goal",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "recommended_service": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "recommended service",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "booking_reference_input": {
+      "group": "CONDITIONAL",
+      "decision": "KEEP CONDITIONAL",
+      "reason": "Use only for the relevant pathway, optional name or explicit temporary return; otherwise use transcript context",
+      "type": "Text",
+      "purpose": "Caller-reported known reference; not verified appointment identity",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "booking_version": {
+      "group": "BACKEND-ONLY",
+      "decision": "SERVER SIDE",
+      "reason": "Server/configuration owns identity, transaction, provenance or authoritative action state; expose only sanitized necessary result",
+      "type": "Text",
+      "purpose": "Backend concurrency version; mock version synthetic",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "location_id": {
+      "group": "BACKEND-ONLY",
+      "decision": "SERVER SIDE",
+      "reason": "Server/configuration owns identity, transaction, provenance or authoritative action state; expose only sanitized necessary result",
+      "type": "Text",
+      "purpose": "Authoritative operational ID only; unknown today",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "school_timezone": {
+      "group": "BACKEND-ONLY",
+      "decision": "SERVER SIDE",
+      "reason": "Server/configuration owns identity, transaction, provenance or authoritative action state; expose only sanitized necessary result",
+      "type": "Text",
+      "purpose": "Owner/backend-confirmed IANA string; unknown in current payload",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "adapter_mode": {
+      "group": "BACKEND-ONLY",
+      "decision": "SERVER SIDE",
+      "reason": "Server/configuration owns identity, transaction, provenance or authoritative action state; expose only sanitized necessary result",
+      "type": "Text",
+      "purpose": "Builder-set demo_mock / production_safe",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "last_tool_result": {
+      "group": "BACKEND-ONLY",
+      "decision": "SERVER SIDE",
+      "reason": "Server/configuration owns identity, transaction, provenance or authoritative action state; expose only sanitized necessary result",
+      "type": "Text",
+      "purpose": "Sanitized normalized result including mode/confirmation/error",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "production_write_enabled": {
+      "group": "BACKEND-ONLY",
+      "decision": "SERVER SIDE",
+      "reason": "Server/configuration owns identity, transaction, provenance or authoritative action state; expose only sanitized necessary result",
+      "type": "Text",
+      "purpose": "Secure server configuration; false today",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "backend_success_verified": {
+      "group": "BACKEND-ONLY",
+      "decision": "SERVER SIDE",
+      "reason": "Server/configuration owns identity, transaction, provenance or authoritative action state; expose only sanitized necessary result",
+      "type": "Text",
+      "purpose": "Server-derived explicit correct-environment success and appointment ID gate",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "verified_customer_ref": {
+      "group": "BACKEND-ONLY",
+      "decision": "SERVER SIDE",
+      "reason": "Server/configuration owns identity, transaction, provenance or authoritative action state; expose only sanitized necessary result",
+      "type": "Text",
+      "purpose": "Scoped secure identity; no credentials/tokens in conversation state",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "verification_status": {
+      "group": "BACKEND-ONLY",
+      "decision": "SERVER SIDE",
+      "reason": "Server/configuration owns identity, transaction, provenance or authoritative action state; expose only sanitized necessary result",
+      "type": "Text",
+      "purpose": "unverified / verified / failed; secure system sets verified",
+      "clear_when": "Student/customer changes clear verification; new issue resets reason/category"
+    },
+    "request_id": {
+      "group": "BACKEND-ONLY",
+      "decision": "SERVER SIDE",
+      "reason": "Server/configuration owns identity, transaction, provenance or authoritative action state; expose only sanitized necessary result",
+      "type": "Text",
+      "purpose": "Server-issued non-PII trace ID",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "idempotency_key": {
+      "group": "BACKEND-ONLY",
+      "decision": "SERVER SIDE",
+      "reason": "Server/configuration owns identity, transaction, provenance or authoritative action state; expose only sanitized necessary result",
+      "type": "Text",
+      "purpose": "Server-issued same-action retry key",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "tool_failure_count": {
+      "group": "BACKEND-ONLY",
+      "decision": "SERVER SIDE",
+      "reason": "Server/configuration owns identity, transaction, provenance or authoritative action state; expose only sanitized necessary result",
+      "type": "Text",
+      "purpose": "tool failure count",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "pending_action": {
+      "group": "BACKEND-ONLY",
+      "decision": "SERVER SIDE",
+      "reason": "Server/configuration owns identity, transaction, provenance or authoritative action state; expose only sanitized necessary result",
+      "type": "Text",
+      "purpose": "create / find / reschedule / cancel / none",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "price_snapshot": {
+      "group": "BACKEND-ONLY",
+      "decision": "SERVER SIDE",
+      "reason": "Server/configuration owns identity, transaction, provenance or authoritative action state; expose only sanitized necessary result",
+      "type": "Text",
+      "purpose": "Reviewed catalog source/version",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "knowledge_snapshot": {
+      "group": "BACKEND-ONLY",
+      "decision": "SERVER SIDE",
+      "reason": "Server/configuration owns identity, transaction, provenance or authoritative action state; expose only sanitized necessary result",
+      "type": "Text",
+      "purpose": "Reviewed business/regulatory source version and freshness gate",
+      "clear_when": "Builder changes reviewed source set; never caller-controlled"
+    },
+    "selected_sessions": {
+      "group": "BACKEND-ONLY",
+      "decision": "SERVER SIDE",
+      "reason": "Server/configuration owns identity, transaction, provenance or authoritative action state; expose only sanitized necessary result",
+      "type": "Text",
+      "purpose": "Ordered tentative selections with duration/provenance",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "caller_phone": {
+      "group": "FUTURE",
+      "decision": "DEFER",
+      "reason": "No callback/CRM or parallel-goal workflow in first demo",
+      "type": "Text",
+      "purpose": "Callback with consent only; not verification",
+      "clear_when": "End call under approved retention; never public logs"
+    },
+    "caller_email": {
+      "group": "FUTURE",
+      "decision": "DEFER",
+      "reason": "No callback/CRM or parallel-goal workflow in first demo",
+      "type": "Text",
+      "purpose": "Optional callback/enrollment contact; not verification",
+      "clear_when": "End call under approved retention; never public logs"
+    },
+    "secondary_intent": {
+      "group": "FUTURE",
+      "decision": "DEFER",
+      "reason": "No callback/CRM or parallel-goal workflow in first demo",
+      "type": "Text",
+      "purpose": "Deferred explicit goal",
+      "clear_when": "New call; consume completed detour; explicit new goal changes primary intent"
+    },
+    "resume_goal": {
+      "group": "FUTURE",
+      "decision": "DEFER",
+      "reason": "No callback/CRM or parallel-goal workflow in first demo",
+      "type": "Text",
+      "purpose": "Minimal suspended task and dependencies",
+      "clear_when": "New call; consume completed detour; explicit new goal changes primary intent"
+    },
+    "permit_status": {
+      "group": "REDUNDANT",
+      "decision": "REMOVE AS REDUNDANT",
+      "reason": "Existing canonical state, node location or catalog lookup already provides this concept",
+      "type": "Text",
+      "purpose": "Compatibility view of learner_license_status; update together",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "out_of_state_license_status": {
+      "group": "REDUNDANT",
+      "decision": "REMOVE AS REDUNDANT",
+      "reason": "Existing canonical state, node location or catalog lookup already provides this concept",
+      "type": "Text",
+      "purpose": "Derived from license_status and jurisdiction",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "foreign_license_status": {
+      "group": "REDUNDANT",
+      "decision": "REMOVE AS REDUNDANT",
+      "reason": "Existing canonical state, node location or catalog lookup already provides this concept",
+      "type": "Text",
+      "purpose": "Derived from license_status and jurisdiction",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "active_persona": {
+      "group": "REDUNDANT",
+      "decision": "REMOVE AS REDUNDANT",
+      "reason": "Existing canonical state, node location or catalog lookup already provides this concept",
+      "type": "Text",
+      "purpose": "Current node ID",
+      "clear_when": "New call; consume completed detour; explicit new goal changes primary intent"
+    },
+    "program": {
+      "group": "REDUNDANT",
+      "decision": "REMOVE AS REDUNDANT",
+      "reason": "Existing canonical state, node location or catalog lookup already provides this concept",
+      "type": "Text",
+      "purpose": "program",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "course_id": {
+      "group": "REDUNDANT",
+      "decision": "REMOVE AS REDUNDANT",
+      "reason": "Existing canonical state, node location or catalog lookup already provides this concept",
+      "type": "Text",
+      "purpose": "course id",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "course_name": {
+      "group": "REDUNDANT",
+      "decision": "REMOVE AS REDUNDANT",
+      "reason": "Existing canonical state, node location or catalog lookup already provides this concept",
+      "type": "Text",
+      "purpose": "course name",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "currency": {
+      "group": "REDUNDANT",
+      "decision": "REMOVE AS REDUNDANT",
+      "reason": "Existing canonical state, node location or catalog lookup already provides this concept",
+      "type": "Text",
+      "purpose": "currency",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    }
+  },
+  "core_variables": [
+    "student_or_parent",
+    "age",
+    "primary_intent",
+    "license_status",
+    "learner_license_status",
+    "driver_education_status",
+    "road_test_eligibility",
+    "package_id",
+    "package_name",
+    "package_price",
+    "preferred_date",
+    "preferred_time",
+    "session_count_required",
+    "session_plan",
+    "available_slots",
+    "selected_slot",
+    "appointment_id",
+    "booking_status",
+    "support_issue",
+    "support_category",
+    "escalation_reason"
+  ],
+  "conditional_variables": [
+    "caller_name",
+    "student_name",
+    "previous_persona",
+    "first_time_applicant",
+    "parent_taught_status",
+    "texas_residency_status",
+    "license_issuing_jurisdiction",
+    "license_expiry",
+    "learner_issue_date",
+    "certificate_type",
+    "required_document_status",
+    "impact_texas_status",
+    "impact_program",
+    "impact_certificate_date",
+    "move_date",
+    "suspension_during_hold",
+    "preferred_location",
+    "experience_level",
+    "recommended_service",
+    "booking_reference_input"
+  ],
+  "backend_variables": [
+    "booking_version",
+    "location_id",
+    "school_timezone",
+    "adapter_mode",
+    "last_tool_result",
+    "production_write_enabled",
+    "backend_success_verified",
+    "verified_customer_ref",
+    "verification_status",
+    "request_id",
+    "idempotency_key",
+    "tool_failure_count",
+    "pending_action",
+    "price_snapshot",
+    "knowledge_snapshot",
+    "selected_sessions"
+  ],
+  "local_transitions": [
+    {
+      "from_node": "01",
+      "to_node": "02",
+      "condition": "The caller seeks Texas licensing guidance or cannot identify the licensing pathway before a service recommendation.",
+      "carry": [
+        "age",
+        "license_status",
+        "learner_license_status",
+        "driver_education_status"
+      ]
+    },
+    {
+      "from_node": "01",
+      "to_node": "03",
+      "condition": "The caller clearly wants adult education or adult driving lessons; student is 18 or older when age determines the service.",
+      "carry": [
+        "age",
+        "learner_license_status",
+        "driver_education_status"
+      ]
+    },
+    {
+      "from_node": "01",
+      "to_node": "04",
+      "condition": "The caller seeks teen education, teen behind-the-wheel or parent-taught support; student is under 18 when age determines service.",
+      "carry": [
+        "age",
+        "student_or_parent",
+        "driver_education_status",
+        "parent_taught_status"
+      ]
+    },
+    {
+      "from_node": "01",
+      "to_node": "05",
+      "condition": "The caller is considering the road test itself or a preparation-plus-test option.",
+      "carry": [
+        "age",
+        "learner_license_status",
+        "road_test_eligibility"
+      ]
+    },
+    {
+      "from_node": "01",
+      "to_node": "06",
+      "condition": "The caller explicitly asks about availability, booking, an existing appointment, rescheduling or cancellation.",
+      "carry": [
+        "package_id",
+        "package_name",
+        "preferred_date",
+        "preferred_time",
+        "booking_reference_input"
+      ]
+    },
+    {
+      "from_node": "01",
+      "to_node": "07",
+      "condition": "The caller has a course, payment, access, certificate or other existing-student issue rather than an appointment operation.",
+      "carry": [
+        "support_issue",
+        "support_category",
+        "package_id"
+      ]
+    },
+    {
+      "from_node": "02",
+      "to_node": "03",
+      "condition": "The relevant adult pathway question is resolved and the caller wants an applicable adult school service.",
+      "carry": [
+        "age",
+        "license_status",
+        "learner_license_status",
+        "driver_education_status"
+      ]
+    },
+    {
+      "from_node": "02",
+      "to_node": "04",
+      "condition": "The relevant teen pathway question is resolved and the caller wants applicable teen or parent-taught services.",
+      "carry": [
+        "age",
+        "student_or_parent",
+        "learner_license_status",
+        "driver_education_status",
+        "parent_taught_status"
+      ]
+    },
+    {
+      "from_node": "02",
+      "to_node": "05",
+      "condition": "Test prerequisite understanding is resolved and the caller wants to choose a road-test package.",
+      "carry": [
+        "road_test_eligibility",
+        "learner_license_status",
+        "driver_education_status",
+        "impact_texas_status"
+      ]
+    },
+    {
+      "from_node": "02",
+      "to_node": "06",
+      "condition": "A specific licensing detour from Booking is resolved, the chosen timed package is still valid and the caller still wants to continue that appointment task.",
+      "carry": [
+        "package_id",
+        "package_name",
+        "package_price",
+        "road_test_eligibility",
+        "preferred_date",
+        "preferred_time",
+        "previous_persona"
+      ]
+    },
+    {
+      "from_node": "03",
+      "to_node": "06",
+      "condition": "The caller has selected or accepted a valid timed adult package and explicitly wants to check availability or schedule.",
+      "carry": [
+        "age",
+        "student_or_parent",
+        "package_id",
+        "package_name",
+        "package_price",
+        "session_count_required",
+        "session_plan"
+      ]
+    },
+    {
+      "from_node": "04",
+      "to_node": "06",
+      "condition": "The caller has selected or accepted a valid timed teen package and explicitly wants to check availability or schedule.",
+      "carry": [
+        "age",
+        "student_or_parent",
+        "package_id",
+        "package_name",
+        "package_price",
+        "session_count_required",
+        "session_plan"
+      ]
+    },
+    {
+      "from_node": "05",
+      "to_node": "06",
+      "condition": "The caller has selected or accepted a valid timed road-test package and explicitly wants to check availability or schedule.",
+      "carry": [
+        "age",
+        "student_or_parent",
+        "package_id",
+        "package_name",
+        "package_price",
+        "session_count_required",
+        "session_plan"
+      ]
+    },
+    {
+      "from_node": "05",
+      "to_node": "02",
+      "condition": "The caller asks licensing requirements or reveals prerequisite uncertainty that blocks road-test recommendation.",
+      "carry": [
+        "age",
+        "learner_license_status",
+        "driver_education_status",
+        "road_test_eligibility"
+      ]
+    },
+    {
+      "from_node": "06",
+      "to_node": "02",
+      "condition": "A newly unanswered licensing question or prerequisite uncertainty blocks the selected appointment task; the same unresolved question has not already been referred back.",
+      "carry": [
+        "age",
+        "package_id",
+        "road_test_eligibility",
+        "previous_persona"
+      ]
+    },
+    {
+      "from_node": "06",
+      "to_node": "07",
+      "condition": "The issue is course/account access, payment, certificate or instruction rather than an appointment operation.",
+      "carry": [
+        "support_issue",
+        "support_category",
+        "package_id"
+      ]
+    },
+    {
+      "from_node": "07",
+      "to_node": "06",
+      "condition": "The caller explicitly wants an appointment lookup/change/cancel or availability operation; a private non-booking support issue has not been misclassified as booking.",
+      "carry": [
+        "support_issue",
+        "support_category",
+        "booking_reference_input",
+        "appointment_id"
+      ]
+    }
+  ],
+  "global_transitions": [
+    {
+      "from_nodes": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07"
+      ],
+      "to_node": "08",
+      "condition": "The caller requests a human, a required action is unavailable, policy/eligibility/private access is unverified or a useful tool retry has failed. Do not trigger from Human or End."
+    },
+    {
+      "from_nodes": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08"
+      ],
+      "to_node": "09",
+      "condition": "The caller explicitly wants to finish or confirms no further help is needed after the confirmed outcome or unresolved staff next step is explained. Do not end merely because a tool failed; do not override an unaddressed human request."
+    },
+    {
+      "from_nodes": [
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08"
+      ],
+      "to_node": "01",
+      "condition": "The caller explicitly changes to a different goal that this node does not own and no more specific direct edge fits. No pending action is abandoned; do not retrigger at Router or for the same unresolved detour."
+    }
+  ],
+  "counts": {
+    "phase_d_variables": 69,
+    "core_variables": 21,
+    "conditional_variables": 20,
+    "backend_only_variables": 16,
+    "deferred_variables": 4,
+    "redundant_removed": 8,
+    "flow_nodes": 9,
+    "specialists": 6,
+    "local_edges": 17,
+    "global_rules": 3,
+    "transition_rules": 20,
+    "expanded_edges": 39
+  },
+  "capabilities": {
+    "mock_local": true,
+    "live_read_local": true,
+    "http_wrapper_deployed": false,
+    "production_write": false,
+    "production_lookup": false
+  },
+  "confirmation_guard": "Explicit appropriate tool success + appointment identity + correct configured environment; mock always demo; current production writes blocked"
+}

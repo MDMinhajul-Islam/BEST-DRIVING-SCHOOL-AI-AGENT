@@ -1,0 +1,14 @@
+{
+  "phase_d_variables": 69,
+  "core_variables": 21,
+  "conditional_variables": 20,
+  "backend_only_variables": 16,
+  "deferred_variables": 4,
+  "redundant_removed": 8,
+  "flow_nodes": 9,
+  "specialists": 6,
+  "local_edges": 17,
+  "global_rules": 3,
+  "transition_rules": 20,
+  "expanded_edges": 39
+}

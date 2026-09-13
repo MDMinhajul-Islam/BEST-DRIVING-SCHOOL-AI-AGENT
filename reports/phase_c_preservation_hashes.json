@@ -1,0 +1,20 @@
+{
+  "knowledge/regulatory/adult_first_time_license.md": "c0cf6ff9eab248d52678e50f1d8fd5fdf51d948cbaebcac1506d175dc611eed4",
+  "knowledge/regulatory/driver_education_requirements.md": "6ab6d67a6e1e7d3959ba5f670a3f0410fe148913b7efa97f4b62a915f4b49c05",
+  "knowledge/regulatory/exceptions_and_edge_cases.md": "81edce1ebea13fae796f5fb8d7982f893617eedda6cf2407685673937d86d74c",
+  "knowledge/regulatory/impact_texas_drivers.md": "abaa475a75d367071e152d919abcc27c854817d5b512ec6a7e62479b70f52c7e",
+  "knowledge/regulatory/international_drivers.md": "2c76d6219d777e23d6df689c993fa7295abedbbc9fea0da39497da9758fbc552",
+  "knowledge/regulatory/learner_license.md": "9ad16ecbc6768a1fa37ea921fcdccd202aac947552677f51c696a9efa8ae4556",
+  "knowledge/regulatory/new_texas_residents.md": "1ec5f803de3acaf84b036ab517c0b09e4c6cc8854e0f0a9520b8c8b36ec4cf47",
+  "knowledge/regulatory/parent_taught_driver_education.md": "fef592ae055caa4b7addb11bfa9a02e0180c40f5c241c3266185d04a61b9988e",
+  "knowledge/regulatory/README.md": "f462d92257aaa7a1959859dc4ec594d7a56fb3c7393b935b0cd99a84ae460ccf",
+  "knowledge/regulatory/required_documents.md": "fcbfa74e9b3605044bf4e95811df9deb000c54ec6a453bf226e7b415832f701e",
+  "knowledge/regulatory/road_test_requirements.md": "3236a45668e8ea8668e7789864807191d22899da41aff7a589b5aa4446e58e13",
+  "knowledge/regulatory/source_index.md": "b3ad045678839624cbbaf3612f8564b5acec05a0f2e97ab834ceb8afe25dbe16",
+  "knowledge/regulatory/teen_license_pathway.md": "29fe07040401e4b1bc8400f1630409c17b9afdd6af69523ce93a98dab7d6dd28",
+  "knowledge/regulatory/third_party_testing.md": "33f84c52ad6c48f1edf2e6f92d5d4cb7ace808b3db2646574602016ae5f826ec",
+  "knowledge/regulatory/unresolved_questions.md": "9649dc8119b3b1f790b8dc1660309b607c875b5e324145e7c6cf5e8e36840e94",
+  "data/structured/regulatory_sources.json": "7c4b134844cd4a8f4164de73016faa2c507406deccbe03bac77703ad9300e9a3",
+  "data/structured/texas_regulatory_knowledge.json": "b5a950f59aa14f827eb1f8fc5ea644dc2f7b62356035c519d2f86a8dad854f76",
+  "data/structured/package_catalog.json": "5bd15115265e98db8b2e60328789d1e643cb9604d579d65a29d2fb9c957d52e7"
+}

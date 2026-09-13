@@ -1,0 +1,2469 @@
+{
+  "artifact_type": "offline_validation_schema_not_retell_workflow",
+  "nodes": [
+    {
+      "id": "00",
+      "name": "Global Agent Rules",
+      "file": "global_agent_rules",
+      "type": "Global settings (conceptual node)",
+      "purpose": "One consistent Best Driving School employee voice and safe actions",
+      "entry_conditions": "Applies throughout; not a routable conversation node",
+      "reads": [
+        "knowledge_snapshot",
+        "adapter_mode",
+        "production_write_enabled"
+      ],
+      "writes": [
+        "knowledge_snapshot"
+      ],
+      "questions": [],
+      "strategy": "Represent Best Driving School. Speak briefly, conversationally, one or two relevant questions at a time. Allow interruptions; do not repeatedly use names, lecture or re-ask answered facts. Check shared state first. Never invent prices, packages, licensing rules, availability, appointments, student data, policy, refund or payment results. Use reviewed school data for business and DPS/TDLR records for regulations; suppress disputed/review-required records. CTO scheduling rules are internal business rules only. Confirm operations only after explicit correct-environment backend success and returned appointment identity. Every mock result must be described as a demo reservation. Caller statements are reported, not verified. Do not collect passwords, cards, DOB, permit/document numbers or authentication tokens in conversational state. Escalate unavailable writes, private issues, unknown policy, regulatory edge cases and repeated failures.",
+      "knowledge_sources": "knowledge/retell_support/regulatory_response_guardrails.md; data/structured/package_catalog.json; data/structured/internal_business_scheduling_rules.json",
+      "success_criteria": "Source-grounded answers and no premature action claim",
+      "fallback": "Any unresolved safety/capability issue → 08",
+      "tests": [
+        "T11",
+        "T12",
+        "T17",
+        "T18"
+      ],
+      "tools": []
+    },
+    {
+      "id": "01",
+      "name": "Greeting / Main Router",
+      "file": "router_node",
+      "type": "Conversation",
+      "purpose": "Semantic intent classification with minimal clarification",
+      "entry_conditions": "Start call or explicit unrelated goal switch",
+      "reads": [
+        "primary_intent",
+        "secondary_intent",
+        "age",
+        "package_id",
+        "support_issue",
+        "previous_persona",
+        "resume_goal"
+      ],
+      "writes": [
+        "primary_intent",
+        "secondary_intent",
+        "active_persona",
+        "previous_persona",
+        "resume_goal",
+        "age",
+        "student_or_parent"
+      ],
+      "questions": [
+        "Thanks for calling Best Driving School. How can I help?",
+        "Practice request with unknown age: How old is the student?",
+        "Ambiguous price/location: Which service are you considering?"
+      ],
+      "strategy": "Classify goals by meaning, not keyword presence. First-time Texas licensing uncertainty → 02 before sales. Clear adult education/lessons → 03; teen/parent or parent-taught service → 04; road test → 05; availability/new/existing booking/reschedule/cancel → 06; paid course/account support → 07. Pricing follows relevant sales; location follows selected service or Booking, distinguishing advertised areas from branches/pickup. Do not perform full sales qualification. Ask one useful clarification, then staff if still unresolved. Politely redirect off-topic once; avoid endless loops.",
+      "knowledge_sources": "knowledge/retell_support/router_intent_reference.md; knowledge/locations.md",
+      "success_criteria": "Correct specialist with minimum sufficient context",
+      "fallback": "Unresolved intent or human request → 08; caller done → 09",
+      "tests": [
+        "T01",
+        "T03",
+        "T07",
+        "T13",
+        "T17"
+      ],
+      "tools": []
+    },
+    {
+      "id": "02",
+      "name": "Texas License Guide",
+      "file": "texas_license_guide_node",
+      "type": "Conversation",
+      "purpose": "Determine pathway before inappropriate selling",
+      "entry_conditions": "Licensing uncertainty, jurisdiction edge or missing prerequisite",
+      "reads": [
+        "age",
+        "first_time_applicant",
+        "license_status",
+        "learner_license_status",
+        "permit_status",
+        "driver_education_status",
+        "parent_taught_status",
+        "texas_residency_status",
+        "out_of_state_license_status",
+        "foreign_license_status",
+        "impact_texas_status",
+        "road_test_eligibility",
+        "license_issuing_jurisdiction",
+        "license_expiry",
+        "learner_issue_date",
+        "certificate_type",
+        "required_document_status",
+        "impact_program",
+        "impact_certificate_date",
+        "move_date",
+        "suspension_during_hold",
+        "previous_persona",
+        "resume_goal",
+        "knowledge_snapshot"
+      ],
+      "writes": [
+        "first_time_applicant",
+        "license_status",
+        "learner_license_status",
+        "permit_status",
+        "driver_education_status",
+        "parent_taught_status",
+        "texas_residency_status",
+        "out_of_state_license_status",
+        "foreign_license_status",
+        "impact_texas_status",
+        "road_test_eligibility",
+        "license_issuing_jurisdiction",
+        "license_expiry",
+        "learner_issue_date",
+        "certificate_type",
+        "required_document_status",
+        "impact_program",
+        "impact_certificate_date",
+        "move_date",
+        "suspension_during_hold",
+        "active_persona",
+        "previous_persona",
+        "resume_goal"
+      ],
+      "questions": [
+        "Age only if unknown; first-time applicant only if relevant",
+        "Current learner license or other driver license?",
+        "Ask jurisdiction, residency or education stage next only as pathway needs it"
+      ],
+      "strategy": "Use progressive questions, not the entire checklist. Identify adult/teen/new-resident/international/parent-taught branch from reported facts. Retrieve applicable reviewed pathway/rule conditions; give one plain-language next step. Distinguish education, instruction, practice, skills test and DPS issuance. Do not guarantee government eligibility or transfer/provider acceptance. Changed age/credential invalidates dependent qualification. Return to saved goal after resolution. Advice does not require a purchase. Suppress disputed and review-required details.",
+      "knowledge_sources": "knowledge/regulatory/README.md; knowledge/regulatory/adult_first_time_license.md; knowledge/regulatory/teen_license_pathway.md; knowledge/regulatory/new_texas_residents.md; knowledge/regulatory/international_drivers.md; knowledge/regulatory/parent_taught_driver_education.md; knowledge/retell_support/regulatory_response_guardrails.md",
+      "success_criteria": "Supported usual pathway explained; eligibility remains reported or needs_review",
+      "fallback": "Unverified edge/conflict → 08 with official DPS/TDLR referral",
+      "tests": [
+        "T01",
+        "T06",
+        "T19"
+      ],
+      "tools": []
+    },
+    {
+      "id": "03",
+      "name": "Adult Sales Specialist",
+      "file": "adult_sales_node",
+      "type": "Conversation",
+      "purpose": "Match adult education/lesson needs to actual catalog options",
+      "entry_conditions": "Clear adult service goal or appropriate adult pathway",
+      "reads": [
+        "age",
+        "driver_education_status",
+        "license_status",
+        "permit_status",
+        "experience_level",
+        "program",
+        "course_id",
+        "course_name",
+        "package_id",
+        "package_name",
+        "package_price",
+        "currency",
+        "price_snapshot",
+        "recommended_service",
+        "knowledge_snapshot"
+      ],
+      "writes": [
+        "program",
+        "course_id",
+        "course_name",
+        "package_id",
+        "package_name",
+        "package_price",
+        "currency",
+        "price_snapshot",
+        "recommended_service",
+        "experience_level",
+        "active_persona"
+      ],
+      "questions": [
+        "Education course, hands-on lessons, or both, if unclear?",
+        "What would you like to improve behind the wheel?",
+        "Offer one grounded option and ask preference before selection"
+      ],
+      "strategy": "Distinguish six-hour online education from private lessons; adult age alone does not imply mandatory education. Use catalog and goal/budget to compare appropriate options; no readiness guarantee. Explain sourced base price and known hours; mention separate sourced processing fee when relevant, no invented total. Adult 2/4/6/8/10 hours imply 1/2/3/4/5 two-hour CTO sessions. Sales explains hours; Booking owns dates. Online education has secure official enrollment/access, no timed booking. Price challenge triggers catalog check, never caller overwrite.",
+      "knowledge_sources": "data/structured/package_catalog.json; knowledge/adult_services.md; data/structured/internal_business_scheduling_rules.json",
+      "success_criteria": "Valid package chosen or informed decision without pressure",
+      "fallback": "Licensing uncertainty → 02; current price conflict → 08; schedule → 06",
+      "tests": [
+        "T02",
+        "T08",
+        "T12"
+      ],
+      "tools": []
+    },
+    {
+      "id": "04",
+      "name": "Teen Sales Specialist",
+      "file": "teen_sales_node",
+      "type": "Conversation",
+      "purpose": "Match teen stage and parent-taught context safely",
+      "entry_conditions": "Teen/parent education or driving-support goal",
+      "reads": [
+        "age",
+        "student_or_parent",
+        "driver_education_status",
+        "learner_license_status",
+        "parent_taught_status",
+        "program",
+        "course_id",
+        "course_name",
+        "package_id",
+        "package_name",
+        "package_price",
+        "currency",
+        "price_snapshot",
+        "recommended_service",
+        "knowledge_snapshot"
+      ],
+      "writes": [
+        "program",
+        "course_id",
+        "course_name",
+        "package_id",
+        "package_name",
+        "package_price",
+        "currency",
+        "price_snapshot",
+        "recommended_service",
+        "active_persona"
+      ],
+      "questions": [
+        "Parent or student, if unknown?",
+        "What education and in-car instruction is already completed?",
+        "Parent-taught program or school-led instruction, if unclear?"
+      ],
+      "strategy": "Use safety-first tone. Compare full education and behind-the-wheel only from catalog. Clarify partial education/certificate stage without inventing transfer acceptance. Parent-taught practice support does not replace the approved program or all training. Both known teen packages have seven actual driving hours: CTO plan [120,120,120,60], four driving sessions. Do not apply this plan to seven observation hours or classroom/cohort timing. Load prices, contents and labels from catalog. Generated reference: full package $399, 24 classroom + 7 driving + 7 observation, Best selling; BTW $350, 7 driving + 7 observation. These are snapshot illustrations, not independent price sources.",
+      "knowledge_sources": "data/structured/package_catalog.json; knowledge/teen_services.md; knowledge/parent_taught.md; data/structured/internal_business_scheduling_rules.json",
+      "success_criteria": "Stage-appropriate valid package with limitations clear",
+      "fallback": "Licensing → 02; transfer/observation/PTDE allocation unknown → 08; schedule → 06",
+      "tests": [
+        "T03",
+        "T04",
+        "T09",
+        "T12"
+      ],
+      "tools": []
+    },
+    {
+      "id": "05",
+      "name": "Road Test Sales Specialist",
+      "file": "road_test_sales_node",
+      "type": "Conversation",
+      "purpose": "Qualify test intent and compare test-only versus useful preparation",
+      "entry_conditions": "Road-test intent or qualified test pathway",
+      "reads": [
+        "age",
+        "road_test_eligibility",
+        "learner_license_status",
+        "driver_education_status",
+        "impact_texas_status",
+        "experience_level",
+        "program",
+        "course_id",
+        "course_name",
+        "package_id",
+        "package_name",
+        "package_price",
+        "currency",
+        "price_snapshot",
+        "knowledge_snapshot"
+      ],
+      "writes": [
+        "program",
+        "course_id",
+        "course_name",
+        "package_id",
+        "package_name",
+        "package_price",
+        "currency",
+        "price_snapshot",
+        "recommended_service",
+        "experience_level",
+        "active_persona"
+      ],
+      "questions": [
+        "Road test itself, if intent unclear?",
+        "Missing prerequisite understanding only",
+        "Would practice beforehand help, or do you only want the test?"
+      ],
+      "strategy": "Use reviewed prerequisites, not confidence as verified eligibility. Compare actual catalog test-only and preparation/test options. Offer preparation for expressed skill need, never pressure a ready caller. CTO allocation: 30-minute slot, actual service 20 minutes. Reset/buffer details remain internal unless relevant/asked. Preparation duration remains unknown; do not assign test or standard lesson duration to preparation. Booking validates actual starts against confirmed schedule origin/resources.",
+      "knowledge_sources": "data/structured/package_catalog.json; knowledge/road_test.md; knowledge/regulatory/road_test_requirements.md; data/structured/internal_business_scheduling_rules.json",
+      "success_criteria": "Appropriate choice and prerequisite understanding; no oversell",
+      "fallback": "Prerequisites unclear → 02; critical preparation/allocation unknown → 08; ready schedule → 06",
+      "tests": [
+        "T05",
+        "T06",
+        "T10"
+      ],
+      "tools": []
+    },
+    {
+      "id": "06",
+      "name": "Booking & Scheduling Specialist",
+      "file": "booking_node",
+      "type": "Subagent (tool-capable dialogue, manually gated tools)",
+      "purpose": "Own availability, selection and guarded appointment operations",
+      "entry_conditions": "Availability/new/existing booking/change/cancel; new timed appointment requires selected package",
+      "reads": [
+        "package_id",
+        "package_name",
+        "package_price",
+        "age",
+        "road_test_eligibility",
+        "preferred_location",
+        "preferred_date",
+        "preferred_time",
+        "session_count_required",
+        "session_plan",
+        "available_slots",
+        "selected_slot",
+        "selected_sessions",
+        "appointment_id",
+        "booking_status",
+        "booking_version",
+        "location_id",
+        "school_timezone",
+        "adapter_mode",
+        "last_tool_result",
+        "production_write_enabled",
+        "backend_success_verified",
+        "booking_reference_input",
+        "verified_customer_ref",
+        "verification_status",
+        "request_id",
+        "idempotency_key",
+        "tool_failure_count",
+        "pending_action",
+        "previous_persona",
+        "resume_goal"
+      ],
+      "writes": [
+        "preferred_location",
+        "preferred_date",
+        "preferred_time",
+        "session_count_required",
+        "session_plan",
+        "available_slots",
+        "selected_slot",
+        "selected_sessions",
+        "appointment_id",
+        "booking_status",
+        "booking_version",
+        "location_id",
+        "last_tool_result",
+        "backend_success_verified",
+        "booking_reference_input",
+        "verified_customer_ref",
+        "verification_status",
+        "request_id",
+        "idempotency_key",
+        "tool_failure_count",
+        "pending_action",
+        "escalation_reason",
+        "active_persona",
+        "previous_persona",
+        "resume_goal"
+      ],
+      "questions": [
+        "Missing package, area, date or time preference only; resolve relative date with caller",
+        "Known existing booking reference, if absent; never enumerate accounts",
+        "Before future action: confirm package, returned location, dates/times and durations; get clear approval"
+      ],
+      "strategy": "Use booking_state_machine.md. Derive known business session plan. PRODUCTION-SAFE today: approved read-only check_availability offers provisional observations only; unknown stable slot IDs/timezone/resources prevents binding selection. New booking/find/change/cancel require staff. DEMO: synthetic only, label before any action and every confirmation; synthetic customer/verification fixtures belong in test harness, never real identity. FUTURE: package → session plan → verified location/timezone → fresh compatible returned slots → choices → caller selection → critical approval → authenticated create → wait for explicit correct-environment backend success and appointment IDs. Multi-session atomicity/remaining-hour accounting require contracts; track tentative choices and per-session confirmed outcomes separately. Road starts must follow confirmed backend 30-minute origin; never round contradictory observed labels. Race: briefly apologize, refresh, offer returned choices. Read retry at most once if useful, then staff. Write timeout means unknown outcome; preserve key and reconcile before retry. Verify scoped customer/reference and concurrency version before lookup/change/cancel. No production action is available simply because its name appears in this blueprint.",
+      "knowledge_sources": "data/structured/session_rules.json; data/structured/scheduling_models.json; docs/availability_contract.md; docs/retell_booking_tool_contracts.md; knowledge/retell_support/booking_state_reference.md",
+      "success_criteria": "Reads never confirm booking; real confirmation requires authorized explicit production success and identity; mock confirmation always demo",
+      "fallback": "Unavailable write/verification/lookup, alignment gap, unknown policy or repeated failure → 08; licensing → 02; account → 07",
+      "tests": [
+        "T07",
+        "T08",
+        "T09",
+        "T10",
+        "T11",
+        "T14",
+        "T15",
+        "T20"
+      ],
+      "tools": [
+        "check_availability",
+        "create_booking",
+        "find_booking",
+        "reschedule_booking",
+        "cancel_booking"
+      ]
+    },
+    {
+      "id": "07",
+      "name": "Existing Student Support",
+      "file": "student_support_node",
+      "type": "Conversation",
+      "purpose": "Triage support without inventing private records",
+      "entry_conditions": "Paid course, account, certificate or support issue",
+      "reads": [
+        "support_issue",
+        "support_category",
+        "verification_status",
+        "verified_customer_ref",
+        "booking_reference_input",
+        "appointment_id",
+        "package_id",
+        "previous_persona",
+        "resume_goal"
+      ],
+      "writes": [
+        "support_issue",
+        "support_category",
+        "escalation_reason",
+        "booking_reference_input",
+        "active_persona",
+        "previous_persona",
+        "resume_goal"
+      ],
+      "questions": [
+        "Minimal symptom: what happens when you try to access the course?",
+        "Course/service only if unknown; no password or card details"
+      ],
+      "strategy": "Classify public FAQ, instruction, booking change, access, payment, certificate, account or high risk. Public FAQ/instruction uses reviewed knowledge; booking change → 06. Private issues require approved authenticated support tool or staff; none exists now. Do not claim payment received, active enrollment, issued certificate, refund or reset from caller statement. Parent role does not verify account authority. Do not collect credentials or promise ticket submission.",
+      "knowledge_sources": "knowledge/faq.md; knowledge/policies.md; knowledge/retell_support/unresolved_information.md",
+      "success_criteria": "Public issue answered or minimal issue/reason routed to staff",
+      "fallback": "Private/access/payment/certificate/account or unknown policy → 08",
+      "tests": [
+        "T16",
+        "T20",
+        "T21"
+      ],
+      "tools": []
+    },
+    {
+      "id": "08",
+      "name": "Human Escalation",
+      "file": "human_escalation_node",
+      "type": "Conversation (transfer only if later verified/configured)",
+      "purpose": "Explain staff need and verified next step",
+      "entry_conditions": "Human requested or safe automation unavailable",
+      "reads": [
+        "escalation_reason",
+        "support_issue",
+        "support_category",
+        "package_id",
+        "preferred_date",
+        "booking_reference_input",
+        "caller_name",
+        "caller_phone",
+        "caller_email",
+        "adapter_mode",
+        "pending_action",
+        "last_tool_result"
+      ],
+      "writes": [
+        "escalation_reason",
+        "caller_name",
+        "caller_phone",
+        "caller_email",
+        "active_persona"
+      ],
+      "questions": [
+        "Would you like the verified school contact information?",
+        "Callback details only with consent and an actual configured intake"
+      ],
+      "strategy": "Set specific reason: write/lookup unavailable, payment/refund dispute, account access, uncertain policy, regulatory edge, failure or human request. Briefly explain why staff is needed. No transfer/CRM/ticket integration exists. Offer verified published school contact from reviewed knowledge; confirm contact/hours before deployment, never invent them. A future transfer/intake must acknowledge success before saying connected or sent. No callback promise without accepted intake. Preserve minimal context, avoid private records. Caller declines → 09.",
+      "knowledge_sources": "knowledge/locations.md; knowledge/business_overview.md; knowledge/policies.md",
+      "success_criteria": "Caller knows unresolved action and actual next step; no fake transfer",
+      "fallback": "Contact unavailable: acknowledge need without guessing; close politely",
+      "tests": [
+        "T18",
+        "T20",
+        "T21"
+      ],
+      "tools": []
+    },
+    {
+      "id": "09",
+      "name": "End Call",
+      "file": "end_call_node",
+      "type": "End (short final utterance)",
+      "purpose": "Close with an accurate essential outcome",
+      "entry_conditions": "Caller finished or escalation next step agreed",
+      "reads": [
+        "booking_status",
+        "appointment_id",
+        "backend_success_verified",
+        "adapter_mode",
+        "last_tool_result",
+        "escalation_reason",
+        "pending_action",
+        "package_name",
+        "support_issue"
+      ],
+      "writes": [
+        "active_persona"
+      ],
+      "questions": [],
+      "strategy": "Summarize only essential confirmed outcome, no full recap. A real appointment statement requires BOOKING_CONFIRMED, appointment_id and explicit authorized production success; demo always labeled demo. Cancelled result is not active reservation. Unresolved booking/payment/account action remains unresolved; no claimed callback or submission. Pending write outcome is unknown and needs reconciliation. End naturally without repeated questions.",
+      "knowledge_sources": "knowledge/retell_manual/booking_state_machine.md",
+      "success_criteria": "Short truthful ending",
+      "fallback": "Human request returns to 08; otherwise state next action clearly",
+      "tests": [
+        "T11",
+        "T18",
+        "T20"
+      ],
+      "tools": []
+    }
+  ],
+  "variables": {
+    "caller_name": {
+      "category": "Caller",
+      "purpose": "caller name",
+      "set_by": [
+        "01",
+        "07",
+        "08"
+      ],
+      "read_by": [
+        "01",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Optional",
+      "clear_when": "End call under approved retention; never public logs"
+    },
+    "caller_phone": {
+      "category": "Caller",
+      "purpose": "Callback with consent only; not verification",
+      "set_by": [
+        "01",
+        "07",
+        "08"
+      ],
+      "read_by": [
+        "01",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Optional",
+      "clear_when": "End call under approved retention; never public logs"
+    },
+    "caller_email": {
+      "category": "Caller",
+      "purpose": "Optional callback/enrollment contact; not verification",
+      "set_by": [
+        "01",
+        "07",
+        "08"
+      ],
+      "read_by": [
+        "01",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Optional",
+      "clear_when": "End call under approved retention; never public logs"
+    },
+    "student_name": {
+      "category": "Student",
+      "purpose": "student name",
+      "set_by": [
+        "01",
+        "02",
+        "03",
+        "04"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07"
+      ],
+      "required": "Conditional",
+      "clear_when": "Student changes: clear licensing, verification, package and tentative slots"
+    },
+    "student_or_parent": {
+      "category": "Student",
+      "purpose": "student / parent / other",
+      "set_by": [
+        "01",
+        "02",
+        "03",
+        "04"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07"
+      ],
+      "required": "Conditional",
+      "clear_when": "Student changes: clear licensing, verification, package and tentative slots"
+    },
+    "age": {
+      "category": "Student",
+      "purpose": "Explicit student age; do not infer from package",
+      "set_by": [
+        "01",
+        "02",
+        "03",
+        "04"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07"
+      ],
+      "required": "Conditional",
+      "clear_when": "Student changes: clear licensing, verification, package and tentative slots"
+    },
+    "first_time_applicant": {
+      "category": "Licensing",
+      "purpose": "first time applicant",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "required": "Conditional",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "license_status": {
+      "category": "Licensing",
+      "purpose": "license status",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "required": "Conditional",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "learner_license_status": {
+      "category": "Licensing",
+      "purpose": "learner license status",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "required": "Conditional",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "permit_status": {
+      "category": "Licensing",
+      "purpose": "Compatibility view of learner_license_status; update together",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "required": "Conditional",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "driver_education_status": {
+      "category": "Licensing",
+      "purpose": "driver education status",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "required": "Conditional",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "parent_taught_status": {
+      "category": "Licensing",
+      "purpose": "parent taught status",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "required": "Conditional",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "texas_residency_status": {
+      "category": "Licensing",
+      "purpose": "texas residency status",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "required": "Conditional",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "out_of_state_license_status": {
+      "category": "Licensing",
+      "purpose": "Derived from license_status and jurisdiction",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "required": "Conditional",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "foreign_license_status": {
+      "category": "Licensing",
+      "purpose": "Derived from license_status and jurisdiction",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "required": "Conditional",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "impact_texas_status": {
+      "category": "Licensing",
+      "purpose": "impact texas status",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "required": "Conditional",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "road_test_eligibility": {
+      "category": "Licensing",
+      "purpose": "unknown / prerequisites_reported / needs_review; never government-approved",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "03",
+        "04",
+        "05",
+        "06"
+      ],
+      "required": "Conditional",
+      "clear_when": "Student/age/credential changes; requalify affected pathway"
+    },
+    "license_issuing_jurisdiction": {
+      "category": "Licensing details",
+      "purpose": "license issuing jurisdiction",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "04",
+        "05"
+      ],
+      "required": "Conditional",
+      "clear_when": "Changed credential/student; ask only if applicable reviewed rule needs it"
+    },
+    "license_expiry": {
+      "category": "Licensing details",
+      "purpose": "license expiry",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "04",
+        "05"
+      ],
+      "required": "Conditional",
+      "clear_when": "Changed credential/student; ask only if applicable reviewed rule needs it"
+    },
+    "learner_issue_date": {
+      "category": "Licensing details",
+      "purpose": "learner issue date",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "04",
+        "05"
+      ],
+      "required": "Conditional",
+      "clear_when": "Changed credential/student; ask only if applicable reviewed rule needs it"
+    },
+    "certificate_type": {
+      "category": "Licensing details",
+      "purpose": "certificate type",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "04",
+        "05"
+      ],
+      "required": "Conditional",
+      "clear_when": "Changed credential/student; ask only if applicable reviewed rule needs it"
+    },
+    "required_document_status": {
+      "category": "Licensing details",
+      "purpose": "required document status",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "04",
+        "05"
+      ],
+      "required": "Conditional",
+      "clear_when": "Changed credential/student; ask only if applicable reviewed rule needs it"
+    },
+    "impact_program": {
+      "category": "Licensing details",
+      "purpose": "impact program",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "04",
+        "05"
+      ],
+      "required": "Conditional",
+      "clear_when": "Changed credential/student; ask only if applicable reviewed rule needs it"
+    },
+    "impact_certificate_date": {
+      "category": "Licensing details",
+      "purpose": "impact certificate date",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "04",
+        "05"
+      ],
+      "required": "Conditional",
+      "clear_when": "Changed credential/student; ask only if applicable reviewed rule needs it"
+    },
+    "move_date": {
+      "category": "Licensing details",
+      "purpose": "move date",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "04",
+        "05"
+      ],
+      "required": "Conditional",
+      "clear_when": "Changed credential/student; ask only if applicable reviewed rule needs it"
+    },
+    "suspension_during_hold": {
+      "category": "Licensing details",
+      "purpose": "suspension during hold",
+      "set_by": [
+        "02"
+      ],
+      "read_by": [
+        "02",
+        "04",
+        "05"
+      ],
+      "required": "Conditional",
+      "clear_when": "Changed credential/student; ask only if applicable reviewed rule needs it"
+    },
+    "primary_intent": {
+      "category": "Intent",
+      "purpose": "Current semantic action goal",
+      "set_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Required",
+      "clear_when": "New call; consume completed detour; explicit new goal changes primary intent"
+    },
+    "secondary_intent": {
+      "category": "Intent",
+      "purpose": "Deferred explicit goal",
+      "set_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Required",
+      "clear_when": "New call; consume completed detour; explicit new goal changes primary intent"
+    },
+    "active_persona": {
+      "category": "Intent",
+      "purpose": "Current node ID",
+      "set_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Required",
+      "clear_when": "New call; consume completed detour; explicit new goal changes primary intent"
+    },
+    "previous_persona": {
+      "category": "Intent",
+      "purpose": "Saved valid prior node ID",
+      "set_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Required",
+      "clear_when": "New call; consume completed detour; explicit new goal changes primary intent"
+    },
+    "resume_goal": {
+      "category": "Intent",
+      "purpose": "Minimal suspended task and dependencies",
+      "set_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Required",
+      "clear_when": "New call; consume completed detour; explicit new goal changes primary intent"
+    },
+    "program": {
+      "category": "Sales",
+      "purpose": "program",
+      "set_by": [
+        "03",
+        "04",
+        "05"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "course_id": {
+      "category": "Sales",
+      "purpose": "course id",
+      "set_by": [
+        "03",
+        "04",
+        "05"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "course_name": {
+      "category": "Sales",
+      "purpose": "course name",
+      "set_by": [
+        "03",
+        "04",
+        "05"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "package_id": {
+      "category": "Sales",
+      "purpose": "Canonical catalog ID, never provisional form ID",
+      "set_by": [
+        "03",
+        "04",
+        "05"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "package_name": {
+      "category": "Sales",
+      "purpose": "package name",
+      "set_by": [
+        "03",
+        "04",
+        "05"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "package_price": {
+      "category": "Sales",
+      "purpose": "Numeric catalog base price, caller cannot overwrite",
+      "set_by": [
+        "03",
+        "04",
+        "05"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "recommended_service": {
+      "category": "Sales",
+      "purpose": "recommended service",
+      "set_by": [
+        "03",
+        "04",
+        "05"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "currency": {
+      "category": "Sales",
+      "purpose": "currency",
+      "set_by": [
+        "03",
+        "04",
+        "05"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "price_snapshot": {
+      "category": "Sales",
+      "purpose": "Reviewed catalog source/version",
+      "set_by": [
+        "03",
+        "04",
+        "05"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "experience_level": {
+      "category": "Sales",
+      "purpose": "Caller-reported confidence and training goal",
+      "set_by": [
+        "03",
+        "04",
+        "05"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Package changes clear session plan and tentative availability; preserve unrelated verified existing booking"
+    },
+    "preferred_location": {
+      "category": "Booking",
+      "purpose": "Caller area preference, not operational ID or pickup commitment",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "preferred_date": {
+      "category": "Booking",
+      "purpose": "Caller-confirmed ISO date in agreed school timezone",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "preferred_time": {
+      "category": "Booking",
+      "purpose": "preferred time",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "session_count_required": {
+      "category": "Booking",
+      "purpose": "Known derived driving count; null for unresolved PTDE/preparation",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "session_plan": {
+      "category": "Booking",
+      "purpose": "Ordered minute durations from known business plan; observation separate",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "available_slots": {
+      "category": "Booking",
+      "purpose": "Ephemeral returned observations; never static knowledge",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "selected_slot": {
+      "category": "Booking",
+      "purpose": "Returned authoritative object; never fabricate an ID from a label",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "selected_sessions": {
+      "category": "Booking",
+      "purpose": "Ordered tentative selections with duration/provenance",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "appointment_id": {
+      "category": "Booking",
+      "purpose": "Verified backend result only, not caller-entered reference",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "booking_status": {
+      "category": "Booking",
+      "purpose": "Guarded enum in booking_state_machine.md",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "booking_version": {
+      "category": "Booking",
+      "purpose": "Backend concurrency version; mock version synthetic",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Date/location/package/resource changes invalidate tentative slots; expire according to approved backend freshness, no invented TTL"
+    },
+    "location_id": {
+      "category": "Booking guards",
+      "purpose": "Authoritative operational ID only; unknown today",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "school_timezone": {
+      "category": "Booking guards",
+      "purpose": "Owner/backend-confirmed IANA string; unknown in current payload",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "adapter_mode": {
+      "category": "Booking guards",
+      "purpose": "Builder-set demo_mock / production_safe",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "last_tool_result": {
+      "category": "Booking guards",
+      "purpose": "Sanitized normalized result including mode/confirmation/error",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "production_write_enabled": {
+      "category": "Booking guards",
+      "purpose": "Secure server configuration; false today",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "backend_success_verified": {
+      "category": "Booking guards",
+      "purpose": "Server-derived explicit correct-environment success and appointment ID gate",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "booking_reference_input": {
+      "category": "Booking guards",
+      "purpose": "Caller-reported known reference; not verified appointment identity",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "verified_customer_ref": {
+      "category": "Booking guards",
+      "purpose": "Scoped secure identity; no credentials/tokens in conversation state",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "request_id": {
+      "category": "Booking guards",
+      "purpose": "Server-issued non-PII trace ID",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "idempotency_key": {
+      "category": "Booking guards",
+      "purpose": "Server-issued same-action retry key",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "tool_failure_count": {
+      "category": "Booking guards",
+      "purpose": "tool failure count",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "pending_action": {
+      "category": "Booking guards",
+      "purpose": "create / find / reschedule / cancel / none",
+      "set_by": [
+        "06"
+      ],
+      "read_by": [
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "New action/context clears success/result/key; preserve in-flight action and key on interruption until reconciled"
+    },
+    "support_issue": {
+      "category": "Support",
+      "purpose": "Minimal caller symptom, not verified account facts",
+      "set_by": [
+        "06",
+        "07",
+        "08"
+      ],
+      "read_by": [
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Student/customer changes clear verification; new issue resets reason/category"
+    },
+    "support_category": {
+      "category": "Support",
+      "purpose": "faq / instruction / booking_change / access / payment / certificate / account / high_risk",
+      "set_by": [
+        "06",
+        "07",
+        "08"
+      ],
+      "read_by": [
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Student/customer changes clear verification; new issue resets reason/category"
+    },
+    "verification_status": {
+      "category": "Support",
+      "purpose": "unverified / verified / failed; secure system sets verified",
+      "set_by": [
+        "06",
+        "07",
+        "08"
+      ],
+      "read_by": [
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Student/customer changes clear verification; new issue resets reason/category"
+    },
+    "escalation_reason": {
+      "category": "Support",
+      "purpose": "Specific reason staff needed; not proof ticket or transfer occurred",
+      "set_by": [
+        "06",
+        "07",
+        "08"
+      ],
+      "read_by": [
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Conditional",
+      "clear_when": "Student/customer changes clear verification; new issue resets reason/category"
+    },
+    "knowledge_snapshot": {
+      "category": "Source control",
+      "purpose": "Reviewed business/regulatory source version and freshness gate",
+      "set_by": [
+        "00"
+      ],
+      "read_by": [
+        "01",
+        "02",
+        "03",
+        "04",
+        "05",
+        "06",
+        "07",
+        "08",
+        "09"
+      ],
+      "required": "Required",
+      "clear_when": "Builder changes reviewed source set; never caller-controlled"
+    }
+  },
+  "handoffs": [
+    {
+      "from": "01",
+      "to": "02",
+      "condition": "First-time Texas/licensing uncertainty",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "01",
+      "to": "03",
+      "condition": "Clear adult education/lessons",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "01",
+      "to": "04",
+      "condition": "Teen/parent or parent-taught service",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "01",
+      "to": "05",
+      "condition": "Road-test service",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "01",
+      "to": "06",
+      "condition": "Availability/new/existing booking/change/cancel",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "01",
+      "to": "07",
+      "condition": "Existing student issue",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "01",
+      "to": "08",
+      "condition": "Human request or unresolved route",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "01",
+      "to": "09",
+      "condition": "Caller done",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "02",
+      "to": "03",
+      "condition": "Adult pathway resolved; relevant service requested",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "02",
+      "to": "04",
+      "condition": "Teen pathway resolved; relevant service requested",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "02",
+      "to": "05",
+      "condition": "Prerequisites reported; test option requested",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "02",
+      "to": "06",
+      "condition": "Return to saved booking goal after qualification",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "02",
+      "to": "09",
+      "condition": "Advice answered; no sale wanted",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "03",
+      "to": "06",
+      "condition": "Valid timed package chosen and caller wants schedule",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "03",
+      "to": "02",
+      "condition": "Licensing prerequisite uncertainty",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "03",
+      "to": "09",
+      "condition": "Information complete or self-paced secure enrollment next step explained",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "04",
+      "to": "06",
+      "condition": "Valid timed package chosen and caller wants schedule",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "04",
+      "to": "02",
+      "condition": "Licensing prerequisite uncertainty",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "04",
+      "to": "09",
+      "condition": "Information complete or self-paced secure enrollment next step explained",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "05",
+      "to": "06",
+      "condition": "Valid timed package chosen and caller wants schedule",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "05",
+      "to": "02",
+      "condition": "Licensing prerequisite uncertainty",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "05",
+      "to": "09",
+      "condition": "Information complete or self-paced secure enrollment next step explained",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "06",
+      "to": "02",
+      "condition": "Eligibility question/uncertainty",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "06",
+      "to": "07",
+      "condition": "Account/course support emerges",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "06",
+      "to": "09",
+      "condition": "Observation or confirmed correct-mode result complete",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "07",
+      "to": "06",
+      "condition": "Booking change",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "07",
+      "to": "09",
+      "condition": "Public FAQ answered",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "08",
+      "to": "09",
+      "condition": "Verified next step offered or caller declines",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "02",
+      "to": "01",
+      "condition": "Explicit unrelated new goal; route semantically",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "02",
+      "to": "08",
+      "condition": "Human requested, private/unknown policy, unavailable action or repeated failure",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "03",
+      "to": "01",
+      "condition": "Explicit unrelated new goal; route semantically",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "03",
+      "to": "08",
+      "condition": "Human requested, private/unknown policy, unavailable action or repeated failure",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "04",
+      "to": "01",
+      "condition": "Explicit unrelated new goal; route semantically",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "04",
+      "to": "08",
+      "condition": "Human requested, private/unknown policy, unavailable action or repeated failure",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "05",
+      "to": "01",
+      "condition": "Explicit unrelated new goal; route semantically",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "05",
+      "to": "08",
+      "condition": "Human requested, private/unknown policy, unavailable action or repeated failure",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "06",
+      "to": "01",
+      "condition": "Explicit unrelated new goal; route semantically",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "06",
+      "to": "08",
+      "condition": "Human requested, private/unknown policy, unavailable action or repeated failure",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "07",
+      "to": "01",
+      "condition": "Explicit unrelated new goal; route semantically",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    },
+    {
+      "from": "07",
+      "to": "08",
+      "condition": "Human requested, private/unknown policy, unavailable action or repeated failure",
+      "context_rule": "Preserve answered caller/student/licensing and catalog state. For temporary detour set previous_persona/resume_goal; consume on return and clear/revalidate stale dependent slots."
+    }
+  ],
+  "booking_states": [
+    "NO_PACKAGE",
+    "PACKAGE_SELECTED",
+    "AVAILABILITY_NEEDED",
+    "AVAILABILITY_CHECKED",
+    "SLOT_OPTIONS_PRESENTED",
+    "SLOT_SELECTED",
+    "SESSIONS_PARTIALLY_SELECTED",
+    "ALL_SESSIONS_SELECTED",
+    "BOOKING_PENDING",
+    "BOOKING_CONFIRMED",
+    "BOOKING_FAILED",
+    "HUMAN_ESCALATION"
+  ],
+  "booking_state_transitions": [
+    {
+      "from": "NO_PACKAGE",
+      "to": "PACKAGE_SELECTED",
+      "guard": "Valid catalog selection"
+    },
+    {
+      "from": "PACKAGE_SELECTED",
+      "to": "AVAILABILITY_NEEDED",
+      "guard": "Known requirement and fresh slots needed"
+    },
+    {
+      "from": "AVAILABILITY_NEEDED",
+      "to": "AVAILABILITY_CHECKED",
+      "guard": "Successful correct-mode read; no confirmation"
+    },
+    {
+      "from": "AVAILABILITY_CHECKED",
+      "to": "SLOT_OPTIONS_PRESENTED",
+      "guard": "Describe returned observations and limitations"
+    },
+    {
+      "from": "SLOT_OPTIONS_PRESENTED",
+      "to": "SLOT_SELECTED",
+      "guard": "Caller selects returned authoritative compatible slot; current live labels cannot satisfy this gate"
+    },
+    {
+      "from": "SLOT_SELECTED",
+      "to": "SESSIONS_PARTIALLY_SELECTED",
+      "guard": "Fewer than required multi-session choices"
+    },
+    {
+      "from": "SESSIONS_PARTIALLY_SELECTED",
+      "to": "ALL_SESSIONS_SELECTED",
+      "guard": "All compatible tentative choices; not booked"
+    },
+    {
+      "from": "SLOT_SELECTED",
+      "to": "BOOKING_PENDING",
+      "guard": "Single session approval + verified customer + ready backend contract + authorized environment"
+    },
+    {
+      "from": "ALL_SESSIONS_SELECTED",
+      "to": "BOOKING_PENDING",
+      "guard": "Approval and verified transaction semantics; no assumed atomicity"
+    },
+    {
+      "from": "BOOKING_PENDING",
+      "to": "BOOKING_CONFIRMED",
+      "guard": "EXPLICIT_BACKEND_SUCCESS: correct-mode success AND returned appointment ID(s) AND booking_confirmed=true. Real confirmation additionally production_write_enabled=true AND backend_success_verified=true; mock always demo."
+    },
+    {
+      "from": "BOOKING_PENDING",
+      "to": "BOOKING_FAILED",
+      "guard": "Explicit negative backend result; timeout remains pending reconciliation"
+    },
+    {
+      "from": "BOOKING_FAILED",
+      "to": "AVAILABILITY_NEEDED",
+      "guard": "Race: clear stale slot, refresh and obtain new choice"
+    },
+    {
+      "from": "NO_PACKAGE",
+      "to": "HUMAN_ESCALATION",
+      "guard": "Capability unavailable, private access, alignment/policy gap or repeated failure"
+    },
+    {
+      "from": "PACKAGE_SELECTED",
+      "to": "HUMAN_ESCALATION",
+      "guard": "Capability unavailable, private access, alignment/policy gap or repeated failure"
+    },
+    {
+      "from": "AVAILABILITY_NEEDED",
+      "to": "HUMAN_ESCALATION",
+      "guard": "Capability unavailable, private access, alignment/policy gap or repeated failure"
+    },
+    {
+      "from": "AVAILABILITY_CHECKED",
+      "to": "HUMAN_ESCALATION",
+      "guard": "Capability unavailable, private access, alignment/policy gap or repeated failure"
+    },
+    {
+      "from": "SLOT_OPTIONS_PRESENTED",
+      "to": "HUMAN_ESCALATION",
+      "guard": "Capability unavailable, private access, alignment/policy gap or repeated failure"
+    },
+    {
+      "from": "SLOT_SELECTED",
+      "to": "HUMAN_ESCALATION",
+      "guard": "Capability unavailable, private access, alignment/policy gap or repeated failure"
+    },
+    {
+      "from": "SESSIONS_PARTIALLY_SELECTED",
+      "to": "HUMAN_ESCALATION",
+      "guard": "Capability unavailable, private access, alignment/policy gap or repeated failure"
+    },
+    {
+      "from": "ALL_SESSIONS_SELECTED",
+      "to": "HUMAN_ESCALATION",
+      "guard": "Capability unavailable, private access, alignment/policy gap or repeated failure"
+    },
+    {
+      "from": "BOOKING_PENDING",
+      "to": "HUMAN_ESCALATION",
+      "guard": "Capability unavailable, private access, alignment/policy gap or repeated failure"
+    },
+    {
+      "from": "BOOKING_CONFIRMED",
+      "to": "HUMAN_ESCALATION",
+      "guard": "Capability unavailable, private access, alignment/policy gap or repeated failure"
+    },
+    {
+      "from": "BOOKING_FAILED",
+      "to": "HUMAN_ESCALATION",
+      "guard": "Capability unavailable, private access, alignment/policy gap or repeated failure"
+    }
+  ],
+  "scenarios": [
+    {
+      "id": "T01",
+      "title": "Adult first-time, 19, unsure where to start",
+      "starting_node": "01",
+      "questions": "Do not re-ask age; current credential/education, residency as needed",
+      "variables": [
+        "age",
+        "first_time_applicant",
+        "license_status",
+        "driver_education_status"
+      ],
+      "transitions": "01 → 02 → 03 or 09",
+      "tools": [],
+      "expected_outcome": "Reviewed usual pathway; no mandatory purchase invented",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T02",
+      "title": "Adult permit and nervous driver",
+      "starting_node": "01",
+      "questions": "Age if missing, skill/confidence goal",
+      "variables": [
+        "age",
+        "permit_status",
+        "experience_level",
+        "package_id"
+      ],
+      "transitions": "01 → 03 → 06",
+      "tools": [
+        "check_availability"
+      ],
+      "expected_outcome": "Appropriate catalog lesson comparison, no readiness guarantee or real booking",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T03",
+      "title": "Parent with daughter 15",
+      "starting_node": "01",
+      "questions": "Education/learner stage, not supplied age again",
+      "variables": [
+        "age",
+        "student_or_parent",
+        "driver_education_status"
+      ],
+      "transitions": "01 → 04 → 02 if needed",
+      "tools": [],
+      "expected_outcome": "Teen path, no immediate road-test promise",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T04",
+      "title": "Teen partial education elsewhere",
+      "starting_node": "01",
+      "questions": "Completed stage/certificate category, age if missing",
+      "variables": [
+        "age",
+        "driver_education_status",
+        "certificate_type",
+        "parent_taught_status"
+      ],
+      "transitions": "01 → 04 → 02 or 08",
+      "tools": [],
+      "expected_outcome": "No inferred transfer acceptance; BTW only if suitable",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T05",
+      "title": "Ready driver wants test only",
+      "starting_node": "01",
+      "questions": "Only missing prerequisites",
+      "variables": [
+        "road_test_eligibility",
+        "package_id"
+      ],
+      "transitions": "01 → 05 → 06",
+      "tools": [
+        "check_availability"
+      ],
+      "expected_outcome": "Test-only if appropriate; no pressured preparation or real reservation",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T06",
+      "title": "Test soon, cannot parallel park or prerequisites unclear",
+      "starting_node": "01",
+      "questions": "Confidence and prerequisite gap",
+      "variables": [
+        "experience_level",
+        "road_test_eligibility"
+      ],
+      "transitions": "01 → 05 → 02 or 08",
+      "tools": [],
+      "expected_outcome": "Reasonable preparation option; no guaranteed eligibility",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T07",
+      "title": "Saturday afternoon availability",
+      "starting_node": "01",
+      "questions": "Missing service/date; resolve relative date in agreed timezone",
+      "variables": [
+        "preferred_date",
+        "preferred_time",
+        "package_id",
+        "available_slots",
+        "booking_status"
+      ],
+      "transitions": "01 → 06 → 09 or 08",
+      "tools": [
+        "check_availability"
+      ],
+      "expected_outcome": "Approved provisional read only; no static knowledge or reservation",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T08",
+      "title": "Adult six-hour multi-session",
+      "starting_node": "03",
+      "questions": "Missing preferences; discuss three tentative sessions",
+      "variables": [
+        "package_id",
+        "session_count_required",
+        "session_plan",
+        "selected_sessions",
+        "booking_status"
+      ],
+      "transitions": "03 → 06 → 08 production / 09 demo",
+      "tools": [
+        "check_availability",
+        "create_booking"
+      ],
+      "expected_outcome": "[120,120,120]; separate per-session outcomes, no assumed atomic school booking",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T09",
+      "title": "Teen seven-hour driving",
+      "starting_node": "04",
+      "questions": "Driving dates separate from observation allocation",
+      "variables": [
+        "session_count_required",
+        "session_plan",
+        "selected_sessions"
+      ],
+      "transitions": "04 → 06 → 08 production",
+      "tools": [
+        "check_availability"
+      ],
+      "expected_outcome": "[120,120,120,60], four driving sessions; observation not converted",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T10",
+      "title": "Road-test interval with contradictory live labels",
+      "starting_node": "05",
+      "questions": "Preferred date; keep buffers internal",
+      "variables": [
+        "package_id",
+        "selected_slot",
+        "booking_status"
+      ],
+      "transitions": "05 → 06 → 08",
+      "tools": [
+        "check_availability"
+      ],
+      "expected_outcome": "20+5+5=30 business rule; no rounded/fabricated starts; verify backend origin",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T11",
+      "title": "Move Tuesday appointment to Thursday",
+      "starting_node": "01",
+      "questions": "Known reference; future secure verification, no private enumeration",
+      "variables": [
+        "booking_reference_input",
+        "verification_status",
+        "pending_action"
+      ],
+      "transitions": "01 → 06 → 08 production / 09 demo",
+      "tools": [
+        "find_booking",
+        "check_availability",
+        "reschedule_booking"
+      ],
+      "expected_outcome": "Production unavailable; demo verified and version-checked, no early success",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T12",
+      "title": "Teen price challenge: I thought it was $299",
+      "starting_node": "04",
+      "questions": "Which teen package only if ambiguous",
+      "variables": [
+        "package_id",
+        "package_price",
+        "price_snapshot"
+      ],
+      "transitions": "04 → 04 or 08",
+      "tools": [],
+      "expected_outcome": "Catalog check: full snapshot $399, BTW $350; never overwrite from caller claim",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T13",
+      "title": "Mid-call adult sales to existing test reschedule",
+      "starting_node": "03",
+      "questions": "Existing reference only if missing",
+      "variables": [
+        "primary_intent",
+        "previous_persona",
+        "resume_goal",
+        "booking_reference_input"
+      ],
+      "transitions": "03 → 01 → 06",
+      "tools": [
+        "find_booking"
+      ],
+      "expected_outcome": "Preserve context; no repeated age/package question; staff fallback today",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T14",
+      "title": "Slot taken after selection",
+      "starting_node": "06",
+      "questions": "Refresh choices and obtain new selection",
+      "variables": [
+        "selected_slot",
+        "available_slots",
+        "booking_status",
+        "last_tool_result"
+      ],
+      "transitions": "06 → 06 or 08",
+      "tools": [
+        "create_booking",
+        "check_availability"
+      ],
+      "expected_outcome": "SLOT_NO_LONGER_AVAILABLE; never success or blind retry",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T15",
+      "title": "Tool timeout/API failure",
+      "starting_node": "06",
+      "questions": "One useful read retry, no repeated writes",
+      "variables": [
+        "tool_failure_count",
+        "pending_action",
+        "request_id",
+        "idempotency_key"
+      ],
+      "transitions": "06 → 08",
+      "tools": [
+        "check_availability",
+        "create_booking"
+      ],
+      "expected_outcome": "Write timeout outcome unknown; preserve key/reconcile; read retry at most once",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T16",
+      "title": "Paid online course inaccessible",
+      "starting_node": "01",
+      "questions": "Minimal symptom and course, no password/card",
+      "variables": [
+        "support_category",
+        "support_issue",
+        "escalation_reason"
+      ],
+      "transitions": "01 → 07 → 08",
+      "tools": [],
+      "expected_outcome": "No payment/enrollment/account assertion; staff required",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T17",
+      "title": "Off-topic or unclear caller",
+      "starting_node": "01",
+      "questions": "One brief school-service clarification",
+      "variables": [
+        "primary_intent",
+        "escalation_reason"
+      ],
+      "transitions": "01 → 01 → 08 or 09",
+      "tools": [],
+      "expected_outcome": "Polite redirect, no invented service/endless loop",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T18",
+      "title": "Human explicitly requested",
+      "starting_node": "03",
+      "questions": "Reason optional, no forced sales qualification",
+      "variables": [
+        "escalation_reason"
+      ],
+      "transitions": "03 → 08 → 09",
+      "tools": [],
+      "expected_outcome": "Immediate staff path; no transfer/callback claim without acknowledgement",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T19",
+      "title": "Foreign credential edge or contradictory age",
+      "starting_node": "02",
+      "questions": "Country/validity/residency categories; resolve contradiction",
+      "variables": [
+        "license_issuing_jurisdiction",
+        "license_status",
+        "age",
+        "road_test_eligibility"
+      ],
+      "transitions": "02 → 08",
+      "tools": [],
+      "expected_outcome": "Reviewed rule only; no exemption invented",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T20",
+      "title": "Cancel and refund request",
+      "starting_node": "01",
+      "questions": "Known reference, reason optional",
+      "variables": [
+        "pending_action",
+        "booking_reference_input",
+        "verification_status",
+        "escalation_reason"
+      ],
+      "transitions": "01 → 06 → 08 production / 09 demo",
+      "tools": [
+        "find_booking",
+        "cancel_booking"
+      ],
+      "expected_outcome": "Real cancel/refund blocked; synthetic cancellation releases fixtures, no refund implied",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    },
+    {
+      "id": "T21",
+      "title": "Certificate/account issue, parent caller",
+      "starting_node": "07",
+      "questions": "Issue category, no private record disclosure",
+      "variables": [
+        "support_category",
+        "verification_status",
+        "escalation_reason"
+      ],
+      "transitions": "07 → 08",
+      "tools": [],
+      "expected_outcome": "Parent relationship not verified authority; no certificate/account assertions",
+      "execution_status": "DESIGN ONLY — manual call not run"
+    }
+  ],
+  "modes": {
+    "demo_mock": "Synthetic only; transaction mechanics, no real reservation",
+    "production_safe": "Approved reads only, default disabled; lookup and writes blocked"
+  }
+}

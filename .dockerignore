@@ -1,0 +1,14 @@
+.git
+.venv
+__pycache__
+**/__pycache__
+.env
+.env.*
+runtime
+logs
+reports
+tests
+data/raw_html
+data/operational_evidence
+data/regulatory_sources
+config/calcom.local.json

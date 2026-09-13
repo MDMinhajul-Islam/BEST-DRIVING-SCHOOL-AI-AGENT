@@ -1,0 +1,189 @@
+{
+  "schema_version": "1.0",
+  "model_scope": "Offline business snapshot and conceptual booking handoff; not workflow import.",
+  "programs": [
+    {
+      "program_id": "teen",
+      "program": "Teen Driver Education",
+      "courses": [
+        {
+          "course_id": "teen_24_hour_class_room_and_driving_package",
+          "course_name": "Teen Driver Education Package",
+          "packages": [
+            {
+              "package_id": "teen_24_hr_classroom_driving_package",
+              "package_name": "24 Hr Classroom + Driving Package",
+              "current_price": 399.0,
+              "currency": "USD",
+              "requires_booking": true,
+              "availability_source": "live_api_required",
+              "booking_requirements_reference": "teen_24_hr_classroom_driving_package"
+            }
+          ]
+        },
+        {
+          "course_id": "teen_behind_the_wheel_only",
+          "course_name": "Teen Behind-the-Wheel Lessons",
+          "packages": [
+            {
+              "package_id": "teen_behind_the_wheel_only_7_7",
+              "package_name": "Behind the Wheel Only (7 & 7)",
+              "current_price": 350.0,
+              "currency": "USD",
+              "requires_booking": true,
+              "availability_source": "live_api_required",
+              "booking_requirements_reference": "teen_behind_the_wheel_only_7_7"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "program_id": "parent_taught",
+      "program": "Parent-Taught Log Driving Hours",
+      "courses": [
+        {
+          "course_id": "log_driving_hours",
+          "course_name": "Parent-Taught Log Driving Hours",
+          "packages": [
+            {
+              "package_id": "parent_taught_10_hours",
+              "package_name": "10 hours",
+              "current_price": 450.0,
+              "currency": "USD",
+              "requires_booking": true,
+              "availability_source": "live_api_required",
+              "booking_requirements_reference": "parent_taught_10_hours"
+            },
+            {
+              "package_id": "parent_taught_15_hours",
+              "package_name": "15 hours",
+              "current_price": 675.0,
+              "currency": "USD",
+              "requires_booking": true,
+              "availability_source": "live_api_required",
+              "booking_requirements_reference": "parent_taught_15_hours"
+            },
+            {
+              "package_id": "parent_taught_30_hours",
+              "package_name": "30 hours",
+              "current_price": 1350.0,
+              "currency": "USD",
+              "requires_booking": true,
+              "availability_source": "live_api_required",
+              "booking_requirements_reference": "parent_taught_30_hours"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "program_id": "adult_online",
+      "program": "Adult 6 Hours Online Permit Class",
+      "courses": [
+        {
+          "course_id": "adult_6_hours_online_permit_class",
+          "course_name": "Texas Adult Permit Class, Online",
+          "packages": [
+            {
+              "package_id": "adult_6_hour_online_permit_class",
+              "package_name": "6-Hour Online Permit Class",
+              "current_price": 19.99,
+              "currency": "USD",
+              "requires_booking": false,
+              "availability_source": "not_applicable_self_paced",
+              "booking_requirements_reference": "adult_6_hour_online_permit_class"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "program_id": "road_test",
+      "program": "3rd Party Road Test in Plano",
+      "courses": [
+        {
+          "course_id": "road_test",
+          "course_name": "DPS Road Test in Plano",
+          "packages": [
+            {
+              "package_id": "road_test_road_test_only",
+              "package_name": "Road test only",
+              "current_price": 100.0,
+              "currency": "USD",
+              "requires_booking": true,
+              "availability_source": "live_api_required",
+              "booking_requirements_reference": "road_test_road_test_only"
+            },
+            {
+              "package_id": "road_test_practice_session_road_test",
+              "package_name": "Practice session + road test",
+              "current_price": 140.0,
+              "currency": "USD",
+              "requires_booking": true,
+              "availability_source": "live_api_required",
+              "booking_requirements_reference": "road_test_practice_session_road_test"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "program_id": "adult_driving",
+      "program": "Adult Driving Lessons in Plano",
+      "courses": [
+        {
+          "course_id": "adult_driving_sessions",
+          "course_name": "Adult Driving Lessons in Plano",
+          "packages": [
+            {
+              "package_id": "adult_2_hours",
+              "package_name": "2 hours",
+              "current_price": 180.0,
+              "currency": "USD",
+              "requires_booking": true,
+              "availability_source": "live_api_required",
+              "booking_requirements_reference": "adult_2_hours"
+            },
+            {
+              "package_id": "adult_4_hours",
+              "package_name": "4 hours",
+              "current_price": 246.0,
+              "currency": "USD",
+              "requires_booking": true,
+              "availability_source": "live_api_required",
+              "booking_requirements_reference": "adult_4_hours"
+            },
+            {
+              "package_id": "adult_6_hours",
+              "package_name": "6 hours",
+              "current_price": 328.0,
+              "currency": "USD",
+              "requires_booking": true,
+              "availability_source": "live_api_required",
+              "booking_requirements_reference": "adult_6_hours"
+            },
+            {
+              "package_id": "adult_8_hours",
+              "package_name": "8 hours",
+              "current_price": 405.0,
+              "currency": "USD",
+              "requires_booking": true,
+              "availability_source": "live_api_required",
+              "booking_requirements_reference": "adult_8_hours"
+            },
+            {
+              "package_id": "adult_10_hours",
+              "package_name": "10 hours",
+              "current_price": 495.0,
+              "currency": "USD",
+              "requires_booking": true,
+              "availability_source": "live_api_required",
+              "booking_requirements_reference": "adult_10_hours"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

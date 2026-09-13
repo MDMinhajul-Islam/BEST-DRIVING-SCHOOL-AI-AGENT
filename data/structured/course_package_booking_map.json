@@ -17,7 +17,31 @@
               "currency": "USD",
               "requires_booking": true,
               "availability_source": "live_api_required",
-              "booking_requirements_reference": "teen_24_hr_classroom_driving_package"
+              "booking_requirements_reference": "teen_24_hr_classroom_driving_package",
+              "derived_driving_session_requirement": {
+                "total_driving_hours": 7,
+                "standard_session_minutes": 120,
+                "full_session_count": 3,
+                "remaining_minutes": 60,
+                "total_session_count": 4,
+                "session_plan_minutes": [
+                  120,
+                  120,
+                  120,
+                  60
+                ],
+                "source_type": "INTERNAL BUSINESS RULE",
+                "authority": "CTO / Best Driving School business confirmation",
+                "status": "BUSINESS VERIFIED",
+                "rule_source_type": "internal_business_rule",
+                "rule_source": "CTO",
+                "business_verified": true,
+                "backend_enforcement_verified": false,
+                "confirmation_date": "2026-09-13",
+                "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory"
+              },
+              "road_test_scheduling_requirement": null,
+              "backend_enforcement_verified": false
             }
           ]
         },
@@ -32,7 +56,31 @@
               "currency": "USD",
               "requires_booking": true,
               "availability_source": "live_api_required",
-              "booking_requirements_reference": "teen_behind_the_wheel_only_7_7"
+              "booking_requirements_reference": "teen_behind_the_wheel_only_7_7",
+              "derived_driving_session_requirement": {
+                "total_driving_hours": 7,
+                "standard_session_minutes": 120,
+                "full_session_count": 3,
+                "remaining_minutes": 60,
+                "total_session_count": 4,
+                "session_plan_minutes": [
+                  120,
+                  120,
+                  120,
+                  60
+                ],
+                "source_type": "INTERNAL BUSINESS RULE",
+                "authority": "CTO / Best Driving School business confirmation",
+                "status": "BUSINESS VERIFIED",
+                "rule_source_type": "internal_business_rule",
+                "rule_source": "CTO",
+                "business_verified": true,
+                "backend_enforcement_verified": false,
+                "confirmation_date": "2026-09-13",
+                "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory"
+              },
+              "road_test_scheduling_requirement": null,
+              "backend_enforcement_verified": false
             }
           ]
         }
@@ -53,7 +101,10 @@
               "currency": "USD",
               "requires_booking": true,
               "availability_source": "live_api_required",
-              "booking_requirements_reference": "parent_taught_10_hours"
+              "booking_requirements_reference": "parent_taught_10_hours",
+              "derived_driving_session_requirement": null,
+              "road_test_scheduling_requirement": null,
+              "backend_enforcement_verified": false
             },
             {
               "package_id": "parent_taught_15_hours",
@@ -62,7 +113,10 @@
               "currency": "USD",
               "requires_booking": true,
               "availability_source": "live_api_required",
-              "booking_requirements_reference": "parent_taught_15_hours"
+              "booking_requirements_reference": "parent_taught_15_hours",
+              "derived_driving_session_requirement": null,
+              "road_test_scheduling_requirement": null,
+              "backend_enforcement_verified": false
             },
             {
               "package_id": "parent_taught_30_hours",
@@ -71,7 +125,10 @@
               "currency": "USD",
               "requires_booking": true,
               "availability_source": "live_api_required",
-              "booking_requirements_reference": "parent_taught_30_hours"
+              "booking_requirements_reference": "parent_taught_30_hours",
+              "derived_driving_session_requirement": null,
+              "road_test_scheduling_requirement": null,
+              "backend_enforcement_verified": false
             }
           ]
         }
@@ -92,7 +149,10 @@
               "currency": "USD",
               "requires_booking": false,
               "availability_source": "not_applicable_self_paced",
-              "booking_requirements_reference": "adult_6_hour_online_permit_class"
+              "booking_requirements_reference": "adult_6_hour_online_permit_class",
+              "derived_driving_session_requirement": null,
+              "road_test_scheduling_requirement": null,
+              "backend_enforcement_verified": false
             }
           ]
         }
@@ -113,7 +173,26 @@
               "currency": "USD",
               "requires_booking": true,
               "availability_source": "live_api_required",
-              "booking_requirements_reference": "road_test_road_test_only"
+              "booking_requirements_reference": "road_test_road_test_only",
+              "derived_driving_session_requirement": null,
+              "road_test_scheduling_requirement": {
+                "service_type": "road_test",
+                "road_test_service_minutes": 20,
+                "service_minutes": 20,
+                "rollback_reset_minutes": 5,
+                "system_buffer_minutes": 5,
+                "slot_interval_minutes": 30,
+                "source_type": "INTERNAL BUSINESS RULE",
+                "authority": "CTO / Best Driving School business confirmation",
+                "status": "BUSINESS VERIFIED",
+                "rule_source_type": "internal_business_rule",
+                "rule_source": "CTO",
+                "business_verified": true,
+                "backend_enforcement_verified": false,
+                "confirmation_date": "2026-09-13",
+                "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory"
+              },
+              "backend_enforcement_verified": false
             },
             {
               "package_id": "road_test_practice_session_road_test",
@@ -122,7 +201,26 @@
               "currency": "USD",
               "requires_booking": true,
               "availability_source": "live_api_required",
-              "booking_requirements_reference": "road_test_practice_session_road_test"
+              "booking_requirements_reference": "road_test_practice_session_road_test",
+              "derived_driving_session_requirement": null,
+              "road_test_scheduling_requirement": {
+                "service_type": "road_test",
+                "road_test_service_minutes": 20,
+                "service_minutes": 20,
+                "rollback_reset_minutes": 5,
+                "system_buffer_minutes": 5,
+                "slot_interval_minutes": 30,
+                "source_type": "INTERNAL BUSINESS RULE",
+                "authority": "CTO / Best Driving School business confirmation",
+                "status": "BUSINESS VERIFIED",
+                "rule_source_type": "internal_business_rule",
+                "rule_source": "CTO",
+                "business_verified": true,
+                "backend_enforcement_verified": false,
+                "confirmation_date": "2026-09-13",
+                "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory"
+              },
+              "backend_enforcement_verified": false
             }
           ]
         }
@@ -143,7 +241,28 @@
               "currency": "USD",
               "requires_booking": true,
               "availability_source": "live_api_required",
-              "booking_requirements_reference": "adult_2_hours"
+              "booking_requirements_reference": "adult_2_hours",
+              "derived_driving_session_requirement": {
+                "total_driving_hours": 2,
+                "standard_session_minutes": 120,
+                "full_session_count": 1,
+                "remaining_minutes": 0,
+                "total_session_count": 1,
+                "session_plan_minutes": [
+                  120
+                ],
+                "source_type": "INTERNAL BUSINESS RULE",
+                "authority": "CTO / Best Driving School business confirmation",
+                "status": "BUSINESS VERIFIED",
+                "rule_source_type": "internal_business_rule",
+                "rule_source": "CTO",
+                "business_verified": true,
+                "backend_enforcement_verified": false,
+                "confirmation_date": "2026-09-13",
+                "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory"
+              },
+              "road_test_scheduling_requirement": null,
+              "backend_enforcement_verified": false
             },
             {
               "package_id": "adult_4_hours",
@@ -152,7 +271,29 @@
               "currency": "USD",
               "requires_booking": true,
               "availability_source": "live_api_required",
-              "booking_requirements_reference": "adult_4_hours"
+              "booking_requirements_reference": "adult_4_hours",
+              "derived_driving_session_requirement": {
+                "total_driving_hours": 4,
+                "standard_session_minutes": 120,
+                "full_session_count": 2,
+                "remaining_minutes": 0,
+                "total_session_count": 2,
+                "session_plan_minutes": [
+                  120,
+                  120
+                ],
+                "source_type": "INTERNAL BUSINESS RULE",
+                "authority": "CTO / Best Driving School business confirmation",
+                "status": "BUSINESS VERIFIED",
+                "rule_source_type": "internal_business_rule",
+                "rule_source": "CTO",
+                "business_verified": true,
+                "backend_enforcement_verified": false,
+                "confirmation_date": "2026-09-13",
+                "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory"
+              },
+              "road_test_scheduling_requirement": null,
+              "backend_enforcement_verified": false
             },
             {
               "package_id": "adult_6_hours",
@@ -161,7 +302,30 @@
               "currency": "USD",
               "requires_booking": true,
               "availability_source": "live_api_required",
-              "booking_requirements_reference": "adult_6_hours"
+              "booking_requirements_reference": "adult_6_hours",
+              "derived_driving_session_requirement": {
+                "total_driving_hours": 6,
+                "standard_session_minutes": 120,
+                "full_session_count": 3,
+                "remaining_minutes": 0,
+                "total_session_count": 3,
+                "session_plan_minutes": [
+                  120,
+                  120,
+                  120
+                ],
+                "source_type": "INTERNAL BUSINESS RULE",
+                "authority": "CTO / Best Driving School business confirmation",
+                "status": "BUSINESS VERIFIED",
+                "rule_source_type": "internal_business_rule",
+                "rule_source": "CTO",
+                "business_verified": true,
+                "backend_enforcement_verified": false,
+                "confirmation_date": "2026-09-13",
+                "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory"
+              },
+              "road_test_scheduling_requirement": null,
+              "backend_enforcement_verified": false
             },
             {
               "package_id": "adult_8_hours",
@@ -170,7 +334,31 @@
               "currency": "USD",
               "requires_booking": true,
               "availability_source": "live_api_required",
-              "booking_requirements_reference": "adult_8_hours"
+              "booking_requirements_reference": "adult_8_hours",
+              "derived_driving_session_requirement": {
+                "total_driving_hours": 8,
+                "standard_session_minutes": 120,
+                "full_session_count": 4,
+                "remaining_minutes": 0,
+                "total_session_count": 4,
+                "session_plan_minutes": [
+                  120,
+                  120,
+                  120,
+                  120
+                ],
+                "source_type": "INTERNAL BUSINESS RULE",
+                "authority": "CTO / Best Driving School business confirmation",
+                "status": "BUSINESS VERIFIED",
+                "rule_source_type": "internal_business_rule",
+                "rule_source": "CTO",
+                "business_verified": true,
+                "backend_enforcement_verified": false,
+                "confirmation_date": "2026-09-13",
+                "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory"
+              },
+              "road_test_scheduling_requirement": null,
+              "backend_enforcement_verified": false
             },
             {
               "package_id": "adult_10_hours",
@@ -179,7 +367,32 @@
               "currency": "USD",
               "requires_booking": true,
               "availability_source": "live_api_required",
-              "booking_requirements_reference": "adult_10_hours"
+              "booking_requirements_reference": "adult_10_hours",
+              "derived_driving_session_requirement": {
+                "total_driving_hours": 10,
+                "standard_session_minutes": 120,
+                "full_session_count": 5,
+                "remaining_minutes": 0,
+                "total_session_count": 5,
+                "session_plan_minutes": [
+                  120,
+                  120,
+                  120,
+                  120,
+                  120
+                ],
+                "source_type": "INTERNAL BUSINESS RULE",
+                "authority": "CTO / Best Driving School business confirmation",
+                "status": "BUSINESS VERIFIED",
+                "rule_source_type": "internal_business_rule",
+                "rule_source": "CTO",
+                "business_verified": true,
+                "backend_enforcement_verified": false,
+                "confirmation_date": "2026-09-13",
+                "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory"
+              },
+              "road_test_scheduling_requirement": null,
+              "backend_enforcement_verified": false
             }
           ]
         }

@@ -1,0 +1,319 @@
+[
+  {
+    "package_id": "teen_24_hr_classroom_driving_package",
+    "public_name": "24 Hr Classroom + Driving Package",
+    "internal_identifiers": {
+      "product_id": "1",
+      "course_id": null,
+      "service_id": null,
+      "schedule_id": null
+    },
+    "identifier_scope": "Observed form product_id, NOT independently verified stable backend identifier",
+    "backend_authoritative_identifier_verified": false,
+    "locations": [],
+    "observed_availability_path": "/api/teen-appointment-times",
+    "location_specific_ids": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/teen-24-hour-class-room-and-driving-package",
+        "raw_html": "data/raw_html/driving-courses-teen-24-hour-class-room-and-driving-package-1af9d18f.html",
+        "content_hash": "bcca060a2ed0db00b0483d240866c69f401f828416a0744c4f16b89d0511b321",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "verification_status": "partially_verified"
+  },
+  {
+    "package_id": "teen_behind_the_wheel_only_7_7",
+    "public_name": "Behind the Wheel Only (7 & 7)",
+    "internal_identifiers": {
+      "product_id": "3",
+      "course_id": null,
+      "service_id": null,
+      "schedule_id": null
+    },
+    "identifier_scope": "Observed form product_id, NOT independently verified stable backend identifier",
+    "backend_authoritative_identifier_verified": false,
+    "locations": [],
+    "observed_availability_path": "/api/teen-appointment-times",
+    "location_specific_ids": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/teen-behind-the-wheel-only",
+        "raw_html": "data/raw_html/driving-courses-teen-behind-the-wheel-only-7de303ab.html",
+        "content_hash": "4d4081dcec33da4becc232e3458869ee1504623cd60cc7989f783e36554b6d9d",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "verification_status": "partially_verified"
+  },
+  {
+    "package_id": "parent_taught_10_hours",
+    "public_name": "10 hours",
+    "internal_identifiers": {
+      "product_id": "8",
+      "course_id": null,
+      "service_id": null,
+      "schedule_id": null
+    },
+    "identifier_scope": "Observed form product_id, NOT independently verified stable backend identifier",
+    "backend_authoritative_identifier_verified": false,
+    "locations": [],
+    "observed_availability_path": "/api/teen-appointment-times",
+    "location_specific_ids": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/log-driving-hours",
+        "raw_html": "data/raw_html/driving-courses-log-driving-hours-d99facb5.html",
+        "content_hash": "31f27e4048610e372781c257353e340c708048dc6095633a290bc781012fefff",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "verification_status": "partially_verified"
+  },
+  {
+    "package_id": "parent_taught_15_hours",
+    "public_name": "15 hours",
+    "internal_identifiers": {
+      "product_id": "7",
+      "course_id": null,
+      "service_id": null,
+      "schedule_id": null
+    },
+    "identifier_scope": "Observed form product_id, NOT independently verified stable backend identifier",
+    "backend_authoritative_identifier_verified": false,
+    "locations": [],
+    "observed_availability_path": "/api/teen-appointment-times",
+    "location_specific_ids": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/log-driving-hours",
+        "raw_html": "data/raw_html/driving-courses-log-driving-hours-d99facb5.html",
+        "content_hash": "31f27e4048610e372781c257353e340c708048dc6095633a290bc781012fefff",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "verification_status": "partially_verified"
+  },
+  {
+    "package_id": "parent_taught_30_hours",
+    "public_name": "30 hours",
+    "internal_identifiers": {
+      "product_id": "6",
+      "course_id": null,
+      "service_id": null,
+      "schedule_id": null
+    },
+    "identifier_scope": "Observed form product_id, NOT independently verified stable backend identifier",
+    "backend_authoritative_identifier_verified": false,
+    "locations": [],
+    "observed_availability_path": "/api/teen-appointment-times",
+    "location_specific_ids": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/log-driving-hours",
+        "raw_html": "data/raw_html/driving-courses-log-driving-hours-d99facb5.html",
+        "content_hash": "31f27e4048610e372781c257353e340c708048dc6095633a290bc781012fefff",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "verification_status": "partially_verified"
+  },
+  {
+    "package_id": "adult_6_hour_online_permit_class",
+    "public_name": "6-Hour Online Permit Class",
+    "internal_identifiers": {
+      "product_id": null,
+      "course_id": null,
+      "service_id": null,
+      "schedule_id": null
+    },
+    "identifier_scope": "Observed form product_id, NOT independently verified stable backend identifier",
+    "backend_authoritative_identifier_verified": false,
+    "locations": [],
+    "observed_availability_path": null,
+    "location_specific_ids": null,
+    "evidence": [],
+    "verification_status": "unknown"
+  },
+  {
+    "package_id": "road_test_road_test_only",
+    "public_name": "Road test only",
+    "internal_identifiers": {
+      "product_id": "4",
+      "course_id": null,
+      "service_id": null,
+      "schedule_id": null
+    },
+    "identifier_scope": "Observed form product_id, NOT independently verified stable backend identifier",
+    "backend_authoritative_identifier_verified": false,
+    "locations": [],
+    "observed_availability_path": "/api/appointment-times",
+    "location_specific_ids": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/road-test",
+        "raw_html": "data/raw_html/driving-courses-road-test-69bab08e.html",
+        "content_hash": "a8aa5287dea2fba14e2d4edc8f59fe77569299f1d8d448dc1107e8d6cf9e795a",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "verification_status": "partially_verified"
+  },
+  {
+    "package_id": "road_test_practice_session_road_test",
+    "public_name": "Practice session + road test",
+    "internal_identifiers": {
+      "product_id": "5",
+      "course_id": null,
+      "service_id": null,
+      "schedule_id": null
+    },
+    "identifier_scope": "Observed form product_id, NOT independently verified stable backend identifier",
+    "backend_authoritative_identifier_verified": false,
+    "locations": [],
+    "observed_availability_path": "/api/appointment-times",
+    "location_specific_ids": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/road-test",
+        "raw_html": "data/raw_html/driving-courses-road-test-69bab08e.html",
+        "content_hash": "a8aa5287dea2fba14e2d4edc8f59fe77569299f1d8d448dc1107e8d6cf9e795a",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "verification_status": "partially_verified"
+  },
+  {
+    "package_id": "adult_2_hours",
+    "public_name": "2 hours",
+    "internal_identifiers": {
+      "product_id": "10",
+      "course_id": null,
+      "service_id": null,
+      "schedule_id": null
+    },
+    "identifier_scope": "Observed form product_id, NOT independently verified stable backend identifier",
+    "backend_authoritative_identifier_verified": false,
+    "locations": [],
+    "observed_availability_path": "/api/adult-appointment-times",
+    "location_specific_ids": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/adult-driving-sessions",
+        "raw_html": "data/raw_html/driving-courses-adult-driving-sessions-f1400c84.html",
+        "content_hash": "62cc34610588c98140532c920044db3e0fdb5514f264fa76f4889beb73c37938",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "verification_status": "partially_verified"
+  },
+  {
+    "package_id": "adult_4_hours",
+    "public_name": "4 hours",
+    "internal_identifiers": {
+      "product_id": "11",
+      "course_id": null,
+      "service_id": null,
+      "schedule_id": null
+    },
+    "identifier_scope": "Observed form product_id, NOT independently verified stable backend identifier",
+    "backend_authoritative_identifier_verified": false,
+    "locations": [],
+    "observed_availability_path": "/api/adult-appointment-times",
+    "location_specific_ids": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/adult-driving-sessions",
+        "raw_html": "data/raw_html/driving-courses-adult-driving-sessions-f1400c84.html",
+        "content_hash": "62cc34610588c98140532c920044db3e0fdb5514f264fa76f4889beb73c37938",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "verification_status": "partially_verified"
+  },
+  {
+    "package_id": "adult_6_hours",
+    "public_name": "6 hours",
+    "internal_identifiers": {
+      "product_id": "12",
+      "course_id": null,
+      "service_id": null,
+      "schedule_id": null
+    },
+    "identifier_scope": "Observed form product_id, NOT independently verified stable backend identifier",
+    "backend_authoritative_identifier_verified": false,
+    "locations": [],
+    "observed_availability_path": "/api/adult-appointment-times",
+    "location_specific_ids": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/adult-driving-sessions",
+        "raw_html": "data/raw_html/driving-courses-adult-driving-sessions-f1400c84.html",
+        "content_hash": "62cc34610588c98140532c920044db3e0fdb5514f264fa76f4889beb73c37938",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "verification_status": "partially_verified"
+  },
+  {
+    "package_id": "adult_8_hours",
+    "public_name": "8 hours",
+    "internal_identifiers": {
+      "product_id": "13",
+      "course_id": null,
+      "service_id": null,
+      "schedule_id": null
+    },
+    "identifier_scope": "Observed form product_id, NOT independently verified stable backend identifier",
+    "backend_authoritative_identifier_verified": false,
+    "locations": [],
+    "observed_availability_path": "/api/adult-appointment-times",
+    "location_specific_ids": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/adult-driving-sessions",
+        "raw_html": "data/raw_html/driving-courses-adult-driving-sessions-f1400c84.html",
+        "content_hash": "62cc34610588c98140532c920044db3e0fdb5514f264fa76f4889beb73c37938",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "verification_status": "partially_verified"
+  },
+  {
+    "package_id": "adult_10_hours",
+    "public_name": "10 hours",
+    "internal_identifiers": {
+      "product_id": "14",
+      "course_id": null,
+      "service_id": null,
+      "schedule_id": null
+    },
+    "identifier_scope": "Observed form product_id, NOT independently verified stable backend identifier",
+    "backend_authoritative_identifier_verified": false,
+    "locations": [],
+    "observed_availability_path": "/api/adult-appointment-times",
+    "location_specific_ids": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/adult-driving-sessions",
+        "raw_html": "data/raw_html/driving-courses-adult-driving-sessions-f1400c84.html",
+        "content_hash": "62cc34610588c98140532c920044db3e0fdb5514f264fa76f4889beb73c37938",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      }
+    ],
+    "verification_status": "partially_verified"
+  }
+]

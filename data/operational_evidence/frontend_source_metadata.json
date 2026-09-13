@@ -1,0 +1,18 @@
+[
+  {
+    "url": "https://bestdrivingschool.us/redesign/js/enroll.js",
+    "local_file": "data/operational_evidence/enroll.js",
+    "sha256": "1627da3c3886f7cfd53e3e5f9722eeadbb2ccdd62b2b41855addabf6312c1649",
+    "observation_date": "2026-09-13",
+    "source": "script URL declared in preserved public HTML",
+    "status": "downloaded public frontend source; no authenticated access"
+  },
+  {
+    "url": "https://bestdrivingschool.us/redesign/js/site.js",
+    "local_file": "data/operational_evidence/site.js",
+    "sha256": "c18915868360e4819e0d9db2464954ddc8c1b82b4ca10d7cd3ddfc89d57492a5",
+    "observation_date": "2026-09-13",
+    "source": "script URL declared in preserved public HTML",
+    "status": "downloaded public frontend source; no authenticated access"
+  }
+]

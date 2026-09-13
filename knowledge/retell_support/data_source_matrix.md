@@ -9,3 +9,17 @@
 | Fee applicability, cancellation exceptions, refund/reschedule authority, manual enrollment exceptions | INTERNAL BUSINESS RULE | Obtain owner-approved policy; preserve public fee evidence separately |
 
 `package_price` comes from `package_catalog.current_price` and currency/snapshot status; no caller amount becomes authoritative. Office hours, duration and generic weekend scheduling are static; actual slots are live. A license-guide answer does not establish school authorization or book a package.
+
+## Phase C.1 / D authority matrix
+
+| Information | Authority | Treatment |
+| --- | --- | --- |
+| Package price/contents | Best Driving School catalog website snapshot | Reviewed business facts, not caller-editable |
+| Texas eligibility | Reviewed DPS/TDLR records | Regulatory; suppress disputed rules |
+| Driving duration/remainder | CTO / INTERNAL BUSINESS RULE | BUSINESS VERIFIED, enforcement unverified |
+| Road 20+5+5 / 30 allocation | CTO / INTERNAL BUSINESS RULE | BUSINESS VERIFIED; frontend conflict preserved |
+| Available time | Approved live read endpoint | Ephemeral observation, not reservation |
+| Selected preference | Caller input | Tentative |
+| Confirmed booking | Authorized explicit backend success + appointment ID | Environment-aware guard |
+| Student account | Scoped authenticated system | Unavailable today; staff |
+| Mock result | Synthetic adapter | Demo only |

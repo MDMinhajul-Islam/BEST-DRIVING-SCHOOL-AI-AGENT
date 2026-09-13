@@ -1,0 +1,903 @@
+[
+  {
+    "package_id": "teen_24_hr_classroom_driving_package",
+    "total_hours": null,
+    "purchased_components": {
+      "classroom_hours": 24,
+      "driving_hours": 7,
+      "observation_hours": 7,
+      "practice_hours": null
+    },
+    "session_duration_minutes": null,
+    "expected_session_count": null,
+    "frontend_block_count": null,
+    "frontend_block_count_is_not_confirmed_session_count": true,
+    "observation_hours": 7,
+    "observation_booking_method": null,
+    "session_duration_fixed_backend": null,
+    "independent_sessions_supported": null,
+    "all_sessions_booked_at_once": null,
+    "frontend_collects_all_rows_before_submit": null,
+    "remaining_sessions_tracked": null,
+    "rescheduling_supported": null,
+    "cancellation_supported": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/teen-24-hour-class-room-and-driving-package",
+        "raw_html": "data/raw_html/driving-courses-teen-24-hour-class-room-and-driving-package-1af9d18f.html",
+        "content_hash": "bcca060a2ed0db00b0483d240866c69f401f828416a0744c4f16b89d0511b321",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      },
+      {
+        "path": "data/operational_evidence/enroll.js",
+        "section": "showRows and loadTimes"
+      }
+    ],
+    "status": "BUSINESS VERIFIED",
+    "phase_c_frontend_observation": {
+      "session_duration_minutes": null,
+      "expected_session_count": null,
+      "frontend_block_count": null,
+      "status": "partially_verified"
+    },
+    "backend_enforcement_verified": false,
+    "total_driving_hours": 7,
+    "standard_session_minutes": 120,
+    "full_session_count": 3,
+    "remaining_minutes": 60,
+    "total_session_count": 4,
+    "session_plan_minutes": [
+      120,
+      120,
+      120,
+      60
+    ],
+    "source_type": "INTERNAL BUSINESS RULE",
+    "authority": "CTO / Best Driving School business confirmation",
+    "rule_source_type": "internal_business_rule",
+    "rule_source": "CTO",
+    "business_verified": true,
+    "confirmation_date": "2026-09-13",
+    "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory",
+    "derived_driving_session_requirement": {
+      "total_driving_hours": 7,
+      "standard_session_minutes": 120,
+      "full_session_count": 3,
+      "remaining_minutes": 60,
+      "total_session_count": 4,
+      "session_plan_minutes": [
+        120,
+        120,
+        120,
+        60
+      ],
+      "source_type": "INTERNAL BUSINESS RULE",
+      "authority": "CTO / Best Driving School business confirmation",
+      "status": "BUSINESS VERIFIED",
+      "rule_source_type": "internal_business_rule",
+      "rule_source": "CTO",
+      "business_verified": true,
+      "backend_enforcement_verified": false,
+      "confirmation_date": "2026-09-13",
+      "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory"
+    },
+    "observation_scheduling_business_verified": false
+  },
+  {
+    "package_id": "teen_behind_the_wheel_only_7_7",
+    "total_hours": null,
+    "purchased_components": {
+      "classroom_hours": 0,
+      "driving_hours": 7,
+      "observation_hours": 7,
+      "practice_hours": null
+    },
+    "session_duration_minutes": null,
+    "expected_session_count": null,
+    "frontend_block_count": null,
+    "frontend_block_count_is_not_confirmed_session_count": true,
+    "observation_hours": 7,
+    "observation_booking_method": null,
+    "session_duration_fixed_backend": null,
+    "independent_sessions_supported": null,
+    "all_sessions_booked_at_once": null,
+    "frontend_collects_all_rows_before_submit": null,
+    "remaining_sessions_tracked": null,
+    "rescheduling_supported": null,
+    "cancellation_supported": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/teen-behind-the-wheel-only",
+        "raw_html": "data/raw_html/driving-courses-teen-behind-the-wheel-only-7de303ab.html",
+        "content_hash": "4d4081dcec33da4becc232e3458869ee1504623cd60cc7989f783e36554b6d9d",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      },
+      {
+        "path": "data/operational_evidence/enroll.js",
+        "section": "showRows and loadTimes"
+      }
+    ],
+    "status": "BUSINESS VERIFIED",
+    "phase_c_frontend_observation": {
+      "session_duration_minutes": null,
+      "expected_session_count": null,
+      "frontend_block_count": null,
+      "status": "partially_verified"
+    },
+    "backend_enforcement_verified": false,
+    "total_driving_hours": 7,
+    "standard_session_minutes": 120,
+    "full_session_count": 3,
+    "remaining_minutes": 60,
+    "total_session_count": 4,
+    "session_plan_minutes": [
+      120,
+      120,
+      120,
+      60
+    ],
+    "source_type": "INTERNAL BUSINESS RULE",
+    "authority": "CTO / Best Driving School business confirmation",
+    "rule_source_type": "internal_business_rule",
+    "rule_source": "CTO",
+    "business_verified": true,
+    "confirmation_date": "2026-09-13",
+    "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory",
+    "derived_driving_session_requirement": {
+      "total_driving_hours": 7,
+      "standard_session_minutes": 120,
+      "full_session_count": 3,
+      "remaining_minutes": 60,
+      "total_session_count": 4,
+      "session_plan_minutes": [
+        120,
+        120,
+        120,
+        60
+      ],
+      "source_type": "INTERNAL BUSINESS RULE",
+      "authority": "CTO / Best Driving School business confirmation",
+      "status": "BUSINESS VERIFIED",
+      "rule_source_type": "internal_business_rule",
+      "rule_source": "CTO",
+      "business_verified": true,
+      "backend_enforcement_verified": false,
+      "confirmation_date": "2026-09-13",
+      "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory"
+    },
+    "observation_scheduling_business_verified": false
+  },
+  {
+    "package_id": "parent_taught_10_hours",
+    "total_hours": 10,
+    "purchased_components": {
+      "classroom_hours": null,
+      "driving_hours": null,
+      "observation_hours": null,
+      "practice_hours": 10
+    },
+    "session_duration_minutes": null,
+    "expected_session_count": null,
+    "frontend_block_count": 7,
+    "frontend_block_count_is_not_confirmed_session_count": true,
+    "observation_hours": null,
+    "observation_booking_method": null,
+    "session_duration_fixed_backend": null,
+    "independent_sessions_supported": null,
+    "all_sessions_booked_at_once": null,
+    "frontend_collects_all_rows_before_submit": null,
+    "remaining_sessions_tracked": null,
+    "rescheduling_supported": null,
+    "cancellation_supported": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/log-driving-hours",
+        "raw_html": "data/raw_html/driving-courses-log-driving-hours-d99facb5.html",
+        "content_hash": "31f27e4048610e372781c257353e340c708048dc6095633a290bc781012fefff",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      },
+      {
+        "path": "data/operational_evidence/enroll.js",
+        "section": "showRows and loadTimes"
+      }
+    ],
+    "status": "partially_verified",
+    "phase_c_frontend_observation": {
+      "session_duration_minutes": null,
+      "expected_session_count": null,
+      "frontend_block_count": 7,
+      "status": "partially_verified"
+    },
+    "backend_enforcement_verified": false,
+    "derived_driving_session_requirement": null,
+    "business_rule_application_status": "Not applied: purchased instructor driving hours not established; PTDE practice hours and road-test preparation are not converted by name.",
+    "observation_scheduling_business_verified": false
+  },
+  {
+    "package_id": "parent_taught_15_hours",
+    "total_hours": 15,
+    "purchased_components": {
+      "classroom_hours": null,
+      "driving_hours": null,
+      "observation_hours": null,
+      "practice_hours": 15
+    },
+    "session_duration_minutes": null,
+    "expected_session_count": null,
+    "frontend_block_count": 7,
+    "frontend_block_count_is_not_confirmed_session_count": true,
+    "observation_hours": null,
+    "observation_booking_method": null,
+    "session_duration_fixed_backend": null,
+    "independent_sessions_supported": null,
+    "all_sessions_booked_at_once": null,
+    "frontend_collects_all_rows_before_submit": null,
+    "remaining_sessions_tracked": null,
+    "rescheduling_supported": null,
+    "cancellation_supported": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/log-driving-hours",
+        "raw_html": "data/raw_html/driving-courses-log-driving-hours-d99facb5.html",
+        "content_hash": "31f27e4048610e372781c257353e340c708048dc6095633a290bc781012fefff",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      },
+      {
+        "path": "data/operational_evidence/enroll.js",
+        "section": "showRows and loadTimes"
+      }
+    ],
+    "status": "partially_verified",
+    "phase_c_frontend_observation": {
+      "session_duration_minutes": null,
+      "expected_session_count": null,
+      "frontend_block_count": 7,
+      "status": "partially_verified"
+    },
+    "backend_enforcement_verified": false,
+    "derived_driving_session_requirement": null,
+    "business_rule_application_status": "Not applied: purchased instructor driving hours not established; PTDE practice hours and road-test preparation are not converted by name.",
+    "observation_scheduling_business_verified": false
+  },
+  {
+    "package_id": "parent_taught_30_hours",
+    "total_hours": 30,
+    "purchased_components": {
+      "classroom_hours": null,
+      "driving_hours": null,
+      "observation_hours": null,
+      "practice_hours": 30
+    },
+    "session_duration_minutes": null,
+    "expected_session_count": null,
+    "frontend_block_count": 7,
+    "frontend_block_count_is_not_confirmed_session_count": true,
+    "observation_hours": null,
+    "observation_booking_method": null,
+    "session_duration_fixed_backend": null,
+    "independent_sessions_supported": null,
+    "all_sessions_booked_at_once": null,
+    "frontend_collects_all_rows_before_submit": null,
+    "remaining_sessions_tracked": null,
+    "rescheduling_supported": null,
+    "cancellation_supported": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/log-driving-hours",
+        "raw_html": "data/raw_html/driving-courses-log-driving-hours-d99facb5.html",
+        "content_hash": "31f27e4048610e372781c257353e340c708048dc6095633a290bc781012fefff",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      },
+      {
+        "path": "data/operational_evidence/enroll.js",
+        "section": "showRows and loadTimes"
+      }
+    ],
+    "status": "partially_verified",
+    "phase_c_frontend_observation": {
+      "session_duration_minutes": null,
+      "expected_session_count": null,
+      "frontend_block_count": 7,
+      "status": "partially_verified"
+    },
+    "backend_enforcement_verified": false,
+    "derived_driving_session_requirement": null,
+    "business_rule_application_status": "Not applied: purchased instructor driving hours not established; PTDE practice hours and road-test preparation are not converted by name.",
+    "observation_scheduling_business_verified": false
+  },
+  {
+    "package_id": "adult_6_hour_online_permit_class",
+    "total_hours": null,
+    "purchased_components": {
+      "classroom_hours": null,
+      "driving_hours": null,
+      "observation_hours": null,
+      "practice_hours": null
+    },
+    "session_duration_minutes": null,
+    "expected_session_count": null,
+    "frontend_block_count": null,
+    "frontend_block_count_is_not_confirmed_session_count": true,
+    "observation_hours": null,
+    "observation_booking_method": null,
+    "session_duration_fixed_backend": null,
+    "independent_sessions_supported": null,
+    "all_sessions_booked_at_once": null,
+    "frontend_collects_all_rows_before_submit": null,
+    "remaining_sessions_tracked": null,
+    "rescheduling_supported": null,
+    "cancellation_supported": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/adult-6-hours-online-permit-class",
+        "raw_html": "data/raw_html/driving-courses-adult-6-hours-online-permit-class-e41fdf0f.html",
+        "content_hash": "de2ab1c446db8ad2b2b3d797b41800a3a123816e63e2c6fb3edc5cba05be4624",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      },
+      {
+        "path": "data/operational_evidence/enroll.js",
+        "section": "showRows and loadTimes"
+      }
+    ],
+    "status": "human_confirmation_required",
+    "phase_c_frontend_observation": {
+      "session_duration_minutes": null,
+      "expected_session_count": null,
+      "frontend_block_count": null,
+      "status": "human_confirmation_required"
+    },
+    "backend_enforcement_verified": false,
+    "derived_driving_session_requirement": null,
+    "business_rule_application_status": "Not applied: purchased instructor driving hours not established; PTDE practice hours and road-test preparation are not converted by name.",
+    "observation_scheduling_business_verified": false
+  },
+  {
+    "package_id": "road_test_road_test_only",
+    "total_hours": null,
+    "purchased_components": {
+      "classroom_hours": null,
+      "driving_hours": null,
+      "observation_hours": null,
+      "practice_hours": null
+    },
+    "session_duration_minutes": null,
+    "expected_session_count": null,
+    "frontend_block_count": 1,
+    "frontend_block_count_is_not_confirmed_session_count": true,
+    "observation_hours": null,
+    "observation_booking_method": null,
+    "session_duration_fixed_backend": null,
+    "independent_sessions_supported": null,
+    "all_sessions_booked_at_once": null,
+    "frontend_collects_all_rows_before_submit": null,
+    "remaining_sessions_tracked": null,
+    "rescheduling_supported": null,
+    "cancellation_supported": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/road-test",
+        "raw_html": "data/raw_html/driving-courses-road-test-69bab08e.html",
+        "content_hash": "a8aa5287dea2fba14e2d4edc8f59fe77569299f1d8d448dc1107e8d6cf9e795a",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      },
+      {
+        "path": "data/operational_evidence/enroll.js",
+        "section": "showRows and loadTimes"
+      }
+    ],
+    "status": "partially_verified",
+    "phase_c_frontend_observation": {
+      "session_duration_minutes": null,
+      "expected_session_count": null,
+      "frontend_block_count": 1,
+      "status": "partially_verified"
+    },
+    "backend_enforcement_verified": false,
+    "derived_driving_session_requirement": null,
+    "business_rule_application_status": "Not applied: purchased instructor driving hours not established; PTDE practice hours and road-test preparation are not converted by name.",
+    "road_test_scheduling_requirement": {
+      "service_type": "road_test",
+      "road_test_service_minutes": 20,
+      "service_minutes": 20,
+      "rollback_reset_minutes": 5,
+      "system_buffer_minutes": 5,
+      "slot_interval_minutes": 30,
+      "source_type": "INTERNAL BUSINESS RULE",
+      "authority": "CTO / Best Driving School business confirmation",
+      "status": "BUSINESS VERIFIED",
+      "rule_source_type": "internal_business_rule",
+      "rule_source": "CTO",
+      "business_verified": true,
+      "backend_enforcement_verified": false,
+      "confirmation_date": "2026-09-13",
+      "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory"
+    },
+    "observation_scheduling_business_verified": false
+  },
+  {
+    "package_id": "road_test_practice_session_road_test",
+    "total_hours": null,
+    "purchased_components": {
+      "classroom_hours": null,
+      "driving_hours": null,
+      "observation_hours": null,
+      "practice_hours": null
+    },
+    "session_duration_minutes": null,
+    "expected_session_count": null,
+    "frontend_block_count": 1,
+    "frontend_block_count_is_not_confirmed_session_count": true,
+    "observation_hours": null,
+    "observation_booking_method": null,
+    "session_duration_fixed_backend": null,
+    "independent_sessions_supported": null,
+    "all_sessions_booked_at_once": null,
+    "frontend_collects_all_rows_before_submit": null,
+    "remaining_sessions_tracked": null,
+    "rescheduling_supported": null,
+    "cancellation_supported": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/road-test",
+        "raw_html": "data/raw_html/driving-courses-road-test-69bab08e.html",
+        "content_hash": "a8aa5287dea2fba14e2d4edc8f59fe77569299f1d8d448dc1107e8d6cf9e795a",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      },
+      {
+        "path": "data/operational_evidence/enroll.js",
+        "section": "showRows and loadTimes"
+      }
+    ],
+    "status": "partially_verified",
+    "phase_c_frontend_observation": {
+      "session_duration_minutes": null,
+      "expected_session_count": null,
+      "frontend_block_count": 1,
+      "status": "partially_verified"
+    },
+    "backend_enforcement_verified": false,
+    "derived_driving_session_requirement": null,
+    "business_rule_application_status": "Not applied: purchased instructor driving hours not established; PTDE practice hours and road-test preparation are not converted by name.",
+    "road_test_scheduling_requirement": {
+      "service_type": "road_test",
+      "road_test_service_minutes": 20,
+      "service_minutes": 20,
+      "rollback_reset_minutes": 5,
+      "system_buffer_minutes": 5,
+      "slot_interval_minutes": 30,
+      "source_type": "INTERNAL BUSINESS RULE",
+      "authority": "CTO / Best Driving School business confirmation",
+      "status": "BUSINESS VERIFIED",
+      "rule_source_type": "internal_business_rule",
+      "rule_source": "CTO",
+      "business_verified": true,
+      "backend_enforcement_verified": false,
+      "confirmation_date": "2026-09-13",
+      "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory"
+    },
+    "observation_scheduling_business_verified": false
+  },
+  {
+    "package_id": "adult_2_hours",
+    "total_hours": 2,
+    "purchased_components": {
+      "classroom_hours": null,
+      "driving_hours": 2,
+      "observation_hours": null,
+      "practice_hours": null
+    },
+    "session_duration_minutes": 120,
+    "expected_session_count": 1,
+    "frontend_block_count": 1,
+    "frontend_block_count_is_not_confirmed_session_count": false,
+    "observation_hours": null,
+    "observation_booking_method": null,
+    "session_duration_fixed_backend": null,
+    "independent_sessions_supported": null,
+    "all_sessions_booked_at_once": null,
+    "frontend_collects_all_rows_before_submit": true,
+    "remaining_sessions_tracked": null,
+    "rescheduling_supported": null,
+    "cancellation_supported": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/adult-driving-sessions",
+        "raw_html": "data/raw_html/driving-courses-adult-driving-sessions-f1400c84.html",
+        "content_hash": "62cc34610588c98140532c920044db3e0fdb5514f264fa76f4889beb73c37938",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      },
+      {
+        "path": "data/operational_evidence/enroll.js",
+        "section": "showRows and loadTimes"
+      }
+    ],
+    "status": "BUSINESS VERIFIED",
+    "phase_c_frontend_observation": {
+      "session_duration_minutes": 120,
+      "expected_session_count": 1,
+      "frontend_block_count": 1,
+      "status": "partially_verified"
+    },
+    "backend_enforcement_verified": false,
+    "total_driving_hours": 2,
+    "standard_session_minutes": 120,
+    "full_session_count": 1,
+    "remaining_minutes": 0,
+    "total_session_count": 1,
+    "session_plan_minutes": [
+      120
+    ],
+    "source_type": "INTERNAL BUSINESS RULE",
+    "authority": "CTO / Best Driving School business confirmation",
+    "rule_source_type": "internal_business_rule",
+    "rule_source": "CTO",
+    "business_verified": true,
+    "confirmation_date": "2026-09-13",
+    "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory",
+    "derived_driving_session_requirement": {
+      "total_driving_hours": 2,
+      "standard_session_minutes": 120,
+      "full_session_count": 1,
+      "remaining_minutes": 0,
+      "total_session_count": 1,
+      "session_plan_minutes": [
+        120
+      ],
+      "source_type": "INTERNAL BUSINESS RULE",
+      "authority": "CTO / Best Driving School business confirmation",
+      "status": "BUSINESS VERIFIED",
+      "rule_source_type": "internal_business_rule",
+      "rule_source": "CTO",
+      "business_verified": true,
+      "backend_enforcement_verified": false,
+      "confirmation_date": "2026-09-13",
+      "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory"
+    },
+    "observation_scheduling_business_verified": false
+  },
+  {
+    "package_id": "adult_4_hours",
+    "total_hours": 4,
+    "purchased_components": {
+      "classroom_hours": null,
+      "driving_hours": 4,
+      "observation_hours": null,
+      "practice_hours": null
+    },
+    "session_duration_minutes": 120,
+    "expected_session_count": 2,
+    "frontend_block_count": 2,
+    "frontend_block_count_is_not_confirmed_session_count": false,
+    "observation_hours": null,
+    "observation_booking_method": null,
+    "session_duration_fixed_backend": null,
+    "independent_sessions_supported": null,
+    "all_sessions_booked_at_once": null,
+    "frontend_collects_all_rows_before_submit": true,
+    "remaining_sessions_tracked": null,
+    "rescheduling_supported": null,
+    "cancellation_supported": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/adult-driving-sessions",
+        "raw_html": "data/raw_html/driving-courses-adult-driving-sessions-f1400c84.html",
+        "content_hash": "62cc34610588c98140532c920044db3e0fdb5514f264fa76f4889beb73c37938",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      },
+      {
+        "path": "data/operational_evidence/enroll.js",
+        "section": "showRows and loadTimes"
+      }
+    ],
+    "status": "BUSINESS VERIFIED",
+    "phase_c_frontend_observation": {
+      "session_duration_minutes": 120,
+      "expected_session_count": 2,
+      "frontend_block_count": 2,
+      "status": "partially_verified"
+    },
+    "backend_enforcement_verified": false,
+    "total_driving_hours": 4,
+    "standard_session_minutes": 120,
+    "full_session_count": 2,
+    "remaining_minutes": 0,
+    "total_session_count": 2,
+    "session_plan_minutes": [
+      120,
+      120
+    ],
+    "source_type": "INTERNAL BUSINESS RULE",
+    "authority": "CTO / Best Driving School business confirmation",
+    "rule_source_type": "internal_business_rule",
+    "rule_source": "CTO",
+    "business_verified": true,
+    "confirmation_date": "2026-09-13",
+    "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory",
+    "derived_driving_session_requirement": {
+      "total_driving_hours": 4,
+      "standard_session_minutes": 120,
+      "full_session_count": 2,
+      "remaining_minutes": 0,
+      "total_session_count": 2,
+      "session_plan_minutes": [
+        120,
+        120
+      ],
+      "source_type": "INTERNAL BUSINESS RULE",
+      "authority": "CTO / Best Driving School business confirmation",
+      "status": "BUSINESS VERIFIED",
+      "rule_source_type": "internal_business_rule",
+      "rule_source": "CTO",
+      "business_verified": true,
+      "backend_enforcement_verified": false,
+      "confirmation_date": "2026-09-13",
+      "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory"
+    },
+    "observation_scheduling_business_verified": false
+  },
+  {
+    "package_id": "adult_6_hours",
+    "total_hours": 6,
+    "purchased_components": {
+      "classroom_hours": null,
+      "driving_hours": 6,
+      "observation_hours": null,
+      "practice_hours": null
+    },
+    "session_duration_minutes": 120,
+    "expected_session_count": 3,
+    "frontend_block_count": 3,
+    "frontend_block_count_is_not_confirmed_session_count": false,
+    "observation_hours": null,
+    "observation_booking_method": null,
+    "session_duration_fixed_backend": null,
+    "independent_sessions_supported": null,
+    "all_sessions_booked_at_once": null,
+    "frontend_collects_all_rows_before_submit": true,
+    "remaining_sessions_tracked": null,
+    "rescheduling_supported": null,
+    "cancellation_supported": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/adult-driving-sessions",
+        "raw_html": "data/raw_html/driving-courses-adult-driving-sessions-f1400c84.html",
+        "content_hash": "62cc34610588c98140532c920044db3e0fdb5514f264fa76f4889beb73c37938",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      },
+      {
+        "path": "data/operational_evidence/enroll.js",
+        "section": "showRows and loadTimes"
+      }
+    ],
+    "status": "BUSINESS VERIFIED",
+    "phase_c_frontend_observation": {
+      "session_duration_minutes": 120,
+      "expected_session_count": 3,
+      "frontend_block_count": 3,
+      "status": "partially_verified"
+    },
+    "backend_enforcement_verified": false,
+    "total_driving_hours": 6,
+    "standard_session_minutes": 120,
+    "full_session_count": 3,
+    "remaining_minutes": 0,
+    "total_session_count": 3,
+    "session_plan_minutes": [
+      120,
+      120,
+      120
+    ],
+    "source_type": "INTERNAL BUSINESS RULE",
+    "authority": "CTO / Best Driving School business confirmation",
+    "rule_source_type": "internal_business_rule",
+    "rule_source": "CTO",
+    "business_verified": true,
+    "confirmation_date": "2026-09-13",
+    "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory",
+    "derived_driving_session_requirement": {
+      "total_driving_hours": 6,
+      "standard_session_minutes": 120,
+      "full_session_count": 3,
+      "remaining_minutes": 0,
+      "total_session_count": 3,
+      "session_plan_minutes": [
+        120,
+        120,
+        120
+      ],
+      "source_type": "INTERNAL BUSINESS RULE",
+      "authority": "CTO / Best Driving School business confirmation",
+      "status": "BUSINESS VERIFIED",
+      "rule_source_type": "internal_business_rule",
+      "rule_source": "CTO",
+      "business_verified": true,
+      "backend_enforcement_verified": false,
+      "confirmation_date": "2026-09-13",
+      "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory"
+    },
+    "observation_scheduling_business_verified": false
+  },
+  {
+    "package_id": "adult_8_hours",
+    "total_hours": 8,
+    "purchased_components": {
+      "classroom_hours": null,
+      "driving_hours": 8,
+      "observation_hours": null,
+      "practice_hours": null
+    },
+    "session_duration_minutes": 120,
+    "expected_session_count": 4,
+    "frontend_block_count": 4,
+    "frontend_block_count_is_not_confirmed_session_count": false,
+    "observation_hours": null,
+    "observation_booking_method": null,
+    "session_duration_fixed_backend": null,
+    "independent_sessions_supported": null,
+    "all_sessions_booked_at_once": null,
+    "frontend_collects_all_rows_before_submit": true,
+    "remaining_sessions_tracked": null,
+    "rescheduling_supported": null,
+    "cancellation_supported": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/adult-driving-sessions",
+        "raw_html": "data/raw_html/driving-courses-adult-driving-sessions-f1400c84.html",
+        "content_hash": "62cc34610588c98140532c920044db3e0fdb5514f264fa76f4889beb73c37938",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      },
+      {
+        "path": "data/operational_evidence/enroll.js",
+        "section": "showRows and loadTimes"
+      }
+    ],
+    "status": "BUSINESS VERIFIED",
+    "phase_c_frontend_observation": {
+      "session_duration_minutes": 120,
+      "expected_session_count": 4,
+      "frontend_block_count": 4,
+      "status": "partially_verified"
+    },
+    "backend_enforcement_verified": false,
+    "total_driving_hours": 8,
+    "standard_session_minutes": 120,
+    "full_session_count": 4,
+    "remaining_minutes": 0,
+    "total_session_count": 4,
+    "session_plan_minutes": [
+      120,
+      120,
+      120,
+      120
+    ],
+    "source_type": "INTERNAL BUSINESS RULE",
+    "authority": "CTO / Best Driving School business confirmation",
+    "rule_source_type": "internal_business_rule",
+    "rule_source": "CTO",
+    "business_verified": true,
+    "confirmation_date": "2026-09-13",
+    "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory",
+    "derived_driving_session_requirement": {
+      "total_driving_hours": 8,
+      "standard_session_minutes": 120,
+      "full_session_count": 4,
+      "remaining_minutes": 0,
+      "total_session_count": 4,
+      "session_plan_minutes": [
+        120,
+        120,
+        120,
+        120
+      ],
+      "source_type": "INTERNAL BUSINESS RULE",
+      "authority": "CTO / Best Driving School business confirmation",
+      "status": "BUSINESS VERIFIED",
+      "rule_source_type": "internal_business_rule",
+      "rule_source": "CTO",
+      "business_verified": true,
+      "backend_enforcement_verified": false,
+      "confirmation_date": "2026-09-13",
+      "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory"
+    },
+    "observation_scheduling_business_verified": false
+  },
+  {
+    "package_id": "adult_10_hours",
+    "total_hours": 10,
+    "purchased_components": {
+      "classroom_hours": null,
+      "driving_hours": 10,
+      "observation_hours": null,
+      "practice_hours": null
+    },
+    "session_duration_minutes": 120,
+    "expected_session_count": 5,
+    "frontend_block_count": 5,
+    "frontend_block_count_is_not_confirmed_session_count": false,
+    "observation_hours": null,
+    "observation_booking_method": null,
+    "session_duration_fixed_backend": null,
+    "independent_sessions_supported": null,
+    "all_sessions_booked_at_once": null,
+    "frontend_collects_all_rows_before_submit": true,
+    "remaining_sessions_tracked": null,
+    "rescheduling_supported": null,
+    "cancellation_supported": null,
+    "evidence": [
+      {
+        "source_url": "https://bestdrivingschool.us/driving-courses/adult-driving-sessions",
+        "raw_html": "data/raw_html/driving-courses-adult-driving-sessions-f1400c84.html",
+        "content_hash": "62cc34610588c98140532c920044db3e0fdb5514f264fa76f4889beb73c37938",
+        "selector": "main [data-enroll-form] input[name=product_id]",
+        "scope": "Server-rendered public frontend; no backend database/schema access"
+      },
+      {
+        "path": "data/operational_evidence/enroll.js",
+        "section": "showRows and loadTimes"
+      }
+    ],
+    "status": "BUSINESS VERIFIED",
+    "phase_c_frontend_observation": {
+      "session_duration_minutes": 120,
+      "expected_session_count": 5,
+      "frontend_block_count": 5,
+      "status": "partially_verified"
+    },
+    "backend_enforcement_verified": false,
+    "total_driving_hours": 10,
+    "standard_session_minutes": 120,
+    "full_session_count": 5,
+    "remaining_minutes": 0,
+    "total_session_count": 5,
+    "session_plan_minutes": [
+      120,
+      120,
+      120,
+      120,
+      120
+    ],
+    "source_type": "INTERNAL BUSINESS RULE",
+    "authority": "CTO / Best Driving School business confirmation",
+    "rule_source_type": "internal_business_rule",
+    "rule_source": "CTO",
+    "business_verified": true,
+    "confirmation_date": "2026-09-13",
+    "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory",
+    "derived_driving_session_requirement": {
+      "total_driving_hours": 10,
+      "standard_session_minutes": 120,
+      "full_session_count": 5,
+      "remaining_minutes": 0,
+      "total_session_count": 5,
+      "session_plan_minutes": [
+        120,
+        120,
+        120,
+        120,
+        120
+      ],
+      "source_type": "INTERNAL BUSINESS RULE",
+      "authority": "CTO / Best Driving School business confirmation",
+      "status": "BUSINESS VERIFIED",
+      "rule_source_type": "internal_business_rule",
+      "rule_source": "CTO",
+      "business_verified": true,
+      "backend_enforcement_verified": false,
+      "confirmation_date": "2026-09-13",
+      "source_reference": "User-provided CTO confirmation, attachment 5d548e66-9068-4035-a9aa-ce004437b8d1; not website-derived or regulatory"
+    },
+    "observation_scheduling_business_verified": false
+  }
+]

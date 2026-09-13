@@ -1,0 +1,108 @@
+{
+  "label": "MOCK — NOT PRODUCTION",
+  "availability": {
+    "success": true,
+    "mode": "mock",
+    "synthetic": true,
+    "production": false,
+    "booking_confirmed": false,
+    "available_slots": [
+      {
+        "slot_id": "MOCK-SLOT-1",
+        "date": "2026-10-01",
+        "start_time": "10:00",
+        "end_time": "11:00",
+        "location_id": "MOCK-LOCATION-1"
+      },
+      {
+        "slot_id": "MOCK-SLOT-2",
+        "date": "2026-10-01",
+        "start_time": "11:00",
+        "end_time": "12:00",
+        "location_id": "MOCK-LOCATION-1"
+      },
+      {
+        "slot_id": "MOCK-SLOT-3",
+        "date": "2026-10-01",
+        "start_time": "12:00",
+        "end_time": "13:00",
+        "location_id": "MOCK-LOCATION-1"
+      },
+      {
+        "slot_id": "MOCK-SLOT-4",
+        "date": "2026-10-01",
+        "start_time": "13:00",
+        "end_time": "14:00",
+        "location_id": "MOCK-LOCATION-1"
+      }
+    ]
+  },
+  "create": {
+    "success": true,
+    "mode": "mock",
+    "synthetic": true,
+    "production": false,
+    "booking_confirmed": true,
+    "booking": {
+      "appointment_id": "MOCK-BOOKING-1",
+      "package_id": "teen_24_hr_classroom_driving_package",
+      "slot_ids": [
+        "MOCK-SLOT-1"
+      ],
+      "customer_ref": "MOCK-CUSTOMER-1",
+      "booking_status": "booking_confirmed",
+      "version": 1
+    }
+  },
+  "find": {
+    "success": true,
+    "mode": "mock",
+    "synthetic": true,
+    "production": false,
+    "booking_confirmed": true,
+    "booking": {
+      "appointment_id": "MOCK-BOOKING-1",
+      "package_id": "teen_24_hr_classroom_driving_package",
+      "slot_ids": [
+        "MOCK-SLOT-1"
+      ],
+      "customer_ref": "MOCK-CUSTOMER-1",
+      "booking_status": "booking_confirmed",
+      "version": 1
+    }
+  },
+  "reschedule": {
+    "success": true,
+    "mode": "mock",
+    "synthetic": true,
+    "production": false,
+    "booking_confirmed": true,
+    "booking": {
+      "appointment_id": "MOCK-BOOKING-1",
+      "package_id": "teen_24_hr_classroom_driving_package",
+      "slot_ids": [
+        "MOCK-SLOT-2"
+      ],
+      "customer_ref": "MOCK-CUSTOMER-1",
+      "booking_status": "booking_confirmed",
+      "version": 2
+    }
+  },
+  "cancel": {
+    "success": true,
+    "mode": "mock",
+    "synthetic": true,
+    "production": false,
+    "booking_confirmed": false,
+    "booking": {
+      "appointment_id": "MOCK-BOOKING-1",
+      "package_id": "teen_24_hr_classroom_driving_package",
+      "slot_ids": [
+        "MOCK-SLOT-2"
+      ],
+      "customer_ref": "MOCK-CUSTOMER-1",
+      "booking_status": "booking_cancelled",
+      "version": 3
+    }
+  }
+}

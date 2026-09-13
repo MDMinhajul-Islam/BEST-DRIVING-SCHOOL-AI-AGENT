@@ -1,0 +1,129 @@
+{
+  "provider": "calcom",
+  "purpose": "internship_demo",
+  "production": false,
+  "timezone": "America/Chicago",
+  "event_readiness": "NOT_READY",
+  "event_types": {
+    "driving_standard": {
+      "event_type_id": null,
+      "duration_minutes": 120
+    },
+    "driving_remainder": {
+      "event_type_id": null,
+      "duration_minutes": 60
+    },
+    "road_test": {
+      "event_type_id": null,
+      "duration_minutes": 30
+    }
+  },
+  "packages": [
+    {
+      "package_id": "teen_24_hr_classroom_driving_package",
+      "session_plan_minutes": [
+        120,
+        120,
+        120,
+        60
+      ],
+      "scheduling_required": true,
+      "status": "DEMO_MAPPING_READY"
+    },
+    {
+      "package_id": "teen_behind_the_wheel_only_7_7",
+      "session_plan_minutes": [
+        120,
+        120,
+        120,
+        60
+      ],
+      "scheduling_required": true,
+      "status": "DEMO_MAPPING_READY"
+    },
+    {
+      "package_id": "parent_taught_10_hours",
+      "status": "STAFF_REVIEW_REQUIRED",
+      "session_plan_minutes": null
+    },
+    {
+      "package_id": "parent_taught_15_hours",
+      "status": "STAFF_REVIEW_REQUIRED",
+      "session_plan_minutes": null
+    },
+    {
+      "package_id": "parent_taught_30_hours",
+      "status": "STAFF_REVIEW_REQUIRED",
+      "session_plan_minutes": null
+    },
+    {
+      "package_id": "adult_6_hour_online_permit_class",
+      "session_plan_minutes": [],
+      "scheduling_required": false,
+      "status": "NO_APPOINTMENT_REQUIRED"
+    },
+    {
+      "package_id": "road_test_road_test_only",
+      "session_plan_minutes": [
+        30
+      ],
+      "scheduling_required": true,
+      "status": "DEMO_MAPPING_READY"
+    },
+    {
+      "package_id": "road_test_practice_session_road_test",
+      "status": "STAFF_REVIEW_REQUIRED",
+      "session_plan_minutes": null
+    },
+    {
+      "package_id": "adult_2_hours",
+      "session_plan_minutes": [
+        120
+      ],
+      "scheduling_required": true,
+      "status": "DEMO_MAPPING_READY"
+    },
+    {
+      "package_id": "adult_4_hours",
+      "session_plan_minutes": [
+        120,
+        120
+      ],
+      "scheduling_required": true,
+      "status": "DEMO_MAPPING_READY"
+    },
+    {
+      "package_id": "adult_6_hours",
+      "session_plan_minutes": [
+        120,
+        120,
+        120
+      ],
+      "scheduling_required": true,
+      "status": "DEMO_MAPPING_READY"
+    },
+    {
+      "package_id": "adult_8_hours",
+      "session_plan_minutes": [
+        120,
+        120,
+        120,
+        120
+      ],
+      "scheduling_required": true,
+      "status": "DEMO_MAPPING_READY"
+    },
+    {
+      "package_id": "adult_10_hours",
+      "session_plan_minutes": [
+        120,
+        120,
+        120,
+        120,
+        120
+      ],
+      "scheduling_required": true,
+      "status": "DEMO_MAPPING_READY"
+    }
+  ]
+}
