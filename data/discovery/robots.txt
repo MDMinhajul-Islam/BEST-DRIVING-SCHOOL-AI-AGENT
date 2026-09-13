@@ -1,0 +1,35 @@
+User-agent: *
+Allow: /
+
+Disallow: /_ignition/
+Disallow: /admin/
+Disallow: /api/
+Disallow: /classSchedule/
+Disallow: /courses
+Disallow: /create/
+Disallow: /employee/
+Disallow: /enrollment/
+Disallow: /guest/
+Disallow: /home
+# /login is deliberately absent from this list. It serves
+# <meta name="robots" content="noindex, nofollow">, and Google cannot read a
+# noindex on a URL it is not allowed to fetch - so disallowing it here was what
+# kept it in the index rather than what removed it. Leave it crawlable until it
+# has dropped out; only then is re-adding this line safe.
+Disallow: /order/
+Disallow: /password/
+Disallow: /product/index/cancel
+Disallow: /product/index/checkout
+Disallow: /product/index/offlinePayment
+Disallow: /product/index/payment
+Disallow: /product/index/paymentForm
+Disallow: /product/index/success
+Disallow: /products
+Disallow: /queries/
+Disallow: /student/home
+Disallow: /teacher/
+Disallow: /update/
+Disallow: /upload/
+Disallow: /view/
+
+Sitemap: https://bestdrivingschool.us/sitemap.xml

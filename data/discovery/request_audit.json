@@ -1,0 +1,102 @@
+[
+  {
+    "url": "https://bestdrivingschool.us/robots.txt",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/sitemap.xml",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/faqs",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/terms-and-conditions",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/privacy-policy",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/services/driving-lessons-for-teens",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/services/driving-lessons-for-adults",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/services/parent-taught-log-driving",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/services/3rd-party-road-test",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/driving-school-plano",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/driving-school-allen",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/driving-school-frisco",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/driving-school-mckinney",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/driving-courses/teen-24-hour-class-room-and-driving-package",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/driving-courses/teen-behind-the-wheel-only",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/driving-courses/road-test",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/driving-courses/log-driving-hours",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/driving-courses/adult-driving-sessions",
+    "status_code": 200,
+    "attempt": 1
+  },
+  {
+    "url": "https://bestdrivingschool.us/driving-courses/adult-6-hours-online-permit-class",
+    "status_code": 200,
+    "attempt": 1
+  }
+]
