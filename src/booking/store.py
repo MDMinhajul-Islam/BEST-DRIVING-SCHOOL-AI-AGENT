@@ -15,6 +15,14 @@ class Store:
    CREATE TABLE IF NOT EXISTS audit(id INTEGER PRIMARY KEY,at TEXT,operation TEXT,mode TEXT,package TEXT,idx INTEGER,status TEXT);
    CREATE TABLE IF NOT EXISTS mock_provider(uid TEXT PRIMARY KEY,start TEXT,end TEXT,status TEXT);
    CREATE TABLE IF NOT EXISTS locks(target TEXT PRIMARY KEY,owner TEXT);
+   CREATE TABLE IF NOT EXISTS internal_services(package_id TEXT PRIMARY KEY,name TEXT NOT NULL,session_plan TEXT,auto_schedulable INTEGER NOT NULL,source TEXT NOT NULL);
+   CREATE TABLE IF NOT EXISTS availability_rules(id TEXT PRIMARY KEY,package_id TEXT NOT NULL,weekday INTEGER NOT NULL,start_time TEXT NOT NULL,end_time TEXT NOT NULL,effective_start TEXT NOT NULL,effective_end TEXT,capacity INTEGER NOT NULL,active INTEGER NOT NULL DEFAULT 1,created_at TEXT NOT NULL,updated_at TEXT NOT NULL);
+   CREATE TABLE IF NOT EXISTS blackouts(id TEXT PRIMARY KEY,package_id TEXT NOT NULL,start TEXT NOT NULL,end TEXT NOT NULL,note TEXT,active INTEGER NOT NULL DEFAULT 1,created_at TEXT NOT NULL);
+   CREATE TABLE IF NOT EXISTS booking_groups(id TEXT PRIMARY KEY,scope TEXT NOT NULL,package_id TEXT NOT NULL,customer_name TEXT NOT NULL,customer_email TEXT NOT NULL,status TEXT NOT NULL,created_at TEXT NOT NULL,updated_at TEXT NOT NULL);
+   CREATE TABLE IF NOT EXISTS internal_sessions(uid TEXT PRIMARY KEY,group_id TEXT NOT NULL,appointment_ref TEXT UNIQUE NOT NULL,package_id TEXT NOT NULL,start TEXT NOT NULL,end TEXT NOT NULL,status TEXT NOT NULL,created_at TEXT NOT NULL,updated_at TEXT NOT NULL,cancelled_at TEXT,FOREIGN KEY(group_id) REFERENCES booking_groups(id));
+   CREATE TABLE IF NOT EXISTS internal_history(id TEXT PRIMARY KEY,at TEXT NOT NULL,action TEXT NOT NULL,object_type TEXT NOT NULL,object_id TEXT NOT NULL,metadata TEXT NOT NULL);
+   CREATE INDEX IF NOT EXISTS ix_internal_sessions_time ON internal_sessions(status,start,end);
+   CREATE INDEX IF NOT EXISTS ix_availability_lookup ON availability_rules(active,package_id,weekday,effective_start,effective_end);
   ''')
  @contextmanager
  def connect(self):

@@ -1,6 +1,6 @@
 # Retell booking wrapper API contract
 
-Prepared September 15, 2026 for later manual Retell wiring. Deployment target is mock only; the base URL is pending Dokploy domain configuration. All timestamps are UTC ISO 8601 and the business timezone is America/Chicago.
+Prepared September 15, 2026 for later manual Retell wiring. The intended deployment provider is `internal`; the same contract continues with `mock`. The base URL is pending Dokploy domain configuration. All timestamps are UTC ISO 8601 and the business timezone is America/Chicago.
 
 ## Transport and authentication
 
@@ -10,13 +10,13 @@ Prepared September 15, 2026 for later manual Retell wiring. Deployment target is
 
 Unauthorized/missing scope returns 401. Unknown operation returns 404; malformed transport/schema returns 400 or 413; infrastructure failures return 503. Domain failures intentionally use HTTP 200 with `success:false` so Retell can branch consistently. Always inspect body fields.
 
-Success includes `success:true`, `mode`, `booking_provider`, `production:false`, `synthetic`, `demo:true`, and `booking_confirmed`. Failure includes `success:false`, `booking_confirmed:false`, `error_code`, and `user_safe_message`. Only provider `accepted` confirms. Pending/partial/unknown never confirms. Cancellation reports `refund_issued:false` and does not decide a refund.
+Success includes `success:true`, `mode`, `booking_provider` (`internal` for the intended deployment), `production:false`, `synthetic`, `demo:true`, and `booking_confirmed`. Failure includes `success:false`, `booking_confirmed:false`, `error_code`, and `user_safe_message`. Only provider `accepted` confirms. Pending/partial/unknown never confirms. Cancellation reports `refund_issued:false` and does not decide a refund.
 
 ## Operations
 
 **check_availability — `/check-availability`.** Requires `package_id` and `preferred_date` (`YYYY-MM-DD`). Optional `session_duration_minutes` (allowed plan integer), `preferred_time_window` (`morning|afternoon|evening`), and `timezone` (exactly `America/Chicago`). Success adds package/timezone, `scheduling_required`, integer `session_plan`, `session_count_required`, and identical `available_slots`/`slots`. Each slot has `slot_ref`, `slot_id`, `start`, `end`, `duration_minutes`. Refs are opaque, scoped and expire after five minutes. Availability never confirms a booking.
 
-**create_booking — `/create`.** Requires `package_id`, `slot_ids` in exact plan order, and `customer` exactly `{name,email}`. Demo names start `BDS AI TEST`; use synthetic contact data only. Confirmed success adds `package_booking_status:"confirmed"` and `sessions`, each with index, internal appointment_id, start, end and booking_status. A single session also appears at top level. Partial results preserve accepted sessions and set `human_review_required:true`; never retry automatically.
+**create_booking — `/create`.** Requires `package_id`, `slot_ids` in exact plan order, and `customer` exactly `{name,email}`. Use synthetic contact data during testing. Confirmed internal success adds `booking_group_id`, `package_booking_status:"confirmed"` and `sessions`, each with index, internal appointment_id, start, end and booking_status. A single session also appears at top level. Internal multi-session creation is atomic, so a conflict leaves no partial group. Legacy provider partial responses remain possible and set `human_review_required:true`; never retry automatically.
 
 **find_booking — `/find`.** Requires `appointment_id`. Success adds appointment_id, start, end, booking_status and booking_confirmed. Only a known internal appointment in the same scope/mode is returned; no email, phone or provider-ID enumeration.
 

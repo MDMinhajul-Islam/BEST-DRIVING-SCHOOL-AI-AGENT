@@ -17,7 +17,7 @@ def create_app(service=None,secret=None):
  if not isinstance(secret,str) or len(secret)<32:raise ValueError('Set a private RETELL_TOOL_SECRET of at least 32 characters')
  service=service or configured_service();app=FastAPI(docs_url=None,redoc_url=None,openapi_url=None)
  @app.get('/api/health')
- def health():return {'status':'ok','service':'best-driving-school-booking-api','provider':'mock' if service.mode=='mock' else 'calcom','timezone':'America/Chicago'}
+ def health():return {'status':'ok','service':'best-driving-school-booking-api','provider':service.mode if service.mode in ('mock','internal') else 'calcom','timezone':'America/Chicago'}
  @app.post('/api/booking/{operation}')
  async def booking(operation:str,request:Request):
   supplied=request.headers.get('X-Retell-Tool-Secret','')
@@ -45,4 +45,7 @@ def create_app(service=None,secret=None):
   except BookingError as e:return JSONResponse(error(e.code,service.mode),status_code=200)
   except (ValueError,TypeError,KeyError):return JSONResponse(error('VALIDATION_ERROR',service.mode),status_code=400)
   except Exception:return JSONResponse(error('OUTCOME_UNKNOWN' if operation in ('create','reschedule','cancel') else 'PROVIDER_UNAVAILABLE',service.mode),status_code=503)
+ if service.mode=='internal':
+  from src.routes.admin import attach_admin
+  attach_admin(app,service)
  return app

@@ -53,8 +53,8 @@ class BookingService:
  def create_booking(self,scope,package_id,slot_ids,customer):
   plan=package_plan(package_id)
   if not plan:raise BookingError('NOT_SCHEDULABLE')
-  customer=customer_data(customer)
-  if self.mode!='mock' and (not self.test_email or customer['email']!=self.test_email):raise BookingError('CUSTOMER_DATA_MISSING')
+  customer=customer_data(customer,self.mode!='internal')
+  if self.mode.startswith('calcom_') and (not self.test_email or customer['email']!=self.test_email):raise BookingError('CUSTOMER_DATA_MISSING')
   if not isinstance(slot_ids,list) or not all(isinstance(s,str) for s in slot_ids) or len(slot_ids)!=len(plan) or len(set(slot_ids))!=len(plan):raise BookingError('VALIDATION_ERROR')
   key,old=self._begin(scope,'create',[package_id,slot_ids,customer])
   if old:return old
@@ -72,6 +72,13 @@ class BookingService:
     day=utc_stamp(slot['start']).astimezone(__import__('zoneinfo').ZoneInfo('America/Chicago')).date().isoformat()
     available=self.adapter.check_availability(package_id,day,session_duration_minutes=slot['duration_minutes'])
     if not any(s['start']==slot['start'] and s['end']==slot['end'] for s in available):raise BookingError('SLOT_UNAVAILABLE')
+   if hasattr(self.adapter,'create_group'):
+    group_id,created=self.adapter.create_group(package_id,slots,customer,scope)
+    for idx,data in enumerate(created,1):
+     ref=data.pop('appointment_ref');sessions.append({'index':idx,**self._public(ref,data)})
+    out=result(self.mode,package_id=package_id,booking_group_id=group_id,booking_confirmed=True,package_booking_status='confirmed',sessions=sessions)
+    if len(plan)==1:out.update({k:v for k,v in sessions[0].items() if k!='index'})
+    self.store.finish(key,out);self.store.unlock(target,key);return out
    for idx,slot in enumerate(slots,1):
     self.store.audit('create_attempt',self.mode,package_id,idx,'pending')
     try:

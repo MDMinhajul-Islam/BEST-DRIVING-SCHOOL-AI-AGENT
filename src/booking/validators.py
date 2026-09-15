@@ -30,9 +30,9 @@ def date_bounds(value,tz='America/Chicago'):
  except (ValueError,TypeError,KeyError):raise BookingError('VALIDATION_ERROR')
  return datetime.combine(d,datetime.min.time(),zone).astimezone(timezone.utc),datetime.combine(d+timedelta(days=1),datetime.min.time(),zone).astimezone(timezone.utc)
 
-def customer_data(value):
+def customer_data(value,demo_only=True):
  if not isinstance(value,dict) or set(value)-{'name','email'}:raise BookingError('VALIDATION_ERROR')
  name=value.get('name');email=value.get('email')
- if not isinstance(name,str) or not name.startswith('BDS AI TEST') or len(name)>100:raise BookingError('CUSTOMER_DATA_MISSING')
+ if not isinstance(name,str) or not name.strip() or len(name)>100 or (demo_only and not name.startswith('BDS AI TEST')):raise BookingError('CUSTOMER_DATA_MISSING')
  if not isinstance(email,str) or len(email)>254 or not re.fullmatch(r'[^\s@]+@[^\s@]+\.[^\s@]+',email):raise BookingError('CUSTOMER_DATA_MISSING')
- return {'name':name,'email':email}
+ return {'name':name.strip(),'email':email}

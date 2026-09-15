@@ -5,17 +5,19 @@ from src.booking.store import Store
 from src.booking.service import BookingService
 from src.booking.calcom_adapter import CalComBookingAdapter
 from src.booking.mock_adapter import PersistentMockBookingAdapter
+from src.booking.internal_adapter import InternalBookingAdapter
 def configured_service(env=None):
  env=os.environ if env is None else env
  mode=env.get('BOOKING_MODE','mock')
- if mode not in ('mock','calcom_test','calcom_live'):raise ValueError('Invalid booking mode')
- provider=env.get('BOOKING_PROVIDER','mock' if mode=='mock' else 'calcom')
- if (mode=='mock' and provider!='mock') or (mode!='mock' and provider!='calcom'):raise ValueError('Booking provider does not match mode')
+ if mode not in ('mock','internal','calcom_test','calcom_live'):raise ValueError('Invalid booking mode')
+ provider=env.get('BOOKING_PROVIDER','mock' if mode=='mock' else ('internal' if mode=='internal' else 'calcom'))
+ if provider not in ('mock','internal','calcom') or (mode=='mock' and provider!='mock') or (mode=='internal' and provider!='internal') or (mode.startswith('calcom_') and provider!='calcom'):raise ValueError('Booking provider does not match mode')
  if env.get('CALCOM_API_BASE_URL','https://api.cal.com')!='https://api.cal.com':raise ValueError('Only verified Cal.com API origin supported')
  if env.get('CALCOM_TIMEZONE','America/Chicago')!='America/Chicago':raise ValueError('Business timezone must be America/Chicago')
  if mode=='calcom_live' and env.get('CALCOM_LIVE_ENABLED')!='true':raise ValueError('Live Cal.com mode requires explicit enablement')
  path=env.get('BOOKING_DB_PATH',str(ROOT/'runtime/booking.sqlite3'));store=Store(path)
  if mode=='mock':adapter=PersistentMockBookingAdapter(store)
+ elif mode=='internal':adapter=InternalBookingAdapter(store)
  else:
   if not env.get('CALCOM_API_KEY'):raise ValueError('Cal.com configuration incomplete')
   mapping=json.loads((ROOT/'config/calcom.example.json').read_text(encoding='utf-8'))['event_types']
