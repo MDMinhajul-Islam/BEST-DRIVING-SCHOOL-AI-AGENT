@@ -1,5 +1,11 @@
 # Best Driving School knowledge pipeline
 
+## Current manual Retell status — September 14, 2026
+
+Use [current implementation](docs/retell_current_implementation.md) as the latest user-reported build record and [minimal state/logic manual plan](docs/retell_state_logic_manual_plan.md) for the next phase. These supersede conflicting historical Phase D/E build instructions. The current router/specialists are Conversation nodes except Booking (Subagent); Human Escalation is global; source nodes say goodbye before the Ending node. The student_age extraction and numeric adult/teen split are now user-reported as manually built and tested. Node-specific KB work is also user-reported complete. Booking tools remain unwired. No Retell changes have been executed by Codex.
+
+Before reviewing or updating node KBs, use [the KB readiness audit](reports/retell_kb_readiness_audit.md) and only the controlled files under `knowledge/retell_kb_ready/`. The broad generated knowledge files remain source/evidence and should not be uploaded directly.
+
 A Python pipeline that collects public business knowledge for Best Driving
 School, Texas, and prepares sourced JSON, Markdown and manual Retell setup
 references.

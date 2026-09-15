@@ -17,7 +17,7 @@ def create_app(service=None,secret=None):
  if not isinstance(secret,str) or len(secret)<32:raise ValueError('Set a private RETELL_TOOL_SECRET of at least 32 characters')
  service=service or configured_service();app=FastAPI(docs_url=None,redoc_url=None,openapi_url=None)
  @app.get('/api/health')
- def health():return {'status':'ok'}
+ def health():return {'status':'ok','service':'best-driving-school-booking-api','provider':'mock' if service.mode=='mock' else 'calcom','timezone':'America/Chicago'}
  @app.post('/api/booking/{operation}')
  async def booking(operation:str,request:Request):
   supplied=request.headers.get('X-Retell-Tool-Secret','')

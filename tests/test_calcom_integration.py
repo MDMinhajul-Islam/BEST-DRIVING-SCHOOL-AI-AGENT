@@ -61,7 +61,7 @@ class CalcomIntegrationTests(unittest.TestCase):
   with self.assertRaises(ValueError):create_app(self.service,'short')
  def test_scope_required(self):
   self.assertEqual(self.client.post('/api/booking/find',headers={'X-Retell-Tool-Secret':'s'*32},json={'appointment_id':'x'}).status_code,401)
- def test_health_minimal(self):self.assertEqual(self.client.get('/api/health').json(),{'status':'ok'})
+ def test_health_minimal(self):self.assertEqual(self.client.get('/api/health').json(),{'status':'ok','service':'best-driving-school-booking-api','provider':'mock','timezone':'America/Chicago'})
  def test_request_validation(self):
   r=self.client.post('/api/booking/find',headers=self.headers,json={'appointment_id':'x','provider_uid':'private'})
   self.assertEqual(r.json()['error_code'],'VALIDATION_ERROR')
@@ -145,6 +145,8 @@ class CalcomIntegrationTests(unittest.TestCase):
  def test_key_alone_stays_mock(self):
   s=configured_service({'CALCOM_API_KEY':'PRIVATE-KEY','BOOKING_DB_PATH':str(self.path)})
   self.assertEqual(s.mode,'mock')
+ def test_provider_must_match_mode(self):
+  with self.assertRaises(ValueError):configured_service({'BOOKING_PROVIDER':'calcom','BOOKING_MODE':'mock','BOOKING_DB_PATH':str(self.path)})
  def test_live_requires_explicit_gate(self):
   with self.assertRaises(ValueError):configured_service({'BOOKING_MODE':'calcom_live','CALCOM_API_KEY':'PRIVATE-KEY','BOOKING_DB_PATH':str(self.path)})
  def test_cal_test_customer_allowlist(self):
