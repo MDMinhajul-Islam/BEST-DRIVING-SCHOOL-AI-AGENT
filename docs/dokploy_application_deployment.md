@@ -56,6 +56,20 @@ SITE_ORIGIN=https://minhaj-bds-frontend-7wmdcd-5ad051-206-189-183-167.sslip.io
 
 `NEXT_PUBLIC_ADMIN_URL` is a public navigation URL. `VOICE_PROXY_SECRET` remains server-only despite being configured on the frontend Application because Next.js does not expose variables without the `NEXT_PUBLIC_` prefix.
 
+### Isolated voice broker Application
+
+Create a third Dokploy Application from the same repository and `main` branch. Use Dockerfile build mode with context `.` and Dockerfile `Dockerfile.voice`, route its HTTPS domain to container port `8000`, and use `/api/health` as its health check. Keep one worker; the in-process call-creation limiter assumes a single replica.
+
+Set only these server-side values on the voice broker:
+
+```dotenv
+RETELL_API_KEY=<private Retell API key>
+RETELL_AGENT_ID=<published Best Driving School agent ID>
+VOICE_PROXY_SECRET=<private random value of at least 32 characters>
+```
+
+Copy the API key from the Retell dashboard API Keys area and the published agent ID from the Best Driving School agent page. Never place either value in a `NEXT_PUBLIC_*` variable. Set the frontend `VOICE_BACKEND_URL` to the broker's HTTPS origin, set the same `VOICE_PROXY_SECRET`, and change `NEXT_PUBLIC_VOICE_DEMO_MODE=false` only after the broker health and authenticated session path pass.
+
 ## Persistence, networking and verification
 
 Create a named volume at `/app/runtime`; SQLite is `/app/runtime/booking.sqlite3`. Schema creation is idempotent and does not reset data. Ensure UID 10001 can write. Use one replica because SQLite is not configured for distributed writers. Back up the entire volume, including SQLite sidecars, with a consistent backup or while stopped.

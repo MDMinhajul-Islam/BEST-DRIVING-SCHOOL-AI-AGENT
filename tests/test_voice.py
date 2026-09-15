@@ -13,8 +13,18 @@ class VoiceTests(unittest.TestCase):
     def test_auth_required(self):
         with self.client(lambda r: self.fail('Must not contact Retell')) as c:
             self.assertEqual(c.post('/api/retell/web-call').status_code,401)
+            self.assertEqual(c.get('/api/health').json(), {
+                'status': 'ok', 'service': 'best-driving-school-voice-broker'})
+    def test_incorrect_proxy_secret_rejected(self):
+        with self.client(lambda r: self.fail('Must not contact Retell')) as c:
+            self.assertEqual(c.post('/api/retell/web-call', headers={
+                'X-Voice-Proxy-Secret': 'wrong-secret'}).status_code, 401)
     def test_missing_credentials_disabled(self):
         self.env.pop('RETELL_API_KEY')
+        with self.client(lambda r: self.fail('Must not contact Retell')) as c:
+            self.assertEqual(c.post('/api/retell/web-call',headers=self.headers).status_code,503)
+    def test_missing_agent_disabled(self):
+        self.env.pop('RETELL_AGENT_ID')
         with self.client(lambda r: self.fail('Must not contact Retell')) as c:
             self.assertEqual(c.post('/api/retell/web-call',headers=self.headers).status_code,503)
     def test_only_temporary_fields_returned(self):

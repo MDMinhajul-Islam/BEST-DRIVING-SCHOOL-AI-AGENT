@@ -18,6 +18,10 @@ def create_app(env=None, transport=None):
     def reply(body, status=200):
         return JSONResponse(body, status_code=status, headers={'Cache-Control': 'no-store'})
 
+    @app.get('/api/health')
+    async def health():
+        return reply({'status': 'ok', 'service': 'best-driving-school-voice-broker'})
+
     @app.post('/api/retell/web-call')
     async def create_call(request: Request):
         secret = env.get('VOICE_PROXY_SECRET', '')

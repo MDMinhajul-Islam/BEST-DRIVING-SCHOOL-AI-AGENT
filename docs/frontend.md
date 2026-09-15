@@ -54,6 +54,8 @@ Supply these in the backend process environment (never public frontend variables
 - `RETELL_AGENT_ID`: your published, configured Best Driving School agent ID.
 - `VOICE_PROXY_SECRET`: random secret of at least 32 characters.
 
+For Dokploy, deploy this process from `Dockerfile.voice` as a separate Application on internal port 8000 with health path `/api/health`. The existing booking Application continues using the root `Dockerfile` and remains unchanged.
+
 ```sh
 .venv/bin/python -m uvicorn src.routes.voice:create_app --factory --host 127.0.0.1 --port 8001 --workers 1 --no-access-log
 ```
