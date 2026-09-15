@@ -53,20 +53,12 @@ export function VoiceProvider({ children }: { children: ReactNode }) {
     controller = useRef<AbortController | null>(null),
     timer = useRef<ReturnType<typeof setTimeout> | null>(null),
     started = useRef(0);
-  const micStream = useRef<MediaStream | null>(null),
-    audioContext = useRef<AudioContext | null>(null),
-    micMeter = useRef<ReturnType<typeof setInterval> | null>(null),
-    mutedRef = useRef(false);
+  const mutedRef = useRef(false);
   const active = ["connected", "user-speaking", "speaking", "muted"].includes(
       state,
     ),
     busy = ["requesting", "connecting"].includes(state);
   function cleanup() {
-    if (micMeter.current) clearInterval(micMeter.current);
-    micStream.current?.getTracks().forEach((t) => t.stop());
-    micStream.current = null;
-    void audioContext.current?.close();
-    audioContext.current = null;
     mutedRef.current = false;
     if (timer.current) clearTimeout(timer.current);
     controller.current?.abort();
@@ -118,12 +110,6 @@ export function VoiceProvider({ children }: { children: ReactNode }) {
       30000,
     );
     try {
-      const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
-      if (id !== generation.current) {
-        stream.getTracks().forEach((t) => t.stop());
-        return;
-      }
-      micStream.current = stream;
       setState("connecting");
       const { RetellWebClient } = await import("retell-client-js-sdk");
       if (id !== generation.current) return;
@@ -134,32 +120,6 @@ export function VoiceProvider({ children }: { children: ReactNode }) {
         if (timer.current) clearTimeout(timer.current);
         started.current = Date.now();
         setState("connected");
-        if (micStream.current) {
-          const ctx = new AudioContext();
-          audioContext.current = ctx;
-          const analyser = ctx.createAnalyser();
-          analyser.fftSize = 256;
-          ctx.createMediaStreamSource(micStream.current).connect(analyser);
-          const samples = new Float32Array(256);
-          let lastInput = 0;
-          micMeter.current = setInterval(() => {
-            if (
-              id !== generation.current ||
-              mutedRef.current ||
-              c.isAgentTalking
-            )
-              return;
-            analyser.getFloatTimeDomainData(samples);
-            const volume = Math.sqrt(
-              samples.reduce((sum, v) => sum + v * v, 0) / samples.length,
-            );
-            setLevel(Math.min(1, volume * 8));
-            if (volume > 0.025) lastInput = Date.now();
-            setState(
-              Date.now() - lastInput < 600 ? "user-speaking" : "connected",
-            );
-          }, 120);
-        }
       });
       c.on("call_ended", () => {
         if (id !== generation.current) return;
@@ -225,9 +185,6 @@ export function VoiceProvider({ children }: { children: ReactNode }) {
     if (muted) c.unmute();
     else c.mute();
     mutedRef.current = !muted;
-    micStream.current?.getAudioTracks().forEach((track) => {
-      track.enabled = muted;
-    });
     setMuted(!muted);
   }
   useEffect(() => {
@@ -241,9 +198,6 @@ export function VoiceProvider({ children }: { children: ReactNode }) {
   useEffect(
     () => () => {
       generation.current++;
-      if (micMeter.current) clearInterval(micMeter.current);
-      micStream.current?.getTracks().forEach((t) => t.stop());
-      void audioContext.current?.close();
       if (timer.current) clearTimeout(timer.current);
       controller.current?.abort();
       client.current?.removeAllListeners();
