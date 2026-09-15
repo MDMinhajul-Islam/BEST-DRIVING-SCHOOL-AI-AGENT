@@ -76,24 +76,37 @@ class InternalCalendarTests(unittest.TestCase):
   c=self.admin_client();self.assertEqual(c.get('/admin/api/summary').status_code,401);self.assertEqual(c.post('/admin/api/login',json={'username':'admin','password':'bad'}).status_code,401);self.assertEqual(c.get('/admin').status_code,200)
  def test_admin_rule_blackout_booking_and_cancel(self):
   c=self.admin_client();csrf=self.login(c);H={'X-CSRF-Token':csrf};rule={'package_id':ROAD,'weekday':0,'start_time':'09:00','end_time':'11:00','effective_start':'2035-10-01','effective_end':'2035-12-31','capacity':1}
+  services=c.get('/admin/api/services').json()['items'];self.assertEqual(len(services),8);self.assertEqual(next(x for x in services if x['package_id']==ADULT)['session_plan'],[120,120])
   self.assertEqual(c.post('/admin/api/availability',headers=H,json=rule).status_code,200);rules=c.get('/admin/api/availability').json()['items'];self.assertEqual(len(rules),1)
   b=self.create();items=c.get('/admin/api/bookings').json()['items'];self.assertEqual(items[0]['appointment_ref'],b['appointment_id'])
   self.assertEqual(c.post('/admin/api/bookings/'+b['appointment_id']+'/cancel',headers=H,json={}).json()['booking_status'],'cancelled')
   self.assertEqual(c.post('/admin/api/blackouts',headers=H,json={'package_id':'*','start':'2035-10-01T14:00:00Z','end':'2035-10-01T15:00:00Z','note':'Synthetic'}).status_code,200)
   self.assertEqual(len(c.get('/admin/api/blackouts').json()['items']),1)
+  summary=c.get('/admin/api/summary').json();self.assertEqual(summary['rules'],1);self.assertEqual(summary['blackouts'],1)
   self.assertEqual(c.get('/admin/api/bookings/'+b['appointment_id']).json()['booking']['group_id'],b['booking_group_id'])
   rid=rules[0]['id'];self.assertEqual(c.post('/admin/api/availability/'+rid,headers=H,json={'start_time':'09:30','end_time':'11:30','capacity':2}).status_code,200)
+  self.assertEqual(c.post('/admin/api/availability/'+rid+'/deactivate',headers=H).status_code,200);self.assertEqual(c.post('/admin/api/availability/'+rid+'/activate',headers=H).status_code,200)
+  bid=c.get('/admin/api/blackouts').json()['items'][0]['id'];self.assertEqual(c.post('/admin/api/blackouts/'+bid+'/deactivate',headers=H).status_code,200);self.assertEqual(c.post('/admin/api/blackouts/'+bid+'/activate',headers=H).status_code,200)
  def test_admin_local_blackout_and_reschedule(self):
   self.rule();b=self.create();self.rule(ROAD,'2035-10-02');c=self.admin_client();csrf=self.login(c);H={'X-CSRF-Token':csrf}
   moved=c.post('/admin/api/bookings/'+b['appointment_id']+'/reschedule',headers=H,json={'start':'2035-10-02T14:00:00Z','end':'2035-10-02T14:30:00Z'})
   self.assertEqual(moved.status_code,200);self.assertEqual(moved.json()['start'],'2035-10-02T14:00:00Z')
+  moved_local=c.post('/admin/api/bookings/'+b['appointment_id']+'/reschedule',headers=H,json={'start':'2035-10-02T10:00','end':'2035-10-02T10:30'})
+  self.assertEqual(moved_local.status_code,200);self.assertEqual(moved_local.json()['start'],'2035-10-02T15:00:00Z')
   blackout=c.post('/admin/api/blackouts',headers=H,json={'package_id':'*','start':'2035-10-02T09:30','end':'2035-10-02T10:00','note':'Chicago local'})
   self.assertEqual(blackout.status_code,200)
   with self.store.connect() as db:
    self.assertEqual(db.execute('SELECT start FROM blackouts WHERE id=?',(blackout.json()['id'],)).fetchone()[0],'2035-10-02T14:30:00Z')
-   self.assertEqual(db.execute("SELECT count(*) FROM internal_history WHERE action='session_rescheduled'").fetchone()[0],1)
+   self.assertEqual(db.execute("SELECT count(*) FROM internal_history WHERE action='session_rescheduled'").fetchone()[0],2)
  def test_admin_csrf_and_invalid_capacity(self):
   c=self.admin_client();csrf=self.login(c);self.assertEqual(c.post('/admin/api/availability',json={}).status_code,401);r=c.post('/admin/api/availability',headers={'X-CSRF-Token':csrf},json={'package_id':ROAD,'weekday':0,'start_time':'09:00','end_time':'10:00','effective_start':'2035-10-01','capacity':0});self.assertEqual(r.status_code,400)
+  short=c.post('/admin/api/availability',headers={'X-CSRF-Token':csrf},json={'package_id':'adult_2_hours','weekday':0,'start_time':'09:00','end_time':'10:00','effective_start':'2035-10-01','capacity':1});self.assertEqual(short.status_code,400);self.assertIn('120-minute',short.json()['error'])
+  self.assertEqual(c.get('/admin/api/services').status_code,200);self.assertEqual(self.admin_client().get('/admin/api/services').status_code,401)
+ def test_admin_page_is_labeled_and_structured(self):
+  page=self.admin_client().get('/admin').text
+  for text in ['Staff portal','Availability','Blackouts','Booking details','System status','Username','Password']:
+   self.assertIn(text,page)
+  self.assertNotIn('<pre',page.lower())
  def test_internal_mode_config_and_health(self):
   env={'BOOKING_PROVIDER':'internal','BOOKING_MODE':'internal','BOOKING_DB_PATH':str(self.path),'ADMIN_USERNAME':'admin','ADMIN_PASSWORD_HASH':make_password_hash('password long enough'),'ADMIN_SESSION_SECRET':'x'*32,'ADMIN_COOKIE_SECURE':'false'}
   with patch.dict(os.environ,env):c=TestClient(create_app(secret='s'*32));self.assertEqual(c.get('/api/health').json()['provider'],'internal')

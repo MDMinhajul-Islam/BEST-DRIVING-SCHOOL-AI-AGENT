@@ -19,6 +19,9 @@ import { RoadVisual } from "@/components/hero/RoadVisual";
 import { school } from "@/lib/content/school";
 import { programs } from "@/lib/content/programs";
 export default function Home() {
+  const adminUrl =
+    process.env.NEXT_PUBLIC_ADMIN_URL ||
+    "https://minhaj-bdsbackend-xbnn3q-3c4628-206-189-183-167.sslip.io/admin";
   return (
     <>
       <Header />
@@ -357,6 +360,9 @@ export default function Home() {
           <a href="#programs">Programs</a>
           <a href={`${school.website}/privacy-policy`}>Privacy</a>
           <a href={`${school.website}/terms-and-conditions`}>Terms</a>
+          <a className="staff-link" href={adminUrl}>
+            Staff Login
+          </a>
         </div>
         <div className="footer-bottom">
           <span>© {new Date().getFullYear()} Best Driving School</span>

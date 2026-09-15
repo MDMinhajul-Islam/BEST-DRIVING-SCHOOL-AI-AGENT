@@ -227,7 +227,7 @@ Regenerate offline with `.venv\Scripts\python.exe -X utf8 -m src.manual_retell.b
 
 The authenticated five-operation HTTP wrapper now supports a restart-safe, duration-aware mock and Cal.com API v2 demo adapter. Start with a private RETELL_TOOL_SECRET and BOOKING_MODE=mock; run `.venv\Scripts\python.exe -m uvicorn src.routes.booking:create_app --factory --host 127.0.0.1 --port 8000 --workers 1 --no-access-log`. Environment variables are explicit; .env files are not automatically loaded. Run the full unittest command above for 104 tests (72 prior + 32 Phase F).
 
-Read `docs/calcom_setup_guide.md`, `docs/retell_calcom_tool_wiring.md`, and `docs/dokploy_application_deployment.md`. Dokploy uses backend Application mode with the root Dockerfile and a durable `/app/runtime` volume. Frontend work is deferred. Cal event mappings remain null: the existing public 45-minute events do not match the required 120/60/30-minute events. No Cal write, deployment, or Retell change has occurred. Readiness and remaining configuration are recorded in `reports/phase_f_calcom_integration.md`.
+Read `docs/calcom_setup_guide.md`, `docs/retell_calcom_tool_wiring.md`, and `docs/dokploy_application_deployment.md`. Dokploy uses backend Application mode with the root Dockerfile and a durable `/app/runtime` volume; the Next.js site deploys separately from `frontend/`. Cal event mappings remain null and Cal writes stay disabled because the internal calendar is active. Retell dashboard configuration remains manual.
 
 ## Website and browser voice assistant
 

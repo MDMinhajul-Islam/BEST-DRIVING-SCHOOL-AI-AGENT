@@ -42,6 +42,20 @@ SEED_DEMO_DATA=false
 
 The backend does not load `.env` automatically. Keep API/admin secrets only in private configuration. Provider and mode must match. Cal fields stay blank/false; production school writes are independently blocked. No availability is seeded. Admin is served at `/admin`.
 
+### Frontend Application
+
+Deploy the frontend as a separate Dokploy Application from the same `main` branch. Set the build context/root directory to `frontend`, use Nixpacks, and route the domain to container port `3000`. The committed `.nvmrc` and `package.json` require Node `22.22.0` or newer. Set:
+
+```dotenv
+NEXT_PUBLIC_VOICE_DEMO_MODE=true
+NEXT_PUBLIC_ADMIN_URL=https://minhaj-bdsbackend-xbnn3q-3c4628-206-189-183-167.sslip.io/admin
+VOICE_BACKEND_URL=https://minhaj-bdsbackend-xbnn3q-3c4628-206-189-183-167.sslip.io
+VOICE_PROXY_SECRET=<same private server-only voice broker value, when voice is enabled>
+SITE_ORIGIN=https://minhaj-bds-frontend-7wmdcd-5ad051-206-189-183-167.sslip.io
+```
+
+`NEXT_PUBLIC_ADMIN_URL` is a public navigation URL. `VOICE_PROXY_SECRET` remains server-only despite being configured on the frontend Application because Next.js does not expose variables without the `NEXT_PUBLIC_` prefix.
+
 ## Persistence, networking and verification
 
 Create a named volume at `/app/runtime`; SQLite is `/app/runtime/booking.sqlite3`. Schema creation is idempotent and does not reset data. Ensure UID 10001 can write. Use one replica because SQLite is not configured for distributed writers. Back up the entire volume, including SQLite sidecars, with a consistent backup or while stopped.
@@ -54,4 +68,4 @@ See [Retell contract](retell_booking_api_contract.md). Dokploy references: [Dock
 
 ## Current status
 
-Local Python and production-container verification passed internal health/authentication, empty-by-default availability, admin rule and blackout control, all five booking operations, dashboard visibility and persistence after container recreation. Image `best-driving-school-booking-api:internal-local` built successfully, exposes port 8000 and runs as `booking`. Dokploy was intentionally not deployed in this phase; domain, volume, private admin credentials and public HTTPS checks remain deployment steps. Retell remains unchanged.
+The backend and frontend are deployed as separate Dokploy Applications. Backend health reports provider `internal` and America/Chicago. Availability remains empty until staff creates a positive-capacity rule in the authenticated dashboard. Retell remains manually configured and unchanged by deployment.

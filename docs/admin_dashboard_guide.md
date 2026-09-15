@@ -16,11 +16,12 @@ Login creates a signed eight-hour HttpOnly, Secure, SameSite=Strict cookie scope
 
 ## Pages and actions
 
-The single responsive dashboard shows today/upcoming/active/cancelled session counts and active rule count, followed by:
+The responsive dashboard uses five focused sections: Overview, Availability, Blackouts, Bookings and System. Overview shows today/upcoming/active/cancelled session counts, active rule and blackout counts, and upcoming sessions. All displayed counts and rows come from the internal SQLite calendar.
 
-- Availability rules: create with canonical package ID or `*`, weekday, local start/end, effective dates and capacity; edit time/capacity; disable.
-- Blackouts: create package/wildcard intervals in America/Chicago local time with optional note; view and disable. The backend converts them to UTC for storage. Full-day closure is represented by its exact start/end interval.
-- Booking calendar/list: chronological sessions with customer, package, reference, start/end and status; search/filter; inspect group sessions/history; reschedule or cancel with confirmation.
+- Availability rules: select one of the eight canonical schedulable services (or all services), see its required session plan, create a weekday window with explicit effective dates/capacity, edit its time/capacity, and activate or disable it. Windows shorter than the service's minimum session length are rejected.
+- Blackouts: create a service-specific or all-service interval in America/Chicago local time with an optional note, then activate or disable it. The backend converts local values to UTC for storage.
+- Bookings: search/filter chronological sessions, inspect a structured booking/group/history view, reschedule in America/Chicago local time, or cancel after confirmation. Session index and booking group context stay visible for multi-session packages.
+- System: confirms the active provider, timezone and health endpoint without exposing credentials.
 
 Admin booking actions use the same internal provider transaction/capacity logic. Reschedule accepts explicit timezone-aware ISO timestamps, preserves session duration and fails if no configured slot exists. Cancellation releases capacity and returns `refund_issued:false`.
 
@@ -35,3 +36,14 @@ Admin booking actions use the same internal provider transaction/capacity logic.
 7. Restart the container with the same `/app/runtime` volume and confirm rules/bookings remain.
 
 No manual booking creation, database download, arbitrary SQL, payment/refund action, resource assignment or analytics exists in this MVP.
+
+## Controlled Retell availability test
+
+Use this synthetic, far-future rule so the test is deterministic and unlikely to affect normal operations. Do not create it automatically; a signed-in staff member controls the write.
+
+1. In **Availability**, choose `Adult 2 Hours` (`adult_2_hours`).
+2. Set weekday to **Monday**, start to **09:00**, end to **11:00**, effective start and end to **2035-10-01**, and capacity to **1**. Times are America/Chicago.
+3. Save the rule and confirm it appears as Active.
+4. In Retell, ask for Adult 2 Hours availability on October 1, 2035. The expected single slot starts at 9:00 AM America/Chicago (14:00 UTC).
+5. Complete the create/find/reschedule/cancel checks using clearly synthetic customer details. Respect the current call-scope rule for every lookup or mutation.
+6. Return to Availability and disable the rule immediately after testing. Confirm a second availability check returns no slots for that controlled window.

@@ -84,6 +84,12 @@ test("session proxy fails closed without a valid origin", async ({
   expect(response.headers()["cache-control"]).toBe("no-store");
 });
 
+test("staff login points to the protected backend admin", async ({ page }) => {
+  await page.goto("/");
+  const link = page.getByRole("link", { name: "Staff Login", exact: true });
+  await expect(link).toHaveAttribute("href", /\/admin$/);
+});
+
 test("WCAG AA scan on homepage and voice dialog", async ({ page }) => {
   const { default: AxeBuilder } = await import("@axe-core/playwright");
   await page.goto("/");

@@ -1029,6 +1029,15 @@ footer {
   display: flex;
   align-items: center;
 }
+.footer-top > .staff-link {
+  color: var(--muted);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.footer-top > .staff-link:focus-visible {
+  outline: 2px solid var(--navy);
+  outline-offset: 3px;
+}
 .footer-bottom {
   border-top: 1px solid var(--line);
   display: flex;
